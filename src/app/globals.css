@@ -1,0 +1,19 @@
+@font-face {
+	font-family: "edo";
+	src: url("/fonts/edo.ttf");
+}
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+:root {
+	--primary-color: #de694f;
+	--secondary-color: #273472;
+	--main-color: #ffffff;
+	--footer: #f78da7;
+	--warm-color: #ff6900;
+	--cold-color: #00d084;
+	--title-font: "edo";
+	--letter-spacing: 0.1em;
+}
