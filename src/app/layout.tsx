@@ -1,4 +1,6 @@
 import "./globals.css";
+import { paragraphFont } from "./ui/font";
+import styles from "./layout.module.css";
 
 export default function RootLayout({
 	children,
@@ -7,7 +9,9 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body>{children}</body>
+			<body className={`${paragraphFont.className} ${styles.body}`}>
+				{children}
+			</body>
 		</html>
 	);
 }
