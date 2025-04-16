@@ -27,8 +27,8 @@ export default function NavMenu({
 							</button>
 							{openSubMenu === "compagnie" && (
 								<ul className={styles.subMenu}>
-									<Link href="#">L'histoire</Link>
-									<Link href="#">L'équipe</Link>
+									<Link href="#">{"L'histoire"}</Link>
+									<Link href="#">{"L'équipe"}</Link>
 								</ul>
 							)}
 						</li>
@@ -90,7 +90,7 @@ export default function NavMenu({
 
 							{openSubMenu === "photo" && (
 								<ul className={styles.subMenu}>
-									<Link href="#">Page d'accueil</Link>
+									<Link href="#">{"Page daccueil"}</Link>
 									<Link href="#">Compagnie</Link>
 									<Link href="#">Spectacles</Link>
 									<Link href="#">Mediations</Link>
