@@ -1,0 +1,125 @@
+.section {
+	display: flex;
+	justify-content: space-around;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: var(--secondary-color);
+	transform: translateY(-100vh);
+	align-items: center;
+}
+.isOpen {
+	animation: slideIn 1s ease-out forwards;
+}
+
+.isClose {
+	animation: slideOut 1s ease-out forwards;
+}
+
+.button {
+	width: fit-content;
+	height: fit-content;
+	position: relative;
+	bottom: 35vh;
+	background-color: var(--secondary-color);
+	border: none;
+	font-size: 3em;
+	color: var(--main-color);
+	@media screen and (max-width: 568px) {
+		bottom: 40vh;
+		font-weight: lighter;
+		font-size: 2em;
+	}
+}
+
+.ul {
+	display: flex;
+	gap: 24vw;
+}
+.sectionMenu {
+	display: flex;
+	flex-direction: column;
+	gap: 16vh;
+}
+.subMenu {
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	gap: 0.8em;
+	font-size: 1.2em;
+	margin-top: 0.8em;
+	@media screen and (max-width: 568px) {
+		font-size: 1em;
+	}
+}
+.subMenu a {
+	text-decoration: none;
+	color: var(--primary-color);
+	background: linear-gradient(
+			to top,
+			var(--primary-color) 0%,
+			var(--primary-color) 3px,
+			transparent 2px
+		)
+		no-repeat;
+
+	background-size: 0 100%;
+	transition: background-size .3s;
+	padding-bottom: 0.2em;
+}
+.subMenu a:hover {
+	background-size: 100% 100%;
+}
+
+.li {
+	list-style: none;
+}
+.link {
+	display: flex;
+	flex-direction: column;
+
+	border: none;
+	text-align: left;
+	font-size: 2em;
+
+	color: var(--main-color);
+	text-decoration: none;
+	background: linear-gradient(
+			to top,
+			var(--main-color) 0%,
+			var(--main-color) 3px,
+			transparent 2px
+		)
+		no-repeat;
+
+	background-size: 0 100%;
+	transition: background-size .3s;
+	padding-bottom: 0.2em;
+	text-transform: uppercase;
+	@media screen and (max-width: 568px) {
+		font-size: 1em;
+	}
+}
+
+.link:hover {
+	background-size: 100% 100%;
+}
+
+@keyframes slideIn {
+	0% {
+		transform: translateY(-100vh);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+@keyframes slideOut {
+	0% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(-100vh);
+	}
+}
