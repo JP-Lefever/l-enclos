@@ -158,20 +158,20 @@ async function seedPhoto() {
 
 export async function GET() {
 	try {
-		await sql.begin(async () => [
-			initUuid(),
-			seedUser(),
-			seedRole(),
-			seedCompagnie(),
-			seedTeam(),
-			seedContact(),
-			seedCreation(),
-			seedAgenda(),
-			seedPartnair(),
-			seedCreationPartnair(),
-			seedMediation(),
-			seedPhoto(),
-		]);
+		await sql.begin(async () => {
+			initUuid();
+			seedUser();
+			seedRole();
+			seedCompagnie();
+			seedTeam();
+			seedContact();
+			seedCreation();
+			seedAgenda();
+			seedPartnair();
+			seedCreationPartnair();
+			seedMediation();
+			seedPhoto();
+		});
 
 		return Response.json({ message: "Database seeded successfully" });
 	} catch (error) {
