@@ -4,10 +4,11 @@ export default function NavMenu({
 	openMenu,
 	closeMenu,
 }: { openMenu: boolean; closeMenu: () => void }) {
+	console.log(openMenu);
 	return (
 		<>
 			<section
-				className={`${styles.section} ${openMenu ? styles.isOpen : !openMenu ? styles.isClose : ""}`}
+				className={`${styles.section} ${openMenu ? styles.isOpen : styles.isClose}`}
 			>
 				<ul className={styles.ul}>
 					<Link className={styles.link} href="#">

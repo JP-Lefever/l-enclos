@@ -6,10 +6,15 @@ import Image from "next/image";
 import styles from "./navBar.module.css";
 import { createPortal } from "react-dom";
 import NavMenu from "../menuNav/NavMenu";
+import Link from "next/link";
 
 export default function NavBar() {
 	const [openMenu, setOpenMenu] = useState(false);
+
 	const handleClickOpenMenu = () => {
+		setOpenMenu(!openMenu);
+	};
+	const handleClickCloseMenu = () => {
 		setOpenMenu(!openMenu);
 	};
 	return (
@@ -19,23 +24,20 @@ export default function NavBar() {
 					<Menu onClick={handleClickOpenMenu} size={48} />
 					{openMenu &&
 						createPortal(
-							<NavMenu
-								openMenu={openMenu}
-								closeMenu={() => {
-									setOpenMenu(false);
-								}}
-							/>,
+							<NavMenu openMenu={openMenu} closeMenu={handleClickCloseMenu} />,
 							document.body,
 						)}
 				</section>
 				<section className={styles.image}>
-					<Image
-						src="/images/logo.png"
-						width={1280}
-						height={760}
-						alt="logo compagnie l'enclos"
-						className={styles.logo}
-					/>
+					<Link href="/">
+						<Image
+							src="/images/logo.png"
+							width={1280}
+							height={760}
+							alt="logo compagnie l'enclos"
+							className={styles.logo}
+						/>
+					</Link>
 				</section>
 			</nav>
 		</>

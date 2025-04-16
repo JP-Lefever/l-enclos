@@ -27,6 +27,10 @@
 	border: none;
 	font-size: 3em;
 	color: var(--main-color);
+	@media screen and (max-width: 568px) {
+		bottom: 30vh;
+		left: 5vw;
+	}
 }
 
 .ul {
