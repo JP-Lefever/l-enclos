@@ -1,12 +1,32 @@
 "use client";
+import type {
+	photoHomePage,
+	photoCarouselProps,
+} from "@/app/assets/lib/definitions";
 import styles from "./photoHomePage.module.css";
 import { useForm } from "react-hook-form";
 
 export default function PhotoHomePage() {
-	const { register } = useForm();
+	const { register, handleSubmit } = useForm<photoHomePage>();
+
+	const onSubmitCarousel = async (photo: photoCarouselProps) => {
+		const { photoCarousel1, photoCarousel2, photoCarousel3, photoCarousel4 } =
+			photo;
+		const formData = new FormData();
+		formData.append("photoCarousel1", photoCarousel1[0]);
+		formData.append("photoCarousel2", photoCarousel2[0]);
+		formData.append("photoCarousel3", photoCarousel3[0]);
+		formData.append("photoCarousel4", photoCarousel4[0]);
+
+		const uploadCarousel = await fetch("/api/upload", {
+			method: "POST",
+			body: formData,
+		});
+	};
+
 	return (
 		<>
-			<form>
+			<form onSubmit={handleSubmit(onSubmitCarousel)}>
 				<fieldset className={styles.fieldset}>
 					<legend className={styles.legend}>Photos carousel</legend>
 					<label className={styles.label} htmlFor="photo carousel">
@@ -15,24 +35,27 @@ export default function PhotoHomePage() {
 					<input
 						className={styles.input}
 						type="file"
-						{...register("photo_carousel1")}
+						{...register("photoCarousel1")}
 					/>
 					<input
 						className={styles.input}
 						type="file"
-						{...register("photo_carousel2")}
+						{...register("photoCarousel2")}
 					/>
 					<input
 						className={styles.input}
 						type="file"
-						{...register("photo_carousel3")}
+						{...register("photoCarousel3")}
 					/>
 					<input
 						className={styles.input}
 						type="file"
-						{...register("photo_carousel4")}
+						{...register("photoCarousel4")}
 					/>
 				</fieldset>
+				<button type="submit">Envoyer</button>
+			</form>
+			<form>
 				<fieldset className={styles.fieldset}>
 					<legend className={styles.legend}>Photos encart compagnie</legend>
 					<label className={styles.label} htmlFor="photo_compagnie">
@@ -41,9 +64,11 @@ export default function PhotoHomePage() {
 					<input
 						className={styles.input}
 						type="file"
-						{...register("photo_compagnie")}
+						{...register("photoCompagnie")}
 					/>
 				</fieldset>
+			</form>
+			<form>
 				<fieldset className={styles.fieldset}>
 					<legend className={styles.legend}>Photos encart spectacle</legend>
 					<label className={styles.label} htmlFor="photo_spectacle">
@@ -52,9 +77,11 @@ export default function PhotoHomePage() {
 					<input
 						className={styles.input}
 						type="file"
-						{...register("photo_spectacle")}
+						{...register("photoSpectacle")}
 					/>
 				</fieldset>
+			</form>
+			<form>
 				<fieldset className={styles.fieldset}>
 					<legend className={styles.legend}>Photos encart mediation</legend>
 					<label className={styles.label} htmlFor="photo_mediation">
@@ -63,7 +90,7 @@ export default function PhotoHomePage() {
 					<input
 						className={styles.input}
 						type="file"
-						{...register("photo_mediation")}
+						{...register("photoMediation")}
 					/>
 				</fieldset>
 			</form>
