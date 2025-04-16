@@ -158,7 +158,7 @@ async function seedPhoto() {
 
 export async function GET() {
 	try {
-		await sql.begin(async (sql) => [
+		await sql.begin(async () => [
 			initUuid(),
 			seedUser(),
 			seedRole(),
