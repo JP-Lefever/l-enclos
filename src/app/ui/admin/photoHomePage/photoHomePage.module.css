@@ -1,0 +1,14 @@
+.fieldset {
+	padding: 1em;
+	display: flex;
+	gap: 5vw;
+	border: 1px var(--primary-color) solid;
+	border-radius: 10px;
+	margin-bottom: 2em;
+}
+
+.legend {
+	border: 1px var(--primary-color) solid;
+	padding: 0.5em;
+	border-radius: 10px;
+}
