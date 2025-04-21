@@ -2,12 +2,14 @@
 	padding: 1em;
 	display: flex;
 	flex-wrap: wrap;
+	align-items: center;
 	gap: 2vw;
 	border: 1px var(--primary-color) solid;
 	border-radius: 10px;
 	margin-bottom: 2em;
 	@media screen and (max-width: 568px) {
 		flex-direction: column;
+		align-items: flex-start;
 	}
 }
 
@@ -29,4 +31,18 @@
 	display: flex;
 	align-items: center;
 	gap: 2vw;
+	@media screen and (max-width: 568px) {
+		flex-direction: column;
+		align-items: flex-start;
+		width: 80vw;
+	}
+}
+.textarea {
+	width: 70vw;
+}
+.select {
+	width: 12vw;
+	@media screen and (max-width: 568px) {
+		width: 70vw;
+	}
 }

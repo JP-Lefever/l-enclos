@@ -1,14 +1,16 @@
 "use client";
 import styles from "./addSpectacle.module.css";
-import type { partnairProps } from "@/lib/definitions";
+import type { creationProps, partnairProps } from "@/lib/definitions";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 
 export default function AddSpectacle({
 	partnair,
 }: { partnair: partnairProps[] }) {
-	const { register } = useForm();
-	console.log(partnair);
+	const {
+		register,
+		formState: { errors },
+	} = useForm<creationProps>();
 
 	const [select, setSelect] = useState(1);
 
@@ -21,15 +23,34 @@ export default function AddSpectacle({
 			<form>
 				<fieldset className={styles.fieldset}>
 					<legend className={styles.legend}> Informations générales</legend>
+
 					<label htmlFor="title">Titre du spectacle :</label>
-					<textarea {...register("title")} />
+					<textarea
+						{...register("title", {
+							required: "champ requis",
+							pattern: {
+								value: /^[^<>]*$/,
+								message: "Caractères <> interdits",
+							},
+							maxLength: {
+								value: 255,
+								message: "Maximum 255 caractères",
+							},
+						})}
+					/>
+					<p>{errors.title?.message}</p>
+
 					<label htmlFor="age">Age :</label>
 					<textarea {...register("age")} />
 					<label htmlFor="duration">Durée : </label>
 					<textarea {...register("duration")} />
 					<div className={styles.div}>
 						<label htmlFor="resumé">Résumé du spectacle : </label>
-						<textarea rows={10} cols={180} {...register("resumé")} />
+						<textarea
+							className={styles.textarea}
+							rows={10}
+							{...register("resumé")}
+						/>
 					</div>
 				</fieldset>
 				<fieldset className={styles.fieldset}>
@@ -57,7 +78,11 @@ export default function AddSpectacle({
 				<fieldset className={styles.fieldset}>
 					<legend className={styles.legend}>Partenaires</legend>
 					{[...Array(select)].map((select, index) => (
-						<select key={select} {...register(`partnair${index + 1}`)}>
+						<select
+							className={styles.select}
+							key={select}
+							{...register(`partnair${index + 1}`)}
+						>
 							<option value="">Choisissez un partenaire</option>
 							{partnair.map((p) => (
 								<option key={p.name} value={p.name}>

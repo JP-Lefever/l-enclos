@@ -16,3 +16,21 @@ export type partnairProps = {
 	partnair: string;
 	name: string;
 };
+
+export type creationProps = {
+	title: string;
+	age: string;
+	duration: string;
+	resumé: string;
+	author: string;
+	Interpretation: string;
+	music: string;
+	illustration: string;
+	assistant: string;
+	jauge: string;
+	Plateau: string;
+	Régie: string;
+	[key: `partnair${number}`]: string | undefined;
+	posterPhoto: string;
+	mainPhoto: string;
+};
