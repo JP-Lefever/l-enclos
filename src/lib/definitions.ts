@@ -14,4 +14,5 @@ export type photoCompagnieProps = {
 
 export type partnairProps = {
 	partnair: string;
+	name: string;
 };

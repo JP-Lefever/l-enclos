@@ -1,50 +1,87 @@
+"use client";
+import styles from "./addSpectacle.module.css";
+import type { partnairProps } from "@/lib/definitions";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 
-export default function addSpectacle() {
+export default function AddSpectacle({
+	partnair,
+}: { partnair: partnairProps[] }) {
 	const { register } = useForm();
+	console.log(partnair);
+
+	const [select, setSelect] = useState(1);
+
+	const addSelect = () => {
+		setSelect((prev) => prev + 1);
+	};
 
 	return (
 		<>
 			<form>
-				<fieldset>
-					<legend> Informations générales</legend>
+				<fieldset className={styles.fieldset}>
+					<legend className={styles.legend}> Informations générales</legend>
 					<label htmlFor="title">Titre du spectacle :</label>
-					<input type="text" {...register("title")} />
+					<textarea {...register("title")} />
 					<label htmlFor="age">Age :</label>
-					<input type="text" {...register("age")} />
-					<label htmlFor="resumé">Résumé du spectacle : </label>
-					<input type="textarea" {...register("resumé")} />
+					<textarea {...register("age")} />
 					<label htmlFor="duration">Durée : </label>
-					<input type="text" {...register("duration")} />
+					<textarea {...register("duration")} />
+					<div className={styles.div}>
+						<label htmlFor="resumé">Résumé du spectacle : </label>
+						<textarea rows={10} cols={180} {...register("resumé")} />
+					</div>
 				</fieldset>
-				<fieldset>
-					<legend>Distribution</legend>
+				<fieldset className={styles.fieldset}>
+					<legend className={styles.legend}>Distribution</legend>
 					<label htmlFor="author">Ecriture : </label>
-					<input type="text" {...register("author")} />
+					<textarea {...register("author")} />
 					<label htmlFor="Interpretation">Interpretation : </label>
-					<input type="text" {...register("Interpretation")} />
+					<textarea {...register("Interpretation")} />
 					<label htmlFor="music">Musiques : </label>
-					<input type="text" {...register("music")} />
+					<textarea {...register("music")} />
 					<label htmlFor="illustration">Illustration : </label>
-					<input type="text" {...register("illustration")} />
+					<textarea {...register("illustration")} />
 					<label htmlFor="assistant">Oeil exterieur : </label>
-					<input type="text" {...register("assistant")} />
+					<textarea {...register("assistant")} />
 				</fieldset>
-				<fieldset>
-					<legend>Technique</legend>
+				<fieldset className={styles.fieldset}>
+					<legend className={styles.legend}>Technique</legend>
 					<label htmlFor="jauge">Jauge : </label>
-					<input type="text" {...register("jauge")} />
+					<textarea {...register("jauge")} />
 					<label htmlFor="Plateau">Plateau : </label>
-					<input type="text" {...register("Plateau")} />
+					<textarea {...register("Plateau")} />
 					<label htmlFor="Régie">Régie : </label>
-					<input type="text" {...register("Régie")} />
+					<textarea {...register("Régie")} />
 				</fieldset>
-				<fieldset>
-					<legend>Partenaires</legend>
+				<fieldset className={styles.fieldset}>
+					<legend className={styles.legend}>Partenaires</legend>
+					{[...Array(select)].map((select, index) => (
+						<select key={select} {...register(`partnair${index + 1}`)}>
+							<option value="">Choisissez un partenaire</option>
+							{partnair.map((p) => (
+								<option key={p.name} value={p.name}>
+									{p.name}
+								</option>
+							))}
+						</select>
+					))}
+					<button onClick={addSelect} type="button">
+						Ajouter un partenaire
+					</button>
 				</fieldset>
-				<fieldset>
-					<legend>Photos</legend>
+				<fieldset className={styles.fieldset}>
+					<legend className={styles.legend}>Photos</legend>
+					<label htmlFor="posterPhoto">Affiche spectacle</label>
+					<input type="file" {...register("posterPhoto")} />
+					<label htmlFor="mainPhoto">
+						Photo principale de la page du spectacle
+					</label>
+					<input type="file" {...register("mainPhoto")} />
 				</fieldset>
+				<button className={styles.button} type="submit">
+					Ajouter
+				</button>
 			</form>
 		</>
 	);
