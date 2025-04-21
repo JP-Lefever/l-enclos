@@ -1,7 +1,7 @@
 import { paragraphFont } from "../../../components/ui/font";
 import styles from "../../(client)/layout.module.css";
 import "../../globals.css";
-import NavAdmin from "@/components/ui/navAdmin/navAdmin";
+import NavAdmin from "@/features/navAdmin/navAdmin";
 import { Bounce, ToastContainer } from "react-toastify";
 
 export default function RootLayout({

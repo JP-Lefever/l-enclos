@@ -3,12 +3,12 @@
 import { Menu } from "lucide-react";
 import { useState } from "react";
 import Image from "next/image";
-import styles from "./navBar.module.css";
+import styles from "./navAdmin.module.css";
 import { createPortal } from "react-dom";
-import NavMenu from "../menuNav/NavMenu";
+import AdminMenu from "../../components/ui/adminMenu/AdminMenu";
 import Link from "next/link";
 
-export default function NavBar() {
+export default function NavAdmin() {
 	const [openMenu, setOpenMenu] = useState(false);
 
 	const handleClickOpenMenu = () => {
@@ -24,12 +24,15 @@ export default function NavBar() {
 					<Menu onClick={handleClickOpenMenu} size={48} />
 					{openMenu &&
 						createPortal(
-							<NavMenu openMenu={openMenu} closeMenu={handleClickCloseMenu} />,
+							<AdminMenu
+								openMenu={openMenu}
+								closeMenu={handleClickCloseMenu}
+							/>,
 							document.body,
 						)}
 				</section>
 				<section className={styles.image}>
-					<Link href="/">
+					<Link href="/admin">
 						<Image
 							src="/images/logo.png"
 							width={1280}

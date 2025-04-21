@@ -1,7 +1,7 @@
 import styles from "./page.module.css";
 import PhotoHomePage from "@/features/photoHomePage/components/PhotoHomePage";
 
-export default function PhotoAccueil() {
+export default function PhotoAccueilPage() {
 	return (
 		<>
 			<section className={styles.section}>
