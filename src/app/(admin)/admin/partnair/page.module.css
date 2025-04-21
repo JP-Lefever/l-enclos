@@ -1,0 +1,10 @@
+.h1 {
+	font-family: var(--title-font);
+	letter-spacing: var(--letter-spacing);
+	margin-bottom: 5vh;
+	color: var(--secondary-color);
+	font-size: 1.8em;
+}
+.section {
+	margin: 5vh;
+}
