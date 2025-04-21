@@ -2,10 +2,11 @@
 import type { photoHomePage } from "@/lib/definitions";
 import styles from "./photoHomePage.module.css";
 import { useForm } from "react-hook-form";
-import { uploadPhoto } from "../action";
+import { addPhoto } from "../action";
+import { toast } from "react-toastify";
 
 export default function PhotoHomePage() {
-	const { register, handleSubmit } = useForm<photoHomePage>();
+	const { register, handleSubmit, reset } = useForm<photoHomePage>();
 
 	const onSubmitCarousel = async (photo: photoHomePage) => {
 		const {
@@ -25,13 +26,17 @@ export default function PhotoHomePage() {
 		formData.append("photoCompagnie", photoCompagnie[0]);
 		formData.append("photoMediation", photoMediation[0]);
 		formData.append("photoSpectacle", photoSpectacle[0]);
-		const uploadCarousel = await fetch("/api/upload", {
+		const uploadPhoto = await fetch("/api/upload", {
 			method: "POST",
 			body: formData,
 		});
 
-		const response = await uploadCarousel.json();
-		await uploadPhoto(response);
+		const responseUpload = await uploadPhoto.json();
+		const responseDb = await addPhoto(responseUpload);
+		reset();
+		if (responseDb?.success === true) {
+			toast.success(responseDb.message);
+		}
 	};
 
 	return (

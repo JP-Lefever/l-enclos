@@ -30,6 +30,7 @@ class utilsPhotoHomePage {
                 INSERT INTO photo (name, service)
                 VALUES ${sql(photos)}
             `;
+			return { message: "Les photos ont bien été ajouté" };
 		} catch (error) {
 			console.log(error);
 		}
