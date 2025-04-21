@@ -11,3 +11,7 @@ export type photoHomePage = {
 export type photoCompagnieProps = {
 	photoCompagnie: string;
 };
+
+export type partnairProps = {
+	partnair: string;
+};
