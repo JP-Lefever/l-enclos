@@ -22,6 +22,6 @@ export async function addPartnair(data: partnairProps) {
 			return { success: true, message: insertData?.message };
 		}
 	} catch (e) {
-		return { message: "une erreur est survenue" };
+		return { error: e, message: "une erreur est survenue" };
 	}
 }
