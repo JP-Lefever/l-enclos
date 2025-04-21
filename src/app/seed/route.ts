@@ -171,6 +171,13 @@ async function alterPhoto() {
     ADD CONSTRAINT fk_photo_creation FOREIGN KEY(creation_id) REFERENCES creation(id);
     `;
 }
+
+async function dropColumnCreation() {
+	await sql`
+    ALTER TABLE creation
+    DROP COLUMN description;  
+    `;
+}
 export async function GET() {
 	try {
 		await sql.begin(async () => {
@@ -188,6 +195,7 @@ export async function GET() {
 			seedPhoto();
 			alterCreation();
 			alterPhoto();
+			dropColumnCreation();
 		});
 
 		return Response.json({ message: "Database seeded successfully" });

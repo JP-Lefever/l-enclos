@@ -42,7 +42,7 @@ export default function NavMenu({
 							</button>
 							{openSubMenu === "spectacle" && (
 								<ul className={styles.subMenu}>
-									<Link href="#">Ajouter</Link>
+									<Link href="/admin/spectacles/new">Ajouter</Link>
 									<Link href="#">Modifier</Link>
 								</ul>
 							)}
