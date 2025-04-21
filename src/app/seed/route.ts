@@ -156,6 +156,21 @@ async function seedPhoto() {
     `;
 }
 
+async function alterCreation() {
+	await sql`
+    ALTER TABLE creation
+    ADD COLUMN posterPhoto  VARCHAR(255) NOT NULL,
+    ADD COLUMN mainphoto VARCHAR(255) NOT NULL;
+    `;
+}
+
+async function alterPhoto() {
+	await sql`
+    ALTER TABLE photo
+    ADD COLUMN creation_id UUID,
+    ADD CONSTRAINT fk_photo_creation FOREIGN KEY(creation_id) REFERENCES creation(id);
+    `;
+}
 export async function GET() {
 	try {
 		await sql.begin(async () => {
@@ -171,6 +186,8 @@ export async function GET() {
 			seedCreationPartnair();
 			seedMediation();
 			seedPhoto();
+			alterCreation();
+			alterPhoto();
 		});
 
 		return Response.json({ message: "Database seeded successfully" });
