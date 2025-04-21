@@ -104,7 +104,9 @@ export default function PhotoHomePage() {
 						{...register("photoMediation")}
 					/>
 				</fieldset>
-				<button type="submit">Envoyer</button>
+				<button className={styles.button} type="submit">
+					Envoyer
+				</button>
 			</form>
 		</>
 	);
