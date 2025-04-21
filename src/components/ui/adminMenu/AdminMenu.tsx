@@ -70,7 +70,11 @@ export default function NavMenu({
 					</section>
 					<section className={styles.sectionMenu}>
 						<li className={styles.li}>
-							<Link className={styles.link} href="#">
+							<Link
+								className={styles.link}
+								href="/admin/partnair"
+								onClick={closeMenu}
+							>
 								Partenaires
 							</Link>
 						</li>
