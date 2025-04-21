@@ -17,7 +17,7 @@ export const POST = async (req: NextRequest) => {
 		const uploadDir = path.join(process.cwd(), "public/uploads");
 
 		const uploadedFiles: Record<string, string> = {};
-		console.log(uploadedFiles);
+		console.log(fileData);
 
 		for (const [fieldName, file] of fileData.entries()) {
 			if (file instanceof File) {
