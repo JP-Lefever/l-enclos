@@ -90,10 +90,12 @@ export default function NavMenu({
 
 							{openSubMenu === "photo" && (
 								<ul className={styles.subMenu}>
-									<Link href="/admin/photo_page_accueil">
+									<Link href="/admin/photo_page_accueil" onClick={closeMenu}>
 										{"Page daccueil"}
 									</Link>
-									<Link href="#">Compagnie</Link>
+									<Link href="/admin/photo_compagnie" onClick={closeMenu}>
+										Compagnie
+									</Link>
 									<Link href="#">Spectacles</Link>
 									<Link href="#">Mediations</Link>
 								</ul>

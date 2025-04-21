@@ -7,3 +7,7 @@ export type photoHomePage = {
 	photoSpectacle: string;
 	photoMediation: string;
 };
+
+export type photoCompagnieProps = {
+	photoCompagnie: string;
+};
