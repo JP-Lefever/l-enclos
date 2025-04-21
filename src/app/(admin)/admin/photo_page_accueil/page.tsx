@@ -1,5 +1,5 @@
 import styles from "./page.module.css";
-import PhotoHomePage from "@/app/ui/admin/photoHomePage/PhotoHomePage";
+import PhotoHomePage from "@/features/photoHomePage/components/PhotoHomePage";
 
 export default function PhotoAccueil() {
 	return (

@@ -37,7 +37,7 @@ export default function NavAdmin() {
 							src="/images/logo.png"
 							width={1280}
 							height={760}
-							alt={"logo compagnie l'enclos"}
+							alt="logo compagnie l'enclos"
 							className={styles.logo}
 						/>
 					</Link>

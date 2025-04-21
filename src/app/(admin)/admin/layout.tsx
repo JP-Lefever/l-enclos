@@ -1,7 +1,7 @@
-import { paragraphFont } from "../../ui/font";
+import { paragraphFont } from "../../../components/ui/font";
 import styles from "../../(client)/layout.module.css";
 import "../../globals.css";
-import NavAdmin from "@/app/ui/admin/navBar/NavAdmin";
+import NavAdmin from "@/components/ui/navAdmin/navAdmin";
 
 export default function RootLayout({
 	children,

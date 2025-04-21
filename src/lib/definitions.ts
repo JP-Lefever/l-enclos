@@ -7,10 +7,3 @@ export type photoHomePage = {
 	photoSpectacle: string;
 	photoMediation: string;
 };
-
-export type photoCarouselProps = {
-	photoCarousel1: string;
-	photoCarousel2: string;
-	photoCarousel3: string;
-	photoCarousel4: string;
-};
