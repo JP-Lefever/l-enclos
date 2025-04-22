@@ -12,8 +12,19 @@
 	width: 100vw;
 	height: 100vh;
 	overflow-x: hidden;
-	background-color: var(--primary-color);
+	background-color: var(--nuance-blue);
 	@media screen and (max-width: 568px) {
 		width: 100vw;
+	}
+}
+
+.sectionMed {
+	height: 100vh;
+	overflow-x: hidden;
+	width: fit-content;
+	margin-top: 15vh;
+
+	@media screen and (max-width: 568px) {
+		width: 90vw;
 	}
 }

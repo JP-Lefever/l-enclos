@@ -1,5 +1,6 @@
 .section {
 	display: flex;
+	align-items: center;
 
 	@media screen and (max-width: 568px) {
 		flex-direction: column;
@@ -9,7 +10,9 @@
 .image {
 	width: 50vw;
 	height: auto;
-
+	position: relative;
+	z-index: 10;
+	margin-left: 2em;
 	@media screen and (max-width: 568px) {
 		width: 90vw;
 	}
@@ -25,7 +28,7 @@
 	font-family: var(--title-font);
 	position: relative;
 	right: 1.5em;
-	color: var(--primary-color);
+	color: var(--secondary-color);
 	line-height: 1.4em;
 	letter-spacing: 0.2em;
 
@@ -36,13 +39,22 @@
 		text-align: center;
 	}
 }
-
+.article {
+	border: solid 1px var(--primary-color);
+	z-index: 0;
+	width: 100vw;
+	height: 90vh;
+	position: relative;
+	right: 10vw;
+	background-color: var(--primary-color);
+}
 .paragraph {
 	width: 25vw;
 	text-align: justify;
-	margin-left: 4em;
-	margin-top: 2em;
+	margin-left: 20vw;
+	margin-top: 20vh;
 	margin-bottom: 4em;
+	color: black;
 	@media screen and (max-width: 568px) {
 		width: 90vw;
 		margin: 0;
@@ -66,7 +78,7 @@
 
 .div {
 	width: 25vw;
-	margin-left: 4em;
+	margin-left: 20vw;
 	@media screen and (max-width: 568px) {
 		width: 90vw;
 		margin-top: 1em;
