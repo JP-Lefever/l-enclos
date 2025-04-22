@@ -178,6 +178,16 @@ async function dropColumnCreation() {
     DROP COLUMN description;  
     `;
 }
+
+async function alterCreationTable() {
+	await sql`
+    ALTER TABLE creation
+    ADD COLUMN music VARCHAR(255),
+    ADD COLUMN video VARCHAR(255),
+    ADD COLUMN light VARCHAR(255);
+    `;
+}
+
 export async function GET() {
 	try {
 		await sql.begin(async () => {
@@ -196,6 +206,7 @@ export async function GET() {
 			alterCreation();
 			alterPhoto();
 			dropColumnCreation();
+			alterCreationTable();
 		});
 
 		return Response.json({ message: "Database seeded successfully" });
