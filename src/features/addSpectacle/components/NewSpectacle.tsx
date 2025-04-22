@@ -3,7 +3,7 @@
 import styles from "./newSpectacle.module.css";
 import type { creationProps, partnairProps } from "@/lib/definitions";
 import { useState } from "react";
-import { useForm, Controller } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { addSpectacle } from "../action";
 import { toast } from "react-toastify";
 
