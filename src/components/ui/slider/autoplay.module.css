@@ -11,4 +11,7 @@
 	border: none;
 	background-color: transparent;
 	color: var(--main-color);
+	@media screen and (max-width: 568px) {
+		opacity: 0;
+	}
 }

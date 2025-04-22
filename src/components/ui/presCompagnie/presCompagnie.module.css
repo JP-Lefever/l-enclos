@@ -1,0 +1,71 @@
+.section {
+	display: flex;
+	@media screen and (max-width: 568px) {
+		flex-direction: column;
+	}
+}
+
+.image {
+	width: 50vw;
+	height: auto;
+	@media screen and (max-width: 568px) {
+		width: 90vw;
+	}
+}
+.span {
+	display: block;
+	@media screen and (max-width: 568px) {
+		display: inline;
+	}
+}
+.h1 {
+	font-size: 6em;
+	font-family: var(--title-font);
+	position: relative;
+	right: 1.5em;
+	color: var(--primary-color);
+	line-height: 1.4em;
+	letter-spacing: 0.2em;
+	@media screen and (max-width: 568px) {
+		font-size: 2em;
+		position: relative;
+		right: 0;
+	}
+}
+
+.paragraph {
+	width: 25vw;
+	text-align: justify;
+	margin-left: 4em;
+	margin-top: 2em;
+	margin-bottom: 4em;
+	@media screen and (max-width: 568px) {
+		width: 90vw;
+		margin: 0;
+	}
+}
+
+.link {
+	border: solid 2px var(--warm-color);
+	text-decoration: none;
+	font-weight: bold;
+	color: var(--warm-color);
+	padding: 0.3em 2em;
+	border-radius: 10px;
+	display: block;
+	text-align: center;
+	@media screen and (max-width: 568px) {
+		width: 90vw;
+		margin: 0;
+	}
+}
+
+.div {
+	width: 25vw;
+	margin-left: 4em;
+	@media screen and (max-width: 568px) {
+		width: 90vw;
+		margin-top: 1em;
+		margin-left: 0;
+	}
+}
