@@ -1,3 +1,7 @@
+import {
+	ScrollAnimation,
+	ScrollAnimation2,
+} from "@/components/ui/animation/ScrollAnimation";
 import styles from "./page.module.css";
 import PresCompagnie from "@/components/ui/presCompagnie/PresCompagnie";
 import PresMediation from "@/components/ui/presMediation/PresMediation";
@@ -10,15 +14,21 @@ export default function Home() {
 			<section>
 				<AutoPlay />
 			</section>
-			<section className={styles.sectionPres}>
-				<PresCompagnie />
-			</section>
-			<section className={styles.sectionSpec}>
-				<PresSpectacles />
-			</section>
-			<section className={styles.sectionMed}>
-				<PresMediation />
-			</section>
+			<ScrollAnimation>
+				<section className={styles.sectionPres}>
+					<PresCompagnie />
+				</section>
+			</ScrollAnimation>
+			<ScrollAnimation2>
+				<section className={styles.sectionSpec}>
+					<PresSpectacles />
+				</section>
+			</ScrollAnimation2>
+			<ScrollAnimation>
+				<section className={styles.sectionMed}>
+					<PresMediation />
+				</section>
+			</ScrollAnimation>
 		</>
 	);
 }
