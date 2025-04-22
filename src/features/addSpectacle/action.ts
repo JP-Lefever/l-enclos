@@ -6,7 +6,7 @@ import utils from "./utils";
 
 const noHtmlRegex = /^[^<>]*$/;
 
-export const spectacleSchema = z.object({
+const spectacleSchema = z.object({
 	title: z
 		.string()
 		.nonempty("champ requis")
@@ -17,11 +17,11 @@ export const spectacleSchema = z.object({
 
 	duration: z.string().nonempty("champ requis").max(255).regex(noHtmlRegex),
 
-	resumé: z.string().nonempty("champ requis").regex(noHtmlRegex),
+	resume: z.string().nonempty("champ requis").regex(noHtmlRegex),
 
 	author: z.string().nonempty("champ requis").max(255).regex(noHtmlRegex),
 
-	Interpretation: z
+	interpretation: z
 		.string()
 		.nonempty("champ requis")
 		.max(255)
@@ -54,18 +54,18 @@ export const spectacleSchema = z.object({
 
 	regie: z.string().nonempty("champ requis").max(255).regex(noHtmlRegex),
 
-	partnair1: z.string(),
-	partnair2: z.string(),
-	partnair3: z.string(),
-	partnair4: z.string(),
-	partnair5: z.string(),
-	partnair6: z.string(),
-	partnair7: z.string(),
-	partnair8: z.string(),
-	partnair9: z.string(),
-	partnair10: z.string(),
-	partnair11: z.string(),
-	partnair12: z.string(),
+	partnair1: z.string().optional(),
+	partnair2: z.string().optional(),
+	partnair3: z.string().optional(),
+	partnair4: z.string().optional(),
+	partnair5: z.string().optional(),
+	partnair6: z.string().optional(),
+	partnair7: z.string().optional(),
+	partnair8: z.string().optional(),
+	partnair9: z.string().optional(),
+	partnair10: z.string().optional(),
+	partnair11: z.string().optional(),
+	partnair12: z.string().optional(),
 });
 
 export async function addSpectacle(
@@ -91,6 +91,31 @@ export async function addSpectacle(
 			...rest
 		} = parsedData.data;
 
-		const insertSpectacle = await utils.createSpectacle(rest, photo);
+		const partnair = [
+			partnair1,
+			partnair2,
+			partnair3,
+			partnair4,
+			partnair5,
+			partnair6,
+			partnair7,
+			partnair8,
+			partnair9,
+			partnair10,
+			partnair11,
+			partnair12,
+		];
+
+		const validPartnair = partnair.filter((p) => p !== undefined);
+
+		const spectacleId = await utils.createSpectacle(rest, photo);
+		console.log(partnair);
+		console.log(validPartnair);
+		// const idPartnair = await utils.readIdPartnair(partnair);
+
+		const idCreationPartnair = await utils.createPartnerCreation(
+			spectacleId,
+			validPartnair,
+		);
 	}
 }

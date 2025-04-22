@@ -7,7 +7,7 @@ const sql = postgres(process.env.POSTGRES_URL as string, { ssl: "require" });
 
 export async function fetchPartnair() {
 	const partnair = sql<partnairProps[]>`
-    SELECT name
+    SELECT name, id
     FROM partnair
     `;
 	return partnair;

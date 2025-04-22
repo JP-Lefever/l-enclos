@@ -21,12 +21,11 @@ export default function AddSpectacle({
 	};
 
 	const onSubmit = async (data: creationProps) => {
-		console.log(data);
 		const { posterPhoto, mainPhoto, ...rest } = data;
 
 		const formData = new FormData();
-		formData.append("poster", posterPhoto[0]);
-		formData.append("mainPhoto", mainPhoto);
+		formData.append("posterPhoto", posterPhoto[0]);
+		formData.append("mainPhoto", mainPhoto[0]);
 
 		const uploadPhoto = await fetch("/api/upload", {
 			method: "POST",
@@ -34,7 +33,7 @@ export default function AddSpectacle({
 		});
 		const responseUpload = await uploadPhoto.json();
 
-		// const responseDb = await addSpectacle(rest, responseUpload);
+		const responseDb = await addSpectacle(rest, responseUpload);
 	};
 
 	return (
@@ -88,11 +87,11 @@ export default function AddSpectacle({
 						})}
 					/>
 					<div className={styles.div}>
-						<label htmlFor="resumé">Résumé du spectacle : </label>
+						<label htmlFor="resume">Résumé du spectacle : </label>
 						<textarea
 							className={styles.textarea}
 							rows={10}
-							{...register("resumé", {
+							{...register("resume", {
 								required: "champ requis",
 								pattern: {
 									value: /^[^<>]*$/,
@@ -118,9 +117,9 @@ export default function AddSpectacle({
 							},
 						})}
 					/>
-					<label htmlFor="Interpretation">Interpretation : </label>
+					<label htmlFor="interpretation">Interpretation : </label>
 					<textarea
-						{...register("Interpretation", {
+						{...register("interpretation", {
 							required: "champ requis",
 							pattern: {
 								value: /^[^<>]*$/,
@@ -268,7 +267,7 @@ export default function AddSpectacle({
 						>
 							<option value="">Choisissez un partenaire</option>
 							{partnair.map((p) => (
-								<option key={p.name} value={p.name}>
+								<option key={p.name} value={p.id}>
 									{p.name}
 								</option>
 							))}

@@ -5,7 +5,6 @@ export default function NavMenu({
 	openMenu,
 	closeMenu,
 }: { openMenu: boolean; closeMenu: () => void }) {
-	console.log(openMenu);
 	const [openSubMenu, setOpenSubMenu] = useState<string | null>(null);
 	const handleClickMenu = (menuName: string) => {
 		setOpenSubMenu((s) => (s === menuName ? null : menuName));

@@ -15,15 +15,16 @@ export type photoCompagnieProps = {
 export type partnairProps = {
 	partnair: string;
 	name: string;
+	id: string;
 };
 
 export type creationProps = {
 	title: string;
 	age: string;
 	duration: string;
-	resumé: string;
+	resume: string;
 	author: string;
-	Interpretation: string;
+	interpretation: string;
 	music: string;
 	illustration: string;
 	poster: string;
