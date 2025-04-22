@@ -3,12 +3,14 @@ import styles from "./addSpectacle.module.css";
 import type { creationProps, partnairProps } from "@/lib/definitions";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { addSpectacle } from "../action";
 
 export default function AddSpectacle({
 	partnair,
 }: { partnair: partnairProps[] }) {
 	const {
 		register,
+		handleSubmit,
 		formState: { errors },
 	} = useForm<creationProps>();
 
@@ -18,9 +20,26 @@ export default function AddSpectacle({
 		setSelect((prev) => prev + 1);
 	};
 
+	const onSubmit = async (data: creationProps) => {
+		console.log(data);
+		const { posterPhoto, mainPhoto, ...rest } = data;
+
+		const formData = new FormData();
+		formData.append("poster", posterPhoto[0]);
+		formData.append("mainPhoto", mainPhoto);
+
+		const uploadPhoto = await fetch("/api/upload", {
+			method: "POST",
+			body: formData,
+		});
+		const responseUpload = await uploadPhoto.json();
+
+		// const responseDb = await addSpectacle(rest, responseUpload);
+	};
+
 	return (
 		<>
-			<form>
+			<form onSubmit={handleSubmit(onSubmit)}>
 				<fieldset className={styles.fieldset}>
 					<legend className={styles.legend}> Informations générales</legend>
 
@@ -167,6 +186,19 @@ export default function AddSpectacle({
 							},
 						})}
 					/>
+					<label htmlFor="poster">Affiche et plaquette : </label>
+					<textarea
+						{...register("poster", {
+							pattern: {
+								value: /^[^<>]*$/,
+								message: "Caractères <> interdits",
+							},
+							maxLength: {
+								value: 255,
+								message: "Maximum 255 caractères",
+							},
+						})}
+					/>
 					<label htmlFor="assistant">Oeil exterieur : </label>
 					<textarea
 						{...register("assistant", {
@@ -197,9 +229,9 @@ export default function AddSpectacle({
 							},
 						})}
 					/>
-					<label htmlFor="Plateau">Plateau : </label>
+					<label htmlFor="plateau">Plateau : </label>
 					<textarea
-						{...register("Plateau", {
+						{...register("plateau", {
 							required: "champ requis",
 							pattern: {
 								value: /^[^<>]*$/,
@@ -211,9 +243,9 @@ export default function AddSpectacle({
 							},
 						})}
 					/>
-					<label htmlFor="Régie">Régie : </label>
+					<label htmlFor="regie">Régie : </label>
 					<textarea
-						{...register("Régie", {
+						{...register("regie", {
 							required: "champ requis",
 							pattern: {
 								value: /^[^<>]*$/,
@@ -232,7 +264,7 @@ export default function AddSpectacle({
 						<select
 							className={styles.select}
 							key={select}
-							{...register(`partnair${index + 1}`)}
+							{...register(`partnair${index}`)}
 						>
 							<option value="">Choisissez un partenaire</option>
 							{partnair.map((p) => (

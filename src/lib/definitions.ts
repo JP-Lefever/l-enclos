@@ -26,12 +26,13 @@ export type creationProps = {
 	Interpretation: string;
 	music: string;
 	illustration: string;
+	poster: string;
 	video: string;
 	light: string;
 	assistant: string;
 	jauge: string;
-	Plateau: string;
-	Régie: string;
+	plateau: string;
+	regie: string;
 	[key: `partnair${number}`]: string | undefined;
 	posterPhoto: string;
 	mainPhoto: string;
