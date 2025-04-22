@@ -26,6 +26,8 @@ export type creationProps = {
 	Interpretation: string;
 	music: string;
 	illustration: string;
+	video: string;
+	light: string;
 	assistant: string;
 	jauge: string;
 	Plateau: string;
