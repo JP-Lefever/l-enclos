@@ -28,17 +28,19 @@ class UtilsSpectacle {
 			jauge,
 			plateau,
 			regie,
+			sceno,
+			directedBy,
 		} = data;
 		const { mainPhoto, posterPhoto } = photo;
 		try {
 			const [newSpectacleId] = await sql`
-        INSERT INTO creation (title, public, duration, author, interpretation, resume, illustration, poster, assistant, jauge, plate, regie, posterphoto, mainphoto, music, video, light)
+        INSERT INTO creation (title, public, duration, author, interpretation, resume, illustration, poster, assistant, jauge, plate, regie, posterphoto, mainphoto, music, video, light,sceno, directedBy)
         VALUES (
     ${safeValue(title)}, ${safeValue(age)}, ${safeValue(duration)}, ${safeValue(author)},
     ${safeValue(interpretation)}, ${safeValue(resume)}, ${safeValue(illustration)},
     ${safeValue(poster)}, ${safeValue(assistant)}, ${safeValue(jauge)},
     ${safeValue(plateau)}, ${safeValue(regie)}, ${safeValue(posterPhoto)},
-    ${safeValue(mainPhoto)}, ${safeValue(music)}, ${safeValue(video)}, ${safeValue(light)}
+    ${safeValue(mainPhoto)}, ${safeValue(music)}, ${safeValue(video)}, ${safeValue(light)},${safeValue(sceno)},${safeValue(directedBy)}
   )
         RETURNING id;
          `;
@@ -50,11 +52,12 @@ class UtilsSpectacle {
 
 	async createPartnerCreation(spectacleId: string, partnair: string[]) {
 		const insertValues = partnair.map((p) => [spectacleId, p]);
-		const idPartnair = await sql`
+		const [idPartnair] = await sql`
         INSERT INTO creation_partnair (creation_id, partnair_id)
         VALUES ${sql(insertValues)}
-        
+		RETURNING id
         `;
+		return idPartnair.id;
 	}
 }
 

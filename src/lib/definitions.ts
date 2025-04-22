@@ -33,6 +33,8 @@ export type creationProps = {
 	assistant: string;
 	jauge: string;
 	plateau: string;
+	directedBy: string;
+	sceno: string;
 	regie: string;
 	[key: `partnair${number}`]: string | undefined;
 	posterPhoto: string;

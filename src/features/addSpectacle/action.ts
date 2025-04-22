@@ -39,7 +39,16 @@ const spectacleSchema = z.object({
 		.max(255)
 		.regex(noHtmlRegex, { message: "Caractères <> interdits" }),
 
-	illustration: z.string().nonempty("champ requis").max(255).regex(noHtmlRegex),
+	sceno: z
+		.string()
+		.max(255)
+		.regex(noHtmlRegex, { message: "Caractères <> interdits" }),
+	directedBy: z
+		.string()
+		.max(255)
+		.regex(noHtmlRegex, { message: "Caractères <> interdits" }),
+
+	illustration: z.string().max(255).regex(noHtmlRegex),
 
 	poster: z.string().max(255).regex(noHtmlRegex),
 
@@ -72,50 +81,54 @@ export async function addSpectacle(
 	data: Omit<creationProps, "mainPhoto" | "posterPhoto">,
 	photo: Pick<creationProps, "mainPhoto" | "posterPhoto">,
 ) {
-	const parsedData = spectacleSchema.safeParse(data);
+	try {
+		const parsedData = spectacleSchema.safeParse(data);
 
-	if (parsedData.success) {
-		const {
-			partnair1,
-			partnair2,
-			partnair3,
-			partnair4,
-			partnair5,
-			partnair6,
-			partnair7,
-			partnair8,
-			partnair9,
-			partnair10,
-			partnair11,
-			partnair12,
-			...rest
-		} = parsedData.data;
+		if (parsedData.success) {
+			const {
+				partnair1,
+				partnair2,
+				partnair3,
+				partnair4,
+				partnair5,
+				partnair6,
+				partnair7,
+				partnair8,
+				partnair9,
+				partnair10,
+				partnair11,
+				partnair12,
+				...rest
+			} = parsedData.data;
 
-		const partnair = [
-			partnair1,
-			partnair2,
-			partnair3,
-			partnair4,
-			partnair5,
-			partnair6,
-			partnair7,
-			partnair8,
-			partnair9,
-			partnair10,
-			partnair11,
-			partnair12,
-		];
+			const partnair = [
+				partnair1,
+				partnair2,
+				partnair3,
+				partnair4,
+				partnair5,
+				partnair6,
+				partnair7,
+				partnair8,
+				partnair9,
+				partnair10,
+				partnair11,
+				partnair12,
+			];
 
-		const validPartnair = partnair.filter((p) => p !== undefined);
+			const validPartnair = partnair.filter((p) => p !== undefined);
 
-		const spectacleId = await utils.createSpectacle(rest, photo);
-		console.log(partnair);
-		console.log(validPartnair);
-		// const idPartnair = await utils.readIdPartnair(partnair);
+			const spectacleId = await utils.createSpectacle(rest, photo);
 
-		const idCreationPartnair = await utils.createPartnerCreation(
-			spectacleId,
-			validPartnair,
-		);
+			const idCreationPartnair = await utils.createPartnerCreation(
+				spectacleId,
+				validPartnair,
+			);
+			if (spectacleId && idCreationPartnair) {
+				return { success: true, message: "Le spectacle a bien été ajouté" };
+			}
+		}
+	} catch (e) {
+		return { message: e };
 	}
 }

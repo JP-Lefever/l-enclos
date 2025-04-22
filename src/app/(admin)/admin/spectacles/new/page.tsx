@@ -1,7 +1,7 @@
 import styles from "./page.module.css";
 import AddSpectacle from "@/features/addSpectacle/components/AddSpectacle";
 import { fetchPartnair } from "@/data/partnair";
-import { Part } from "formidable";
+
 import type { partnairProps } from "@/lib/definitions";
 
 export default async function NewSpectaclePage() {

@@ -46,3 +46,8 @@
 		width: 70vw;
 	}
 }
+.error {
+	width: fit-content;
+
+	color: red;
+}

@@ -1,9 +1,12 @@
 "use client";
+
 import styles from "./addSpectacle.module.css";
 import type { creationProps, partnairProps } from "@/lib/definitions";
 import { useState } from "react";
-import { useForm } from "react-hook-form";
+import { useForm, Controller } from "react-hook-form";
 import { addSpectacle } from "../action";
+import { array } from "zod";
+import { toast } from "react-toastify";
 
 export default function AddSpectacle({
 	partnair,
@@ -11,6 +14,7 @@ export default function AddSpectacle({
 	const {
 		register,
 		handleSubmit,
+		reset,
 		formState: { errors },
 	} = useForm<creationProps>();
 
@@ -34,6 +38,11 @@ export default function AddSpectacle({
 		const responseUpload = await uploadPhoto.json();
 
 		const responseDb = await addSpectacle(rest, responseUpload);
+
+		if (responseDb?.success) {
+			toast.success(responseDb.message);
+			reset();
+		}
 	};
 
 	return (
@@ -56,9 +65,10 @@ export default function AddSpectacle({
 							},
 						})}
 					/>
-					<p>{errors.title?.message}</p>
+					<p className={styles.error}>{errors.title?.message}</p>
 
 					<label htmlFor="age">Age :</label>
+
 					<textarea
 						{...register("age", {
 							required: "champ requis",
@@ -72,6 +82,7 @@ export default function AddSpectacle({
 							},
 						})}
 					/>
+					<p className={styles.error}>{errors.age?.message}</p>
 					<label htmlFor="duration">Durée : </label>
 					<textarea
 						{...register("duration", {
@@ -86,8 +97,10 @@ export default function AddSpectacle({
 							},
 						})}
 					/>
+					<p className={styles.error}>{errors.duration?.message}</p>
 					<div className={styles.div}>
 						<label htmlFor="resume">Résumé du spectacle : </label>
+
 						<textarea
 							className={styles.textarea}
 							rows={10}
@@ -99,6 +112,7 @@ export default function AddSpectacle({
 								},
 							})}
 						/>
+						<p className={styles.error}>{errors.resume?.message}</p>
 					</div>
 				</fieldset>
 				<fieldset className={styles.fieldset}>
@@ -117,6 +131,22 @@ export default function AddSpectacle({
 							},
 						})}
 					/>
+					<p className={styles.error}>{errors.author?.message}</p>
+					<label htmlFor="directedBy">Mis en scène : </label>
+					<textarea
+						{...register("directedBy", {
+							required: "champ requis",
+							pattern: {
+								value: /^[^<>]*$/,
+								message: "Caractères <> interdits",
+							},
+							maxLength: {
+								value: 255,
+								message: "Maximum 255 caractères",
+							},
+						})}
+					/>
+					<p className={styles.error}>{errors.directedBy?.message}</p>
 					<label htmlFor="interpretation">Interpretation : </label>
 					<textarea
 						{...register("interpretation", {
@@ -131,6 +161,21 @@ export default function AddSpectacle({
 							},
 						})}
 					/>
+					<p className={styles.error}>{errors.interpretation?.message}</p>
+					<label htmlFor="sceno">Scenographie : </label>
+					<textarea
+						{...register("sceno", {
+							pattern: {
+								value: /^[^<>]*$/,
+								message: "Caractères <> interdits",
+							},
+							maxLength: {
+								value: 255,
+								message: "Maximum 255 caractères",
+							},
+						})}
+					/>
+					<p className={styles.error}>{errors.sceno?.message}</p>
 					<label htmlFor="music">Musiques : </label>
 					<textarea
 						{...register("music", {
@@ -145,6 +190,7 @@ export default function AddSpectacle({
 							},
 						})}
 					/>
+					<p className={styles.error}>{errors.music?.message}</p>
 					<label htmlFor="video">Video : </label>
 					<textarea
 						{...register("video", {
@@ -158,6 +204,7 @@ export default function AddSpectacle({
 							},
 						})}
 					/>
+					<p className={styles.error}>{errors.video?.message}</p>
 					<label htmlFor="light">Lumière : </label>
 					<textarea
 						{...register("light", {
@@ -171,10 +218,10 @@ export default function AddSpectacle({
 							},
 						})}
 					/>
+					<p className={styles.error}>{errors.light?.message}</p>
 					<label htmlFor="illustration">Illustration : </label>
 					<textarea
 						{...register("illustration", {
-							required: "champ requis",
 							pattern: {
 								value: /^[^<>]*$/,
 								message: "Caractères <> interdits",
@@ -185,6 +232,7 @@ export default function AddSpectacle({
 							},
 						})}
 					/>
+					<p className={styles.error}>{errors.illustration?.message}</p>
 					<label htmlFor="poster">Affiche et plaquette : </label>
 					<textarea
 						{...register("poster", {
@@ -198,6 +246,7 @@ export default function AddSpectacle({
 							},
 						})}
 					/>
+					<p className={styles.error}>{errors.poster?.message}</p>
 					<label htmlFor="assistant">Oeil exterieur : </label>
 					<textarea
 						{...register("assistant", {
@@ -211,6 +260,7 @@ export default function AddSpectacle({
 							},
 						})}
 					/>
+					<p className={styles.error}>{errors.assistant?.message}</p>
 				</fieldset>
 				<fieldset className={styles.fieldset}>
 					<legend className={styles.legend}>Technique</legend>
@@ -228,6 +278,7 @@ export default function AddSpectacle({
 							},
 						})}
 					/>
+					<p className={styles.error}>{errors.jauge?.message}</p>
 					<label htmlFor="plateau">Plateau : </label>
 					<textarea
 						{...register("plateau", {
@@ -242,6 +293,7 @@ export default function AddSpectacle({
 							},
 						})}
 					/>
+					<p className={styles.error}>{errors.plateau?.message}</p>
 					<label htmlFor="regie">Régie : </label>
 					<textarea
 						{...register("regie", {
@@ -256,13 +308,14 @@ export default function AddSpectacle({
 							},
 						})}
 					/>
+					<p className={styles.error}>{errors.regie?.message}</p>
 				</fieldset>
 				<fieldset className={styles.fieldset}>
 					<legend className={styles.legend}>Partenaires</legend>
-					{[...Array(select)].map((select, index) => (
+					{[...Array(select)].map((_, index) => (
 						<select
 							className={styles.select}
-							key={select}
+							key={(partnair.length++).toString()}
 							{...register(`partnair${index}`)}
 						>
 							<option value="">Choisissez un partenaire</option>
