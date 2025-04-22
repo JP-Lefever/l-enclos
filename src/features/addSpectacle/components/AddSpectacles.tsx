@@ -7,7 +7,7 @@ import { useForm, Controller } from "react-hook-form";
 import { addSpectacle } from "../action";
 import { toast } from "react-toastify";
 
-export default function AddSpectacles({
+export default function AddSpectacle({
 	partnair,
 }: { partnair: partnairProps[] }) {
 	const {
