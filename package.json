@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "formidable": "^3.5.2",
     "lucide-react": "^0.488.0",
     "next": "15.3.0",
     "postgres": "^3.4.5",
@@ -21,7 +20,6 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@types/formidable": "^3.4.5",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",

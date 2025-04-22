@@ -171,6 +171,7 @@ async function alterPhoto() {
     ADD CONSTRAINT fk_photo_creation FOREIGN KEY(creation_id) REFERENCES creation(id);
     `;
 }
+
 export async function GET() {
 	try {
 		await sql.begin(async () => {

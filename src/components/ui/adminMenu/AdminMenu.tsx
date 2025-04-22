@@ -5,7 +5,6 @@ export default function NavMenu({
 	openMenu,
 	closeMenu,
 }: { openMenu: boolean; closeMenu: () => void }) {
-	console.log(openMenu);
 	const [openSubMenu, setOpenSubMenu] = useState<string | null>(null);
 	const handleClickMenu = (menuName: string) => {
 		setOpenSubMenu((s) => (s === menuName ? null : menuName));
@@ -42,7 +41,9 @@ export default function NavMenu({
 							</button>
 							{openSubMenu === "spectacle" && (
 								<ul className={styles.subMenu}>
-									<Link href="#">Ajouter</Link>
+									<Link href="/admin/spectacles/new" onClick={closeMenu}>
+										Ajouter
+									</Link>
 									<Link href="#">Modifier</Link>
 								</ul>
 							)}

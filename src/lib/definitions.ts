@@ -14,4 +14,29 @@ export type photoCompagnieProps = {
 
 export type partnairProps = {
 	partnair: string;
+	name: string;
+	id: string;
+};
+
+export type creationProps = {
+	title: string;
+	age: string;
+	duration: string;
+	resume: string;
+	author: string;
+	interpretation: string;
+	music: string;
+	illustration: string;
+	poster: string;
+	video: string;
+	light: string;
+	assistant: string;
+	jauge: string;
+	plateau: string;
+	directedBy: string;
+	sceno: string;
+	regie: string;
+	[key: `partnair${number}`]: string | undefined;
+	posterPhoto: string;
+	mainPhoto: string;
 };

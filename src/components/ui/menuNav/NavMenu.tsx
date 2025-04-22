@@ -4,7 +4,6 @@ export default function NavMenu({
 	openMenu,
 	closeMenu,
 }: { openMenu: boolean; closeMenu: () => void }) {
-	console.log(openMenu);
 	return (
 		<>
 			<section
