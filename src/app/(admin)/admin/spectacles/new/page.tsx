@@ -1,5 +1,4 @@
 import styles from "./page.module.css";
-
 import { fetchPartnair } from "@/data/partnair";
 import AddSpectacle from "@/features/addSpectacle/components/AddSpectacle";
 
