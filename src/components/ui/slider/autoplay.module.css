@@ -1,5 +1,4 @@
 .photoCarousel {
-	width: 90vw;
 	max-height: 90vh;
 }
 
@@ -14,4 +13,7 @@
 	@media screen and (max-width: 568px) {
 		opacity: 0;
 	}
+}
+.container {
+	overflow-x: hidden;
 }

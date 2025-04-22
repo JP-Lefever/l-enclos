@@ -2,6 +2,9 @@
 	font-family: "edo";
 	src: url("/fonts/edo.ttf");
 }
+body {
+	overflow-x: hidden;
+}
 * {
 	padding: 0;
 	margin: 0;
