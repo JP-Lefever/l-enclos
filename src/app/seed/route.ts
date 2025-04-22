@@ -189,9 +189,6 @@ export async function GET() {
 			seedPhoto();
 			alterCreation();
 			alterPhoto();
-			dropColumnCreation();
-			alterCreationTable();
-			alterCreationTable2();
 		});
 
 		return Response.json({ message: "Database seeded successfully" });

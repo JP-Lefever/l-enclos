@@ -1,6 +1,7 @@
 import styles from "./page.module.css";
-import AddSpectacle from "@/features/addSpectacle/components/AddSpectacle";
+
 import { fetchPartnair } from "@/data/partnair";
+import AddSpectacle from "@/features/addSpectacle/components/AddSpectacle";
 
 import type { partnairProps } from "@/lib/definitions";
 
