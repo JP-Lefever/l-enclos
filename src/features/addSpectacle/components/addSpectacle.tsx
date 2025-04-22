@@ -5,7 +5,6 @@ import type { creationProps, partnairProps } from "@/lib/definitions";
 import { useState } from "react";
 import { useForm, Controller } from "react-hook-form";
 import { addSpectacle } from "../action";
-import { array } from "zod";
 import { toast } from "react-toastify";
 
 export default function AddSpectacle({
