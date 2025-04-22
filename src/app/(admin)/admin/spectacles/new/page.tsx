@@ -1,6 +1,6 @@
 import styles from "./page.module.css";
 import { fetchPartnair } from "@/data/partnair";
-import AddSpectacles from "@/features/addSpectacle/components/addSpectacles";
+import NewSpectacle from "@/features/addSpectacle/components/NewSpectacle";
 
 import type { partnairProps } from "@/lib/definitions";
 
@@ -11,7 +11,7 @@ export default async function NewSpectaclePage() {
 		<>
 			<section className={styles.section}>
 				<h1 className={styles.h1}>AJOUTER UN SPECTACLE</h1>
-				<AddSpectacles partnair={partnair} />
+				<NewSpectacle partnair={partnair} />
 			</section>
 		</>
 	);
