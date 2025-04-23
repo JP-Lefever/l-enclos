@@ -12,7 +12,7 @@ export default function RootLayout({
 		<html lang="fr">
 			<body className={`${paragraphFont.className} ${styles.body}`}>
 				<NavBar />
-				{children}
+				<main>{children}</main>
 			</body>
 		</html>
 	);

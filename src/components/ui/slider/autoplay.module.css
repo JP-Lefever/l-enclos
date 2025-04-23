@@ -1,0 +1,19 @@
+.photoCarousel {
+	max-height: 90vh;
+}
+
+.button {
+	font-size: 2em;
+	width: fit-content;
+	position: relative;
+	bottom: 4em;
+	border: none;
+	background-color: transparent;
+	color: var(--main-color);
+	@media screen and (max-width: 568px) {
+		opacity: 0;
+	}
+}
+.container {
+	overflow-x: hidden;
+}

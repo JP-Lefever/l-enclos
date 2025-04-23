@@ -2,6 +2,9 @@
 	font-family: "edo";
 	src: url("/fonts/edo.ttf");
 }
+body {
+	overflow-x: hidden;
+}
 * {
 	padding: 0;
 	margin: 0;
@@ -9,7 +12,9 @@
 }
 :root {
 	--primary-color: #de694f;
+	--nuance-orange: #eecdc6;
 	--secondary-color: #273472;
+	--nuance-blue: #bfc5e4;
 	--main-color: #ffffff;
 	--footer: #f78da7;
 	--warm-color: #ff6900;
