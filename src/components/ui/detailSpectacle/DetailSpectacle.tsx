@@ -1,22 +1,33 @@
 "use client";
 import styles from "./detailSpectacle.module.css";
-import type { SpectacleProps } from "@/lib/definitions";
+import type {
+	Partnair,
+	PastSpectacleDateProps,
+	SpectacleDateProps,
+	SpectacleProps,
+} from "@/lib/definitions";
 import Image from "next/image";
 import Markdown from "react-markdown";
 import { partnair, date, datePassed } from "@/lib/placeholder-data";
 import { ChevronRight } from "lucide-react";
-import { div } from "framer-motion/client";
 
 export default function DetailSpectacle({
 	cardData,
 	id,
 }: { cardData: SpectacleProps[]; id: string }) {
-	const data = cardData.find((c) => c.id === Number(id));
+	const data: SpectacleProps | undefined = cardData.find(
+		(c) => c.id === Number(id),
+	);
 
-	const partnairSpec = partnair.filter((p) => p.id_spec === Number(id));
-	const dateSpec = date.filter((p) => p.id_spec === Number(id));
-	const dateSpecOver = datePassed.filter((p) => p.id_spec === Number(id));
-	console.log(partnairSpec);
+	const partnairSpec: Partnair[] = partnair.filter(
+		(p) => p.id_spec === Number(id),
+	);
+	const dateSpec: SpectacleDateProps[] = date.filter(
+		(p) => p.id_spec === Number(id),
+	);
+	const dateSpecOver: PastSpectacleDateProps[] = datePassed.filter(
+		(p) => p.id_spec === Number(id),
+	);
 
 	if (!data) {
 		return "Spectacle introuvable";
@@ -24,7 +35,7 @@ export default function DetailSpectacle({
 	return (
 		<>
 			<section className={styles.sectionInfo}>
-				<article className={styles.info}>
+				<article className={styles.articleInfo}>
 					<h2 className={styles.h2}>{data.title}</h2>
 					<div className={styles.div}>
 						<h3 className={styles.h3}>Résumé</h3>
@@ -181,8 +192,8 @@ export default function DetailSpectacle({
 					<article className={styles.articleDatePassed}>
 						<h3 className={styles.h3Date}>Passées</h3>
 						<div className={styles.divDatePass}>
-							{datePassed
-								? datePassed.map((d) => (
+							{dateSpecOver
+								? dateSpecOver.map((d) => (
 										<div key={d.id}>
 											<h4>{d.place}</h4>
 										</div>

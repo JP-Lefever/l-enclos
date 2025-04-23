@@ -2,7 +2,7 @@
 	display: flex;
 	align-items: center;
 }
-.info {
+.articleInfo {
 	border: solid 1px;
 	border-color: var(--primary-color);
 	padding: 8vw;

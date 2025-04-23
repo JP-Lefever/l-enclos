@@ -192,7 +192,6 @@ const date = [
 		date: "09/02/2025",
 		place: "Collectif Tohu Bohu",
 		info: "Annulé",
-		hour: "10h et à 14h30",
 	},
 ];
 

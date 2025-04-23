@@ -65,11 +65,11 @@ export type SpectacleProps = {
 	regie: string;
 };
 
-export interface Partnair {
+export type Partnair = {
 	id: number;
 	id_spec: number;
 	name: string;
-}
+};
 
 export type cardDataProps = {
 	id: number;
@@ -91,7 +91,7 @@ export type SpectacleDateProps = {
 	date: string;
 	place: string;
 	info: string;
-	hour: string;
+	hour?: string;
 };
 
 export type PastSpectacleDateProps = {
