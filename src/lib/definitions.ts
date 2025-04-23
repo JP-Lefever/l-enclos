@@ -40,3 +40,17 @@ export type creationProps = {
 	posterPhoto: string;
 	mainPhoto: string;
 };
+
+export type cardDataProps = {
+	id: number;
+	title: string;
+	public: string;
+	image_url: string;
+};
+
+export type buttonSpecProps = {
+	id: number;
+	name: string;
+	link: string;
+	img_src: string;
+};

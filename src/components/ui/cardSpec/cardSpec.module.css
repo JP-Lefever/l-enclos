@@ -1,0 +1,53 @@
+.main {
+	background-color: var(--secondary-color);
+
+	margin-bottom: 20vh;
+}
+
+.section {
+	display: flex;
+	padding: 10vh 0;
+	width: fit-content;
+	margin: auto;
+	gap: 20em;
+	color: var(--main-color);
+	@media screen and (max-width: 568px) {
+		display: flex;
+		flex-direction: column;
+		gap: 5em;
+	}
+}
+
+.article {
+	text-align: center;
+	width: 20vw;
+	@media screen and (max-width: 568px) {
+		width: 80vw;
+	}
+}
+
+.article:hover {
+	transform: scale(1.1);
+	color: var(--main-color);
+}
+
+.imageWrapper {
+	position: relative;
+	width: 20vw;
+	height: 55vh;
+	@media screen and (max-width: 568px) {
+		width: 80vw;
+	}
+}
+.image {
+	object-fit: contain;
+}
+.p {
+	font-size: 1.2em;
+	margin-bottom: 3vh;
+	text-align: center;
+}
+
+.h2 {
+	margin-top: 2vh;
+}

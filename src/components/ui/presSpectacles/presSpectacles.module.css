@@ -28,7 +28,7 @@
 	font-family: var(--title-font);
 	font-size: 5em;
 	color: var(--primary-color);
-	letter-spacing: 0.2em;
+	letter-spacing: var(--letter-spacing);
 	position: relative;
 	left: 4em;
 	bottom: 0.2em;

@@ -12,11 +12,13 @@ body {
 }
 :root {
 	--primary-color: #de694f;
-	--nuance-orange: #eecdc6;
+	--primary-color2: #ebac9e;
+	--nuance-orange: #ffedd5;
+	--nuance-orange2: rgb(255, 182, 80, 1);
 	--secondary-color: #273472;
 	--nuance-blue: #bfc5e4;
 	--main-color: #ffffff;
-	--footer: #f78da7;
+	--footer: #f6f6f6;
 	--warm-color: #ff6900;
 	--cold-color: #00d084;
 	--title-font: "edo";
