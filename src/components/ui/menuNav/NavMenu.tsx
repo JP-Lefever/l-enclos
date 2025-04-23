@@ -10,13 +10,13 @@ export default function NavMenu({
 				className={`${styles.section} ${openMenu ? styles.isOpen : styles.isClose}`}
 			>
 				<ul className={styles.ul}>
-					<Link className={styles.link} href="#">
+					<Link className={styles.link} href="/" onClick={closeMenu}>
 						Accueil
 					</Link>
 					<Link className={styles.link} href="#">
 						Compagnie
 					</Link>
-					<Link className={styles.link} href="#">
+					<Link className={styles.link} href="/spectacles" onClick={closeMenu}>
 						Spectacle
 					</Link>
 					<Link className={styles.link} href="#">
