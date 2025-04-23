@@ -41,6 +41,36 @@ export type creationProps = {
 	mainPhoto: string;
 };
 
+export type SpectacleProps = {
+	id: number;
+	title: string;
+	public: string;
+	duration: string;
+	image_url: string;
+	image_spec: string;
+	writing: string;
+	directedBy: string;
+	interpretation?: string;
+	music: string;
+	illustration?: string;
+	poster?: string;
+	assistant: string;
+	sceno?: string;
+	light?: string;
+	video?: string;
+	shortResume: string;
+	resume: string;
+	jauge: string;
+	plateau: string;
+	regie: string;
+};
+
+export interface Partnair {
+	id: number;
+	id_spec: number;
+	name: string;
+}
+
 export type cardDataProps = {
 	id: number;
 	title: string;
@@ -53,4 +83,19 @@ export type buttonSpecProps = {
 	name: string;
 	link: string;
 	img_src: string;
+};
+
+export type SpectacleDateProps = {
+	id: number;
+	id_spec: number;
+	date: string;
+	place: string;
+	info: string;
+	hour: string;
+};
+
+export type PastSpectacleDateProps = {
+	id: number;
+	id_spec: number;
+	place: string;
 };

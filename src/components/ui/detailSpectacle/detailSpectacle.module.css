@@ -1,0 +1,242 @@
+.sectionInfo {
+	display: flex;
+	align-items: center;
+}
+.info {
+	border: solid 1px;
+	border-color: var(--primary-color);
+	padding: 8vw;
+
+	height: 90vh;
+	width: 80vw;
+	background-color: var(--primary-color);
+}
+.imageInfo {
+	position: relative;
+	right: 10vw;
+	width: fit-content;
+}
+.imagePres {
+	width: 45vw;
+	height: auto;
+}
+
+.h2 {
+	font-family: var(--title-font);
+	font-size: 4em;
+	letter-spacing: var(--letter-spacing);
+	color: var(--main-color);
+	margin-bottom: 5vh;
+}
+
+.h3 {
+	color: var(--main-color);
+	font-size: 1.5em;
+}
+.div {
+	margin-left: 10vw;
+	line-height: 3em;
+}
+.p {
+	color: var(--main-color);
+}
+.sectionPres {
+	display: flex;
+	align-items: center;
+	margin-top: 10vh;
+	justify-content: flex-end;
+}
+/* .imagePresSpec {
+	width: 50vw;
+	height: auto;
+} */
+.imageSpec {
+	width: 30vw;
+	height: auto;
+	margin-left: 4vw;
+}
+.resume {
+	border: solid 1px;
+	border-color: var(--nuance-blue);
+	padding: 4vw 1vw;
+	height: 60vh;
+	width: 50vw;
+	background-color: var(--nuance-blue);
+}
+.h2Pres {
+	font-family: var(--title-font);
+	font-size: 4em;
+	letter-spacing: var(--letter-spacing);
+	color: var(--main-color);
+	margin: 2vh 3vw;
+}
+.divResume {
+	width: 40vw;
+
+	font-size: 0.9em;
+}
+
+.distribution {
+	width: 100vw;
+	background-color: var(--secondary-color);
+	padding: 2em;
+	height: 60vh;
+}
+.articleDistrib {
+	display: flex;
+	flex-direction: row;
+	gap: 2vw;
+	width: 60vw;
+	margin: auto;
+	margin-top: 10vh;
+}
+
+.h3Dist {
+	color: var(--main-color);
+	font-size: 1.2em;
+	margin-bottom: 1vh;
+}
+.pDist {
+	color: var(--main-color);
+	font-size: 0.8em;
+	margin-bottom: 1em;
+}
+
+.h2Dist {
+	font-family: var(--title-font);
+	font-size: 4em;
+	letter-spacing: var(--letter-spacing);
+	color: var(--main-color);
+	margin-bottom: 15vh;
+	text-align: center;
+}
+.divDistrib {
+	width: 10vw;
+}
+
+.divTech {
+	display: flex;
+}
+.sectionTech {
+	background-color: var(--primary-color);
+	height: 60vh;
+	width: 30vw;
+	padding-left: 2vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.sectionPartnair {
+	background-color: var(--main-color);
+	padding-left: 2vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.h2Tech {
+	font-family: var(--title-font);
+	font-size: 4em;
+	letter-spacing: var(--letter-spacing);
+	color: var(--main-color);
+
+	text-align: left;
+	margin-top: -10vh;
+	margin-bottom: 5vh;
+}
+
+.h2Partnair {
+	font-family: var(--title-font);
+	font-size: 4em;
+	letter-spacing: var(--letter-spacing);
+	color: var(--primary-color);
+	margin-bottom: 5vh;
+	margin-top: -10vh;
+	text-align: left;
+}
+.articlePartnair {
+	width: 65vw;
+	line-height: 1.5em;
+}
+.pPartnair {
+	display: flex;
+	align-items: center;
+	gap: 1em;
+}
+
+.sectionDate {
+	background-color: var(--nuance-blue);
+	padding: 5vw;
+	margin-top: 5vh;
+	height: 70vh;
+	margin-bottom: 5vh;
+}
+
+.articles {
+	display: flex;
+}
+
+.articleDate {
+	width: 70vw;
+}
+
+.articleDatePassed {
+	border-left: 1px solid;
+	padding-left: 5vw;
+	border-color: var(--primary-color);
+}
+
+.h2Date {
+	font-family: var(--title-font);
+	font-size: 4em;
+	letter-spacing: var(--letter-spacing);
+	color: var(--secondary-color);
+	margin-bottom: 5vh;
+	margin-top: -10vh;
+	text-align: center;
+}
+
+.h3Date {
+	font-family: var(--title-font);
+	font-size: 2em;
+	letter-spacing: var(--letter-spacing);
+	color: var(--secondary-color);
+	text-align: center;
+}
+.divDate {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 5vh;
+	height: 40vh;
+}
+.h4Date {
+	color: var(--secondary-color);
+	font-size: 1.4em;
+	text-align: left;
+	padding-bottom: 1em;
+	border-bottom: solid 1px;
+	border-color: var(--secondary-color);
+}
+
+.pDate1 {
+	color: var(--secondary-color);
+	font-size: 1.4em;
+	text-align: left;
+	padding-bottom: 1em;
+	border-bottom: solid 1px;
+	border-color: var(--secondary-color);
+	font-weight: bold;
+}
+.pDate2 {
+	color: var(--secondary-color);
+	font-size: 1.4em;
+	text-align: left;
+}
+
+.divDatePass {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-top: 5vh;
+	color: var(--secondary-color);
+}

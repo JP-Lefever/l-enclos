@@ -4,6 +4,7 @@ import type { cardDataProps } from "@/lib/definitions";
 import styles from "./cardSpec.module.css";
 import { cardData } from "@/lib/placeholder-data";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function CardSpec() {
 	return (
@@ -11,7 +12,11 @@ export default function CardSpec() {
 			<main className={styles.main}>
 				<section className={styles.section}>
 					{cardData.map((c: cardDataProps) => (
-						<article className={styles.article} key={c.id}>
+						<Link
+							href={`/spectacles/${c.id}`}
+							className={styles.article}
+							key={c.id}
+						>
 							<p className={styles.p}>{c.public}</p>
 							<figure className={styles.imageWrapper}>
 								<Image
@@ -22,7 +27,7 @@ export default function CardSpec() {
 								/>
 							</figure>
 							<h2 className={styles.h2}>{c.title}</h2>
-						</article>
+						</Link>
 					))}
 				</section>
 			</main>
