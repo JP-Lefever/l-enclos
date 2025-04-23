@@ -20,7 +20,7 @@ export default function PresCompagnie() {
 					<h1 className={styles.h1}>
 						<span className={styles.span}>LA </span>
 						<span className={styles.span}>COMPAGNIE </span>
-						<span className={styles.span}>L'ENCLOS</span>
+						<span className={styles.span}>{"L'ENCLOS"}</span>
 					</h1>
 					<p className={styles.paragraph}>
 						{`L'Enclos parle de cet Espace Clos qui entoure chaque être humain,
