@@ -107,3 +107,40 @@ export type PhotoDataProps = {
 	service: string;
 	id_spec?: number;
 };
+
+export type MediationProps = {
+	id: number;
+	name: string;
+	title: string;
+	photoPres: string;
+	photoSeance: string;
+	photoDate: string;
+	type: string;
+	public: string;
+	duration: string;
+	theme: string;
+	pres: string;
+	organisation: string;
+	first: string;
+	presFirst: string;
+	second: string;
+	presSecond: string;
+	third?: string;
+	presThird?: string;
+	fourth?: string;
+	presFourth?: string;
+	final: string;
+	presFinal: string;
+	material?: string[];
+	extract?: string;
+	textExtract?: string;
+	thanks: string;
+	credit?: string;
+};
+
+export type InterventionProps = {
+	id: number;
+	id_med: number;
+	date: string;
+	info: string;
+};

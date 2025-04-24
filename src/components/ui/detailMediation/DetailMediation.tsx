@@ -1,0 +1,205 @@
+import Link from "next/link";
+import styles from "./detailMediation.module.css";
+import Image from "next/image";
+import type { InterventionProps, MediationProps } from "@/lib/definitions";
+import {
+	ScrollAnimation,
+	ScrollAnimation2,
+} from "../animation/ScrollAnimation";
+import Markdown from "react-markdown";
+import { intervention } from "@/lib/placeholder-data";
+import { ChevronRight } from "lucide-react";
+
+export default function DetailMediation({
+	mediation,
+	id,
+}: { mediation: MediationProps[]; id: string }) {
+	const data = mediation.find((m) => m.id === Number(id));
+	const dataInter: InterventionProps[] = intervention.filter(
+		(i) => i.id_med === Number(id),
+	);
+
+	if (!data) {
+		return <p>Projet Introuvable</p>;
+	}
+
+	return (
+		<>
+			<section className={styles.sectionInfo}>
+				<ScrollAnimation className={styles.articleInfo}>
+					<h2 className={styles.h2}>{data.name}</h2>
+					<h2 className={styles.h3title}>{data.title}</h2>
+
+					<div className={styles.div}>
+						<h3 className={styles.h3}>{data.type}</h3>
+
+						<h3 className={styles.h3}>Public : {data.public}</h3>
+
+						<h3 className={styles.h3}>Durée : {data.duration}</h3>
+						<h3 className={styles.h3}>Durée : {data.theme}</h3>
+					</div>
+					<div className={styles.pPres}>
+						<Markdown>{data.pres}</Markdown>
+					</div>
+				</ScrollAnimation>
+				<ScrollAnimation2 className={styles.imageInfo}>
+					<Image
+						className={styles.imagePres}
+						src={data.photoPres}
+						alt={data.title}
+						width={1080}
+						height={860}
+					/>
+				</ScrollAnimation2>
+			</section>
+			<ScrollAnimation className={styles.organisation}>
+				<h2 className={styles.h2}>Organisation</h2>
+				<h3 className={styles.h3Deroul}>{data.organisation}</h3>
+				<article className={styles.articleOrga}>
+					<div>
+						<h3 className={styles.h3Orga}>
+							<Markdown>{data.first}</Markdown>
+						</h3>
+
+						<span className={styles.p}>
+							<Markdown>{data.presFirst}</Markdown>
+						</span>
+					</div>
+
+					<div className={styles.divDistrib}>
+						<h3 className={styles.h3Orga}>
+							<Markdown>{data.second}</Markdown>
+						</h3>
+						<span className={styles.p}>
+							<Markdown>{data.presSecond}</Markdown>
+						</span>
+					</div>
+					{data.third && (
+						<div className={styles.divDistrib}>
+							<h3 className={styles.h3Orga}>
+								<Markdown>{data.third}</Markdown>
+							</h3>
+							<span className={styles.pDist}>
+								<Markdown>{data.presThird}</Markdown>
+							</span>
+						</div>
+					)}
+					{data.fourth && (
+						<div className={styles.divDistrib}>
+							<>
+								<h3 className={styles.h3Orga}>
+									<Markdown>{data.fourth}</Markdown>
+								</h3>
+								<span className={styles.pDist}>
+									<Markdown>{data.presFourth}</Markdown>
+								</span>
+							</>
+						</div>
+					)}
+
+					<div className={styles.divDistrib}>
+						<>
+							<h3 className={styles.h3Orga}>
+								<Markdown>{data.final}</Markdown>
+							</h3>
+							<span className={styles.pDist}>
+								<Markdown>{data.presFinal}</Markdown>
+							</span>
+						</>
+					</div>
+
+					{data.material && (
+						<div className={styles.divDistrib}>
+							<h3 className={styles.h3Orga}>
+								{"Matériel fourni par la compagnie L'Enclos : "}
+							</h3>
+							{data.material.map((d) => (
+								<p key={d} className={styles.pDist}>
+									{d}
+								</p>
+							))}
+						</div>
+					)}
+				</article>
+			</ScrollAnimation>
+			{data.extract && (
+				<section className={styles.sectionExtract}>
+					<ScrollAnimation>
+						<Image
+							className={styles.imageExtract}
+							src={data.photoDate}
+							alt="photo d'enfants jouant des personnages "
+							width={1080}
+							height={860}
+						/>
+					</ScrollAnimation>
+					<ScrollAnimation2 className={styles.extract}>
+						<h2 className={styles.h2Extract}>{data.extract}</h2>
+						<div className={styles.divExtract}>
+							<Markdown>{data.textExtract}</Markdown>
+						</div>
+					</ScrollAnimation2>
+				</section>
+			)}
+
+			<div className={styles.divThanks}>
+				<ScrollAnimation className={styles.sectionThanks}>
+					<h2 className={styles.h2Thanks}>Remerciement</h2>
+					<article>
+						<p className={styles.pThanks}> {data.thanks}</p>
+					</article>
+				</ScrollAnimation>
+				<ScrollAnimation2 className={styles.sectionInter}>
+					<h2 className={styles.h2Inter}>Interventions passées</h2>
+					<article className={styles.articleInter}>
+						{dataInter.map((i) => (
+							<div key={i.id}>
+								<h3>{i.date}</h3>
+								<p className={styles.pInter}>
+									<ChevronRight />
+									{i.info}
+								</p>
+							</div>
+						))}
+					</article>
+				</ScrollAnimation2>
+			</div>
+			{/*
+            <section>
+				<article className={styles.articleCarousel}>{""}</article>
+			</section>
+			<ScrollAnimation className={styles.sectionDate}>
+				<h2 className={styles.h2Date}>Les Dates</h2>
+				<section className={styles.articles}>
+					<ScrollAnimation className={styles.articleDate}>
+						<h3 className={styles.h3Date}>A venir</h3>
+						<div className={styles.divDate}>
+							{dateSpec
+								? dateSpec.map((d) => (
+										<div key={d.id}>
+											<h4 className={styles.h4Date}>{d.date}</h4>
+											<p className={styles.pDate1}>{d.place}</p>
+											<p className={styles.pDate2}>{d.info} </p>
+											<p className={styles.pDate2}>{d.hour}</p>
+										</div>
+									))
+								: ""}
+						</div>
+					</ScrollAnimation>
+					<ScrollAnimation2 className={styles.articleDatePassed}>
+						<h3 className={styles.h3Date}>Passées</h3>
+						<div className={styles.divDatePass}>
+							{dateSpecOver
+								? dateSpecOver.map((d) => (
+										<div key={d.id}>
+											<h4>{d.place}</h4>
+										</div>
+									))
+								: ""}
+						</div>
+					</ScrollAnimation2>
+				</section>
+			</ScrollAnimation>  */}
+		</>
+	);
+}
