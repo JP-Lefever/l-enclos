@@ -11,6 +11,10 @@ import Markdown from "react-markdown";
 import { partnair, date, datePassed } from "@/lib/placeholder-data";
 import { ChevronRight } from "lucide-react";
 import { AutoPlaySpec } from "../slider/Autoplay";
+import {
+	ScrollAnimation,
+	ScrollAnimation2,
+} from "../animation/ScrollAnimation";
 
 export default function DetailSpectacle({
 	cardData,
@@ -38,7 +42,7 @@ export default function DetailSpectacle({
 	return (
 		<>
 			<section className={styles.sectionInfo}>
-				<article className={styles.articleInfo}>
+				<ScrollAnimation className={styles.articleInfo}>
 					<h2 className={styles.h2}>{data.title}</h2>
 					<div className={styles.div}>
 						<h3 className={styles.h3}>Résumé</h3>
@@ -48,8 +52,8 @@ export default function DetailSpectacle({
 						<h3 className={styles.h3}>Durée</h3>
 						<p className={styles.p}>{data.duration}</p>
 					</div>
-				</article>
-				<article className={styles.imageInfo}>
+				</ScrollAnimation>
+				<ScrollAnimation2 className={styles.imageInfo}>
 					<Image
 						className={styles.imagePres}
 						src={data.image_spec}
@@ -57,11 +61,11 @@ export default function DetailSpectacle({
 						width={1080}
 						height={860}
 					/>
-				</article>
+				</ScrollAnimation2>
 			</section>
 
 			<section className={styles.sectionPres}>
-				<article className={styles.imagePresSpec}>
+				<ScrollAnimation className={styles.imagePresSpec}>
 					<Image
 						className={styles.imageSpec}
 						src={data.image_url}
@@ -69,18 +73,18 @@ export default function DetailSpectacle({
 						width={1080}
 						height={860}
 					/>
-				</article>
-				<article className={styles.resume}>
+				</ScrollAnimation>
+				<ScrollAnimation2 className={styles.resume}>
 					<h2 className={styles.h2Pres}>PRESENTATION</h2>
 					<div className={styles.divResume}>
 						<Markdown>{data.resume}</Markdown>
 					</div>
-				</article>
+				</ScrollAnimation2>
 			</section>
 			<section>
 				<article className={styles.articleCarousel}>{carousel}</article>
 			</section>
-			<section className={styles.distribution}>
+			<ScrollAnimation className={styles.distribution}>
 				<h2 className={styles.h2Dist}>DISTRIBUTION</h2>
 				<article className={styles.articleDistrib}>
 					<div className={styles.divDistrib}>
@@ -148,9 +152,9 @@ export default function DetailSpectacle({
 						<p className={styles.pDist}>{data.assistant}</p>
 					</div>
 				</article>
-			</section>
+			</ScrollAnimation>
 			<div className={styles.divTech}>
-				<section className={styles.sectionTech}>
+				<ScrollAnimation className={styles.sectionTech}>
 					<h2 className={styles.h2Tech}>Technique</h2>
 					<article className={styles.articleTech}>
 						<h3 className={styles.h3Dist}>Jauge : </h3>
@@ -160,8 +164,8 @@ export default function DetailSpectacle({
 						<h3 className={styles.h3Dist}>Régie : </h3>
 						<p className={styles.pDist}> {data.regie}</p>
 					</article>
-				</section>
-				<section className={styles.sectionPartnair}>
+				</ScrollAnimation>
+				<ScrollAnimation2 className={styles.sectionPartnair}>
 					<h2 className={styles.h2Partnair}>Les partenaires</h2>
 					<article className={styles.articlePartnair}>
 						{partnairSpec.map((s) => (
@@ -171,12 +175,12 @@ export default function DetailSpectacle({
 							</p>
 						))}
 					</article>
-				</section>
+				</ScrollAnimation2>
 			</div>
-			<section className={styles.sectionDate}>
+			<ScrollAnimation className={styles.sectionDate}>
 				<h2 className={styles.h2Date}>Les Dates</h2>
 				<section className={styles.articles}>
-					<article className={styles.articleDate}>
+					<ScrollAnimation className={styles.articleDate}>
 						<h3 className={styles.h3Date}>A venir</h3>
 						<div className={styles.divDate}>
 							{dateSpec
@@ -190,8 +194,8 @@ export default function DetailSpectacle({
 									))
 								: ""}
 						</div>
-					</article>
-					<article className={styles.articleDatePassed}>
+					</ScrollAnimation>
+					<ScrollAnimation2 className={styles.articleDatePassed}>
 						<h3 className={styles.h3Date}>Passées</h3>
 						<div className={styles.divDatePass}>
 							{dateSpecOver
@@ -202,9 +206,9 @@ export default function DetailSpectacle({
 									))
 								: ""}
 						</div>
-					</article>
+					</ScrollAnimation2>
 				</section>
-			</section>
+			</ScrollAnimation>
 		</>
 	);
 }
