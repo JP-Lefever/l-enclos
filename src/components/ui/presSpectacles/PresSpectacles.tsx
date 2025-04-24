@@ -29,7 +29,7 @@ export default function PresSpectacles() {
 						sensibilité, dans leurs limites….`}
 					</p>
 					<div className={styles.div}>
-						<Link className={styles.link} href="#">
+						<Link className={styles.link} href="/spectacles">
 							Voir les spectacles
 						</Link>
 					</div>

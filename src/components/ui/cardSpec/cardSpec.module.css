@@ -14,6 +14,7 @@
 	@media screen and (max-width: 568px) {
 		display: flex;
 		flex-direction: column;
+
 		gap: 5em;
 	}
 }
@@ -23,14 +24,11 @@
 	width: 20vw;
 	color: var(--main-color);
 	text-decoration: none;
-	@media screen and (max-width: 568px) {
-		width: 80vw;
-	}
 }
 
 .article:hover {
-	transform: scale(1.1);
 	color: var(--warm-color);
+	transform: scale(1.05);
 }
 
 .imageWrapper {
@@ -38,18 +36,32 @@
 	width: 20vw;
 	height: 55vh;
 	@media screen and (max-width: 568px) {
-		width: 80vw;
+		width: 90vw;
 	}
 }
 .image {
 	object-fit: contain;
+	transition: transform 0.3s ease-in-out;
 }
+
+.image:hover {
+	transform: scale(1.05);
+}
+
 .p {
 	font-size: 1.2em;
 	margin-bottom: 3vh;
 	text-align: center;
+	width: 20vw;
+	@media screen and (max-width: 568px) {
+		width: 90vw;
+	}
 }
 
 .h2 {
 	margin-top: 2vh;
+	width: 20vw;
+	@media screen and (max-width: 568px) {
+		width: 90vw;
+	}
 }
