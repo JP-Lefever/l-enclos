@@ -5,8 +5,9 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
+	overflow-x: hidden;
 	@media screen and (max-width: 568px) {
-		background-image: url("/images/spectacle_enclos.jpg");
+		background-image: url("/images/mediation_bg.jpg");
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
