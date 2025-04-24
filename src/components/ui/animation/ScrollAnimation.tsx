@@ -1,6 +1,6 @@
 "use client";
 
-import { hover, motion, useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import React from "react";
 import { type ReactNode, useRef } from "react";
 
