@@ -11,7 +11,6 @@ import Markdown from "react-markdown";
 import { partnair, date, datePassed } from "@/lib/placeholder-data";
 import { ChevronRight } from "lucide-react";
 import { AutoPlaySpec } from "../slider/Autoplay";
-import { s } from "framer-motion/client";
 
 export default function DetailSpectacle({
 	cardData,
