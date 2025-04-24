@@ -2,6 +2,7 @@ import MediationPrimaire from "@/components/ui/mediationPrimaire/MediationPrimai
 import styles from "./page.module.css";
 import MediationCollege from "@/components/ui/mediationCollege/MediationCollege";
 import MediationEphad from "@/components/ui/mediationEphad/MediationEphad";
+import ButtonMediation from "@/components/ui/buttonMediation/ButtonMediation";
 
 export default function MediationPage() {
 	return (
@@ -9,13 +10,14 @@ export default function MediationPage() {
 			<section className={styles.section}>
 				<h1 className={styles.h1}>Mediations</h1>
 			</section>
-			<section className={styles.sectionPrim}>
+			<ButtonMediation />
+			<section id="primaire" className={styles.sectionPrim}>
 				<MediationPrimaire />
 			</section>
-			<section className={styles.sectionColl}>
+			<section id="college" className={styles.sectionColl}>
 				<MediationCollege />
 			</section>
-			<section className={styles.sectionEph}>
+			<section id="ephad" className={styles.sectionEph}>
 				<MediationEphad />
 			</section>
 		</>
