@@ -258,4 +258,99 @@ const buttonSpec = [
 	},
 ];
 
-export { cardData, buttonSpec, partnair, date, datePassed };
+const photo = [
+	{
+		id: 1,
+		photo: "/images/affiche.png",
+		service: "carousel_accueil",
+	},
+	{
+		id: 2,
+		photo: "/images/j_ai_17_ans_scene.jpg",
+		service: "carousel_accueil",
+	},
+	{
+		id: 3,
+		photo: "/images/j_ai_17ans_pour_toujours.png",
+		service: "carousel_accueil",
+	},
+	{
+		id: 4,
+		photo: "/images/te_souviens_tu.jpg",
+		service: "carousel_accueil",
+	},
+	{
+		id: 5,
+		photo: "/images/teSouviensTu/te_souviens_tu_jeux.webp",
+		service: "carousel_te_souviens",
+		id_spec: 1,
+	},
+	{
+		id: 6,
+		photo: "/images/teSouviensTu/te_souviens_tu_jeux2.webp",
+		service: "carousel_te_souviens",
+		id_spec: 1,
+	},
+	{
+		id: 7,
+		photo: "/images/teSouviensTu/te_souviens_tu_jeux3.webp",
+		service: "carousel_te_souviens",
+		id_spec: 1,
+	},
+	{
+		id: 8,
+		photo: "/images/teSouviensTu/te_souviens_tu_jeux4.webp",
+		service: "carousel_te_souviens",
+		id_spec: 1,
+	},
+	{
+		id: 9,
+		photo: "/images/teSouviensTu/te_souviens_tu_jeux5.webp",
+		service: "carousel_te_souviens",
+		id_spec: 1,
+	},
+	{
+		id: 10,
+		photo: "/images/teSouviensTu/te_souviens_tu_jeux6.webp",
+		service: "carousel_te_souviens",
+		id_spec: 1,
+	},
+	{
+		id: 11,
+		photo: "/images/17ans/17ans1.png",
+		service: "carousel_te_souviens",
+		id_spec: 2,
+	},
+	{
+		id: 12,
+		photo: "/images/17ans/17ans2.jpg",
+		service: "carousel_te_souviens",
+		id_spec: 2,
+	},
+	{
+		id: 13,
+		photo: "/images/17ans/17ans3.jpg",
+		service: "carousel_te_souviens",
+		id_spec: 2,
+	},
+	{
+		id: 14,
+		photo: "/images/17ans/17ans4.jpg",
+		service: "carousel_te_souviens",
+		id_spec: 2,
+	},
+	{
+		id: 15,
+		photo: "/images/17ans/17ans5.jpg",
+		service: "carousel_te_souviens",
+		id_spec: 2,
+	},
+	{
+		id: 16,
+		photo: "/images/17ans/17ans6.jpg",
+		service: "carousel_te_souviens",
+		id_spec: 2,
+	},
+];
+
+export { cardData, buttonSpec, partnair, date, datePassed, photo };

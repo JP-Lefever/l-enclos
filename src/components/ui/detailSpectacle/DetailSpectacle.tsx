@@ -10,6 +10,8 @@ import Image from "next/image";
 import Markdown from "react-markdown";
 import { partnair, date, datePassed } from "@/lib/placeholder-data";
 import { ChevronRight } from "lucide-react";
+import { AutoPlaySpec } from "../slider/Autoplay";
+import { s } from "framer-motion/client";
 
 export default function DetailSpectacle({
 	cardData,
@@ -28,6 +30,8 @@ export default function DetailSpectacle({
 	const dateSpecOver: PastSpectacleDateProps[] = datePassed.filter(
 		(p) => p.id_spec === Number(id),
 	);
+
+	const carousel = AutoPlaySpec(Number(id));
 
 	if (!data) {
 		return "Spectacle introuvable";
@@ -56,6 +60,7 @@ export default function DetailSpectacle({
 					/>
 				</article>
 			</section>
+
 			<section className={styles.sectionPres}>
 				<article className={styles.imagePresSpec}>
 					<Image
@@ -74,9 +79,7 @@ export default function DetailSpectacle({
 				</article>
 			</section>
 			<section>
-				<article>
-					<p>slider</p>
-				</article>
+				<article className={styles.articleCarousel}>{carousel}</article>
 			</section>
 			<section className={styles.distribution}>
 				<h2 className={styles.h2Dist}>DISTRIBUTION</h2>

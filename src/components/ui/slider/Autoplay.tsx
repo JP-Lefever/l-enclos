@@ -1,20 +1,17 @@
 "use client";
 
-import Slider from "react-slick";
 import styles from "./autoplay.module.css";
+import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
-import Image, { type StaticImageData } from "next/image";
 import "slick-carousel/slick/slick-theme.css";
-import photo0 from "../../../../public/images/affiche.png";
-import photo1 from "../../../../public/images/j_ai_17_ans_scene.jpg";
-import photo2 from "../../../../public/images/j_ai_17ans_pour_toujours.png";
-import photo3 from "../../../../public/images/te_souviens_tu.jpg";
+import Image from "next/image";
+
 import { useRef } from "react";
 import { ChevronRight } from "lucide-react";
 import { ChevronLeft } from "lucide-react";
+import { photo } from "@/lib/placeholder-data";
 
-export default function AutoPlay() {
-	const data: StaticImageData[] = [photo0, photo1, photo2, photo3];
+const AutoPlay = () => {
 	const settings = {
 		dots: false,
 		infinite: true,
@@ -25,6 +22,8 @@ export default function AutoPlay() {
 		autoplaySpeed: 7000,
 		cssEase: "linear",
 	};
+
+	const photoCarousel = photo.filter((p) => p.service === "carousel_accueil");
 
 	const sliderRef = useRef<Slider>(null);
 
@@ -43,13 +42,13 @@ export default function AutoPlay() {
 	return (
 		<div className={styles.container}>
 			<Slider ref={sliderRef} {...settings}>
-				{data.map((m) => (
-					<div key={m.toString()}>
-						<div key={m.toString()} className={styles.slide}>
+				{photoCarousel.map((p) => (
+					<div key={p.id}>
+						<div key={p.id} className={styles.slide}>
 							<Image
 								className={styles.photoCarousel}
-								src={m}
-								alt={m.toString()}
+								src={p.photo}
+								alt={p.service}
 								width={1080}
 								height={860}
 								layout="responsive"
@@ -66,4 +65,70 @@ export default function AutoPlay() {
 			</button>
 		</div>
 	);
-}
+};
+
+const AutoPlaySpec = (id: number) => {
+	const settings = {
+		dots: false,
+		infinite: true,
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		autoplay: true,
+		speed: 500,
+		autoplaySpeed: 5000,
+		cssEase: "linear",
+	};
+
+	const handleClick = (src: string) => {
+		window.open(src); // Ouvre l'image dans un nouvel onglet
+	};
+
+	const photoCarousel = photo.filter((p) => p.id_spec === id);
+
+	const sliderRef = useRef<Slider>(null);
+
+	const nextSlide = () => {
+		if (sliderRef.current) {
+			sliderRef.current.slickNext();
+		}
+	};
+
+	const previousSlide = () => {
+		if (sliderRef.current) {
+			sliderRef.current.slickPrev();
+		}
+	};
+
+	return (
+		<div className={styles.containerSpec}>
+			<button
+				className={styles.buttonSpec}
+				type="button"
+				onClick={previousSlide}
+			>
+				<ChevronLeft size={72} />
+			</button>
+			<Slider ref={sliderRef} {...settings}>
+				{photoCarousel.map((p) => (
+					<div key={p.id}>
+						<div key={p.id} className={styles.slideSpec}>
+							<Image
+								className={styles.photoCarouselSpec}
+								src={p.photo}
+								alt={p.service}
+								fill
+								onClick={() => handleClick(p.photo)}
+							/>
+						</div>
+					</div>
+				))}
+			</Slider>
+
+			<button className={styles.buttonSpec} type="button" onClick={nextSlide}>
+				<ChevronRight size={72} />
+			</button>
+		</div>
+	);
+};
+
+export { AutoPlay, AutoPlaySpec };

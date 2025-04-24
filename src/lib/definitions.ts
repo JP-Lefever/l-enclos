@@ -41,6 +41,7 @@ export type creationProps = {
 	mainPhoto: string;
 };
 
+//FRONT
 export type SpectacleProps = {
 	id: number;
 	title: string;
@@ -98,4 +99,11 @@ export type PastSpectacleDateProps = {
 	id: number;
 	id_spec: number;
 	place: string;
+};
+
+export type PhotoDataProps = {
+	id: number;
+	photo: string;
+	service: string;
+	id_spec?: number;
 };

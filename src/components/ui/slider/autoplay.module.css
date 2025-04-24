@@ -17,3 +17,47 @@
 .container {
 	overflow-x: hidden;
 }
+
+/* carouselSpec */
+.slideSpec {
+	aspect-ratio: 3 / 4;
+	overflow: hidden;
+	margin: 0 0.5vw;
+	padding: 0 1vw;
+	position: relative;
+}
+
+.photoCarouselSpec {
+	object-fit: cover;
+	cursor: pointer;
+}
+.containerSpec {
+	position: relative;
+
+	width: 80vw;
+	margin: auto;
+}
+
+.buttonSpec {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 2;
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+
+.buttonSpec:first-of-type {
+	left: -5em;
+	@media screen and (max-width: 568px) {
+		opacity: 0;
+	}
+}
+
+.buttonSpec:last-of-type {
+	right: -5em;
+	@media screen and (max-width: 568px) {
+		opacity: 0;
+	}
+}
