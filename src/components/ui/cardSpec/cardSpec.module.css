@@ -10,7 +10,7 @@
 	width: fit-content;
 	margin: auto;
 	gap: 20em;
-	color: var(--main-color);
+
 	@media screen and (max-width: 568px) {
 		display: flex;
 		flex-direction: column;
@@ -21,6 +21,8 @@
 .article {
 	text-align: center;
 	width: 20vw;
+	color: var(--main-color);
+	text-decoration: none;
 	@media screen and (max-width: 568px) {
 		width: 80vw;
 	}
@@ -28,7 +30,7 @@
 
 .article:hover {
 	transform: scale(1.1);
-	color: var(--main-color);
+	color: var(--warm-color);
 }
 
 .imageWrapper {
