@@ -27,8 +27,8 @@
 }
 
 .article:hover {
-	transform: scale(1.1);
 	color: var(--warm-color);
+	transform: scale(1.05);
 }
 
 .imageWrapper {
@@ -41,7 +41,13 @@
 }
 .image {
 	object-fit: contain;
+	transition: transform 0.3s ease-in-out;
 }
+
+.image:hover {
+	transform: scale(1.05);
+}
+
 .p {
 	font-size: 1.2em;
 	margin-bottom: 3vh;

@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
+import { hover, motion, useInView } from "framer-motion";
 import React from "react";
 import { type ReactNode, useRef } from "react";
 
@@ -61,7 +61,7 @@ export const ScrollAnimation3 = ({ children }: ScrollAnimationType) => {
 	const ref = useRef(null);
 	const isInView = useInView(ref, { once: true, amount: 0.4 });
 
-	const containerVariants = {
+	const variants = {
 		hidden: {},
 		visible: {
 			transition: {
@@ -75,7 +75,7 @@ export const ScrollAnimation3 = ({ children }: ScrollAnimationType) => {
 			ref={ref}
 			initial="hidden"
 			animate={isInView ? "visible" : "hidden"}
-			variants={containerVariants}
+			variants={variants}
 		>
 			{children}
 		</motion.div>
