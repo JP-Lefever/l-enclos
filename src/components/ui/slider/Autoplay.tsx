@@ -166,13 +166,15 @@ const AutoPlayMed = (id: number) => {
 
 	return (
 		<div className={styles.containerSpec}>
-			<button
-				className={styles.buttonSpec}
-				type="button"
-				onClick={previousSlide}
-			>
-				<ChevronLeft size={72} />
-			</button>
+			{photoCarousel.length > 0 && (
+				<button
+					className={styles.buttonSpec}
+					type="button"
+					onClick={previousSlide}
+				>
+					<ChevronLeft size={72} />
+				</button>
+			)}
 			<Slider ref={sliderRef} {...settings}>
 				{photoCarousel.map((p) => (
 					<div key={p.id}>
@@ -188,10 +190,11 @@ const AutoPlayMed = (id: number) => {
 					</div>
 				))}
 			</Slider>
-
-			<button className={styles.buttonSpec} type="button" onClick={nextSlide}>
-				<ChevronRight size={72} />
-			</button>
+			{photoCarousel.length > 0 && (
+				<button className={styles.buttonSpec} type="button" onClick={nextSlide}>
+					<ChevronRight size={72} />
+				</button>
+			)}
 		</div>
 	);
 };

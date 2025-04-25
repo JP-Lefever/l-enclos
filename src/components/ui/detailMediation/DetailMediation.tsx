@@ -145,7 +145,9 @@ export default function DetailMediation({
 					</ScrollAnimation2>
 				</section>
 			)}
+
 			<section className={styles.carousel}>{slider}</section>
+
 			<div className={styles.divThanks}>
 				<ScrollAnimation className={styles.sectionThanks}>
 					<h2 className={styles.h2Thanks}>Remerciement</h2>
