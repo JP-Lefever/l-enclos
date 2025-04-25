@@ -1,4 +1,3 @@
-i;
 import DetailMediation from "@/components/ui/detailMediation/DetailMediation";
 import { mediation } from "@/lib/placeholder-data";
 
