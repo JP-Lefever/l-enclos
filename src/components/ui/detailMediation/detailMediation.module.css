@@ -269,14 +269,6 @@
 	}
 }
 
-
-
-
-
-
-
-
-
 .sectionDate {
 	background-color: var(--nuance-blue);
 	padding: 5vw;
@@ -375,6 +367,6 @@
 	color: var(--secondary-color);
 }
 
-.articleCarousel {
+.carousel {
 	margin: 5vh 2vw;
-} */
+}

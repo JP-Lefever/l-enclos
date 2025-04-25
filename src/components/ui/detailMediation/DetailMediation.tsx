@@ -1,3 +1,5 @@
+"use client";
+
 import styles from "./detailMediation.module.css";
 import Image from "next/image";
 import type { InterventionProps, MediationProps } from "@/lib/definitions";
@@ -8,6 +10,7 @@ import {
 import Markdown from "react-markdown";
 import { intervention } from "@/lib/placeholder-data";
 import { ChevronRight } from "lucide-react";
+import { AutoPlayMed } from "../slider/Autoplay";
 
 export default function DetailMediation({
 	mediation,
@@ -21,6 +24,8 @@ export default function DetailMediation({
 	if (!data) {
 		return <p>Projet Introuvable</p>;
 	}
+
+	const slider = AutoPlayMed(Number(id));
 
 	return (
 		<>
@@ -140,7 +145,7 @@ export default function DetailMediation({
 					</ScrollAnimation2>
 				</section>
 			)}
-
+			<section className={styles.carousel}>{slider}</section>
 			<div className={styles.divThanks}>
 				<ScrollAnimation className={styles.sectionThanks}>
 					<h2 className={styles.h2Thanks}>Remerciement</h2>

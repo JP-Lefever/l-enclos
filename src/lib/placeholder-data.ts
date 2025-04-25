@@ -352,6 +352,42 @@ const photo = [
 		service: "carousel_te_souviens",
 		id_spec: 2,
 	},
+	{
+		id: 17,
+		photo: "/images/ephad/carou1.jpg",
+		service: "carousel_ephad",
+		id_med: 3,
+	},
+	{
+		id: 18,
+		photo: "/images/ephad/carou2.jpg",
+		service: "carousel_ephad",
+		id_med: 3,
+	},
+	{
+		id: 19,
+		photo: "/images/ephad/carou3.jpg",
+		service: "carousel_ephad",
+		id_med: 3,
+	},
+	{
+		id: 20,
+		photo: "/images/ephad/carou4.jpg",
+		service: "carousel_ephad",
+		id_med: 3,
+	},
+	{
+		id: 21,
+		photo: "/images/ephad/carou5.jpg",
+		service: "carousel_ephad",
+		id_med: 3,
+	},
+	{
+		id: 22,
+		photo: "/images/ephad/carou6.jpg",
+		service: "carousel_ephad",
+		id_med: 3,
+	},
 ];
 
 //mediation

@@ -106,6 +106,7 @@ export type PhotoDataProps = {
 	photo: string;
 	service: string;
 	id_spec?: number;
+	id_med?: number;
 };
 
 export type MediationProps = {
