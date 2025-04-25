@@ -1,4 +1,3 @@
-import Link from "next/link";
 import styles from "./detailMediation.module.css";
 import Image from "next/image";
 import type { InterventionProps, MediationProps } from "@/lib/definitions";
@@ -164,42 +163,6 @@ export default function DetailMediation({
 					</article>
 				</ScrollAnimation2>
 			</div>
-			{/*
-            <section>
-				<article className={styles.articleCarousel}>{""}</article>
-			</section>
-			<ScrollAnimation className={styles.sectionDate}>
-				<h2 className={styles.h2Date}>Les Dates</h2>
-				<section className={styles.articles}>
-					<ScrollAnimation className={styles.articleDate}>
-						<h3 className={styles.h3Date}>A venir</h3>
-						<div className={styles.divDate}>
-							{dateSpec
-								? dateSpec.map((d) => (
-										<div key={d.id}>
-											<h4 className={styles.h4Date}>{d.date}</h4>
-											<p className={styles.pDate1}>{d.place}</p>
-											<p className={styles.pDate2}>{d.info} </p>
-											<p className={styles.pDate2}>{d.hour}</p>
-										</div>
-									))
-								: ""}
-						</div>
-					</ScrollAnimation>
-					<ScrollAnimation2 className={styles.articleDatePassed}>
-						<h3 className={styles.h3Date}>Passées</h3>
-						<div className={styles.divDatePass}>
-							{dateSpecOver
-								? dateSpecOver.map((d) => (
-										<div key={d.id}>
-											<h4>{d.place}</h4>
-										</div>
-									))
-								: ""}
-						</div>
-					</ScrollAnimation2>
-				</section>
-			</ScrollAnimation>  */}
 		</>
 	);
 }
