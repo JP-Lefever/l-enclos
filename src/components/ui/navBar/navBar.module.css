@@ -1,0 +1,14 @@
+.nav {
+	display: flex;
+	padding: 1em;
+	align-items: center;
+	margin-left: 1em;
+}
+.logo {
+	width: 10em;
+	height: auto;
+}
+.image {
+	width: fit-content;
+	margin: auto;
+}

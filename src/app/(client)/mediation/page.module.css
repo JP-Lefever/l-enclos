@@ -1,0 +1,66 @@
+.section {
+	background-image: url("/images/mediation_bg.jpg");
+	width: 100vw;
+	height: 40vw;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	overflow-x: hidden;
+	@media screen and (max-width: 568px) {
+		background-image: url("/images/mediation_bg.jpg");
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		height: 40vh;
+		width: 100vw;
+	}
+}
+
+.h1 {
+	font-family: var(--title-font);
+	font-size: 6.5em;
+	letter-spacing: var(--letter-spacing);
+	color: var(--main-color);
+	display: block;
+	text-align: center;
+	position: relative;
+	top: 50vh;
+	left: 10vw;
+	@media screen and (max-width: 568px) {
+		font-size: 3em;
+		position: relative;
+		top: 25vh;
+	}
+}
+
+.sectionPrim {
+	width: 80vw;
+	margin: auto;
+	height: 100vh;
+	overflow-x: hidden;
+	@media screen and (max-width: 568px) {
+		width: 90vw;
+	}
+}
+
+.sectionColl {
+	width: 100vw;
+	height: 100vh;
+	overflow-x: hidden;
+	background-color: var(--nuance-blue);
+	@media screen and (max-width: 568px) {
+		width: 100vw;
+	}
+}
+
+.sectionEph {
+	height: 100vh;
+	overflow-x: hidden;
+	width: fit-content;
+	margin-top: 15vh;
+
+	@media screen and (max-width: 568px) {
+		width: 100vw;
+		margin-top: 5vh;
+	}
+}

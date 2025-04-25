@@ -1,0 +1,29 @@
+@font-face {
+	font-family: "edo";
+	src: url("/fonts/edo.ttf");
+}
+body {
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+:root {
+	--primary-color: #de694f;
+	--primary-color2: #ebac9e;
+	--nuance-orange: #ffedd5;
+	--nuance-orange2: rgb(255, 182, 80, 1);
+	--secondary-color: #273472;
+	--nuance-blue: #bfc5e4;
+	--main-color: #ffffff;
+	--footer: #f6f6f6;
+	--warm-color: #ff6900;
+	--cold-color: #00d084;
+	--title-font: "edo";
+	--letter-spacing: 0.1em;
+}
