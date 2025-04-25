@@ -1,8 +1,9 @@
 import { paragraphFont } from "../../components/ui/font";
 import styles from "./layout.module.css";
-import NavBar from "../../features/navBar/NavBar";
+
 import "../globals.css";
 import Footer from "@/components/ui/footer/Footer";
+import NavBar from "@/components/ui/navBar/NavBar";
 
 export default function RootLayout({
 	children,
