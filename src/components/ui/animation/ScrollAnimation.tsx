@@ -14,7 +14,7 @@ export const ScrollAnimation = ({
 	className,
 }: ScrollAnimationType) => {
 	const ref = useRef(null);
-	const isInView = useInView(ref, { once: true, amount: 0.4 });
+	const isInView = useInView(ref, { once: true, amount: 0.3 });
 
 	const variants = {
 		hidden: { opacity: 0, y: -20, x: -20 },

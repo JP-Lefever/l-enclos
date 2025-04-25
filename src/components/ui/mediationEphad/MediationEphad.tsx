@@ -3,6 +3,7 @@ import styles from "./mediationEphad.module.css";
 import Image from "next/image";
 
 export default function MediationEphad() {
+	const id = 3;
 	return (
 		<>
 			<section className={styles.section}>
@@ -20,7 +21,7 @@ export default function MediationEphad() {
 					<h1 className={styles.h1}>théâtre - EPHAD</h1>
 					<p className={styles.paragraph}>Mediation ephad</p>
 					<div className={styles.div}>
-						<Link className={styles.link} href="#">
+						<Link className={styles.link} href={`/mediation/${id}`}>
 							Voir les ateliers
 						</Link>
 					</div>

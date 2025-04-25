@@ -3,6 +3,7 @@ import styles from "./mediationCollege.module.css";
 import Image from "next/image";
 
 export default function MediationCollege() {
+	const id = 2;
 	return (
 		<>
 			<section className={styles.section}>
@@ -20,7 +21,7 @@ export default function MediationCollege() {
 					<h1 className={styles.h1}>Théâtre - College</h1>
 					<p className={styles.paragraph}>Mediation college</p>
 					<div className={styles.div}>
-						<Link className={styles.link} href="#">
+						<Link className={styles.link} href={`/mediation/${id}`}>
 							En savoir plus
 						</Link>
 					</div>
