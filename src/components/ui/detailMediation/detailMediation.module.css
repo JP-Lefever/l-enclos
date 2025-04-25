@@ -5,6 +5,7 @@
 	@media screen and (max-width: 568px) {
 		display: flex;
 		flex-direction: column;
+		overflow-x: hidden;
 	}
 }
 .articleInfo {
@@ -15,7 +16,7 @@
 	width: 80vw;
 	background-color: var(--primary-color);
 	@media screen and (max-width: 568px) {
-		height: 50vh;
+		height: fit-content;
 		width: 90vw;
 	}
 }
@@ -54,17 +55,27 @@
 	color: var(--main-color);
 	margin-bottom: 2vh;
 	width: 45vw;
+	@media screen and (max-width: 568px) {
+		font-size: 1em;
+		width: 90vw;
+	}
 }
 .h3 {
 	color: var(--main-color);
 	font-size: 1.5em;
 	text-transform: uppercase;
+	@media screen and (max-width: 568px) {
+		font-size: 1em;
+	}
 }
 .pPres {
 	width: 40vw;
 	color: var(--main-color);
 	margin-top: 5vh;
 	line-height: 1.6em;
+	@media screen and (max-width: 568px) {
+		width: 80vw;
+	}
 }
 .div {
 	margin-left: 2vw;
@@ -81,7 +92,8 @@
 	padding: 2em;
 	height: fit-content;
 	@media screen and (max-width: 568px) {
-		height: fit-content;
+		width: 100vw;
+		height: auto;
 	}
 }
 
@@ -94,10 +106,11 @@
 	margin: 5vh 3vw;
 
 	@media screen and (max-width: 568px) {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		width: 90vw;
-		margin-top: 5vh;
+		display: flex;
+		flex-direction: column;
+		width: 85vw;
+		height: auto;
+		margin: auto;
 	}
 }
 
@@ -106,6 +119,9 @@
 	color: var(--nuance-orange2);
 	margin-bottom: 2vh;
 	font-size: 1.8em;
+	@media screen and (max-width: 568px) {
+		font-size: 1.1em;
+	}
 }
 
 .h3Orga {
@@ -122,6 +138,7 @@
 	@media screen and (max-width: 568px) {
 		display: flex;
 		flex-direction: column;
+		overflow-x: hidden;
 	}
 }
 
@@ -175,6 +192,7 @@
 	@media screen and (max-width: 568px) {
 		display: flex;
 		flex-direction: column;
+		overflow-x: hidden;
 	}
 }
 
