@@ -145,3 +145,8 @@ export type InterventionProps = {
 	date: string;
 	info: string;
 };
+
+export type CompagnieProps = {
+	id: number;
+	about: string;
+};

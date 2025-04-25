@@ -13,7 +13,7 @@ export default function NavMenu({
 					<Link className={styles.link} href="/" onClick={closeMenu}>
 						Accueil
 					</Link>
-					<Link className={styles.link} href="#">
+					<Link className={styles.link} href="/compagnie" onClick={closeMenu}>
 						Compagnie
 					</Link>
 					<Link className={styles.link} href="/spectacles" onClick={closeMenu}>

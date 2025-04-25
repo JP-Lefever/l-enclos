@@ -33,7 +33,7 @@ export default function PresCompagnie() {
 						sensibilité, dans leurs limites….`}
 					</p>
 					<div className={styles.div}>
-						<Link className={styles.link} href="#">
+						<Link className={styles.link} href="/compagnie">
 							En savoir plus
 						</Link>
 					</div>
