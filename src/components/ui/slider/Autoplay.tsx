@@ -41,19 +41,17 @@ const AutoPlay = () => {
 	};
 
 	return (
-		<div className={styles.container}>
+		<section className={styles.container}>
 			<Slider ref={sliderRef} {...settings}>
 				{photoCarousel.map((p) => (
-					<div key={p.id}>
-						<div key={p.id} className={styles.slide}>
-							<Image
-								className={styles.photoCarousel}
-								src={p.photo}
-								alt={p.service}
-								fill
-							/>
-						</div>
-					</div>
+					<figure key={p.id} className={styles.slide}>
+						<Image
+							className={styles.photoCarousel}
+							src={p.photo}
+							alt={p.service}
+							fill
+						/>
+					</figure>
 				))}
 			</Slider>
 			<button className={styles.button} type="button" onClick={previousSlide}>
@@ -62,7 +60,7 @@ const AutoPlay = () => {
 			<button className={styles.button} type="button" onClick={nextSlide}>
 				<ChevronRight size={72} />
 			</button>
-		</div>
+		</section>
 	);
 };
 

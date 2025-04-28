@@ -6,17 +6,17 @@ export default function PresCompagnie() {
 	return (
 		<>
 			<section className={styles.section}>
-				<article>
+				<figure>
 					<Image
 						className={styles.image}
-						src={"/images/cie.png"}
+						src={"/images/affiche_17ans.png"}
 						alt={"La compagnie l'Enclos"}
 						width={1080}
 						height={860}
 					/>
-				</article>
+				</figure>
 
-				<article>
+				<article className={styles.article}>
 					<h1 className={styles.h1}>
 						<span className={styles.span}>LA </span>
 						<span className={styles.span}>COMPAGNIE </span>
@@ -32,11 +32,10 @@ export default function PresCompagnie() {
 						profondeur, dans les méandres de leurs pensées, dans leur
 						sensibilité, dans leurs limites….`}
 					</p>
-					<div className={styles.div}>
-						<Link className={styles.link} href="/compagnie">
-							En savoir plus
-						</Link>
-					</div>
+
+					<Link className={styles.link} href="/compagnie">
+						En savoir plus
+					</Link>
 				</article>
 			</section>
 		</>

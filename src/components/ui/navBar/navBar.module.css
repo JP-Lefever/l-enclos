@@ -7,8 +7,16 @@
 .logo {
 	width: 10em;
 	height: auto;
+	@media screen and (max-width: 568px) {
+		width: 5em;
+	}
 }
 .image {
 	width: fit-content;
 	margin: auto;
+}
+.menu {
+	@media screen and (max-width: 568px) {
+		width: 2em;
+	}
 }
