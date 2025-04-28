@@ -50,9 +50,7 @@ const AutoPlay = () => {
 								className={styles.photoCarousel}
 								src={p.photo}
 								alt={p.service}
-								width={1080}
-								height={860}
-								layout="responsive"
+								fill
 							/>
 						</div>
 					</div>
