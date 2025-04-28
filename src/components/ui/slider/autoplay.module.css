@@ -1,23 +1,27 @@
+.slide {
+	position: relative;
+	overflow: hidden;
+	height: 90vh;
+	width: 100vw;
+
+	@media screen and (max-width: 568px) {
+		height: 50vh;
+	}
+}
 .photoCarousel {
 	object-fit: cover;
 }
-.slide {
-	height: 90vh;
-	width: 100vw;
-	position: relative;
-	aspect-ratio: "1080 / 860";
-}
 
 .button {
-	font-size: 2em;
 	width: fit-content;
 	position: relative;
-	bottom: 4em;
+	bottom: 8em;
 	border: none;
 	background-color: transparent;
 	color: var(--main-color);
+	cursor: pointer;
 	@media screen and (max-width: 568px) {
-		opacity: 0;
+		display: none;
 	}
 }
 .container {
