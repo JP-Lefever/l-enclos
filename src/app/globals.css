@@ -6,7 +6,10 @@ body {
 	overflow-x: hidden;
 	scroll-behavior: smooth;
 }
-
+h1,
+h2 {
+	font-weight: 400;
+}
 * {
 	padding: 0;
 	margin: 0;
