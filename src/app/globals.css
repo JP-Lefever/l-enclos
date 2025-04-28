@@ -17,11 +17,12 @@ h2 {
 	scroll-behavior: smooth;
 }
 :root {
-	--primary-color: #de694f;
+	--primary-color: #d3a1a0;
+	--secondary-color: #7097ec;
+	--third-color: #000100;
 	--primary-color2: #ebac9e;
 	--nuance-orange: #ffedd5;
 	--nuance-orange2: rgb(255, 182, 80, 1);
-	--secondary-color: #273472;
 	--nuance-blue: #bfc5e4;
 	--main-color: #ffffff;
 	--footer: #f6f6f6;

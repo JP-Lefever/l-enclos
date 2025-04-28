@@ -17,7 +17,7 @@ export default function PresSpectacles() {
 				</article>
 
 				<article>
-					<h1 className={styles.h1}>Spectales</h1>
+					<h1 className={styles.h1}>Créations</h1>
 					<p className={styles.paragraph}>
 						{`L'Enclos parle de cet Espace Clos qui entoure chaque être humain,
 						l'intimité de l'être dans toute sa complexité, l'endroit de notre

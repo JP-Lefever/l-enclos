@@ -7,12 +7,12 @@
 	}
 }
 .articleInfo {
-	border: solid 1px;
-	border-color: var(--primary-color);
+	border: solid 3px;
+	border-color: var(--third-color);
 	padding: 8vw;
 	height: 90vh;
 	width: 80vw;
-	background-color: var(--primary-color);
+	background-color: var(--main-color);
 	@media screen and (max-width: 568px) {
 		height: 50vh;
 		width: 90vw;
@@ -40,7 +40,7 @@
 	font-family: var(--title-font);
 	font-size: 4em;
 	letter-spacing: var(--letter-spacing);
-	color: var(--main-color);
+	color: var(--third-color);
 	margin-bottom: 5vh;
 	@media screen and (max-width: 568px) {
 		font-size: 1.5em;
@@ -49,7 +49,7 @@
 }
 
 .h3 {
-	color: var(--main-color);
+	color: var(--third-color);
 	font-size: 1.5em;
 }
 .div {
@@ -61,7 +61,7 @@
 	}
 }
 .p {
-	color: var(--main-color);
+	color: var(--third-color);
 }
 .sectionPres {
 	display: flex;
@@ -86,11 +86,11 @@
 }
 .resume {
 	border: solid 1px;
-	border-color: var(--nuance-blue);
+	border-color: var(--secondary-color);
 	padding: 4vw 1vw;
 	height: 60vh;
 	width: 50vw;
-	background-color: var(--nuance-blue);
+	background-color: var(--secondary-color);
 	@media screen and (max-width: 568px) {
 		height: fit-content;
 		width: 90vw;
@@ -101,7 +101,7 @@
 	font-family: var(--title-font);
 	font-size: 4em;
 	letter-spacing: var(--letter-spacing);
-	color: var(--main-color);
+	color: var(--third-color);
 	margin: 2vh 3vw;
 	@media screen and (max-width: 568px) {
 		font-size: 1.5em;
@@ -118,7 +118,8 @@
 
 .distribution {
 	width: 100vw;
-	background-color: var(--secondary-color);
+	background-color: var(--main-color);
+	border: solid 3px var(--third-color);
 	padding: 2em;
 	height: 60vh;
 	@media screen and (max-width: 568px) {
@@ -141,12 +142,12 @@
 }
 
 .h3Dist {
-	color: var(--main-color);
+	color: var(--third-color);
 	font-size: 1.2em;
 	margin-bottom: 1vh;
 }
 .pDist {
-	color: var(--main-color);
+	color: var(--third-color);
 	font-size: 0.8em;
 	margin-bottom: 1em;
 }
@@ -155,7 +156,7 @@
 	font-family: var(--title-font);
 	font-size: 4em;
 	letter-spacing: var(--letter-spacing);
-	color: var(--main-color);
+	color: var(--third-color);
 	margin-bottom: 15vh;
 	text-align: center;
 	@media screen and (max-width: 568px) {
@@ -178,7 +179,7 @@
 	}
 }
 .sectionTech {
-	background-color: var(--primary-color);
+	background-color: var(--secondary-color);
 	height: 60vh;
 	width: 30vw;
 	padding-left: 2vw;
@@ -202,7 +203,7 @@
 	font-family: var(--title-font);
 	font-size: 4em;
 	letter-spacing: var(--letter-spacing);
-	color: var(--main-color);
+	color: var(--third-color);
 
 	text-align: left;
 	margin-top: -10vh;
@@ -241,7 +242,7 @@
 }
 
 .sectionDate {
-	background-color: var(--nuance-blue);
+	background-color: var(--third-color);
 	padding: 5vw;
 	margin-top: 5vh;
 	height: 70vh;
@@ -270,14 +271,14 @@
 .articleDatePassed {
 	border-left: 1px solid;
 	padding-left: 5vw;
-	border-color: var(--primary-color);
+	border-color: var(--main-color);
 }
 
 .h2Date {
 	font-family: var(--title-font);
 	font-size: 4em;
 	letter-spacing: var(--letter-spacing);
-	color: var(--secondary-color);
+	color: var(--main-color);
 	margin-bottom: 5vh;
 	margin-top: -10vh;
 	text-align: center;
@@ -291,7 +292,7 @@
 	font-family: var(--title-font);
 	font-size: 2em;
 	letter-spacing: var(--letter-spacing);
-	color: var(--secondary-color);
+	color: var(--main-color);
 	text-align: center;
 }
 .divDate {
@@ -307,25 +308,25 @@
 	}
 }
 .h4Date {
-	color: var(--secondary-color);
+	color: var(--main-color);
 	font-size: 1.4em;
 	text-align: left;
 	padding-bottom: 1em;
 	border-bottom: solid 1px;
-	border-color: var(--secondary-color);
+	border-color: var(--main-color);
 }
 
 .pDate1 {
-	color: var(--secondary-color);
+	color: var(--main-color);
 	font-size: 1.4em;
 	text-align: left;
 	padding-bottom: 1em;
 	border-bottom: solid 1px;
-	border-color: var(--secondary-color);
+	border-color: var(--main-color);
 	font-weight: bold;
 }
 .pDate2 {
-	color: var(--secondary-color);
+	color: var(--main-color);
 	font-size: 1.4em;
 	text-align: left;
 }
@@ -335,7 +336,7 @@
 	flex-direction: column;
 	justify-content: center;
 	margin-top: 5vh;
-	color: var(--secondary-color);
+	color: var(--main-color);
 }
 
 .articleCarousel {
