@@ -1,5 +1,11 @@
 .photoCarousel {
-	max-height: 90vh;
+	object-fit: cover;
+}
+.slide {
+	height: 90vh;
+	width: 100vw;
+	position: relative;
+	aspect-ratio: "1080 / 860";
 }
 
 .button {
