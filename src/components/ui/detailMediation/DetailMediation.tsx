@@ -57,7 +57,7 @@ export default function DetailMediation({
 				</ScrollAnimation2>
 			</section>
 			<ScrollAnimation className={styles.organisation}>
-				<h2 className={styles.h2}>Organisation</h2>
+				<h2 className={styles.h2Orga}>Organisation</h2>
 				<h3 className={styles.h3Deroul}>{data.organisation}</h3>
 				<article className={styles.articleOrga}>
 					<div>

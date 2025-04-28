@@ -9,12 +9,12 @@
 	}
 }
 .articleInfo {
-	border: solid 1px;
-	border-color: var(--primary-color);
+	border: solid 3px;
+	border-color: var(--third-color);
 	padding: 2vw;
 	height: 90vh;
 	width: 80vw;
-	background-color: var(--primary-color);
+	background-color: var(--main-color);
 	@media screen and (max-width: 568px) {
 		height: fit-content;
 		width: 90vw;
@@ -42,7 +42,7 @@
 	font-family: var(--title-font);
 	font-size: 4em;
 	letter-spacing: var(--letter-spacing);
-	color: var(--main-color);
+	color: var(--third-color);
 	margin-bottom: 5vh;
 	@media screen and (max-width: 568px) {
 		font-size: 1.5em;
@@ -52,7 +52,7 @@
 .h3title {
 	font-family: var(--title-font);
 	letter-spacing: var(--letter-spacing);
-	color: var(--main-color);
+	color: var(--third-color);
 	margin-bottom: 2vh;
 	width: 45vw;
 	@media screen and (max-width: 568px) {
@@ -61,7 +61,7 @@
 	}
 }
 .h3 {
-	color: var(--main-color);
+	color: var(--third-color);
 	font-size: 1.5em;
 	text-transform: uppercase;
 	@media screen and (max-width: 568px) {
@@ -70,7 +70,7 @@
 }
 .pPres {
 	width: 40vw;
-	color: var(--main-color);
+	color: var(--third-color);
 	margin-top: 5vh;
 	line-height: 1.6em;
 	@media screen and (max-width: 568px) {
@@ -96,7 +96,17 @@
 		height: auto;
 	}
 }
-
+.h2Orga {
+	font-family: var(--title-font);
+	font-size: 4em;
+	letter-spacing: var(--letter-spacing);
+	color: var(--main-color);
+	margin-bottom: 5vh;
+	@media screen and (max-width: 568px) {
+		font-size: 1.5em;
+		margin-bottom: 2vh;
+	}
+}
 .articleOrga {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -116,7 +126,7 @@
 
 .h3Deroul {
 	letter-spacing: var(--letter-spacing);
-	color: var(--nuance-orange2);
+	color: var(--main-color);
 	margin-bottom: 2vh;
 	font-size: 1.8em;
 	@media screen and (max-width: 568px) {
@@ -125,7 +135,7 @@
 }
 
 .h3Orga {
-	color: var(--nuance-orange2);
+	color: var(--main-color);
 	font-size: 1.2em;
 	margin-bottom: 1vh;
 }
@@ -155,11 +165,11 @@
 
 .extract {
 	border: solid 1px;
-	border-color: var(--nuance-blue);
+	border-color: var(--primary-color);
 	padding: 4vw 1vw;
 	height: 60vh;
 	width: 50vw;
-	background-color: var(--nuance-blue);
+	background-color: var(--primary-color);
 	@media screen and (max-width: 568px) {
 		height: fit-content;
 		width: 90vw;
@@ -197,7 +207,7 @@
 }
 
 .sectionThanks {
-	background-color: var(--primary-color);
+	background-color: var(--secondary-color);
 	height: 60vh;
 	width: 30vw;
 	padding-left: 2vw;

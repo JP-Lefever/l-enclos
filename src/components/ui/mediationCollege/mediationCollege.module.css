@@ -29,7 +29,7 @@
 .h1 {
 	font-family: var(--title-font);
 	font-size: 3.5em;
-	color: var(--primary-color);
+	color: var(--secondary-color);
 	letter-spacing: var(--letter-spacing);
 	position: relative;
 	left: 4em;
@@ -48,7 +48,7 @@
 	text-align: justify;
 	margin-bottom: 6em;
 	width: 25vw;
-
+	color: var(--main-color);
 	@media screen and (max-width: 568px) {
 		width: 90vw;
 		margin: 0;
@@ -57,9 +57,10 @@
 
 .link {
 	border: solid 2px var(--secondary-color);
+	background-color: var(--secondary-color);
 	text-decoration: none;
 	font-weight: bold;
-	color: var(--secondary-color);
+	color: var(--main-color);
 	padding: 0.3em 2em;
 	border-radius: 10px;
 	display: block;

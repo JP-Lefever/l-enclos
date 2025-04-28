@@ -30,7 +30,7 @@
 	margin: 5vh 0;
 }
 .isActive {
-	background-color: var(--nuance-blue);
+	background-color: var(--secondary-color);
 }
 .article {
 	height: 25vh;

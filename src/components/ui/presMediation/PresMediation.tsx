@@ -17,7 +17,7 @@ export default function PresMediation() {
 				</article>
 
 				<article className={styles.article}>
-					<h1 className={styles.h1}>Mediation</h1>
+					<h1 className={styles.h1}>Immersion</h1>
 					<p className={styles.paragraph}>
 						{`L'Enclos parle de cet Espace Clos qui entoure chaque être humain,
 						l'intimité de l'être dans toute sa complexité, l'endroit de notre
