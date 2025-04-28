@@ -56,7 +56,7 @@
 	border-radius: var(--border-radius);
 	display: block;
 	text-align: center;
-
+	text-transform: uppercase;
 	margin: var(--margin-section);
 	@media screen and (max-width: 568px) {
 		width: 90vw;

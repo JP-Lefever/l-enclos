@@ -6,20 +6,21 @@ export default function PresMediation() {
 	return (
 		<>
 			<section className={styles.section}>
-				<article>
+				<figure>
 					<Image
 						className={styles.image}
-						src={"/images/mediation.webp"}
+						src={"/images/ephad/carou6.jpg"}
 						alt={"La compagnie l'Enclos"}
 						width={1080}
 						height={860}
 					/>
-				</article>
+				</figure>
 
 				<article className={styles.article}>
 					<h1 className={styles.h1}>Immersion</h1>
-					<p className={styles.paragraph}>
-						{`L'Enclos parle de cet Espace Clos qui entoure chaque être humain,
+					<div className={styles.paragraph}>
+						<p>
+							{`L'Enclos parle de cet Espace Clos qui entoure chaque être humain,
 						l'intimité de l'être dans toute sa complexité, l'endroit de notre
 						vulnérabilité. Notre carapace. Par ses créations toujours axées sur
 						des écritures contemporaines, L'Enclos souhaite ainsi ouvrir la
@@ -27,10 +28,9 @@ export default function PresMediation() {
 						vie » et ainsi aller à la rencontre de ses personnages dans leur
 						profondeur, dans les méandres de leurs pensées, dans leur
 						sensibilité, dans leurs limites….`}
-					</p>
-					<div className={styles.div}>
+						</p>
 						<Link className={styles.link} href="/mediation">
-							Voir les ateliers
+							Voir les immersions
 						</Link>
 					</div>
 				</article>

@@ -4,6 +4,7 @@
 	overflow-x: hidden;
 	background-color: var(--third-color);
 	display: flex;
+
 	@media screen and (max-width: 568px) {
 		width: 100vw;
 		height: fit-content;
@@ -44,6 +45,7 @@
 	color: var(--secondary-color);
 	position: relative;
 	bottom: 0.4em;
+
 	letter-spacing: var(--letter-spacing);
 	transform: translateX(50%);
 
@@ -56,7 +58,7 @@
 }
 
 .paragraph {
-	margin-bottom: var(--margin-section);
+	margin: var(--margin-section) 0;
 	color: var(--main-color);
 	line-height: var(--line-height);
 	@media screen and (max-width: 568px) {
@@ -71,11 +73,11 @@
 	text-decoration: none;
 	font-weight: bold;
 	color: var(--main-color);
-	padding: 0.3em 2em;
-	border-radius: 10px;
+	border-radius: var(--border-radius);
 	display: block;
 	text-align: center;
-
+	padding: var(--padding-button);
+	text-transform: uppercase;
 	@media screen and (max-width: 568px) {
 		width: 90vw;
 		margin: 0;
