@@ -2,7 +2,7 @@ import {
 	ScrollAnimation,
 	ScrollAnimation2,
 } from "@/components/ui/animation/ScrollAnimation";
-import styles from "./page.module.css";
+
 import PresCompagnie from "@/components/ui/presCompagnie/PresCompagnie";
 import PresMediation from "@/components/ui/presMediation/PresMediation";
 import PresSpectacles from "@/components/ui/presSpectacles/PresSpectacles";
@@ -22,7 +22,7 @@ export default function Home() {
 				<PresSpectacles />
 			</ScrollAnimation2>
 
-			<ScrollAnimation className={styles.sectionMed}>
+			<ScrollAnimation>
 				<PresMediation />
 			</ScrollAnimation>
 		</>
