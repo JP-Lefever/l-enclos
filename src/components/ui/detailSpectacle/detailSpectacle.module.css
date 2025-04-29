@@ -225,10 +225,11 @@
 	padding-left: 2vw;
 	display: flex;
 	flex-direction: column;
-
+	height: 60vh;
 	@media screen and (max-width: 1024px) {
 		width: 100vw;
 		padding-left: 5vw;
+		height: fit-content;
 	}
 }
 .sectionPartnair {
@@ -236,6 +237,12 @@
 	padding-left: 2vw;
 	display: flex;
 	flex-direction: column;
+	height: 60vh;
+	@media screen and (max-width: 1024px) {
+		width: 100vw;
+		padding-left: 5vw;
+		height: fit-content;
+	}
 }
 
 .h2Tech {
@@ -247,7 +254,7 @@
 	text-align: left;
 
 	@media screen and (max-width: 1024px) {
-		font-size: 1.5em;
+		font-size: 2em;
 		margin-top: 0;
 	}
 }
@@ -263,7 +270,6 @@
 	@media screen and (max-width: 1024px) {
 		font-size: 2.0em;
 		margin-top: 5vh;
-		padding-left: 5vw;
 	}
 }
 .articleTech {
