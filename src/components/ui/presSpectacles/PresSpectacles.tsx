@@ -6,20 +6,21 @@ export default function PresSpectacles() {
 	return (
 		<>
 			<section className={styles.section}>
-				<article>
-					<Image
-						className={styles.image}
-						src={"/images/female-mime-making-hand-frame.jpg"}
-						alt={"La compagnie l'Enclos"}
-						width={1080}
-						height={860}
-					/>
-				</article>
+				<article className={styles.sectionSpec}>
+					<figure>
+						<Image
+							className={styles.image}
+							src={"/images/17ans/17ans5.jpg"}
+							alt={"La compagnie l'Enclos"}
+							width={1080}
+							height={860}
+						/>
+					</figure>
 
-				<article>
-					<h1 className={styles.h1}>Spectales</h1>
-					<p className={styles.paragraph}>
-						{`L'Enclos parle de cet Espace Clos qui entoure chaque être humain,
+					<section className={styles.sectionCréa}>
+						<h1 className={styles.h1}>Créations</h1>
+						<p className={styles.paragraph}>
+							{`L'Enclos parle de cet Espace Clos qui entoure chaque être humain,
 						l'intimité de l'être dans toute sa complexité, l'endroit de notre
 						vulnérabilité. Notre carapace. Par ses créations toujours axées sur
 						des écritures contemporaines, L'Enclos souhaite ainsi ouvrir la
@@ -27,12 +28,12 @@ export default function PresSpectacles() {
 						vie » et ainsi aller à la rencontre de ses personnages dans leur
 						profondeur, dans les méandres de leurs pensées, dans leur
 						sensibilité, dans leurs limites….`}
-					</p>
-					<div className={styles.div}>
+						</p>
+
 						<Link className={styles.link} href="/spectacles">
 							Voir les spectacles
 						</Link>
-					</div>
+					</section>
 				</article>
 			</section>
 		</>

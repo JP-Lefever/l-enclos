@@ -31,7 +31,7 @@
 	font-family: var(--title-font);
 	position: relative;
 	right: 1.5em;
-	color: var(--secondary-color);
+	color: var(--third-color);
 	line-height: 1.4em;
 	letter-spacing: var(--letter-spacing);
 
@@ -43,13 +43,13 @@
 	}
 }
 .article {
-	border: solid 1px var(--primary-color);
+	border: solid 1px var(--secondary-color);
 	z-index: 0;
 	width: 100vw;
 	height: 90vh;
 	position: relative;
 	right: 10vw;
-	background-color: var(--primary-color);
+	background-color: var(--secondary-color);
 	@media screen and (max-width: 568px) {
 		width: 100vw;
 		position: relative;
@@ -73,10 +73,11 @@
 }
 
 .link {
-	border: solid 2px var(--secondary-color);
+	border: solid 2px var(--third-color);
+	background-color: var(--third-color);
 	text-decoration: none;
 	font-weight: bold;
-	color: var(--secondary-color);
+	color: var(--main-color);
 	padding: 0.3em 2em;
 	border-radius: 10px;
 	display: block;

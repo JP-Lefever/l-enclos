@@ -22,7 +22,11 @@ export default function NavBar() {
 		<>
 			<nav className={styles.nav}>
 				<section>
-					<Menu onClick={handleClickOpenMenu} size={48} />
+					<Menu
+						className={styles.menu}
+						onClick={handleClickOpenMenu}
+						size={48}
+					/>
 					{openMenu &&
 						createPortal(
 							<NavMenu openMenu={openMenu} closeMenu={handleClickCloseMenu} />,

@@ -2,6 +2,7 @@
 const cardData = [
 	{
 		id: 1,
+		status: "En diffusion",
 		title: "Te souviens tu du jour ou j'ai coupé mes cheveux ?",
 		public: "Spectacle familial, à partir de 5 ans.",
 		duration: "45 minutes",
@@ -14,15 +15,15 @@ const cardData = [
 		illustration: "Mona Costa",
 		poster: "Julien Durand",
 		assistant: "Françoise Longeard, Mylène Mauries et Anita Schultz-Moszkowski",
-		shortResume:
-			"Découvrez Maya et Theo, un garçon aux cheveux long, une fille au cheveux court",
+		theme: "égalité fille garçon",
 		resume: `**Maya** n'est pas comme les filles de son école : elle aime avoir les cheveux courts, elle est toujours habillée en vêtements de sport et elle passe son temps à chasser Baradring Mangetout, une créature qui habite dans la forêt. **Théo**, c'est un garçon mais il a les cheveux longs, il adore prendre des photos de paysage et jouer avec son ami Nana, une poupée qu'il a piqué à sa petite sœur.
 
 Est ce grave qu'ils soient différents de leurs camarades de classe ?
 
 **Est ce qu'ils sont normaux ?**
 
-Moqués par les autres enfants et observés avec étonnement par les adultes, **Maya et Théo vont se rencontrer**, se dévoiler l'un à l'autre lors des péripéties qu'ils traverseront ensemble et découvrir à leur façon la complexité et la beauté du monde pour petit à petit se l'approprier.
+Moqués par les autres enfants et observés avec étonnement par les adultes, **Maya et Théo vont se rencontrer**, se dévoiler l'un à l'autre lors des péripéties qu'ils traverseront ensemble et découvrir à leur façon la complexité et la beauté du monde pour petit à petit se l'approprier.`,
+		propos: `
 
 La pièce parle avant tout de la **découverte de soi**, du retour à l'enfance, des premières collisions de l'individu avec l'opinion dominante, des codes de genre que les parents transmettent inconsciemment à leurs enfants. Nous revendiquons le besoin pour chaque enfant de trouver son propre chemin vers ce qui fera de lui un **adulte ouvert d'esprit et bien dans sa peau.**
 
@@ -35,6 +36,7 @@ Notre travail s'est axé principalement sur la recherche des notions même du **
 	},
 	{
 		id: 2,
+		status: "En diffusion",
 		title: "J'ai 17ans pour toujours",
 		public: "Tout public, à partir de 14 ans.",
 		image_url: "/images/affiche_17ans.png",
@@ -47,7 +49,7 @@ Notre travail s'est axé principalement sur la recherche des notions même du **
 		light: "Rémi Dubot",
 		video: "Mathilde Foriel-Destezet",
 		assistant: "Magali Zaphiropoulo, Anita Schulski",
-		shortResume: "Stella et Adèle, deux filles que tout oppose",
+		theme: "L'adolescence",
 		resume: `**Stella et Adèle**, deux amies de 17 ans, passent une énième nuit, perchées sur le toit de leur immeuble.
 		Stella ne parle plus à son père suite à la mort de sa mère. Adèle attend depuis plusieurs jours des nouvelles de son amoureux qui s'est enfui de chez lui.  
 		
@@ -247,7 +249,7 @@ const datePassed = [
 const buttonSpec = [
 	{
 		id: 1,
-		name: "les spectacles",
+		name: "les créations",
 		link: "/spectacles",
 		img_src: "/images/test.png",
 	},

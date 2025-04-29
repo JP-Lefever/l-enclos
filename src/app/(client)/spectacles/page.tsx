@@ -5,7 +5,7 @@ export default function SpectaclesPage() {
 	return (
 		<>
 			<section className={styles.section}>
-				<h1 className={styles.h1}>SPECTACLES</h1>
+				<h1 className={styles.h1}>créations</h1>
 			</section>
 			<section>
 				<ButtonSpec />

@@ -30,7 +30,7 @@
 	margin: 5vh 0;
 }
 .isActive {
-	background-color: var(--nuance-blue);
+	background-color: var(--secondary-color);
 }
 .article {
 	height: 25vh;
@@ -38,6 +38,10 @@
 	margin: 0.2em 0;
 	border-radius: 10px;
 	@media screen and (max-width: 568px) {
+		height: 25vh;
+		width: 35vw;
+	}
+	@media screen and (min-width: 768px) and (max-width: 1024px) {
 		height: 25vh;
 		width: 35vw;
 	}

@@ -6,7 +6,10 @@ body {
 	overflow-x: hidden;
 	scroll-behavior: smooth;
 }
-
+h1,
+h2 {
+	font-weight: 400;
+}
 * {
 	padding: 0;
 	margin: 0;
@@ -14,16 +17,17 @@ body {
 	scroll-behavior: smooth;
 }
 :root {
-	--primary-color: #de694f;
-	--primary-color2: #ebac9e;
-	--nuance-orange: #ffedd5;
-	--nuance-orange2: rgb(255, 182, 80, 1);
-	--secondary-color: #273472;
-	--nuance-blue: #bfc5e4;
+	--primary-color: #d3a1a0;
+	--secondary-color: #7097ec;
+	--third-color: #000100;
 	--main-color: #ffffff;
-	--footer: #f6f6f6;
-	--warm-color: #ff6900;
-	--cold-color: #00d084;
 	--title-font: "edo";
 	--letter-spacing: 0.1em;
+	--size-title: 5em;
+	--position: 1.2em;
+	--margin-section: 2em;
+	--line-height: 1.6em;
+	--padding-button: 0.3em 2em;
+	--border-radius: 10px;
+	--size-title-responsive: 1.8em;
 }

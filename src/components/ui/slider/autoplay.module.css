@@ -1,17 +1,30 @@
+.slide {
+	position: relative;
+	overflow: hidden;
+	height: 90vh;
+	width: 100vw;
+
+	@media screen and (max-width: 568px) {
+		height: 50vh;
+	}
+	@media screen and (min-width: 768px) and (max-width: 1024px) {
+		height: 40vh;
+	}
+}
 .photoCarousel {
-	max-height: 90vh;
+	object-fit: cover;
 }
 
 .button {
-	font-size: 2em;
 	width: fit-content;
 	position: relative;
-	bottom: 4em;
+	bottom: 8em;
 	border: none;
 	background-color: transparent;
 	color: var(--main-color);
+	cursor: pointer;
 	@media screen and (max-width: 568px) {
-		opacity: 0;
+		display: none;
 	}
 }
 .container {
