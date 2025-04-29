@@ -18,17 +18,14 @@
 
 .h1 {
 	font-family: var(--title-font);
-	font-size: 6.5em;
+	font-size: var(--size-title);
 	letter-spacing: var(--letter-spacing);
 	color: var(--main-color);
 	display: block;
 	text-align: center;
-	position: relative;
-	top: 50vh;
-	left: 10vw;
+	margin-top: 0.5em;
+
 	@media screen and (max-width: 568px) {
-		font-size: 3em;
-		position: relative;
-		top: 25vh;
+		font-size: 2em;
 	}
 }

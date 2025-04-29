@@ -11,6 +11,12 @@
 		width: 100vw;
 		height: fit-content;
 	}
+	@media screen and (min-width: 768px) and (max-width: 1024px) {
+		flex-direction: column;
+		align-items: center;
+		width: 100vw;
+		height: fit-content;
+	}
 }
 
 .image {
@@ -24,6 +30,15 @@
 		margin-left: 0;
 		margin-bottom: 5vh;
 	}
+	@media screen and (min-width: 768px) and (max-width: 1024px) {
+		width: 90vw;
+		margin-left: 0;
+		margin-bottom: 0vh;
+	}
+	@media screen and (min-width: 1367px) {
+		width: 40vw;
+		left: 12em;
+	}
 }
 
 .h1 {
@@ -31,6 +46,7 @@
 	font-family: var(--title-font);
 	position: relative;
 	right: var(--position);
+
 	color: var(--third-color);
 	line-height: var(--line-height);
 	letter-spacing: var(--letter-spacing);
@@ -42,23 +58,43 @@
 		right: 0;
 		text-align: center;
 	}
+	@media screen and (min-width: 768px) and (max-width: 1024px) {
+		font-size: var(--size-title);
+		position: relative;
+		right: 0;
+		text-align: center;
+	}
 }
 .article {
 	position: relative;
 	right: 10vw;
+	padding-top: 3.4em;
 	border: solid 1px var(--primary-color);
 	width: 60vw;
 	height: 100vh;
 	background-color: var(--secondary-color);
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+
 	@media screen and (max-width: 568px) {
 		width: 100vw;
 		position: relative;
 		right: 0vw;
 		justify-content: left;
 		align-items: center;
+		height: fit-content;
+	}
+	@media screen and (min-width: 768px) and (max-width: 1024px) {
+		width: 100vw;
+		position: relative;
+		right: 0vw;
+		justify-content: left;
+		align-items: center;
+		height: fit-content;
+	}
+	@media screen and (min-width: 1367px) {
+		position: relative;
+		right: 0vw;
 	}
 }
 .paragraph {
@@ -72,6 +108,14 @@
 		width: 90vw;
 		position: initial;
 		margin: 0;
+	}
+	@media screen and (min-width: 768px) and (max-width: 1024px) {
+		width: 90vw;
+		position: initial;
+		margin: 0;
+	}
+	@media screen and (min-width: 1367px) {
+		width: 30vw;
 	}
 }
 

@@ -10,18 +10,16 @@ export default function Histoire() {
 	return (
 		<>
 			<section className={styles.section}>
-				<ScrollAnimation>
-					<article className={styles.articleH1}>
-						<h1 className={styles.h1}>
-							<span className={styles.span}>La compagnie</span>
-							{" l'enclos"}
-						</h1>
-					</article>
+				<ScrollAnimation className={styles.articleH1}>
+					<h1 className={styles.h1}>
+						<span className={styles.span}>La </span>
+						<span className={styles.span}>compagnie</span>
+						{" l'enclos"}
+					</h1>
 				</ScrollAnimation>
-				<ScrollAnimation2>
-					<article className={styles.paragraph}>
-						<Markdown>{compagnie.about}</Markdown>
-					</article>
+
+				<ScrollAnimation2 className={styles.paragraph}>
+					<Markdown>{compagnie.about}</Markdown>
 				</ScrollAnimation2>
 			</section>
 		</>

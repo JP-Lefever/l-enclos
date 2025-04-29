@@ -1,61 +1,87 @@
 .sectionInfo {
 	display: flex;
 	align-items: center;
-	@media screen and (max-width: 568px) {
+	width: 95vw;
+	margin: auto 0;
+
+	@media screen and (max-width: 1024px) {
 		display: flex;
 		flex-direction: column;
+		margin: auto;
 	}
 }
 .articleInfo {
-	border: solid 3px;
-	border-color: var(--third-color);
-	padding: 8vw;
-	height: 90vh;
+	border: solid 3px var(--third-color);
+	padding: 6vw;
+	position: relative;
 	width: 80vw;
+	height: fit-content;
 	background-color: var(--main-color);
-	@media screen and (max-width: 568px) {
-		height: 50vh;
+	@media screen and (max-width: 1024px) {
+		height: fit-content;
 		width: 90vw;
 	}
 }
 .imageInfo {
-	position: relative;
-	right: 10vw;
-	width: fit-content;
-	@media screen and (max-width: 568px) {
+	height: 20vh;
+
+	@media screen and (max-width: 1024px) {
 		position: relative;
 		right: 0vw;
+		height: fit-content;
 	}
 }
 .imagePres {
-	width: 45vw;
-	height: auto;
-	@media screen and (max-width: 568px) {
-		width: 90vw;
+	max-height: 60vh;
+	max-width: 60vw;
+	position: relative;
+	left: 30vw;
+	bottom: 35vh;
+	@media screen and (max-width: 1024px) {
+		max-width: 75vw;
 		height: auto;
+		position: relative;
+		left: 0vw;
+		bottom: 0vh;
+		padding-top: 5vh;
+	}
+	@media screen and (min-width: 1367px) {
+		width: 55vw;
+		height: auto;
+		bottom: 32vh;
 	}
 }
 
 .h2 {
 	font-family: var(--title-font);
-	font-size: 4em;
+	font-size: var(--size-title);
 	letter-spacing: var(--letter-spacing);
 	color: var(--third-color);
 	margin-bottom: 5vh;
-	@media screen and (max-width: 568px) {
+	@media screen and (max-width: 1024px) {
 		font-size: 1.5em;
 		margin-bottom: 2vh;
 	}
 }
-
+.h2Title {
+	font-weight: bold;
+	@media screen and (min-width: 1367px) {
+		font-size: 2.4em;
+	}
+}
 .h3 {
 	color: var(--third-color);
 	font-size: 1.5em;
+	text-transform: uppercase;
+	@media screen and (max-width: 1024px) {
+		padding: 2vh 0;
+	}
 }
 .div {
-	margin-left: 10vw;
+	margin-top: var(--margin-section);
 	line-height: 3em;
-	@media screen and (max-width: 568px) {
+	text-transform: uppercase;
+	@media screen and (max-width: 1024px) {
 		line-height: 1.5em;
 		margin-left: 0vw;
 	}
@@ -66,32 +92,41 @@
 .sectionPres {
 	display: flex;
 	align-items: center;
-	margin-top: 10vh;
+	margin-top: var(--margin-section);
 	justify-content: flex-end;
-	@media screen and (max-width: 568px) {
+
+	@media screen and (max-width: 1024px) {
 		display: flex;
 		flex-direction: column;
 	}
 }
 
 .imageSpec {
-	width: 30vw;
+	width: 40vw;
 	height: auto;
-	margin-left: 4vw;
-	@media screen and (max-width: 568px) {
+	position: relative;
+	z-index: 2;
+	left: 10vw;
+
+	@media screen and (max-width: 1024px) {
 		width: 90vw;
 		height: auto;
-		margin-left: 0vw;
+		left: 0vw;
+	}
+	@media screen and (min-width: 1367px) {
+		width: 30vw;
+		height: auto;
 	}
 }
 .resume {
-	border: solid 1px;
 	border-color: var(--secondary-color);
-	padding: 4vw 1vw;
-	height: 60vh;
-	width: 50vw;
+	padding: 4vw 12vw;
+	height: fit-content;
+	width: 80vw;
 	background-color: var(--secondary-color);
-	@media screen and (max-width: 568px) {
+	line-height: var(--line-height);
+
+	@media screen and (max-width: 1024px) {
 		height: fit-content;
 		width: 90vw;
 		padding: 2vw 2vw;
@@ -99,19 +134,24 @@
 }
 .h2Pres {
 	font-family: var(--title-font);
-	font-size: 4em;
+	font-size: var(--size-title);
 	letter-spacing: var(--letter-spacing);
 	color: var(--third-color);
-	margin: 2vh 3vw;
-	@media screen and (max-width: 568px) {
+	position: relative;
+	right: 8vw;
+	margin: 2vh 0;
+	line-height: var(--line-height);
+	z-index: 4;
+	@media screen and (max-width: 1024px) {
 		font-size: 1.5em;
+		right: 0vw;
 	}
 }
 .divResume {
 	width: 40vw;
 
 	font-size: 0.9em;
-	@media screen and (max-width: 568px) {
+	@media screen and (max-width: 1024px) {
 		width: 80vw;
 	}
 }
@@ -120,20 +160,21 @@
 	width: 100vw;
 	background-color: var(--main-color);
 	border: solid 3px var(--third-color);
-	padding: 2em;
 	height: 60vh;
-	@media screen and (max-width: 568px) {
+	display: flex;
+	flex-direction: column;
+	margin: var(--margin-section) 0;
+	@media screen and (max-width: 1024px) {
 		height: fit-content;
 	}
 }
 .articleDistrib {
 	display: flex;
-
 	gap: 2vw;
-	width: 60vw;
+	width: 80vw;
 	margin: auto;
-	margin-top: 10vh;
-	@media screen and (max-width: 568px) {
+
+	@media screen and (max-width: 1024px) {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		width: 90vw;
@@ -143,52 +184,52 @@
 
 .h3Dist {
 	color: var(--third-color);
-	font-size: 1.2em;
+	font-size: 1.4em;
 	margin-bottom: 1vh;
 }
 .pDist {
 	color: var(--third-color);
-	font-size: 0.8em;
+	font-size: 1em;
 	margin-bottom: 1em;
 }
 
 .h2Dist {
 	font-family: var(--title-font);
-	font-size: 4em;
+	font-size: var(--size-title);
 	letter-spacing: var(--letter-spacing);
-	color: var(--third-color);
-	margin-bottom: 15vh;
+	color: var(--secondary-color);
 	text-align: center;
-	@media screen and (max-width: 568px) {
+	@media screen and (max-width: 1024px) {
 		font-size: 2.5em;
 		margin-bottom: 2vh;
 	}
 }
 .divDistrib {
-	width: 10vw;
-	@media screen and (max-width: 568px) {
+	width: 20vw;
+	@media screen and (max-width: 1024px) {
 		width: 40vw;
 	}
 }
 
 .divTech {
 	display: flex;
-	@media screen and (max-width: 568px) {
+	@media screen and (max-width: 1024px) {
 		display: flex;
 		flex-direction: column;
 	}
 }
 .sectionTech {
 	background-color: var(--secondary-color);
-	height: 60vh;
-	width: 30vw;
+
+	width: 50vw;
 	padding-left: 2vw;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	@media screen and (max-width: 568px) {
+	height: 60vh;
+	@media screen and (max-width: 1024px) {
 		width: 100vw;
 		padding-left: 5vw;
+		height: fit-content;
 	}
 }
 .sectionPartnair {
@@ -196,7 +237,12 @@
 	padding-left: 2vw;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	height: 60vh;
+	@media screen and (max-width: 1024px) {
+		width: 100vw;
+		padding-left: 5vw;
+		height: fit-content;
+	}
 }
 
 .h2Tech {
@@ -204,12 +250,11 @@
 	font-size: 4em;
 	letter-spacing: var(--letter-spacing);
 	color: var(--third-color);
-
+	margin: 0.1em 0;
 	text-align: left;
-	margin-top: -10vh;
-	margin-bottom: 5vh;
-	@media screen and (max-width: 568px) {
-		font-size: 1.5em;
+
+	@media screen and (max-width: 1024px) {
+		font-size: 2em;
 		margin-top: 0;
 	}
 }
@@ -217,21 +262,25 @@
 .h2Partnair {
 	font-family: var(--title-font);
 	font-size: 4em;
+	margin: 0.1em 0;
 	letter-spacing: var(--letter-spacing);
 	color: var(--primary-color);
-	margin-bottom: 5vh;
-	margin-top: -10vh;
+
 	text-align: left;
-	@media screen and (max-width: 568px) {
+	@media screen and (max-width: 1024px) {
 		font-size: 2.0em;
 		margin-top: 5vh;
-		padding-left: 5vw;
 	}
 }
+.articleTech {
+	line-height: var(--line-height);
+	margin-top: 1em;
+}
 .articlePartnair {
-	width: 65vw;
-	line-height: 1.5em;
-	@media screen and (max-width: 568px) {
+	width: 50vw;
+	margin-top: 1em;
+	line-height: var(--line-height);
+	@media screen and (max-width: 1024px) {
 		width: 100vw;
 	}
 }
@@ -243,27 +292,28 @@
 
 .sectionDate {
 	background-color: var(--third-color);
-	padding: 5vw;
-	margin-top: 5vh;
+
 	height: 70vh;
-	margin-bottom: 5vh;
-	@media screen and (max-width: 568px) {
+	margin: var(--margin-section) 0;
+	@media screen and (max-width: 1024px) {
 		height: fit-content;
 	}
 }
 
 .articles {
 	display: flex;
-	@media screen and (max-width: 568px) {
+	margin-top: 2vh;
+	@media screen and (max-width: 1024px) {
 		display: flex;
 		flex-direction: column;
 		gap: 3em;
+		align-items: center;
 	}
 }
 
 .articleDate {
 	width: 70vw;
-	@media screen and (max-width: 568px) {
+	@media screen and (max-width: 1024px) {
 		height: fit-content;
 	}
 }
@@ -272,17 +322,20 @@
 	border-left: 1px solid;
 	padding-left: 5vw;
 	border-color: var(--main-color);
+	@media screen and (max-width: 1024px) {
+		margin-left: 2vw;
+		margin-bottom: 5vh;
+	}
 }
 
 .h2Date {
 	font-family: var(--title-font);
-	font-size: 4em;
+	padding: 0.1em 0;
+	font-size: var(--size-title);
 	letter-spacing: var(--letter-spacing);
 	color: var(--main-color);
-	margin-bottom: 5vh;
-	margin-top: -10vh;
 	text-align: center;
-	@media screen and (max-width: 568px) {
+	@media screen and (max-width: 1024px) {
 		margin-top: 0vh;
 		font-size: 3em;
 	}
@@ -295,12 +348,20 @@
 	color: var(--main-color);
 	text-align: center;
 }
+.h3DatePass {
+	font-family: var(--title-font);
+	font-size: 2em;
+	letter-spacing: var(--letter-spacing);
+	color: var(--main-color);
+	text-align: left;
+}
 .divDate {
 	display: flex;
 	justify-content: space-around;
 	margin-top: 5vh;
 	height: 40vh;
-	@media screen and (max-width: 568px) {
+
+	@media screen and (max-width: 1024px) {
 		display: flex;
 		flex-direction: column;
 		height: fit-content;
@@ -337,6 +398,7 @@
 	justify-content: center;
 	margin-top: 5vh;
 	color: var(--main-color);
+	line-height: var(--line-height);
 }
 
 .articleCarousel {

@@ -14,7 +14,7 @@ export const ScrollAnimation = ({
 	className,
 }: ScrollAnimationType) => {
 	const ref = useRef(null);
-	const isInView = useInView(ref, { once: true, amount: 0.3 });
+	const isInView = useInView(ref, { once: true, amount: 0.2 });
 
 	const variants = {
 		hidden: { opacity: 0, y: -20, x: -20 },
@@ -38,7 +38,7 @@ export const ScrollAnimation2 = ({
 	className,
 }: ScrollAnimationType) => {
 	const ref = useRef(null);
-	const isInView = useInView(ref, { once: true, amount: 0.4 });
+	const isInView = useInView(ref, { once: true, amount: 0.2 });
 
 	const variants = {
 		hidden: { opacity: 0, y: 20, x: 20 },
@@ -59,7 +59,7 @@ export const ScrollAnimation2 = ({
 
 export const ScrollAnimation3 = ({ children }: ScrollAnimationType) => {
 	const ref = useRef(null);
-	const isInView = useInView(ref, { once: true, amount: 0.4 });
+	const isInView = useInView(ref, { once: true, amount: 0.2 });
 
 	const variants = {
 		hidden: {},
