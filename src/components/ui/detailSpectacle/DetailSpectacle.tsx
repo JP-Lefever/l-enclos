@@ -27,9 +27,11 @@ export default function DetailSpectacle({
 	const partnairSpec: Partnair[] = partnair.filter(
 		(p) => p.id_spec === Number(id),
 	);
+
 	const dateSpec: SpectacleDateProps[] = date.filter(
 		(p) => p.id_spec === Number(id),
 	);
+
 	const dateSpecOver: PastSpectacleDateProps[] = datePassed.filter(
 		(p) => p.id_spec === Number(id),
 	);
@@ -43,43 +45,54 @@ export default function DetailSpectacle({
 		<>
 			<section className={styles.sectionInfo}>
 				<ScrollAnimation className={styles.articleInfo}>
-					<h2 className={styles.h2}>{data.title}</h2>
+					<h2 className={styles.h2}>{data.status}</h2>
+					<h2 className={styles.h2Title}>{data.title}</h2>
 					<div className={styles.div}>
-						<h3 className={styles.h3}>Résumé</h3>
-						<p className={styles.p}>{data.shortResume}</p>
+						<h3 className={styles.h3}>Thématique</h3>
+						<p className={styles.p}>{data.theme}</p>
 						<h3 className={styles.h3}>Age</h3>
 						<p className={styles.p}>{data.public}</p>
 						<h3 className={styles.h3}>Durée</h3>
 						<p className={styles.p}>{data.duration}</p>
+						<ScrollAnimation2 className={styles.imageInfo}>
+							<Image
+								className={styles.imagePres}
+								src={data.image_spec}
+								alt={data.title}
+								width={1080}
+								height={860}
+							/>
+						</ScrollAnimation2>
 					</div>
 				</ScrollAnimation>
-				<ScrollAnimation2 className={styles.imageInfo}>
-					<Image
-						className={styles.imagePres}
-						src={data.image_spec}
-						alt={data.title}
-						width={1080}
-						height={860}
-					/>
-				</ScrollAnimation2>
 			</section>
 
 			<section className={styles.sectionPres}>
-				<ScrollAnimation className={styles.imagePresSpec}>
+				<article className={styles.imagePresSpec}>
 					<Image
 						className={styles.imageSpec}
 						src={data.image_url}
-						alt=""
+						alt="Affiche spectacle"
 						width={1080}
 						height={860}
 					/>
-				</ScrollAnimation>
-				<ScrollAnimation2 className={styles.resume}>
-					<h2 className={styles.h2Pres}>PRESENTATION</h2>
-					<div className={styles.divResume}>
-						<Markdown>{data.resume}</Markdown>
-					</div>
-				</ScrollAnimation2>
+				</article>
+				<article className={styles.resume}>
+					<ScrollAnimation2>
+						<h2 className={styles.h2Pres}>{"L'HISTOIRE"}</h2>
+						<div className={styles.divResume}>
+							<Markdown>{data.resume}</Markdown>
+						</div>
+						{data.propos && (
+							<>
+								<h2 className={styles.h2Pres}>{"LE PROPOS"}</h2>
+								<div className={styles.divResume}>
+									<Markdown>{data.propos}</Markdown>
+								</div>
+							</>
+						)}
+					</ScrollAnimation2>
+				</article>
 			</section>
 			<section>
 				<article className={styles.articleCarousel}>{carousel}</article>
@@ -196,12 +209,12 @@ export default function DetailSpectacle({
 						</div>
 					</ScrollAnimation>
 					<ScrollAnimation2 className={styles.articleDatePassed}>
-						<h3 className={styles.h3Date}>Passées</h3>
+						<h3 className={styles.h3DatePass}>Passées</h3>
 						<div className={styles.divDatePass}>
 							{dateSpecOver
 								? dateSpecOver.map((d) => (
 										<div key={d.id}>
-											<h4>{d.place}</h4>
+											<p>{d.place}</p>
 										</div>
 									))
 								: ""}

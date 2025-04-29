@@ -44,6 +44,7 @@ export type creationProps = {
 //FRONT
 export type SpectacleProps = {
 	id: number;
+	status: string;
 	title: string;
 	public: string;
 	duration: string;
@@ -59,8 +60,9 @@ export type SpectacleProps = {
 	sceno?: string;
 	light?: string;
 	video?: string;
-	shortResume: string;
+	theme: string;
 	resume: string;
+	propos?: string;
 	jauge: string;
 	plateau: string;
 	regie: string;
