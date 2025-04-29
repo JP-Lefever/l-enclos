@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import styles from "./buttonSpec.module.css";
-import Image from "next/image";
+// import Image from "next/image";
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
 import { buttonSpec } from "@/lib/placeholder-data";
