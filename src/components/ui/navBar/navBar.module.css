@@ -3,6 +3,9 @@
 	padding: 1em;
 	align-items: center;
 	margin-left: 1em;
+	@media screen and (max-width: 568px) {
+		margin-left: 0em;
+	}
 }
 .logo {
 	width: 10em;

@@ -26,13 +26,13 @@ export default function ButtonSpec() {
 							})}
 							type="button"
 						>
-							<Image
+							{/* <Image
 								className={styles.image}
 								src={b.img_src}
 								width={128}
 								height={84}
 								alt={b.name}
-							/>
+							/> */}
 							<p className={styles.text}>{b.name}</p>
 						</Link>
 					</article>

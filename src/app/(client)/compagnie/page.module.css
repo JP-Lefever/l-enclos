@@ -18,7 +18,7 @@
 
 .h1 {
 	font-family: var(--title-font);
-	font-size: 6.5em;
+	font-size: var(--size-title);
 	letter-spacing: var(--letter-spacing);
 	color: var(--main-color);
 	display: block;

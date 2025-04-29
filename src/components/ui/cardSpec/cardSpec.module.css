@@ -1,42 +1,42 @@
 .main {
 	background-color: var(--third-color);
-
-	margin-bottom: 20vh;
+	margin-bottom: var(--margin-section);
 }
 
 .section {
 	display: flex;
-	padding: 10vh 0;
+	padding: var(--margin-section);
 	width: fit-content;
 	margin: auto;
-	gap: 20em;
-
+	gap: 10em;
 	@media screen and (max-width: 568px) {
 		display: flex;
 		flex-direction: column;
-
-		gap: 5em;
+		gap: 2em;
+		padding: 0;
+		padding-top: var(--margin-section);
 	}
 }
 
 .article {
 	text-align: center;
-	width: 20vw;
 	color: var(--main-color);
 	text-decoration: none;
 }
 
 .article:hover {
-	color: var(--warm-color);
-	transform: scale(1.05);
+	color: var(--secondary-color);
 }
 
 .imageWrapper {
 	position: relative;
-	width: 20vw;
+	width: 30vw;
 	height: 55vh;
 	@media screen and (max-width: 568px) {
 		width: 90vw;
+	}
+	@media screen and (min-width: 768px) and (max-width: 1024px) {
+		height: 40vh;
 	}
 }
 .image {
@@ -49,19 +49,31 @@
 }
 
 .p {
-	font-size: 1.2em;
-	margin-bottom: 3vh;
+	text-transform: uppercase;
+	margin-bottom: var(--margin-section);
 	text-align: center;
-	width: 20vw;
+	width: 30vw;
 	@media screen and (max-width: 568px) {
 		width: 90vw;
+	}
+	@media screen and (min-width: 768px) and (max-width: 1024px) {
+		margin-bottom: 0;
 	}
 }
 
 .h2 {
-	margin-top: 2vh;
-	width: 20vw;
+	margin-top: var(--margin-section);
+	width: 30vw;
+	text-transform: uppercase;
 	@media screen and (max-width: 568px) {
 		width: 90vw;
+		margin-bottom: var(--margin-section);
+	}
+	@media screen and (min-width: 768px) and (max-width: 1024px) {
+		margin-top: 0;
+	}
+	@media screen and (min-width: 1367px) {
+		width: 20vw;
+		margin: var(--margin-section) auto;
 	}
 }

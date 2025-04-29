@@ -247,7 +247,7 @@ const datePassed = [
 const buttonSpec = [
 	{
 		id: 1,
-		name: "les spectacles",
+		name: "les créations",
 		link: "/spectacles",
 		img_src: "/images/test.png",
 	},
