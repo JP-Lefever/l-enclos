@@ -398,10 +398,10 @@ const mediation = [
 	{
 		id: 1,
 		name: "Théâtre-Primaire",
-		title: `" Chevalier comme un garçon, princesse comme une fille ? "`,
-		photoPres: "/images/mediation.webp",
+		title: `"Chevalier comme un garçon, princesse comme une fille ?"`,
+		photoPres: "/images/primaire2.png",
 		photoSeance: "/images/primaire1.jpg",
-		photoDate: "/images/primaire2.png",
+		photoDate: "/images/mediation.webp",
 		type: "Parcours théâtral",
 		public: "8/12 ANS",
 		duration: "Adaptable",
@@ -457,11 +457,11 @@ C'était difficile à apprécier ; toujours une chose ou l'autre ne lui semblait
 	{
 		id: 2,
 		name: "Théâtre - College",
-		title: `" Du texte à la scène ! Autour de Stroboscopie de Sébastien Joanniez " 
+		title: `"Du texte à la scène ! Autour de Stroboscopie de Sébastien Joanniez" 
 `,
-		photoPres: "/images/mediation_college.jpg",
+		photoPres: "/images/college2.png",
 		photoSeance: "/images/college1.webp",
-		photoDate: "/images/college2.png",
+		photoDate: "/images/mediation_college.jpg",
 		type: "Parcours théâtral",
 		public: "12/16 ANS",
 		duration: "Adaptable",
@@ -490,7 +490,7 @@ Développer l'imaginaire, s'exprimer devant le reste du groupe, développer sa r
 Apprendre à jouer un texte de théâtre, développer son esprit de groupe, l'écoute de ses partenaires, comprendre les enjeux du texte.`,
 		final: "**Séance finale :** Restitution et Bilan",
 		presFinal: `Pour finir, il est essentiel que le groupe puisse faire **une restitution du travail abouti** sous une forme théâtrale. C'est le moment où garçons et filles se soutiennent pour arriver à passer devant le public (en général devant d'autres jeunes de leur âge). C'est un moment toujours plein d'enthousiasme, de rire et de d'épanouissement. Puis vient **le temps du bilan**, le moment où chacun peut donner ses retours, ses ressentis sur l'expérience vécue et ainsi repartir grandi de ces moments de partage entre garçons et filles…`,
-		extract: "Extrait de la pièce :",
+		extract: `Extrait de la pièce : "Stroboscopie"`,
 		textExtract: `Chœur filles : Tu me trouves grosse ?
 
 		
@@ -511,7 +511,7 @@ Apprendre à jouer un texte de théâtre, développer son esprit de groupe, l'é
 	{
 		id: 3,
 		name: "théâtre - EPHAD",
-		title: "« Le crépitement du vinyle »",
+		title: `"Le crépitement du vinyle"`,
 		photoPres: "/images/mediation_ephad.jpg",
 		photoSeance: "/images/ephad1.jpg",
 		photoDate: "/images/ephad2.jpg",

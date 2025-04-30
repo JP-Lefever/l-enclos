@@ -1,60 +1,67 @@
 .sectionInfo {
 	display: flex;
 	align-items: center;
-	margin-bottom: 5vh;
-	@media screen and (max-width: 568px) {
+	width: 95vw;
+	margin: var(--margin-section) 0;
+
+	@media screen and (max-width: 1024px) {
 		display: flex;
 		flex-direction: column;
-		overflow-x: hidden;
+		margin: auto;
 	}
 }
 .articleInfo {
-	border: solid 3px;
-	border-color: var(--third-color);
-	padding: 2vw;
-	height: 90vh;
+	border: solid 3px var(--third-color);
+	padding: 6vw;
+
 	width: 80vw;
+	height: 100vh;
 	background-color: var(--main-color);
-	@media screen and (max-width: 568px) {
+	@media screen and (max-width: 1024px) {
 		height: fit-content;
 		width: 90vw;
 	}
 }
-.imageInfo {
-	position: relative;
-	right: 10vw;
-	width: fit-content;
-	@media screen and (max-width: 568px) {
-		position: relative;
-		right: 0vw;
-	}
-}
-.imagePres {
-	width: 45vw;
-	height: auto;
-	@media screen and (max-width: 568px) {
-		width: 90vw;
-		height: auto;
-	}
-}
 
+.imagePres {
+	height: auto;
+	width: 45vw;
+
+	@media screen and (max-width: 1024px) {
+		max-width: 75vw;
+		height: auto;
+		position: relative;
+		left: 0vw;
+		bottom: 0vh;
+		padding-top: 5vh;
+	}
+	@media screen and (min-width: 1367px) {
+		width: 55vw;
+		height: auto;
+		bottom: 32vh;
+	}
+}
+.article {
+	display: flex;
+	align-items: center;
+	width: 85vw;
+}
 .h2 {
 	font-family: var(--title-font);
-	font-size: 4em;
+	font-size: var(--size-title);
 	letter-spacing: var(--letter-spacing);
 	color: var(--third-color);
-	margin-bottom: 5vh;
+	line-height: var(--line-height);
 	@media screen and (max-width: 568px) {
 		font-size: 1.5em;
 		margin-bottom: 2vh;
 	}
 }
 .h3title {
-	font-family: var(--title-font);
 	letter-spacing: var(--letter-spacing);
 	color: var(--third-color);
 	margin-bottom: 2vh;
-	width: 45vw;
+	line-height: var(--line-height);
 	@media screen and (max-width: 568px) {
 		font-size: 1em;
 		width: 90vw;
@@ -78,19 +85,90 @@
 	}
 }
 .div {
-	margin-left: 2vw;
 	line-height: 3em;
+
+	width: 40vw;
+
 	@media screen and (max-width: 568px) {
 		line-height: 1.5em;
 		margin-left: 0vw;
 	}
 }
 
+.sectionPres {
+	display: flex;
+	align-items: center;
+	margin: var(--margin-section) 0;
+	justify-content: flex-end;
+
+	@media screen and (max-width: 1024px) {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+.imageSpec {
+	width: 40vw;
+	height: auto;
+	position: relative;
+	z-index: 2;
+	left: 10vw;
+
+	@media screen and (max-width: 1024px) {
+		width: 90vw;
+		height: auto;
+		left: 0vw;
+	}
+	@media screen and (min-width: 1367px) {
+		width: 30vw;
+		height: auto;
+	}
+}
+.resume {
+	border-color: var(--secondary-color);
+	padding: 4vw 12vw;
+	height: fit-content;
+	width: 80vw;
+
+	background-color: var(--secondary-color);
+
+	@media screen and (max-width: 1024px) {
+		height: fit-content;
+		width: 90vw;
+		padding: 2vw 2vw;
+	}
+}
+.h2Pres {
+	font-family: var(--title-font);
+	font-size: var(--size-title);
+	letter-spacing: var(--letter-spacing);
+	color: var(--third-color);
+	position: relative;
+	right: 8vw;
+	margin: 2vh 0;
+	line-height: var(--line-height);
+	z-index: 4;
+	@media screen and (max-width: 1024px) {
+		font-size: 1.5em;
+		right: 0vw;
+	}
+}
+.divResume {
+	width: 40vw;
+	line-height: var(--line-height);
+	@media screen and (max-width: 1024px) {
+		width: 80vw;
+	}
+}
+
 .organisation {
 	width: 100vw;
-	background-color: var(--secondary-color);
+	background-color: var(--main-color);
 	padding: 2em;
 	height: fit-content;
+	border-top: solid 3px var(--third-color);
+	border-bottom: solid 3px var(--third-color);
+	margin: var(--margin-section) 0;
 	@media screen and (max-width: 568px) {
 		width: 100vw;
 		height: auto;
@@ -98,9 +176,10 @@
 }
 .h2Orga {
 	font-family: var(--title-font);
-	font-size: 4em;
+	font-size: var(--size-title);
+	text-align: center;
 	letter-spacing: var(--letter-spacing);
-	color: var(--main-color);
+	color: var(--third-color);
 	margin-bottom: 5vh;
 	@media screen and (max-width: 568px) {
 		font-size: 1.5em;
@@ -110,9 +189,9 @@
 .articleOrga {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	gap: 2vw;
-	color: var(--main-color);
-	line-height: 1.5em;
+	gap: 4vw;
+	color: var(--third-color);
+	line-height: var(--line-height);
 	margin: 5vh 3vw;
 
 	@media screen and (max-width: 568px) {
@@ -126,7 +205,7 @@
 
 .h3Deroul {
 	letter-spacing: var(--letter-spacing);
-	color: var(--main-color);
+	color: var(--third-color);
 	margin-bottom: 2vh;
 	font-size: 1.8em;
 	@media screen and (max-width: 568px) {
@@ -135,7 +214,7 @@
 }
 
 .h3Orga {
-	color: var(--main-color);
+	color: var(--third-color);
 	font-size: 1.2em;
 	margin-bottom: 1vh;
 }
@@ -143,8 +222,10 @@
 .sectionExtract {
 	display: flex;
 	align-items: center;
-	margin-top: 10vh;
+
 	justify-content: flex-end;
+	height: fit-content;
+
 	@media screen and (max-width: 568px) {
 		display: flex;
 		flex-direction: column;
@@ -153,7 +234,7 @@
 }
 
 .imageExtract {
-	width: 30vw;
+	width: 40vw;
 	height: auto;
 	margin-left: 4vw;
 	@media screen and (max-width: 568px) {
@@ -164,12 +245,14 @@
 }
 
 .extract {
-	border: solid 1px;
-	border-color: var(--primary-color);
-	padding: 4vw 1vw;
-	height: 60vh;
-	width: 50vw;
+	padding: 8vw 1vw;
+	height: 90vh;
+	width: 85vw;
 	background-color: var(--primary-color);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
 	@media screen and (max-width: 568px) {
 		height: fit-content;
 		width: 90vw;
@@ -177,7 +260,8 @@
 	}
 }
 .h2Extract {
-	font-size: 1.5em;
+	font-size: 2em;
+
 	letter-spacing: var(--letter-spacing);
 	color: var(--main-color);
 	margin: 2vh 3vw;
@@ -187,96 +271,54 @@
 }
 
 .divExtract {
-	width: 35vw;
-	font-size: 0.9em;
-	padding: 2vh 5vw;
-	line-height: 1.8em;
-	@media screen and (max-width: 568px) {
-		width: 80vw;
-	}
-}
-
-.divThanks {
-	display: flex;
-	margin: 5vh 0;
-	@media screen and (max-width: 568px) {
-		display: flex;
-		flex-direction: column;
-		overflow-x: hidden;
-	}
-}
-
-.sectionThanks {
-	background-color: var(--secondary-color);
-	height: 60vh;
-	width: 30vw;
-	padding-left: 2vw;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	@media screen and (max-width: 568px) {
-		width: 100vw;
-		padding-left: 5vw;
+	line-height: var(--line-height);
+	margin: 2vh 3vw;
+	@media screen and (max-width: 1024px) {
+		display: flex;
+		flex-direction: column;
 	}
 }
+.divThanks {
+	display: flex;
+	height: 60vh;
 
+	margin: var(--margin-section) 0;
+}
+.sectionThanks {
+	width: 50vw;
+	background-color: var(--secondary-color);
+}
+
+.articleThanks {
+	display: flex;
+	flex-direction: column;
+	margin: 5vh auto;
+	width: 45vw;
+}
 .h2Thanks {
 	font-family: var(--title-font);
 	font-size: 4em;
-	letter-spacing: var(--letter-spacing);
-	color: var(--main-color);
-	margin-top: -7vh;
-	text-align: left;
-
-	margin-bottom: 5vh;
-	@media screen and (max-width: 568px) {
-		font-size: 1.5em;
-		margin-top: 0;
-	}
+	text-align: center;
+	margin: 0.1em 0;
 }
-
-.pThanks {
-	color: var(--main-color);
-	font-size: 1.4em;
-	margin-bottom: 1em;
-}
-
 .sectionInter {
+	width: 50vw;
 	background-color: var(--main-color);
-	padding-left: 2vw;
-	display: flex;
-
-	flex-direction: column;
-	justify-content: center;
 }
 
 .articleInter {
-	width: 65vw;
-	line-height: 1.5em;
-	@media screen and (max-width: 568px) {
-		width: 100vw;
-	}
-}
-
-.pInter {
 	display: flex;
-	align-items: center;
-	gap: 1em;
+	flex-direction: column;
+	margin: 5vh auto;
+	width: 45vw;
 }
-
 .h2Inter {
 	font-family: var(--title-font);
 	font-size: 4em;
-	letter-spacing: var(--letter-spacing);
-	color: var(--primary-color);
-	margin-bottom: 5vh;
-
-	text-align: left;
-	@media screen and (max-width: 568px) {
-		font-size: 2.0em;
-		margin-top: 5vh;
-		padding-left: 5vw;
-	}
+	text-align: center;
+	margin: 0.1em 0;
 }
 
 .sectionDate {
@@ -378,5 +420,5 @@
 }
 
 .carousel {
-	margin: 5vh 2vw;
+	margin: var(--margin-section);
 }
