@@ -53,7 +53,7 @@ export default function DetailMediation({
 				</ScrollAnimation>
 			</section>
 			<section className={styles.sectionPres}>
-				<article className={styles.imagePresSpec}>
+				<ScrollAnimation className={styles.imagePresSpec}>
 					<Image
 						className={styles.imageSpec}
 						src={data.photoDate}
@@ -61,7 +61,7 @@ export default function DetailMediation({
 						width={1080}
 						height={860}
 					/>
-				</article>
+				</ScrollAnimation>
 				<article className={styles.resume}>
 					<ScrollAnimation2>
 						<h2 className={styles.h2Pres}>{"LE PROPOS"}</h2>

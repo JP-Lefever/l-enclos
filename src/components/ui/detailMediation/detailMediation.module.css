@@ -19,7 +19,7 @@
 	background-color: var(--main-color);
 	@media screen and (max-width: 1024px) {
 		height: fit-content;
-		width: 90vw;
+		width: 100vw;
 	}
 }
 
@@ -28,7 +28,7 @@
 	width: 45vw;
 
 	@media screen and (max-width: 1024px) {
-		max-width: 75vw;
+		width: 85vw;
 		height: auto;
 		position: relative;
 		left: 0vw;
@@ -36,7 +36,7 @@
 		padding-top: 5vh;
 	}
 	@media screen and (min-width: 1367px) {
-		width: 55vw;
+		width: 40vw;
 		height: auto;
 		bottom: 32vh;
 	}
@@ -45,6 +45,12 @@
 	display: flex;
 	align-items: center;
 	width: 85vw;
+	@media screen and (max-width: 1024px) {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		width: 90vw;
+	}
 }
 .h2 {
 	font-family: var(--title-font);
@@ -87,11 +93,14 @@
 .div {
 	line-height: 3em;
 
-	width: 40vw;
+	width: 90vw;
 
 	@media screen and (max-width: 568px) {
 		line-height: 1.5em;
 		margin-left: 0vw;
+	}
+	@media screen and (min-width: 1367px) {
+		width: 40vw;
 	}
 }
 
@@ -158,6 +167,9 @@
 	line-height: var(--line-height);
 	@media screen and (max-width: 1024px) {
 		width: 80vw;
+	}
+	@media screen and (min-width: 1367px) {
+		width: 30vw;
 	}
 }
 
@@ -285,10 +297,18 @@
 	height: 60vh;
 
 	margin: var(--margin-section) 0;
+	@media screen and (max-width: 1024px) {
+		display: flex;
+		flex-direction: column;
+		height: fit-content;
+	}
 }
 .sectionThanks {
 	width: 50vw;
 	background-color: var(--secondary-color);
+	@media screen and (max-width: 1024px) {
+		width: 100vw;
+	}
 }
 
 .articleThanks {
@@ -296,16 +316,28 @@
 	flex-direction: column;
 	margin: 5vh auto;
 	width: 45vw;
+	line-height: var(--line-height);
+	@media screen and (max-width: 1024px) {
+		width: 100vw;
+		width: 90vw;
+		margin: var(--margin-section) auto;
+	}
 }
 .h2Thanks {
 	font-family: var(--title-font);
 	font-size: 4em;
 	text-align: center;
 	margin: 0.1em 0;
+	@media screen and (max-width: 1024px) {
+		font-size: 2.0em;
+	}
 }
 .sectionInter {
 	width: 50vw;
 	background-color: var(--main-color);
+	@media screen and (max-width: 1024px) {
+		width: 100vw;
+	}
 }
 
 .articleInter {
@@ -313,110 +345,20 @@
 	flex-direction: column;
 	margin: 5vh auto;
 	width: 45vw;
+	line-height: var(--line-height);
+	@media screen and (max-width: 1024px) {
+		width: 90vw;
+		margin: var(--margin-section) auto;
+	}
 }
 .h2Inter {
 	font-family: var(--title-font);
 	font-size: 4em;
 	text-align: center;
 	margin: 0.1em 0;
-}
-
-.sectionDate {
-	background-color: var(--nuance-blue);
-	padding: 5vw;
-	margin-top: 5vh;
-	height: 70vh;
-	margin-bottom: 5vh;
-	@media screen and (max-width: 568px) {
-		height: fit-content;
+	@media screen and (max-width: 1024px) {
+		font-size: 2.0em;
 	}
-}
-
-.articles {
-	display: flex;
-	@media screen and (max-width: 568px) {
-		display: flex;
-		flex-direction: column;
-		gap: 3em;
-	}
-}
-
-.articleDate {
-	width: 70vw;
-	@media screen and (max-width: 568px) {
-		height: fit-content;
-	}
-}
-
-.articleDatePassed {
-	border-left: 1px solid;
-	padding-left: 5vw;
-	border-color: var(--primary-color);
-}
-
-.h2Date {
-	font-family: var(--title-font);
-	font-size: 4em;
-	letter-spacing: var(--letter-spacing);
-	color: var(--secondary-color);
-	margin-bottom: 5vh;
-	margin-top: -10vh;
-	text-align: center;
-	@media screen and (max-width: 568px) {
-		margin-top: 0vh;
-		font-size: 3em;
-	}
-}
-
-.h3Date {
-	font-family: var(--title-font);
-	font-size: 2em;
-	letter-spacing: var(--letter-spacing);
-	color: var(--secondary-color);
-	text-align: center;
-}
-.divDate {
-	display: flex;
-	justify-content: space-around;
-	margin-top: 5vh;
-	height: 40vh;
-	@media screen and (max-width: 568px) {
-		display: flex;
-		flex-direction: column;
-		height: fit-content;
-		gap: 5vh;
-	}
-}
-.h4Date {
-	color: var(--secondary-color);
-	font-size: 1.4em;
-	text-align: left;
-	padding-bottom: 1em;
-	border-bottom: solid 1px;
-	border-color: var(--secondary-color);
-}
-
-.pDate1 {
-	color: var(--secondary-color);
-	font-size: 1.4em;
-	text-align: left;
-	padding-bottom: 1em;
-	border-bottom: solid 1px;
-	border-color: var(--secondary-color);
-	font-weight: bold;
-}
-.pDate2 {
-	color: var(--secondary-color);
-	font-size: 1.4em;
-	text-align: left;
-}
-
-.divDatePass {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	margin-top: 5vh;
-	color: var(--secondary-color);
 }
 
 .carousel {
