@@ -1,12 +1,23 @@
 .divContact {
 	display: flex;
 	margin: var(--margin-section);
+	@media screen and (max-width: 1024px) {
+		display: flex;
+		flex-direction: column;
+	}
+	@media screen and (min-width: 1367px) {
+		width: 80vw;
+		margin: var(--margin-section) auto;
+	}
 }
 .h2 {
 	font-family: var(--title-font);
 	font-size: var(--size-title);
 	letter-spacing: var(--letter-spacing);
 	color: var(--primary-color);
+	@media screen and (max-width: 1024px) {
+		font-size: 3em;
+	}
 }
 
 .articleInfo {
@@ -22,18 +33,30 @@
 }
 .sectionInfo {
 	width: 40vw;
+	@media screen and (max-width: 1024px) {
+		width: 100vw;
+	}
 }
 .sectionForm {
 	width: 60vw;
+	@media screen and (max-width: 1024px) {
+		width: 100vw;
+	}
 }
 .form {
 	width: 90%;
+	@media screen and (max-width: 1024px) {
+		width: 80%;
+	}
 }
 .fieldset {
 	display: flex;
 	flex-direction: column;
 	padding: 1em;
 	border: none;
+	@media screen and (max-width: 1024px) {
+		padding: 0;
+	}
 }
 .h3 {
 	padding: 1vh 1vw;
@@ -66,6 +89,9 @@
 	text-transform: uppercase;
 	letter-spacing: var(--letter-spacing);
 	padding-bottom: 4vh;
+	@media screen and (max-width: 1024px) {
+		padding: 4vh 0;
+	}
 }
 .option {
 	border: none;
@@ -76,6 +102,10 @@
 	font-weight: bold;
 	font-size: 1em;
 	padding-bottom: 6vh;
+	@media screen and (max-width: 1024px) {
+		padding: 4vh 0;
+		padding-bottom: 6vh;
+	}
 }
 .option:focus {
 	outline: none;
@@ -97,5 +127,14 @@
 	font-size: 1.2em;
 	text-transform: uppercase;
 	font-weight: bold;
-	margin: var(--margin-section);
+	margin: var(--margin-section) 1vh;
+
+	@media screen and (max-width: 568px) {
+		width: 80vw;
+		margin: var(--margin-section) 0vh;
+	}
+	@media screen and (min-width: 569px) and (max-width: 1024px) {
+		width: 20vw;
+		margin: var(--margin-section) 0;
+	}
 }

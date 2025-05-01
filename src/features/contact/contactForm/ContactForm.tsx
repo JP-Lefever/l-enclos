@@ -38,7 +38,7 @@ export default function AdminContact() {
 					</article>
 				</section>
 				<section className={styles.sectionForm}>
-					<h2 className={styles.h3}>N'hésitez pas à nous contacter</h2>
+					<h2 className={styles.h3}>N'hésitez pas à nous écrire</h2>
 					<form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
 						<fieldset className={styles.fieldset}>
 							<label className={styles.label} htmlFor="lastname">
