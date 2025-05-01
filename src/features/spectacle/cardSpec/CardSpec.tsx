@@ -2,7 +2,7 @@
 
 import type { cardDataProps } from "@/lib/definitions";
 import styles from "./cardSpec.module.css";
-import { cardData } from "@/lib/placeholder-data";
+import { cardData } from "@/lib/placeholder-data-spectacle";
 import Image from "next/image";
 import Link from "next/link";
 import {

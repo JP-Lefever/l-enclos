@@ -8,7 +8,7 @@ import type {
 } from "@/lib/definitions";
 import Image from "next/image";
 import Markdown from "react-markdown";
-import { partnair, date, datePassed } from "@/lib/placeholder-data";
+import { partnair, date, datePassed } from "@/lib/placeholder-data-spectacle";
 import { ChevronRight } from "lucide-react";
 import { AutoPlaySpec } from "@/components/ui/slider/Autoplay";
 import {

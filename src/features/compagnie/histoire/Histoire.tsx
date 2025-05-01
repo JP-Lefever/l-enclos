@@ -1,6 +1,6 @@
 import Markdown from "react-markdown";
 import styles from "./histoire.module.css";
-import { compagnie } from "@/lib/placeholder-data";
+import { compagnie } from "@/lib/placeholder-data-compagnie";
 import {
 	ScrollAnimation,
 	ScrollAnimation2,

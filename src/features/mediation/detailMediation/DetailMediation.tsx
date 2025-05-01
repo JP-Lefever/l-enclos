@@ -5,7 +5,7 @@ import Image from "next/image";
 import type { InterventionProps, MediationProps } from "@/lib/definitions";
 
 import Markdown from "react-markdown";
-import { intervention } from "@/lib/placeholder-data";
+import { intervention } from "@/lib/placeholder-data-mediation";
 import { ChevronRight } from "lucide-react";
 import { AutoPlayMed } from "@/components/ui/slider/Autoplay";
 import {

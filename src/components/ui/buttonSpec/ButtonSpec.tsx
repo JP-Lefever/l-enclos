@@ -5,7 +5,7 @@ import styles from "./buttonSpec.module.css";
 // import Image from "next/image";
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
-import { buttonSpec } from "@/lib/placeholder-data";
+import { buttonSpec } from "@/lib/placeholder-data-spectacle";
 
 export default function ButtonSpec() {
 	const pathname = usePathname();
