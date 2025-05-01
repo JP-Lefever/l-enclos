@@ -1,7 +1,7 @@
 "use client";
 
 import styles from "./contactForm.module.css";
-import { SubmitHandler, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { subjectOptions } from "@/lib/placeholder-data-contact";
 import errorMessage from "../../../lib/errorMessage.json";
 import type { ContactProps } from "@/lib/definitions";
