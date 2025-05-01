@@ -3,7 +3,7 @@
 	justify-content: center;
 	gap: 2vw;
 	margin: var(--margin-section) auto;
-	height: 100vh;
+	height: fit-content;
 	width: 80vw;
 
 	@media screen and (max-width: 568px) {
@@ -26,6 +26,8 @@
 	width: 50vw;
 	line-height: var(--line-height);
 	padding-top: 10vh;
+	height: fit-content;
+
 	@media screen and (max-width: 568px) {
 		padding-top: 0vh;
 		width: 90vw;

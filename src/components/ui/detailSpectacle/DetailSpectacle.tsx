@@ -47,7 +47,7 @@ export default function DetailSpectacle({
 				<ScrollAnimation className={styles.articleInfo}>
 					<h2 className={styles.h2}>{data.status}</h2>
 					<h2 className={styles.h2Title}>{data.title}</h2>
-					<div className={styles.div}>
+					<article className={styles.div}>
 						<h3 className={styles.h3}>Thématique</h3>
 						<p className={styles.p}>{data.theme}</p>
 						<h3 className={styles.h3}>Age</h3>
@@ -63,7 +63,7 @@ export default function DetailSpectacle({
 								height={860}
 							/>
 						</ScrollAnimation2>
-					</div>
+					</article>
 				</ScrollAnimation>
 			</section>
 
@@ -80,15 +80,15 @@ export default function DetailSpectacle({
 				<article className={styles.resume}>
 					<ScrollAnimation2>
 						<h2 className={styles.h2Pres}>{"L'HISTOIRE"}</h2>
-						<div className={styles.divResume}>
+						<article className={styles.divResume}>
 							<Markdown>{data.resume}</Markdown>
-						</div>
+						</article>
 						{data.propos && (
 							<>
 								<h2 className={styles.h2Pres}>{"LE PROPOS"}</h2>
-								<div className={styles.divResume}>
+								<article className={styles.divResume}>
 									<Markdown>{data.propos}</Markdown>
-								</div>
+								</article>
 							</>
 						)}
 					</ScrollAnimation2>
@@ -166,7 +166,7 @@ export default function DetailSpectacle({
 					</div>
 				</article>
 			</ScrollAnimation>
-			<div className={styles.divTech}>
+			<section className={styles.divTech}>
 				<ScrollAnimation className={styles.sectionTech}>
 					<h2 className={styles.h2Tech}>Technique</h2>
 					<article className={styles.articleTech}>
@@ -189,7 +189,7 @@ export default function DetailSpectacle({
 						))}
 					</article>
 				</ScrollAnimation2>
-			</div>
+			</section>
 			<ScrollAnimation className={styles.sectionDate}>
 				<h2 className={styles.h2Date}>Les Dates</h2>
 				<section className={styles.articles}>

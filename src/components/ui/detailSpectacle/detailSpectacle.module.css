@@ -120,7 +120,7 @@
 }
 .resume {
 	border-color: var(--secondary-color);
-	padding: 4vw 12vw;
+	padding: 2vw 12vw;
 	height: fit-content;
 	width: 80vw;
 	background-color: var(--secondary-color);
@@ -139,8 +139,7 @@
 	color: var(--third-color);
 	position: relative;
 	right: 8vw;
-	margin: 2vh 0;
-	line-height: var(--line-height);
+	padding: 4vh 0;
 	z-index: 4;
 	@media screen and (max-width: 1024px) {
 		font-size: 1.5em;
@@ -150,7 +149,6 @@
 .divResume {
 	width: 40vw;
 
-	font-size: 0.9em;
 	@media screen and (max-width: 1024px) {
 		width: 80vw;
 	}
@@ -159,7 +157,8 @@
 .distribution {
 	width: 100vw;
 	background-color: var(--main-color);
-	border: solid 3px var(--third-color);
+	border-top: solid 3px var(--third-color);
+	border-bottom: solid 3px var(--third-color);
 	height: 60vh;
 	display: flex;
 	flex-direction: column;
