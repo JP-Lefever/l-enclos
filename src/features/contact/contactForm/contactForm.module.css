@@ -1,41 +1,101 @@
-.sectionForm {
-	width: 100vw;
-	padding: var(--margin-section);
-	margin: var(--margin-section) 0;
-	background: linear-gradient(
-		to right,
-		var(--main-color) 10%,
-		var(--primary-color) 10%
-	);
-}
-.form {
-	width: 20vw;
-	margin: auto;
-	background-color: var(--secondary-color);
-	border-radius: var(--border-radius);
+.divContact {
+	display: flex;
+	margin: var(--margin-section);
 }
 .h2 {
 	font-family: var(--title-font);
 	font-size: var(--size-title);
-	text-align: center;
-	margin-bottom: 5vh;
+	letter-spacing: var(--letter-spacing);
+	color: var(--primary-color);
 }
 
+.articleInfo {
+	display: flex;
+	flex-direction: column;
+	gap: 2em;
+	margin: 4em 0;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.span {
+	display: block;
+}
+.sectionInfo {
+	width: 40vw;
+}
+.sectionForm {
+	width: 60vw;
+}
+.form {
+	width: 90%;
+}
 .fieldset {
 	display: flex;
 	flex-direction: column;
 	padding: 1em;
 	border: none;
 }
-
-.label {
-	padding: 1vh 0;
+.h3 {
+	padding: 1vh 1vw;
 	font-weight: bold;
+	margin-bottom: 2vh;
+	text-transform: uppercase;
+}
+.label {
+	padding: 4vh 0;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: var(--letter-spacing);
 }
 .input {
-	border-radius: 5px;
-	height: 3vh;
+	border: none;
+	border-bottom: 2px solid var(--third-color);
+	font-family: var(--font-paragraph);
+	font-size: 1em;
+	padding: 0;
 }
+
 .textarea {
-	border-radius: 5px;
+	border: none;
+	border-bottom: 2px solid var(--third-color);
+	font-family: var(--font-paragraph);
+	font-size: 1em;
+}
+.labelArea {
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: var(--letter-spacing);
+	padding-bottom: 4vh;
+}
+.option {
+	border: none;
+	border-bottom: 2px solid var(--third-color);
+	font-family: var(--font-paragraph);
+	text-transform: uppercase;
+	letter-spacing: var(--letter-spacing);
+	font-weight: bold;
+	font-size: 1em;
+	padding-bottom: 6vh;
+}
+.option:focus {
+	outline: none;
+	box-shadow: none;
+}
+.textarea:focus {
+	outline: none;
+	box-shadow: none;
+}
+
+.button {
+	text-decoration: none;
+	border: 2px solid var(--secondary-color);
+	color: var(--secondary-color);
+	padding: 0.2em 0;
+	border-radius: 20px;
+	width: 12vw;
+	text-align: center;
+	font-size: 1.2em;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin: var(--margin-section);
 }

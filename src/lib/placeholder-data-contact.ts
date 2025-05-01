@@ -1,15 +1,19 @@
 const subjectOptions = [
 	{
 		id: 1,
-		subject: "Demande de prestation",
+		subject: "contact",
 	},
 	{
 		id: 2,
-		subject: "Demande de partenariat",
+		subject: "Diffusion",
 	},
 	{
 		id: 3,
-		subject: "Demande d'informations",
+		subject: "Immersion",
+	},
+	{
+		id: 4,
+		subject: "Partenariat",
 	},
 ];
 

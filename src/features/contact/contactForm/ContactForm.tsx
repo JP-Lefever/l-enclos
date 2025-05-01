@@ -22,110 +22,114 @@ export default function AdminContact() {
 	};
 	return (
 		<>
-			<section className={styles.sectionForm}>
-				<h2 className={styles.h2}>Formulaire de contact</h2>
-				<form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
-					<fieldset className={styles.fieldset}>
-						<label className={styles.label} htmlFor="lastname">
-							Nom
-						</label>
-						<input
-							className={styles.input}
-							type="text"
-							{...register("lastname", {
-								required: errorMessage.require,
-								min: {
-									value: 2,
-									message: errorMessage.minLenght,
-								},
-								pattern: {
-									value: /^[A-Za-zÀ-ÖØ-öø-ÿ]+(?:[ '-][A-Za-zÀ-ÖØ-öø-ÿ]+)*$/,
-									message: errorMessage.regex,
-								},
-							})}
-						/>
-						<label className={styles.label} htmlFor="firstname">
-							Prénom
-						</label>
-						<input
-							className={styles.input}
-							type="text"
-							{...register("firstname", {
-								required: errorMessage.require,
-								min: {
-									value: 2,
-									message: errorMessage.minLenght,
-								},
-								pattern: {
-									value: /^[A-Za-zÀ-ÖØ-öø-ÿ]+(?:[ '-][A-Za-zÀ-ÖØ-öø-ÿ]+)*$/,
-									message: errorMessage.regex,
-								},
-							})}
-						/>
-						<label className={styles.label} htmlFor="organism">
-							Organisme (optionnel)
-						</label>
-						<input
-							className={styles.input}
-							type="text"
-							{...register("organism")}
-						/>
-						<label className={styles.label} htmlFor="email">
-							Email
-						</label>
-						<input
-							className={styles.input}
-							type="email"
-							{...register("email", {
-								required: errorMessage.require,
-								min: {
-									value: 2,
-									message: errorMessage.minLenght,
-								},
-								pattern: {
-									value: /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/,
-									message: errorMessage.regex,
-								},
-							})}
-						/>
-					</fieldset>
-					<fieldset className={styles.fieldset}>
-						<label className={styles.label} htmlFor="subject">
-							Sujet du message
-						</label>
-						<select
-							className={styles.input}
-							{...register("subject", { required: errorMessage.require })}
-						>
-							<option value="" disabled>
-								Veuillez selectionner un sujet
-							</option>
-							{subjectOptions.map((s) => (
-								<option key={s.id} value={s.subject}>
-									{s.subject}
-								</option>
-							))}
-						</select>
-					</fieldset>
-					<fieldset className={styles.fieldset}>
-						<label className={styles.label} htmlFor="message">
-							Message
-						</label>
-						<textarea
-							className={styles.textarea}
-							rows={10}
-							{...register("message", {
-								required: errorMessage.require,
-								min: {
-									value: 2,
-									message: errorMessage.minLenght,
-								},
-							})}
-						/>
-					</fieldset>
-					<button type="submit">Envoyer</button>
-				</form>
-			</section>
+			<div className={styles.divContact}>
+				<section className={styles.sectionInfo}>
+					<h2 className={styles.h2}>
+						<span className={styles.span}>La </span>
+						<span className={styles.span}>compagnie </span>
+						<span>{"L'Enclos"}</span>
+					</h2>
+					<article className={styles.articleInfo}>
+						<p>
+							64 boulevard Silvio Trentin <br /> 31200, Toulouse{" "}
+						</p>
+
+						<p className={styles.mail}>cie.lenclos@posteo.net</p>
+					</article>
+				</section>
+				<section className={styles.sectionForm}>
+					<h2 className={styles.h3}>N'hésitez pas à nous contacter</h2>
+					<form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+						<fieldset className={styles.fieldset}>
+							<label className={styles.label} htmlFor="lastname">
+								Nom
+							</label>
+							<input
+								className={styles.input}
+								type="text"
+								{...register("lastname", {
+									required: errorMessage.require,
+									min: {
+										value: 2,
+										message: errorMessage.minLenght,
+									},
+									pattern: {
+										value: /^[A-Za-zÀ-ÖØ-öø-ÿ]+(?:[ '-][A-Za-zÀ-ÖØ-öø-ÿ]+)*$/,
+										message: errorMessage.regex,
+									},
+								})}
+							/>
+							<label className={styles.label} htmlFor="firstname">
+								Prénom
+							</label>
+							<input
+								className={styles.input}
+								type="text"
+								{...register("firstname", {
+									required: errorMessage.require,
+									min: {
+										value: 2,
+										message: errorMessage.minLenght,
+									},
+									pattern: {
+										value: /^[A-Za-zÀ-ÖØ-öø-ÿ]+(?:[ '-][A-Za-zÀ-ÖØ-öø-ÿ]+)*$/,
+										message: errorMessage.regex,
+									},
+								})}
+							/>
+
+							<label className={styles.label} htmlFor="email">
+								Email
+							</label>
+							<input
+								className={styles.input}
+								type="email"
+								{...register("email", {
+									required: errorMessage.require,
+									min: {
+										value: 2,
+										message: errorMessage.minLenght,
+									},
+									pattern: {
+										value: /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/,
+										message: errorMessage.regex,
+									},
+								})}
+							/>
+						</fieldset>
+						<fieldset className={styles.fieldset}>
+							<select
+								className={styles.option}
+								{...register("subject", { required: errorMessage.require })}
+							>
+								{subjectOptions.map((s) => (
+									<option key={s.id} value={s.subject}>
+										{s.subject}
+									</option>
+								))}
+							</select>
+						</fieldset>
+						<fieldset className={styles.fieldset}>
+							<label className={styles.labelArea} htmlFor="message">
+								Message
+							</label>
+							<textarea
+								className={styles.textarea}
+								{...register("message", {
+									required: errorMessage.require,
+									min: {
+										value: 2,
+										message: errorMessage.minLenght,
+									},
+								})}
+							/>
+						</fieldset>
+						<button className={styles.button} type="submit">
+							Envoyer
+						</button>
+					</form>
+				</section>
+			</div>
 		</>
 	);
 }
