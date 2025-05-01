@@ -30,7 +30,7 @@ const contactSchema = z.object({
 
 export async function addMessage(data: ContactProps) {
 	const parsedData = contactSchema.safeParse(data);
-	console.log(parsedData.error);
+
 	if (!parsedData.success) {
 		return { success: false, error: parsedData.error.flatten().fieldErrors };
 	}
