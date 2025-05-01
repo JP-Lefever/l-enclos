@@ -81,6 +81,7 @@ export type cardDataProps = {
 	image_url: string;
 };
 
+//A utiliser
 export type buttonSpecProps = {
 	id: number;
 	name: string;
@@ -151,4 +152,13 @@ export type InterventionProps = {
 export type CompagnieProps = {
 	id: number;
 	about: string;
+};
+
+export type ContactProps = {
+	firstname: string;
+	lastname: string;
+	organism: string;
+	email: string;
+	subject: string;
+	message: string;
 };

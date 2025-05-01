@@ -1,0 +1,41 @@
+.sectionForm {
+	width: 100vw;
+	padding: var(--margin-section);
+	margin: var(--margin-section) 0;
+	background: linear-gradient(
+		to right,
+		var(--main-color) 10%,
+		var(--primary-color) 10%
+	);
+}
+.form {
+	width: 20vw;
+	margin: auto;
+	background-color: var(--secondary-color);
+	border-radius: var(--border-radius);
+}
+.h2 {
+	font-family: var(--title-font);
+	font-size: var(--size-title);
+	text-align: center;
+	margin-bottom: 5vh;
+}
+
+.fieldset {
+	display: flex;
+	flex-direction: column;
+	padding: 1em;
+	border: none;
+}
+
+.label {
+	padding: 1vh 0;
+	font-weight: bold;
+}
+.input {
+	border-radius: 5px;
+	height: 3vh;
+}
+.textarea {
+	border-radius: 5px;
+}

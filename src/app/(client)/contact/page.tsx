@@ -1,4 +1,4 @@
-import AdminContact from "@/features/contact/ContactForm";
+import AdminContact from "@/features/contact/contactForm/ContactForm";
 
 export default function ContactPage() {
 	return (

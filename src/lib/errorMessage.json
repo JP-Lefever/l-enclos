@@ -1,0 +1,5 @@
+{
+	"require": "Champs requis",
+	"minLenght": "Le champs doit comporter au moins 2 caractères",
+	"regex": "Certains caractères ne sont pas autorisés"
+}
