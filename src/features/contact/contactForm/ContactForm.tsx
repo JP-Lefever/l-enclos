@@ -31,14 +31,14 @@ export default function AdminContact() {
 					</h2>
 					<article className={styles.articleInfo}>
 						<p>
-							64 boulevard Silvio Trentin <br /> 31200, Toulouse{" "}
+							64 boulevard Silvio Trentin <br /> 31200, Toulouse
 						</p>
 
 						<p className={styles.mail}>cie.lenclos@posteo.net</p>
 					</article>
 				</section>
 				<section className={styles.sectionForm}>
-					<h2 className={styles.h3}>N'hésitez pas à nous écrire</h2>
+					<h2 className={styles.h3}>{"N'hésitez pas à nous écrire"}</h2>
 					<form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
 						<fieldset className={styles.fieldset}>
 							<label className={styles.label} htmlFor="lastname">
