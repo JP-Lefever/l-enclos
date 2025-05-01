@@ -1,4 +1,4 @@
-import DetailSpectacle from "@/components/ui/detailSpectacle/DetailSpectacle";
+import DetailSpectacle from "@/features/spectacle/detailSpectacle/DetailSpectacle";
 import { cardData } from "@/lib/placeholder-data";
 
 export default async function detailSpectaclePage(props: {

@@ -8,7 +8,7 @@ import Link from "next/link";
 import {
 	ScrollAnimation3,
 	ScrollAnimation4,
-} from "../animation/ScrollAnimation";
+} from "@/components/ui/animation/ScrollAnimation";
 
 export default function CardSpec() {
 	return (

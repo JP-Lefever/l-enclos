@@ -1,5 +1,5 @@
+import Histoire from "@/features/compagnie/histoire/Histoire";
 import styles from "./page.module.css";
-import Histoire from "@/components/ui/histoire/Histoire";
 
 export default function CompagniePage() {
 	return (

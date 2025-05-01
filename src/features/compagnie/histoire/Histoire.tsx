@@ -4,7 +4,7 @@ import { compagnie } from "@/lib/placeholder-data";
 import {
 	ScrollAnimation,
 	ScrollAnimation2,
-} from "../animation/ScrollAnimation";
+} from "@/components/ui/animation/ScrollAnimation";
 
 export default function Histoire() {
 	return (

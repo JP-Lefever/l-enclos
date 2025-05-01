@@ -3,14 +3,15 @@
 import styles from "./detailMediation.module.css";
 import Image from "next/image";
 import type { InterventionProps, MediationProps } from "@/lib/definitions";
-import {
-	ScrollAnimation,
-	ScrollAnimation2,
-} from "../animation/ScrollAnimation";
+
 import Markdown from "react-markdown";
 import { intervention } from "@/lib/placeholder-data";
 import { ChevronRight } from "lucide-react";
-import { AutoPlayMed } from "../slider/Autoplay";
+import { AutoPlayMed } from "@/components/ui/slider/Autoplay";
+import {
+	ScrollAnimation,
+	ScrollAnimation2,
+} from "@/components/ui/animation/ScrollAnimation";
 
 export default function DetailMediation({
 	mediation,

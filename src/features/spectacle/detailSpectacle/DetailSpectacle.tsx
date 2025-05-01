@@ -10,11 +10,11 @@ import Image from "next/image";
 import Markdown from "react-markdown";
 import { partnair, date, datePassed } from "@/lib/placeholder-data";
 import { ChevronRight } from "lucide-react";
-import { AutoPlaySpec } from "../slider/Autoplay";
+import { AutoPlaySpec } from "@/components/ui/slider/Autoplay";
 import {
 	ScrollAnimation,
 	ScrollAnimation2,
-} from "../animation/ScrollAnimation";
+} from "@/components/ui/animation/ScrollAnimation";
 
 export default function DetailSpectacle({
 	cardData,

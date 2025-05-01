@@ -1,7 +1,7 @@
-import MediationPrimaire from "@/components/ui/mediationPrimaire/MediationPrimaire";
+import MediationPrimaire from "@/features/mediation/mediationPrimaire/MediationPrimaire";
 import styles from "./page.module.css";
-import MediationCollege from "@/components/ui/mediationCollege/MediationCollege";
-import MediationEphad from "@/components/ui/mediationEphad/MediationEphad";
+import MediationCollege from "@/features/mediation/mediationCollege/MediationCollege";
+import MediationEphad from "@/features/mediation/mediationEphad/MediationEphad";
 import ButtonMediation from "@/components/ui/buttonMediation/ButtonMediation";
 import {
 	ScrollAnimation2,

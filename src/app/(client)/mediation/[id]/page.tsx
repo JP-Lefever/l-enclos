@@ -1,4 +1,4 @@
-import DetailMediation from "@/components/ui/detailMediation/DetailMediation";
+import DetailMediation from "@/features/mediation/detailMediation/DetailMediation";
 import { mediation } from "@/lib/placeholder-data";
 
 export default async function DetailMediationPage(props: {
