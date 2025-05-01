@@ -1,19 +1,30 @@
 "use client";
 
 import styles from "./contactForm.module.css";
-import { useForm } from "react-hook-form";
+import { SubmitHandler, useForm } from "react-hook-form";
 import { subjectOptions } from "@/lib/placeholder-data-contact";
 import errorMessage from "../../../lib/errorMessage.json";
 import type { ContactProps } from "@/lib/definitions";
+import { addMessage } from "./contact.action";
+import { toast } from "react-toastify";
 
 export default function AdminContact() {
-	const { register } = useForm();
-	const onSubmit = async (data: ContactProps) => {};
+	const { register, handleSubmit, reset } = useForm<ContactProps>();
+	const onSubmit = async (data: ContactProps) => {
+		const response = await addMessage(data);
+
+		if (response?.success) {
+			toast.success(response.message);
+			reset();
+		} else {
+			toast.error("Un erreur est survenue, veuillez rééssayer ulterieurement");
+		}
+	};
 	return (
 		<>
 			<section className={styles.sectionForm}>
 				<h2 className={styles.h2}>Formulaire de contact</h2>
-				<form className={styles.form}>
+				<form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
 					<fieldset className={styles.fieldset}>
 						<label className={styles.label} htmlFor="lastname">
 							Nom
@@ -57,17 +68,7 @@ export default function AdminContact() {
 						<input
 							className={styles.input}
 							type="text"
-							{...register("organism", {
-								required: errorMessage.require,
-								min: {
-									value: 2,
-									message: errorMessage.minLenght,
-								},
-								pattern: {
-									value: /^[A-Za-zÀ-ÖØ-öø-ÿ]+(?:[ '-][A-Za-zÀ-ÖØ-öø-ÿ]+)*$/,
-									message: errorMessage.regex,
-								},
-							})}
+							{...register("organism")}
 						/>
 						<label className={styles.label} htmlFor="email">
 							Email
@@ -100,7 +101,7 @@ export default function AdminContact() {
 								Veuillez selectionner un sujet
 							</option>
 							{subjectOptions.map((s) => (
-								<option key={s.id} value={s.id}>
+								<option key={s.id} value={s.subject}>
 									{s.subject}
 								</option>
 							))}
@@ -122,6 +123,7 @@ export default function AdminContact() {
 							})}
 						/>
 					</fieldset>
+					<button type="submit">Envoyer</button>
 				</form>
 			</section>
 		</>

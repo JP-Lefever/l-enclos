@@ -157,8 +157,15 @@ export type CompagnieProps = {
 export type ContactProps = {
 	firstname: string;
 	lastname: string;
-	organism: string;
+	organism?: string;
 	email: string;
 	subject: string;
 	message: string;
 };
+
+export type ResultProps =
+	| {
+			success: true;
+			message: string;
+	  }
+	| { message: string };
