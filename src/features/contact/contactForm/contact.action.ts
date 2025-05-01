@@ -1,6 +1,6 @@
 "use server";
 
-import type { ContactProps, ResultProps } from "@/lib/definitions";
+import type { ContactProps } from "@/lib/definitions";
 import Contact from "./Contact.repository";
 import { z } from "zod";
 
