@@ -1,5 +1,4 @@
 import postgres from "postgres";
-import argon from "argon2";
 
 const sql = postgres(process.env.POSTGRES_URL as string, { ssl: "require" });
 
@@ -50,6 +49,8 @@ async function users() {
 export async function GET() {
 	try {
 		await sql.begin(async () => {
+			initUuid();
+			contact();
 			role();
 			users();
 		});
