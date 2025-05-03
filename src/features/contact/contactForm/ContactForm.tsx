@@ -2,9 +2,9 @@
 
 import styles from "./contactForm.module.css";
 import { useForm } from "react-hook-form";
-import { subjectOptions } from "@/lib/placeholder-data-contact";
-import errorMessage from "../../../lib/errorMessage.json";
-import type { ContactProps } from "@/lib/definitions";
+import { subjectOptions } from "@/assets/data/placeholder-data-contact";
+import errorMessage from "../../../assets/data/errorMessage.json";
+import type { ContactProps } from "@/types/definitions";
 import { addMessage } from "./contact.action";
 import { toast } from "react-toastify";
 
@@ -20,6 +20,7 @@ export default function AdminContact() {
 			toast.error("Un erreur est survenue, veuillez rééssayer ulterieurement");
 		}
 	};
+
 	return (
 		<>
 			<div className={styles.divContact}>

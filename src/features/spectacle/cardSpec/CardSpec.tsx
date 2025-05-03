@@ -1,8 +1,8 @@
 "use client";
 
-import type { cardDataProps } from "@/lib/definitions";
+import type { cardDataProps } from "@/types/definitions";
 import styles from "./cardSpec.module.css";
-import { cardData } from "@/lib/placeholder-data-spectacle";
+import { cardData } from "@/assets/data/placeholder-data-spectacle";
 import Image from "next/image";
 import Link from "next/link";
 import {
