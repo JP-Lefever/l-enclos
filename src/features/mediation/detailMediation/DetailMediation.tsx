@@ -2,10 +2,10 @@
 
 import styles from "./detailMediation.module.css";
 import Image from "next/image";
-import type { InterventionProps, MediationProps } from "@/lib/definitions";
+import type { InterventionProps, MediationProps } from "@/types/definitions";
 
 import Markdown from "react-markdown";
-import { intervention } from "@/lib/placeholder-data-mediation";
+import { intervention } from "@/assets/data/placeholder-data-mediation";
 import { ChevronRight } from "lucide-react";
 import { AutoPlayMed } from "@/components/ui/slider/Autoplay";
 import {

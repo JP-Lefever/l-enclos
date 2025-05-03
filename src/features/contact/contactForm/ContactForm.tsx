@@ -2,9 +2,9 @@
 
 import styles from "./contactForm.module.css";
 import { useForm } from "react-hook-form";
-import { subjectOptions } from "@/lib/placeholder-data-contact";
+import { subjectOptions } from "@/assets/data/placeholder-data-contact";
 import errorMessage from "../../../lib/errorMessage.json";
-import type { ContactProps } from "@/lib/definitions";
+import type { ContactProps } from "@/types/definitions";
 import { addMessage } from "./contact.action";
 import { toast } from "react-toastify";
 import argon2 from "argon2";

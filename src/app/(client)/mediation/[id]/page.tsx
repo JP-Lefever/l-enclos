@@ -1,5 +1,5 @@
 import DetailMediation from "@/features/mediation/detailMediation/DetailMediation";
-import { mediation } from "@/lib/placeholder-data-mediation";
+import { mediation } from "@/assets/data/placeholder-data-mediation";
 
 export default async function DetailMediationPage(props: {
 	params: Promise<{ id: string }>;

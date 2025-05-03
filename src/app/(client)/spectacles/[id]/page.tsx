@@ -1,5 +1,5 @@
 import DetailSpectacle from "@/features/spectacle/detailSpectacle/DetailSpectacle";
-import { cardData } from "@/lib/placeholder-data-spectacle";
+import { cardData } from "@/assets/data/placeholder-data-spectacle";
 
 export default async function detailSpectaclePage(props: {
 	params: Promise<{ id: string }>;
