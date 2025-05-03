@@ -7,7 +7,6 @@ import errorMessage from "../../../assets/data/errorMessage.json";
 import type { ContactProps } from "@/types/definitions";
 import { addMessage } from "./contact.action";
 import { toast } from "react-toastify";
-import argon2 from "argon2";
 
 export default function AdminContact() {
 	const { register, handleSubmit, reset } = useForm<ContactProps>();

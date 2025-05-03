@@ -1,5 +1,5 @@
 "use server";
-import { em } from "framer-motion/client";
+
 import Users from "./repository";
 
 export async function getUserByEmail(email: string) {
