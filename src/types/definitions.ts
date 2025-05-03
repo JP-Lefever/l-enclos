@@ -169,3 +169,12 @@ export type ResultProps =
 			message: string;
 	  }
 	| { message: string };
+
+export type UsersProps = {
+	id: string;
+	firstname: string;
+	lastname: string;
+	email: string;
+	password: string;
+	role_id: number;
+};

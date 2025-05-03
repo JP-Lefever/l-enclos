@@ -41,7 +41,7 @@
 .input {
 	height: 5vh;
 	width: 100%;
-	text-transform: uppercase;
+
 	font-family: var(--paragraph-font);
 	letter-spacing: var(--letter-spacing);
 	padding-left: 1vw;

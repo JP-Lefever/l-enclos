@@ -3,7 +3,7 @@
 import styles from "./contactForm.module.css";
 import { useForm } from "react-hook-form";
 import { subjectOptions } from "@/assets/data/placeholder-data-contact";
-import errorMessage from "../../../lib/errorMessage.json";
+import errorMessage from "../../../assets/data/errorMessage.json";
 import type { ContactProps } from "@/types/definitions";
 import { addMessage } from "./contact.action";
 import { toast } from "react-toastify";

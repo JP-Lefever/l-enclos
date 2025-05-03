@@ -31,10 +31,6 @@ async function role() {
     LABEL VARCHAR(50)
     );
     `;
-	await sql`
-    INSERT INTO role(label)
-    VALUES ("admin")
-    `;
 }
 
 async function users() {
