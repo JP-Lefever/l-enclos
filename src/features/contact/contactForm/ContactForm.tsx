@@ -7,6 +7,7 @@ import errorMessage from "../../../lib/errorMessage.json";
 import type { ContactProps } from "@/lib/definitions";
 import { addMessage } from "./contact.action";
 import { toast } from "react-toastify";
+import argon2 from "argon2";
 
 export default function AdminContact() {
 	const { register, handleSubmit, reset } = useForm<ContactProps>();
@@ -20,6 +21,7 @@ export default function AdminContact() {
 			toast.error("Un erreur est survenue, veuillez rééssayer ulterieurement");
 		}
 	};
+
 	return (
 		<>
 			<div className={styles.divContact}>
