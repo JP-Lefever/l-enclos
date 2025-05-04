@@ -3,6 +3,7 @@ import { ToastContainer, Bounce } from "react-toastify";
 import { paragraphFont } from "@/components/ui/font";
 
 import "../../globals.css";
+import NavAdmin from "@/components/layout/navigation/navAdmin/navAdmin";
 
 export default function RootLayout({
 	children,
@@ -25,7 +26,7 @@ export default function RootLayout({
 					theme="colored"
 					transition={Bounce}
 				/>
-
+				<NavAdmin />
 				<main>{children}</main>
 			</body>
 		</html>
