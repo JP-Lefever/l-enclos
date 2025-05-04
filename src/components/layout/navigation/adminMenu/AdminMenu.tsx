@@ -1,14 +1,10 @@
 import Link from "next/link";
 import styles from "./adminMenu.module.css";
-import { useState } from "react";
+
 export default function NavMenu({
 	openMenu,
 	closeMenu,
 }: { openMenu: boolean; closeMenu: () => void }) {
-	const [openSubMenu, setOpenSubMenu] = useState<string | null>(null);
-	const handleClickMenu = (menuName: string) => {
-		setOpenSubMenu((s) => (s === menuName ? null : menuName));
-	};
 	return (
 		<>
 			<section
