@@ -1,6 +1,7 @@
 import ButtonSpec from "@/components/ui/buttonSpec/ButtonSpec";
 import styles from "./page.module.css";
-import CardSpec from "@/components/ui/cardSpec/CardSpec";
+import CardSpec from "@/features/spectacle/cardSpec/CardSpec";
+
 export default function SpectaclesPage() {
 	return (
 		<>

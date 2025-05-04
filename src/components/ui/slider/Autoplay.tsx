@@ -9,8 +9,8 @@ import Image from "next/image";
 import { useRef } from "react";
 import { ChevronRight } from "lucide-react";
 import { ChevronLeft } from "lucide-react";
-import { photo } from "@/lib/placeholder-data";
-import type { PhotoDataProps } from "@/lib/definitions";
+import { photo } from "@/assets/data/placeholder-data-spectacle";
+import type { PhotoDataProps } from "@/types/definitions";
 
 const AutoPlay = () => {
 	const settings = {

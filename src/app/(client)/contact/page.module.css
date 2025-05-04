@@ -1,0 +1,32 @@
+.section {
+	background-image: url("/images/contact.jpg");
+	width: 100vw;
+	height: 40vw;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	overflow-x: hidden;
+	@media screen and (max-width: 568px) {
+		background-image: url("/images/contact.jpg");
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		height: 40vh;
+		width: 100vw;
+	}
+}
+
+.h1 {
+	font-family: var(--title-font);
+	font-size: var(--size-title);
+	letter-spacing: var(--letter-spacing);
+	color: var(--main-color);
+	margin-left: 1em;
+	text-align: left;
+
+	@media screen and (max-width: 568px) {
+		font-size: 3em;
+		position: relative;
+		top: 25vh;
+	}
+}
