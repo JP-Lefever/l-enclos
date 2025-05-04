@@ -1,6 +1,7 @@
 import Link from "next/link";
 import styles from "./presCompagnie.module.css";
 import Image from "next/image";
+import {generalesInformations} from "@/assets/data/placeholder-data-homePage";
 
 export default function PresCompagnie() {
 	return (
@@ -9,28 +10,19 @@ export default function PresCompagnie() {
 				<figure>
 					<Image
 						className={styles.image}
-						src={"/images/affiche_17ans.png"}
-						alt={"La compagnie l'Enclos"}
+						src={generalesInformations[0].image}
+						alt={generalesInformations[0].title}
 						width={1080}
 						height={860}
 					/>
 				</figure>
 
-				<article className={styles.article}>
+				<article>
 					<h1 className={styles.h1}>
-						<span className={styles.span}>LA </span>
-						<span className={styles.span}>COMPAGNIE </span>
-						<span className={styles.span}>{"L'ENCLOS"}</span>
+						{generalesInformations[0].title}
 					</h1>
 					<p className={styles.paragraph}>
-						{`L'Enclos parle de cet Espace Clos qui entoure chaque être humain,
-						l'intimité de l'être dans toute sa complexité, l'endroit de notre
-						vulnérabilité. Notre carapace. Par ses créations toujours axées sur
-						des écritures contemporaines, L'Enclos souhaite ainsi ouvrir la
-						porte de cet espace clos difficilement accessible dans la « vraie
-						vie » et ainsi aller à la rencontre de ses personnages dans leur
-						profondeur, dans les méandres de leurs pensées, dans leur
-						sensibilité, dans leurs limites….`}
+						{generalesInformations[0].paragraph}
 					</p>
 
 					<Link className={styles.link} href="/compagnie">
