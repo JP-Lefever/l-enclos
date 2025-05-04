@@ -6,7 +6,7 @@ export default function PresSpectacles() {
 	return (
 		<>
 			<section className={styles.section}>
-				<article className={styles.sectionSpec}>
+
 					<figure>
 						<Image
 							className={styles.image}
@@ -17,7 +17,7 @@ export default function PresSpectacles() {
 						/>
 					</figure>
 
-					<section className={styles.sectionCréa}>
+					<article className={styles.article}>
 						<h1 className={styles.h1}>Créations</h1>
 						<p className={styles.paragraph}>
 							{`L'Enclos parle de cet Espace Clos qui entoure chaque être humain,
@@ -33,8 +33,8 @@ export default function PresSpectacles() {
 						<Link className={styles.link} href="/spectacles">
 							Voir les spectacles
 						</Link>
-					</section>
-				</article>
+					</article>
+
 			</section>
 		</>
 	);
