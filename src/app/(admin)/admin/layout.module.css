@@ -1,0 +1,5 @@
+.body {
+	background-color: var(--main-color);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
