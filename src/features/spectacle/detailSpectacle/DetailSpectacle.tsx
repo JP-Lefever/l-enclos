@@ -72,7 +72,7 @@ export default function DetailSpectacle({
 			</section>
 
 			<section className={styles.sectionPres}>
-				<article className={styles.imagePresSpec}>
+				<ScrollAnimation className={styles.imagePresSpec}>
 					<Image
 						className={styles.imageSpec}
 						src={data.image_url}
@@ -80,7 +80,7 @@ export default function DetailSpectacle({
 						width={1080}
 						height={860}
 					/>
-				</article>
+				</ScrollAnimation>
 				<article className={styles.resume}>
 					<ScrollAnimation2>
 						<h2 className={styles.h2Pres}>{"L'HISTOIRE"}</h2>
