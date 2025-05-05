@@ -33,20 +33,3 @@
 	}
 }
 
-
-
-.sectionColl {
-
-	@media screen and (max-width: 568px) {
-		width: 100vw;
-	}
-}
-
-.sectionEph {
-
-
-	@media screen and (max-width: 568px) {
-		width: 100vw;
-		margin-top: 5vh;
-	}
-}

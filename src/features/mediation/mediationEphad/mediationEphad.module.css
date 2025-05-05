@@ -91,6 +91,7 @@
 	display: block;
 	text-align: center;
 	margin: var(--margin-between) 0;
+	text-transform: uppercase;
 	@media screen and (max-width: 1024px) {
 		width: 90vw;
 

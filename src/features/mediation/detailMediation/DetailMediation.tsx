@@ -35,32 +35,30 @@ export default function DetailMediation({
 					<h2 className={styles.h2}>{data.name}</h2>
 					<h2 className={styles.h3title}>{data.title}</h2>
 					<article className={styles.article}>
-						<div className={styles.div}>
+						<article>
 							<h3 className={styles.h3}>{data.type}</h3>
 							<h3 className={styles.h3}>Public : {data.public}</h3>
 							<h3 className={styles.h3}>Durée : {data.duration}</h3>
 							<h3 className={styles.h3}>Theme : {data.theme}</h3>
-						</div>
-						<ScrollAnimation2>
+						</article>
+						<ScrollAnimation2 className={styles.imageWrapper}>
 							<Image
 								className={styles.imagePres}
 								src={data.photoPres}
 								alt={data.title}
-								width={1080}
-								height={860}
+								fill={true}
 							/>
 						</ScrollAnimation2>
 					</article>
 				</ScrollAnimation>
 			</section>
 			<section className={styles.sectionPres}>
-				<ScrollAnimation className={styles.imagePresSpec}>
+				<ScrollAnimation className={styles.imageWrapperPres}>
 					<Image
 						className={styles.imageSpec}
 						src={data.photoDate}
 						alt="Affiche spectacle"
-						width={1080}
-						height={860}
+						fill={true}
 					/>
 				</ScrollAnimation>
 				<article className={styles.resume}>
@@ -72,11 +70,11 @@ export default function DetailMediation({
 					</ScrollAnimation2>
 				</article>
 			</section>
-			<ScrollAnimation className={styles.organisation}>
+			<article className={styles.organisation}>
 				<h2 className={styles.h2Orga}>Organisation</h2>
 				<h3 className={styles.h3Deroul}>{data.organisation}</h3>
 				<article className={styles.articleOrga}>
-					<div>
+					<ScrollAnimation>
 						<h3 className={styles.h3Orga}>
 							<Markdown>{data.first}</Markdown>
 						</h3>
@@ -84,28 +82,28 @@ export default function DetailMediation({
 						<span className={styles.p}>
 							<Markdown>{data.presFirst}</Markdown>
 						</span>
-					</div>
+					</ScrollAnimation>
 
-					<div className={styles.divDistrib}>
+					<ScrollAnimation2 className={styles.divDistrib}>
 						<h3 className={styles.h3Orga}>
 							<Markdown>{data.second}</Markdown>
 						</h3>
 						<span className={styles.p}>
 							<Markdown>{data.presSecond}</Markdown>
 						</span>
-					</div>
+					</ScrollAnimation2>
 					{data.third && (
-						<div className={styles.divDistrib}>
+						<ScrollAnimation className={styles.divDistrib}>
 							<h3 className={styles.h3Orga}>
 								<Markdown>{data.third}</Markdown>
 							</h3>
 							<span className={styles.pDist}>
 								<Markdown>{data.presThird}</Markdown>
 							</span>
-						</div>
+						</ScrollAnimation>
 					)}
 					{data.fourth && (
-						<div className={styles.divDistrib}>
+						<ScrollAnimation2 className={styles.divDistrib}>
 							<>
 								<h3 className={styles.h3Orga}>
 									<Markdown>{data.fourth}</Markdown>
@@ -114,10 +112,10 @@ export default function DetailMediation({
 									<Markdown>{data.presFourth}</Markdown>
 								</span>
 							</>
-						</div>
+						</ScrollAnimation2>
 					)}
 
-					<div className={styles.divDistrib}>
+					<ScrollAnimation className={styles.divDistrib}>
 						<>
 							<h3 className={styles.h3Orga}>
 								<Markdown>{data.final}</Markdown>
@@ -126,10 +124,10 @@ export default function DetailMediation({
 								<Markdown>{data.presFinal}</Markdown>
 							</span>
 						</>
-					</div>
+					</ScrollAnimation>
 
 					{data.material && (
-						<div className={styles.divDistrib}>
+						<ScrollAnimation2 className={styles.divDistrib}>
 							<h3 className={styles.h3Orga}>
 								{"Matériel fourni par la compagnie L'Enclos : "}
 							</h3>
@@ -138,10 +136,10 @@ export default function DetailMediation({
 									{d}
 								</p>
 							))}
-						</div>
+						</ScrollAnimation2>
 					)}
 				</article>
-			</ScrollAnimation>
+			</article>
 			{data.extract && (
 				<section className={styles.sectionExtract}>
 					<ScrollAnimation>
@@ -175,13 +173,13 @@ export default function DetailMediation({
 					<h2 className={styles.h2Inter}>Interventions</h2>
 					<article>
 						{dataInter.map((i) => (
-							<div className={styles.articleInter} key={i.id}>
+							<article className={styles.articleInter} key={i.id}>
 								<h3>{i.date}</h3>
 								<p className={styles.pInter}>
 									<ChevronRight />
 									{i.info}
 								</p>
-							</div>
+							</article>
 						))}
 					</article>
 				</ScrollAnimation2>

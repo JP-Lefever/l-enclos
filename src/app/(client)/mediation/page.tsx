@@ -16,17 +16,17 @@ export default function MediationPage() {
 			</section>
 			<ButtonMediation />
 
-				<section id="primaire" className={styles.sectionPrim}>
+				<section id="primaire" >
 					<MediationPrimaire />
 				</section>
 
 
-				<section id="college" className={styles.sectionColl}>
+				<section id="college" >
 					<MediationCollege />
 				</section>
 
 
-				<section id="ephad" className={styles.sectionEph}>
+				<section id="ephad">
 					<MediationEphad />
 				</section>
 
