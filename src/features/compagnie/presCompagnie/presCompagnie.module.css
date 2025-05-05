@@ -1,9 +1,8 @@
 .section {
 	display: flex;
 	width: 90vw;
-	margin: auto;
 	overflow-x: hidden;
-	margin-bottom: var(--margin-section);
+	margin: auto auto var(--margin-between);
 	@media screen and (max-width: 568px) {
 		display: flex;
 		flex-direction: column;
@@ -40,16 +39,22 @@
 
 .h1 {
 	font-size: var(--size-title);
-	font-family: var(--title-font);
+	font-family: var(--title-font), serif;
 	position: relative;
 	right: var(--position);
 	color: var(--primary-color);
 	line-height: var(--line-height);
 	letter-spacing: var(--letter-spacing);
+	width: 20vw;
 	@media screen and (max-width: 568px) {
 		font-size: var(--size-title-responsive);
 		position: initial;
 		text-align: center;
+		width: 90vw;
+		margin: auto;
+	}
+	@media screen and (min-width: 768px) and (max-width: 1024px) {
+		font-size: var(--size-title-responsive);
 	}
 }
 

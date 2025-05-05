@@ -2,7 +2,7 @@
 	display: flex;
 	justify-content: center;
 	gap: 3em;
-	margin: 5em 0;
+	margin: 5em ;
 	@media screen and (max-width: 568px) {
 		display: flex;
 		flex-direction: column;

@@ -1,9 +1,7 @@
 .section {
 	display: flex;
-	justify-content: center;
-	gap: 2vw;
-	margin: var(--margin-section) auto;
-	height: fit-content;
+
+	margin: var(--margin-between) auto;
 	width: 80vw;
 
 	@media screen and (max-width: 568px) {
@@ -17,9 +15,7 @@
 		height: fit-content;
 	}
 	@media screen and (min-width: 1367px) {
-		width: 60vw;
-		height: fit-content;
-		height: 90vh;
+		width: 80vw;
 	}
 }
 .paragraph {
@@ -29,22 +25,26 @@
 	height: fit-content;
 
 	@media screen and (max-width: 568px) {
-		padding-top: 0vh;
+		padding-top: 0;
 		width: 90vw;
 	}
 	@media screen and (min-width: 768px) and (max-width: 1024px) {
 		position: relative;
 		top: 0;
 	}
+	@media screen and (min-width: 1367px) {
+		width: 35vw;
+	}
 }
 
 .h1 {
 	font-size: var(--size-title);
-	font-family: var(--title-font);
+	font-family: var(--title-font), serif;
 	letter-spacing: var(--letter-spacing);
 	color: var(--primary-color);
 	text-transform: uppercase;
 	line-height: var(--line-height);
+	width: 45vw;
 	@media screen and (max-width: 568px) {
 		font-size: 2em;
 		position: relative;
@@ -53,11 +53,12 @@
 	}
 	@media screen and (min-width: 768px) and (max-width: 1024px) {
 		font-size: 3em;
+		width: 40vw;
+	}
+	@media screen and (min-width: 1367px) {
+		width: 40vw;
+		height: fit-content;
+
 	}
 }
-.span {
-	display: block;
-	@media screen and (max-width: 568px) {
-		display: inline;
-	}
-}
+

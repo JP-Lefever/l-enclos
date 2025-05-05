@@ -1,31 +1,36 @@
 import Link from "next/link";
 import styles from "./mediationCollege.module.css";
 import Image from "next/image";
+import {ScrollAnimation, ScrollAnimation2} from "@/components/ui/animation/ScrollAnimation";
+import {mediation} from "@/assets/data/placeholder-data-mediation";
+import Markdown from "react-markdown";
 
 export default function MediationCollege() {
 	const id = 2;
 	return (
 		<>
 			<section className={styles.section}>
-				<article>
+
+				<ScrollAnimation2 className={styles.imageWrapper}>
 					<Image
 						className={styles.image}
-						src={"/images/mediation_college.jpg"}
-						alt={"La compagnie l'Enclos"}
-						width={1080}
-						height={860}
+						src={mediation[1].photoDate}
+						alt={mediation[1].name}
+						fill={true}
 					/>
-				</article>
+				</ScrollAnimation2>
 
-				<article>
-					<h1 className={styles.h1}>Théâtre - College</h1>
-					<p className={styles.paragraph}>Mediation college</p>
-					<div className={styles.div}>
+				<ScrollAnimation>
+					<h1 className={styles.h1}>{mediation[1].name}</h1>
+
+						<article className={styles.paragraph}>
+							<Markdown>{mediation[1].pres}</Markdown>
 						<Link className={styles.link} href={`/mediation/${id}`}>
 							En savoir plus
 						</Link>
-					</div>
-				</article>
+						</article>
+
+				</ScrollAnimation>
 			</section>
 		</>
 	);

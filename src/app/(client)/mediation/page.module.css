@@ -17,7 +17,7 @@
 }
 
 .h1 {
-	font-family: var(--title-font);
+	font-family: var(--title-font), serif;
 	font-size: var(--size-title);
 	letter-spacing: var(--letter-spacing);
 	color: var(--main-color);
@@ -33,34 +33,3 @@
 	}
 }
 
-.sectionPrim {
-	width: 80vw;
-	margin: auto;
-	height: 100vh;
-	overflow-x: hidden;
-	@media screen and (max-width: 568px) {
-		width: 90vw;
-	}
-}
-
-.sectionColl {
-	width: 100vw;
-	height: 100vh;
-	overflow-x: hidden;
-	background-color: var(--third-color);
-	@media screen and (max-width: 568px) {
-		width: 100vw;
-	}
-}
-
-.sectionEph {
-	height: 100vh;
-	overflow-x: hidden;
-	width: fit-content;
-	margin-top: 15vh;
-
-	@media screen and (max-width: 568px) {
-		width: 100vw;
-		margin-top: 5vh;
-	}
-}
