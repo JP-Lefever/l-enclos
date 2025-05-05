@@ -1,31 +1,33 @@
 import Link from "next/link";
 import styles from "./mediationEphad.module.css";
 import Image from "next/image";
+import {ScrollAnimation, ScrollAnimation2} from "@/components/ui/animation/ScrollAnimation";
+import {mediation} from "@/assets/data/placeholder-data-mediation";
+import Markdown from "react-markdown";
 
 export default function MediationEphad() {
 	const id = 3;
 	return (
 		<>
 			<section className={styles.section}>
-				<article>
+				<ScrollAnimation2 className={styles.imageWrapper}>
 					<Image
 						className={styles.image}
-						src={"/images/mediation_ephad.jpg"}
-						alt={"La compagnie l'Enclos"}
-						width={1080}
-						height={860}
+						src={mediation[2].photoPres}
+						alt={mediation[2].name}
+						fill={true}
 					/>
-				</article>
+				</ScrollAnimation2>
 
-				<article className={styles.article}>
-					<h1 className={styles.h1}>théâtre - EPHAD</h1>
-					<p className={styles.paragraph}>Mediation ephad</p>
-					<div className={styles.div}>
+				<ScrollAnimation className={styles.sec} >
+					<h1 className={styles.h1}>{mediation[2].name}</h1>
+					<article className={styles.paragraph}>
+					<Markdown>{mediation[2].pres}</Markdown>
 						<Link className={styles.link} href={`/mediation/${id}`}>
 							Voir les ateliers
 						</Link>
-					</div>
-				</article>
+					</article>
+				</ScrollAnimation>
 			</section>
 		</>
 	);
