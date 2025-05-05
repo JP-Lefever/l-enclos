@@ -10,21 +10,21 @@ export default function PresMediation() {
 				<figure className={styles.figure}>
 					<Image
 						className={styles.image}
-						src={generalesInformations[1].image}
-						alt={generalesInformations[1].title}
+						src={generalesInformations[2].image}
+						alt={generalesInformations[2].title}
 						width={1080}
 						height={860}
 					/>
 				</figure>
 
 				<article className={styles.article}>
-					<h1 className={styles.h1}>{generalesInformations[1].title}</h1>
+					<h1 className={styles.h1}>{generalesInformations[2].title}</h1>
 
 						<p className={styles.paragraph}>
-							{generalesInformations[1].paragraph}
+							{generalesInformations[2].paragraph}
 						</p>
 						<Link className={styles.link} href="/mediation">
-							Voir les immersions
+							{generalesInformations[2].button}
 						</Link>
 
 				</article>

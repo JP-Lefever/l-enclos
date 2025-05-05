@@ -51,8 +51,8 @@
 }
 
 .article {
-	width : 32vw;
-	margin-right: 20vw;
+	width : 42vw;
+	margin-right: 10vw;
 	@media screen and (max-width: 568px) {
 		width : 90vw;
 		margin-right: 0;
@@ -60,14 +60,16 @@
 	}
 	@media screen and (min-width: 768px) and (max-width: 1024px) {
 		width : 90vw;
-		margin: 0 var(--margin-section) ;
-
-
+		margin: 0 var(--margin-section);
+	}
+	@media screen and (min-width: 1367px) {
+		width: 33vw;
+		margin-right: 15vw;
 	}
 }
 .paragraph {
-	width: 30vw;
-	margin: 0 var(--margin-section) ;
+	width: 40vw;
+	margin: var(--margin-between) var(--margin-between)  ;
 	color: black;
 	margin-right: 10vw;
 	line-height: var(--line-height);
@@ -80,6 +82,9 @@
 		width : 90vw;
 
 		margin: 0
+	}
+	@media screen and (min-width: 1367px) {
+		width: 30vw;
 	}
 }
 

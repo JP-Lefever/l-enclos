@@ -26,7 +26,7 @@ export default function PresCompagnie() {
 					</p>
 
 					<Link className={styles.link} href="/compagnie">
-						En savoir plus
+						{generalesInformations[0].button}
 					</Link>
 				</article>
 			</section>

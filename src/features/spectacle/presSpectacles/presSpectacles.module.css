@@ -54,14 +54,19 @@
 	}
 }
 .article {
+	margin: var(--margin-between) ;
 	@media screen and (min-width: 768px) and (max-width: 1024px) {
 		width: 90vw;
 	}
+	@media screen and (min-width: 1367px) {
+		width: 33vw;
+	}
 }
 .paragraph {
-	margin: var(--margin-between) 0;
+	margin: var(--margin-between) ;
 	color: var(--main-color);
 	line-height: var(--line-height);
+
 	@media screen and (max-width: 568px) {
 		width: 90vw;
 		margin-bottom: 1em;
@@ -82,7 +87,7 @@
 	text-align: center;
 	padding: var(--padding-button);
 	text-transform: uppercase;
-
+	margin: var(--margin-between) ;
 	@media screen and (max-width: 1024px) {
 		width: 90vw;
 		margin-bottom: 5vh;
