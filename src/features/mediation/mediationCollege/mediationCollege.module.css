@@ -1,57 +1,85 @@
 .section {
 	display: flex;
-	width: 80vw;
-	margin: auto;
+	width: 100vw;
+	height: 100vh;
+	overflow-x: hidden;
+	background-color: var(--third-color);
+	flex-direction: row-reverse;
 	align-items: center;
 
-	padding: 6em 0;
-	flex-direction: row-reverse;
-	gap: 4em;
 
-	@media screen and (max-width: 568px) {
+	@media screen and (max-width: 1024px) {
 		flex-direction: column;
 		width: 100vw;
-		padding: 0;
+		height: fit-content;
 		gap: 0;
+		padding: var(--margin-between);
+	}
+	@media screen and (min-width: 1367px) {
+		padding-right: 3vw;
+		gap: 2vw;
 	}
 }
 
-.image {
-	width: 40vw;
-	height: auto;
-	margin: 5em 0;
-	@media screen and (max-width: 568px) {
+.imageWrapper{
+	position: relative;
+	width: 45vw;
+	height: 50vh;
+	right: 4vw;
+	@media screen and (max-width: 1024px) {
+		position: relative;
 		width: 90vw;
-		padding-top: 2em;
+		height: 50vh;
+		right: 0;
+	}
+	@media screen and (min-width: 1367px) {
+		right: 0;
+
+	}
+}
+.image {
+	object-fit: cover;
+	@media screen and (max-width: 1024px) {
+		object-fit: cover;
 	}
 }
 
 .h1 {
-	font-family: var(--title-font);
-	font-size: 3.5em;
+	font-family: var(--title-font), serif;
+	font-size: 4em;
 	color: var(--secondary-color);
 	letter-spacing: var(--letter-spacing);
 	position: relative;
-	left: 4em;
-	bottom: 2em;
-
-	@media screen and (max-width: 568px) {
+	left: 1em;
+	@media screen and (max-width: 1024px) {
 		font-size: 2em;
 		position: relative;
 		text-align: center;
-		left: 0em;
+		left: 0;
 		margin-top: 0.5em;
+		width: 100vw;
+	}
+	@media screen and (min-width: 1367px) {
+		position: relative;
+		left: 14vw;
+
 	}
 }
 
 .paragraph {
-	text-align: justify;
-	margin-bottom: 6em;
-	width: 25vw;
+
+	margin: var(--margin-between) 0;
+	width: 40vw;
+	line-height: var(--line-height);
 	color: var(--main-color);
-	@media screen and (max-width: 568px) {
+
+	@media screen and (max-width: 1024px) {
 		width: 90vw;
-		margin: 0;
+		margin: var(--margin-between) ;
+	}
+	@media screen and (min-width: 1367px) {
+		width: 35vw;
+
 	}
 }
 
@@ -65,19 +93,11 @@
 	border-radius: 10px;
 	display: block;
 	text-align: center;
-
-	@media screen and (max-width: 568px) {
+	margin: var(--margin-between) 0;
+	text-transform: uppercase;
+	@media screen and (max-width: 1024px) {
 		width: 90vw;
-		margin: 0;
+		margin: var(--margin-between) 0;
 	}
 }
 
-.div {
-	width: 25vw;
-
-	@media screen and (max-width: 568px) {
-		width: 90vw;
-		margin-top: 1em;
-		margin-left: 0;
-	}
-}

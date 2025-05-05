@@ -178,3 +178,12 @@ export type UsersProps = {
 	password: string;
 	role_id: number;
 };
+
+export type homePageProps = {
+	id: number,
+	title : string,
+	image : string,
+	paragraph : string,
+	button : string,
+
+}

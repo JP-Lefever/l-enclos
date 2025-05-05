@@ -60,7 +60,7 @@ C'était difficile à apprécier ; toujours une chose ou l'autre ne lui semblait
 	},
 	{
 		id: 2,
-		name: "Théâtre - College",
+		name: "Théâtre-College",
 		title: `"Du texte à la scène ! Autour de Stroboscopie de Sébastien Joanniez" 
 `,
 		photoPres: "/images/college2.png",

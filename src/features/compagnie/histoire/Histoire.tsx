@@ -12,9 +12,7 @@ export default function Histoire() {
 			<section className={styles.section}>
 				<ScrollAnimation className={styles.articleH1}>
 					<h1 className={styles.h1}>
-						<span className={styles.span}>La </span>
-						<span className={styles.span}>compagnie</span>
-						{" l'enclos"}
+						La compagnie {" l'enclos"}
 					</h1>
 				</ScrollAnimation>
 

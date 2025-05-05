@@ -23,11 +23,13 @@ h2 {
 	--main-color: #ffffff;
 	--title-font: "edo";
 	--letter-spacing: 0.1em;
-	--size-title: 5em;
+	--size-title: 12vh;
+	--size-h2: 10vh;
 	--position: 1.2em;
-	--margin-section: 2em;
+	--margin-section: 3vh 3vw;
+	--margin-between: 3vh;
 	--line-height: 1.8em;
 	--padding-button: 0.3em 2em;
 	--border-radius: 10px;
-	--size-title-responsive: 1.8em;
+	--size-title-responsive: 3em;
 }
