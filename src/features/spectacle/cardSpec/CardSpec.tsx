@@ -17,7 +17,8 @@ export default function CardSpec() {
 				<ScrollAnimation3>
 					<section className={styles.section}>
 						{cardData.map((c: cardDataProps) => (
-							<ScrollAnimation4 key={c.id}>
+							<ScrollAnimation4 key={c.id} >
+
 								<Link
 									href={`/spectacles/${c.id}`}
 									className={styles.article}
@@ -34,6 +35,7 @@ export default function CardSpec() {
 									</figure>
 									<h2 className={styles.h2}>{c.title}</h2>
 								</Link>
+
 							</ScrollAnimation4>
 						))}
 					</section>
