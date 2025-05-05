@@ -47,29 +47,32 @@ export default function DetailSpectacle({
 	}
 	return (
 		<>
-			<section className={styles.sectionInfo}>
+
 				<ScrollAnimation className={styles.articleInfo}>
 					<h2 className={styles.h2}>{data.status}</h2>
 					<h2 className={styles.h2Title}>{data.title}</h2>
-					<article className={styles.div}>
+					<article className={styles.subArticle}>
+						<article className={styles.info}>
 						<h3 className={styles.h3}>Thématique</h3>
 						<p className={styles.p}>{data.theme}</p>
 						<h3 className={styles.h3}>Age</h3>
 						<p className={styles.p}>{data.public}</p>
 						<h3 className={styles.h3}>Durée</h3>
 						<p className={styles.p}>{data.duration}</p>
-						<ScrollAnimation2 className={styles.imageInfo}>
+						</article>
+						<ScrollAnimation2 >
+							<figure className={styles.imageWrapper}>
 							<Image
 								className={styles.imagePres}
 								src={data.image_spec}
 								alt={data.title}
-								width={1080}
-								height={860}
+								fill={true}
 							/>
+							</figure>
 						</ScrollAnimation2>
 					</article>
 				</ScrollAnimation>
-			</section>
+
 
 			<section className={styles.sectionPres}>
 				<ScrollAnimation className={styles.imagePresSpec}>
@@ -81,22 +84,21 @@ export default function DetailSpectacle({
 						height={860}
 					/>
 				</ScrollAnimation>
-				<article className={styles.resume}>
-					<ScrollAnimation2>
-						<h2 className={styles.h2Pres}>{"L'HISTOIRE"}</h2>
+					<ScrollAnimation2 className={styles.resume}>
 						<article className={styles.divResume}>
+						<h2 className={styles.h2Pres}>{"L'HISTOIRE"}</h2>
 							<Markdown>{data.resume}</Markdown>
 						</article>
 						{data.propos && (
 							<>
-								<h2 className={styles.h2Pres}>{"LE PROPOS"}</h2>
 								<article className={styles.divResume}>
+								<h2 className={styles.h2Pres}>{"LE PROPOS"}</h2>
 									<Markdown>{data.propos}</Markdown>
 								</article>
 							</>
 						)}
 					</ScrollAnimation2>
-				</article>
+
 			</section>
 			<section>
 				<article className={styles.articleCarousel}>{carousel}</article>
@@ -104,70 +106,70 @@ export default function DetailSpectacle({
 			<ScrollAnimation className={styles.distribution}>
 				<h2 className={styles.h2Dist}>DISTRIBUTION</h2>
 				<article className={styles.articleDistrib}>
-					<div className={styles.divDistrib}>
+					<article className={styles.divDistrib}>
 						<h3 className={styles.h3Dist}>Ecriture</h3>
 						<p className={styles.pDist}>{data.writing}</p>
-					</div>
-					<div className={styles.divDistrib}>
+					</article>
+					<article className={styles.divDistrib}>
 						<h3 className={styles.h3Dist}>Mise en scène</h3>
 						<p className={styles.pDist}>{data.directedBy}</p>
-					</div>
+					</article>
 					{data.interpretation && (
-						<div className={styles.divDistrib}>
+						<article className={styles.divDistrib}>
 							<h3 className={styles.h3Dist}>Interpretation</h3>
 							<p className={styles.pDist}>{data.interpretation}</p>
-						</div>
+						</article>
 					)}
-					<div className={styles.divDistrib}>
+					<article className={styles.divDistrib}>
 						<h3 className={styles.h3Dist}>Composition musicales</h3>
 						<p className={styles.pDist}>{data.music}</p>
-					</div>
+					</article>
 					{data.illustration && (
-						<div className={styles.divDistrib}>
+						<article className={styles.divDistrib}>
 							<>
 								<h3 className={styles.h3Dist}>Illustration</h3>
 								<p className={styles.pDist}>{data.illustration}</p>
 							</>
-						</div>
+						</article>
 					)}
 					{data.sceno && (
-						<div className={styles.divDistrib}>
+						<article className={styles.divDistrib}>
 							<>
 								<h3 className={styles.h3Dist}>Conception scenographique</h3>
 								<p className={styles.pDist}>{data.sceno}</p>
 							</>
-						</div>
+						</article>
 					)}
 					{data.light && (
-						<div className={styles.divDistrib}>
+						<article className={styles.divDistrib}>
 							<>
 								<h3 className={styles.h3Dist}>Creation lumière</h3>
 								<p className={styles.pDist}>{data.light}</p>
 							</>
-						</div>
+						</article>
 					)}
 					{data.video && (
-						<div className={styles.divDistrib}>
+						<article className={styles.divDistrib}>
 							<>
 								<h3 className={styles.h3Dist}>Vidéaste</h3>
 								<p className={styles.pDist}>{data.video}</p>
 							</>
-						</div>
+						</article>
 					)}
 					{data.illustration && (
-						<div className={styles.divDistrib}>
+						<article className={styles.divDistrib}>
 							<>
 								<h3 className={styles.h3Dist}>
 									Mise en page de la plaquette et affiche
 								</h3>
 								<p className={styles.pDist}>{data.illustration}</p>
 							</>
-						</div>
+						</article>
 					)}
-					<div className={styles.divDistrib}>
+					<article className={styles.divDistrib}>
 						<h3 className={styles.h3Dist}>Oeil exterieur</h3>
 						<p className={styles.pDist}>{data.assistant}</p>
-					</div>
+					</article>
 				</article>
 			</ScrollAnimation>
 			<section className={styles.divTech}>
@@ -199,30 +201,30 @@ export default function DetailSpectacle({
 				<section className={styles.articles}>
 					<ScrollAnimation className={styles.articleDate}>
 						<h3 className={styles.h3Date}>A venir</h3>
-						<div className={styles.divDate}>
+						<article className={styles.divDate}>
 							{dateSpec
 								? dateSpec.map((d) => (
-										<div key={d.id}>
+										<article key={d.id}>
 											<h4 className={styles.h4Date}>{d.date}</h4>
 											<p className={styles.pDate1}>{d.place}</p>
 											<p className={styles.pDate2}>{d.info} </p>
 											<p className={styles.pDate2}>{d.hour}</p>
-										</div>
+										</article>
 									))
 								: ""}
-						</div>
+						</article>
 					</ScrollAnimation>
 					<ScrollAnimation2 className={styles.articleDatePassed}>
 						<h3 className={styles.h3DatePass}>Passées</h3>
-						<div className={styles.divDatePass}>
+						<article className={styles.divDatePass}>
 							{dateSpecOver
 								? dateSpecOver.map((d) => (
-										<div key={d.id}>
+										<article key={d.id}>
 											<p>{d.place}</p>
-										</div>
+										</article>
 									))
 								: ""}
-						</div>
+						</article>
 					</ScrollAnimation2>
 				</section>
 			</ScrollAnimation>
