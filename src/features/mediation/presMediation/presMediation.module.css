@@ -92,6 +92,7 @@
 	font-size: var(--size-title);
 	font-family: var(--title-font), serif;
 	color: var(--third-color);
+	letter-spacing: var(--letter-spacing);
 	position: relative;
 	right: var(--position);
 	line-height: var(--line-height);
