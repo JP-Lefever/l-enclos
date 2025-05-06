@@ -9,7 +9,7 @@ class Message {
         try {
           const message = await sql`
         SELECT * 
-        FROM public.contact
+        FROM contact
         WHERE id = ${id};
         `;
           console.log(message)
@@ -24,6 +24,16 @@ class Message {
     console.error("Une erreur est survenue : ", error);
     return  "Une erreur est survenue"
     }
+    }
+
+    async updateStatus(id : string, status:boolean) {
+
+        const changeStatus = await sql`
+        UPDATE contact
+        SET is_treated=${status}
+        WHERE id = ${id};
+`
+        return {success : true, message : "le status a été modifié"}
     }
 }
 

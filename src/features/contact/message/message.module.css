@@ -1,7 +1,7 @@
 .section {
     display: flex;
 
-height: 80vh;
+    min-height: 80vh;
 }
 .info{
     display: grid;
@@ -47,5 +47,39 @@ height: 80vh;
 .message p{
     margin-top:5em;
     font-size: 1.4em;
+}
+.action {
+    display: flex;
+    align-items: center;
+    gap: 2em
+}
+.deleteButton {
+    height: 3em;
+    text-transform: uppercase;
+    padding: 0 2em;
+    border-radius: var(--border-radius);
+    background-color: red;
+    font-weight: bold;
+    letter-spacing: var(--letter-spacing);
 
+}
+
+.read {
+    background-color: green;
+    height: 3em;
+    text-transform: uppercase;
+    padding: 0 2em;
+    border-radius: var(--border-radius);
+
+    font-weight: bold;
+    letter-spacing: var(--letter-spacing);
+}
+.unRead {
+    background-color: orange;
+    height: 3em;
+    text-transform: uppercase;
+    padding: 0 2em;
+    border-radius: var(--border-radius);
+    font-weight: bold;
+    letter-spacing: var(--letter-spacing);
 }

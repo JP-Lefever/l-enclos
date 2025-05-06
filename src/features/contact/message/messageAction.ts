@@ -7,4 +7,11 @@ const readMessage = async (id: string)=>{
 
 }
 
-export {readMessage}
+const updateStatus = async (id: string, status: boolean)=>{
+
+    const changeStatus = Message.updateStatus(id, status);
+
+    return {success : true, message : changeStatus}
+}
+
+export {readMessage, updateStatus}

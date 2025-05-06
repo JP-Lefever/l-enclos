@@ -163,7 +163,8 @@ export type ContactProps = {
 	subject: string;
 	date : string;
 	message: string;
-	status :number
+
+	is_treated : boolean;
 };
 
 export type ResultProps =

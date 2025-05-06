@@ -6,13 +6,13 @@ export default async function DetailMessagePage(props: { params: Promise<{ id: s
 
 const params = await props.params;
 const id= params.id;
-    console.log(id)
 
-    const fullMessage : ContactProps | null | string = await readMessage(id);
+const fullMessage : ContactProps | null | string = await readMessage(id);
+
 
 
     return <>
 
-    <Message  fullMessage = {fullMessage}/>
+    <Message  fullMessage = {fullMessage} />
     </>
 }

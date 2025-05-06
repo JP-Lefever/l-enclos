@@ -1,8 +1,14 @@
+"use client"
 import styles from "./message.module.css";
 import {ContactProps} from "@/types/definitions";
 import {formatedDate} from "@/lib/helpers/formatedDate";
+import {useEffect, useState} from "react";
 
-export default function Message({fullMessage} : {fullMessage : ContactProps | null | string }){
+import {updateStatus} from "@/features/contact/message/messageAction";
+
+
+
+export default function Message({fullMessage} : {fullMessage : ContactProps | null | string }) {
 
     if(typeof fullMessage === "string"){
         return <p>{fullMessage}</p>
@@ -11,7 +17,30 @@ export default function Message({fullMessage} : {fullMessage : ContactProps | nu
         return "Message introuvable"
     }
 
-   const {firstname, lastname, email, organism, subject, date, message} = fullMessage;
+   const {id, firstname, lastname, email, organism, subject, date, message, is_treated} = fullMessage;
+
+
+
+
+    const [status, setStatus] = useState(is_treated)
+    const buttonStatus = status ? "Lu" : "Marquer comme lu"
+
+    const handleClickStatus = ()=>{
+        setStatus(!status)
+
+    }
+
+  useEffect(()=>{
+      (async()=>{
+          try{
+              await updateStatus(id, status)
+          }catch(e){
+              console.error(e)
+          }
+      })()
+  },[status])
+
+
 
     return <>
 
@@ -44,7 +73,11 @@ export default function Message({fullMessage} : {fullMessage : ContactProps | nu
             </span>
         </article>
         <article className={styles.message}>
+            <span className={styles.action}>
             <h2 className={styles.h2Message}>Message</h2>
+                <button onClick={handleClickStatus} className={status ? styles.read : styles.unRead}  type="button">{buttonStatus}</button>
+                <button className={styles.deleteButton} type="button">Supprimer le message</button>
+            </span>
             <p>{message}</p>
         </article>
     </section>
