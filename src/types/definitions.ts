@@ -190,5 +190,5 @@ export type homePageProps = {
 	image : string,
 	paragraph : string,
 	button : string,
-	statuts: boolean,
+
 }
