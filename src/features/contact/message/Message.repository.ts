@@ -34,7 +34,8 @@ class Message {
         WHERE id = ${id};
 `
     }catch(error){
-    return  "Une erreur est survenue  "
+        console.error("Une erreur est survenue : ", error);
+        return  "Une erreur est survenue"
     }
    }
 
@@ -45,7 +46,7 @@ class Message {
             DELETE FROM contact
             WHERE id = ${id}`
         }catch(error){
-
+            console.error("Une erreur est survenue : ", error);
             return  "Une erreur est survenue"
         }
     
