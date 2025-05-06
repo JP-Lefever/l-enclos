@@ -83,3 +83,17 @@
     font-weight: bold;
     letter-spacing: var(--letter-spacing);
 }
+.sectionBack{
+    margin : var(--margin-between);
+}
+.link {
+    background-color: var(--primary-color);
+    text-decoration: none;
+    color: black;
+    height: 3em;
+    text-transform: uppercase;
+    padding: 1vh 2em;
+    border-radius: var(--border-radius);
+    font-weight: bold;
+    letter-spacing: var(--letter-spacing);
+}

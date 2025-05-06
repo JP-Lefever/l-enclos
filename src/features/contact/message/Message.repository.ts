@@ -27,13 +27,28 @@ class Message {
     }
 
     async updateStatus(id : string, status:boolean) {
-
-        const changeStatus = await sql`
+    try {
+        await sql`
         UPDATE contact
         SET is_treated=${status}
         WHERE id = ${id};
 `
-        return {success : true, message : "le status a été modifié"}
+    }catch(error){
+    return  "Une erreur est survenue : "
+    }
+   }
+
+    async deleteMessage(id:string){
+    
+        try {
+            await sql`
+            DELETE FROM contact
+            WHERE id = ${id}`
+        }catch(error){
+
+            return  "Une erreur est survenue"
+        }
+    
     }
 }
 

@@ -4,7 +4,11 @@ import {ContactProps} from "@/types/definitions";
 import {formatedDate} from "@/lib/helpers/formatedDate";
 import {useEffect, useState} from "react";
 
-import {updateStatus} from "@/features/contact/message/messageAction";
+import { updateStatus} from "@/features/contact/message/messageAction";
+import Link from "next/link";
+import {createPortal} from "react-dom";
+import DeleteConfirmation from "@/features/contact/deleteConfirmation/DeleteConfirmation";
+
 
 
 
@@ -17,17 +21,23 @@ export default function Message({fullMessage} : {fullMessage : ContactProps | nu
         return "Message introuvable"
     }
 
-   const {id, firstname, lastname, email, organism, subject, date, message, is_treated} = fullMessage;
-
-
-
+    const {id, firstname, lastname, email, organism, subject, date, message, is_treated} = fullMessage;
 
     const [status, setStatus] = useState(is_treated)
     const buttonStatus = status ? "Lu" : "Marquer comme lu"
-
     const handleClickStatus = ()=>{
         setStatus(!status)
 
+    }
+
+
+    const [openValidateModal, setOpenValidateModal] = useState(false)
+
+    const handleOpenValidateModal = () => {
+        setOpenValidateModal(true)
+    }
+    const closeModale = ()=>{
+        setOpenValidateModal(false)
     }
 
   useEffect(()=>{
@@ -44,6 +54,9 @@ export default function Message({fullMessage} : {fullMessage : ContactProps | nu
 
     return <>
 
+        <section className={styles.sectionBack}>
+            <Link className={styles.link} href={"/admin/messages"}>Revenir a la liste de messages</Link>
+        </section>
     <section className={styles.section}>
         <article className={styles.info}>
             <h2 className={styles.h2}>Informations</h2>
@@ -76,10 +89,11 @@ export default function Message({fullMessage} : {fullMessage : ContactProps | nu
             <span className={styles.action}>
             <h2 className={styles.h2Message}>Message</h2>
                 <button onClick={handleClickStatus} className={status ? styles.read : styles.unRead}  type="button">{buttonStatus}</button>
-                <button className={styles.deleteButton} type="button">Supprimer le message</button>
+                <button onClick={handleOpenValidateModal} className={styles.deleteButton} type="button">Supprimer le message</button>
             </span>
             <p>{message}</p>
         </article>
+        {openValidateModal && createPortal(<DeleteConfirmation closeModale={closeModale} id={id}/>, document.body)}
     </section>
 
     </>

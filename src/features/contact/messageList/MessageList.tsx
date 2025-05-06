@@ -28,7 +28,7 @@ export default function MessageList({messages} : {messages : ContactProps[] | un
         </thead>
         <tbody >
         { Array.isArray(messages) && messages?.map((m :ContactProps)=>{
-           const statut =  m.is_treated  ? "traité" : "En attente"
+           const statut =  m.is_treated  ? "Traité" : "En attente"
             return (
 
             <tr className={styles.tr} key={m.id} onClick={()=>router.push(`/admin/messages/${m.id}`)}>
