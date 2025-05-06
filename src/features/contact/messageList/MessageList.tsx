@@ -31,7 +31,7 @@ export default function MessageList({messages} : {messages : ContactProps[] | un
            const statut =  m.status === 1 ? "traité" : "En attente"
             return (
 
-            <tr className={styles.tr} key={m.id} onClick={()=>router.push(`/contact/${m.id}`)}>
+            <tr className={styles.tr} key={m.id} onClick={()=>router.push(`/admin/messages/${m.id}`)}>
 
                 <th >{m.firstname}</th>
                 <th>{m.lastname}</th>
