@@ -155,12 +155,16 @@ export type CompagnieProps = {
 };
 
 export type ContactProps = {
+	id:string;
 	firstname: string;
 	lastname: string;
 	organism?: string;
 	email: string;
 	subject: string;
+	date : string;
 	message: string;
+
+	is_treated : boolean;
 };
 
 export type ResultProps =
@@ -176,6 +180,7 @@ export type UsersProps = {
 	lastname: string;
 	email: string;
 	password: string;
+
 	role_id: number;
 };
 

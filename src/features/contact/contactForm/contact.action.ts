@@ -28,7 +28,7 @@ const contactSchema = z.object({
 		}),
 });
 
-export async function addMessage(data: ContactProps) {
+export async function addMessage(data: Omit<ContactProps, "id" | "date" | "is_treated">) {
 	const parsedData = contactSchema.safeParse(data);
 
 	if (!parsedData.success) {

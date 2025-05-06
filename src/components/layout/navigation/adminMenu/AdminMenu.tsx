@@ -18,7 +18,7 @@ export default function NavMenu({
 					</li>
 
 					<li className={styles.li}>
-						<Link className={styles.link} href="#">
+						<Link className={styles.link} href="/admin/messages" onClick={closeMenu}>
 							Messages
 						</Link>
 					</li>

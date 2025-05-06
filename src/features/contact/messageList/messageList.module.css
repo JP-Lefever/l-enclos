@@ -1,0 +1,40 @@
+.table {
+    width: 90vw;
+    border-collapse: collapse;
+    margin: var(--margin-between) auto;
+
+}
+.table th,
+.table td {
+
+    border: solid 1px var(--secondary-color);
+    padding: 1em;
+
+}
+
+.tr{
+    cursor : pointer;
+}
+
+.caption {
+    font-family: var(--title-font), serif;
+    font-size: 3em;
+    letter-spacing: var(--letter-spacing);
+    color: var(--third-color);
+    text-align: left;
+    line-height: var(--line-height);
+}
+.thead{
+    background-color: var(--secondary-color);
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+.read {
+    background-color: green;
+
+}
+.unRead {
+    background-color: orange;
+
+}
