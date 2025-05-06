@@ -12,7 +12,8 @@ const fullMessage : ContactProps | null | string = await readMessage(id);
 
 
     return <>
-
+        {fullMessage && typeof(fullMessage) !== "string" &&
     <Message  fullMessage = {fullMessage} />
+        }
     </>
 }

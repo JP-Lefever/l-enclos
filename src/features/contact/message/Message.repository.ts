@@ -12,12 +12,12 @@ class Message {
         FROM contact
         WHERE id = ${id};
         `;
-          console.log(message)
+
           const messages = message[0];
           if(!messages){
               return "Message introuvable"
           }
-          console.log(messages)
+
           return messages as ContactProps;
         }
      catch (error) {
@@ -34,7 +34,7 @@ class Message {
         WHERE id = ${id};
 `
     }catch(error){
-    return  "Une erreur est survenue : "
+    return  "Une erreur est survenue  "
     }
    }
 
