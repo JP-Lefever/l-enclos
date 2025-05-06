@@ -155,12 +155,15 @@ export type CompagnieProps = {
 };
 
 export type ContactProps = {
+	id:string;
 	firstname: string;
 	lastname: string;
 	organism?: string;
 	email: string;
 	subject: string;
+	date : string;
 	message: string;
+	status :number
 };
 
 export type ResultProps =
@@ -176,6 +179,7 @@ export type UsersProps = {
 	lastname: string;
 	email: string;
 	password: string;
+
 	role_id: number;
 };
 
@@ -185,5 +189,5 @@ export type homePageProps = {
 	image : string,
 	paragraph : string,
 	button : string,
-
+	statuts: boolean,
 }

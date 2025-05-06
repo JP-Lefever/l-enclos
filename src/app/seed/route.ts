@@ -45,6 +45,12 @@ async function users() {
     );
     `;
 }
+async function addColumnContact(){
+	await sql `
+	ALTER TABLE contact
+	ADD COLUMN subject VARCHAR(255) NOT NULL DEFAULT 'Nouveau message';
+`;
+}
 
 export async function GET() {
 	try {
@@ -53,6 +59,7 @@ export async function GET() {
 			contact();
 			role();
 			users();
+			addColumnContact();
 		});
 		return Response.json({ message: "Db mise a jour" });
 	} catch (error) {
