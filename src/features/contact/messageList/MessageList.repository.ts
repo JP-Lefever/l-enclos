@@ -1,5 +1,5 @@
 import postgres from "postgres";
-import type { ContactProps, ResultProps } from "@/types/definitions";
+import type { ContactProps} from "@/types/definitions";
 
 const sql = postgres(process.env.POSTGRES_URL as string, { ssl: "require" });
 

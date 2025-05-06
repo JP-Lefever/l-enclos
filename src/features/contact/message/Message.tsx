@@ -48,7 +48,7 @@ export default function Message({fullMessage} : {fullMessage : ContactProps | nu
               console.error(e)
           }
       })()
-  },[status])
+  },[status, id])
 
 
 
