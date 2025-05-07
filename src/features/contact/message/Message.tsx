@@ -87,7 +87,7 @@ export default function Message({fullMessage} : {fullMessage : ContactProps }) {
             </span>
         <p>{message}</p>
     </article>
-    {openValidateModal && createPortal(<DeleteConfirmation closeModale={closeModale} id={id}/>, document.body)}
+    {openValidateModal && createPortal(<DeleteConfirmation closeModaleAction={closeModale} id={id}/>, document.body)}
     </section>
 
     </>

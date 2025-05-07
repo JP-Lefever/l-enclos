@@ -2,31 +2,8 @@
 
 import type { ContactProps } from "@/types/definitions";
 import Contact from "./Contact.repository";
-import { z } from "zod";
+import {contactSchema} from "@/lib/utils/validationSchema";
 
-const contactSchema = z.object({
-	lastname: z
-		.string()
-		.min(2, { message: "Le nom doit contenir au moins 2 caractères" })
-		.regex(/^[A-Za-zÀ-ÖØ-öø-ÿ]+(?:[ '-][A-Za-zÀ-ÖØ-öø-ÿ]+)*$/, {
-			message: "Nom invalide",
-		}),
-	firstname: z
-		.string()
-		.min(2, { message: "Le prénom doit contenir au moins 2 caractères" })
-		.regex(/^[A-Za-zÀ-ÖØ-öø-ÿ]+(?:[ '-][A-Za-zÀ-ÖØ-öø-ÿ]+)*$/, {
-			message: "Prénom invalide",
-		}),
-	organism: z.string().optional(),
-	email: z.string().email({ message: "Adresse e-mail invalide" }),
-	subject: z.string().nonempty({ message: "Le sujet est obligatoire" }),
-	message: z
-		.string()
-		.min(2, { message: "Le message doit contenir au moins 2 caractères" })
-		.refine((val) => /\S/.test(val), {
-			message: "Le message ne peut pas contenir que des espaces",
-		}),
-});
 
 export async function addMessage(data: Omit<ContactProps, "id" | "date" | "is_treated">) {
 	const parsedData = contactSchema.safeParse(data);

@@ -27,7 +27,7 @@ export default function NavAdmin() {
 						createPortal(
 							<AdminMenu
 								openMenu={openMenu}
-								closeMenu={handleClickCloseMenu}
+								closeMenuAction={handleClickCloseMenu}
 							/>,
 							document.body,
 						)}

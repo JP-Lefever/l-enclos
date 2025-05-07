@@ -9,7 +9,7 @@ import { addMessage } from "./contact.action";
 import { toast } from "react-toastify";
 
 export default function AdminContact() {
-	const { register, handleSubmit, reset } = useForm<ContactProps>();
+	const { register, handleSubmit, formState:{errors}, reset } = useForm<ContactProps>();
 	const onSubmit = async (data: ContactProps) => {
 		const response = await addMessage(data);
 
@@ -60,6 +60,7 @@ export default function AdminContact() {
 									},
 								})}
 							/>
+							{errors.lastname && (<p className={styles.errors}>errors.lastname.message as string</p>)}
 							<label className={styles.label} htmlFor="firstname">
 								Prénom
 							</label>
@@ -78,7 +79,7 @@ export default function AdminContact() {
 									},
 								})}
 							/>
-
+							{errors.firstname && (<p className={styles.errors}>errors.firstname.message as string</p>)}
 							<label className={styles.label} htmlFor="email">
 								Email
 							</label>
@@ -97,6 +98,7 @@ export default function AdminContact() {
 									},
 								})}
 							/>
+							{errors.email && (<p className={styles.errors}>errors.email.message as string</p>)}
 						</fieldset>
 						<fieldset className={styles.fieldset}>
 							<select
@@ -109,6 +111,7 @@ export default function AdminContact() {
 									</option>
 								))}
 							</select>
+							{errors.subject && (<p className={styles.errors}>errors.subject.message as string</p>)}
 						</fieldset>
 						<fieldset className={styles.fieldset}>
 							<label className={styles.labelArea} htmlFor="message">
@@ -124,6 +127,7 @@ export default function AdminContact() {
 									},
 								})}
 							/>
+							{errors.message && (<p className={styles.errors}>errors.subject.message as string</p>)}
 						</fieldset>
 						<button className={styles.button} type="submit">
 							Envoyer

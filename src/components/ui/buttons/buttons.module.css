@@ -1,0 +1,96 @@
+/*button adminDate*/
+.AgendaButtons {
+    display : flex;
+    width : fit-content;
+    margin : var(--margin-between) auto;
+    gap : 3em;
+}
+
+.buttonDate {
+    border-radius: var(--border-radius);
+    padding : var(--padding-button);
+}
+
+/*button Mediation page*/
+
+.mediationButton {
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+    margin: 5em ;
+    @media screen and (max-width: 568px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.linkMediation {
+    text-decoration: none;
+    border: 2px solid var(--secondary-color);
+    color: var(--secondary-color);
+    padding: 0.2em 0;
+    border-radius: 20px;
+    width: 12vw;
+    text-align: center;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-weight: bold;
+    @media screen and (max-width: 568px) {
+        width: 60vw;
+    }
+}
+
+/*button spectacle*/
+
+.specButtons {
+    display: flex;
+    width: fit-content;
+    margin: auto;
+
+    gap: 10vw;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.textSpec {
+    text-transform: uppercase;
+    font-size: 1em;
+    margin-top: 1em;
+    @media screen and (max-width: 568px) {
+        font-size: 0.8em;
+    }
+}
+.image {
+    width: 3em;
+    height: auto;
+}
+.buttonSpec {
+    background-color: var(--main-color);
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5vh 0;
+}
+.isActiveSpec {
+    background-color: var(--secondary-color);
+}
+.articleSpec {
+    height: 25vh;
+    width: 15vw;
+    margin: 0.2em 0;
+    border-radius: 10px;
+
+    @media screen and (max-width: 568px) {
+        height: 25vh;
+        width: 35vw;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+        height: 25vh;
+        width: 35vw;
+    }
+}

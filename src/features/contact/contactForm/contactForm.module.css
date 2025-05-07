@@ -138,3 +138,8 @@
 		margin: var(--margin-section) 0;
 	}
 }
+
+.errors {
+	color : red;
+	font-size: 1em;
+}

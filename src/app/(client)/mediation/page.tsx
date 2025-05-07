@@ -2,7 +2,7 @@ import MediationPrimaire from "@/features/mediation/mediationPrimaire/MediationP
 import styles from "./page.module.css";
 import MediationCollege from "@/features/mediation/mediationCollege/MediationCollege";
 import MediationEphad from "@/features/mediation/mediationEphad/MediationEphad";
-import ButtonMediation from "@/components/ui/buttonMediation/ButtonMediation";
+import {ButtonMediation}  from "@/components/ui/buttons/Buttons"
 
 
 export default function MediationPage() {
