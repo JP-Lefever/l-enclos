@@ -1,0 +1,11 @@
+.AgendaButtons {
+    display : flex;
+    width : fit-content;
+    margin : var(--margin-between) auto;
+    gap : 3em;
+}
+
+.buttonDate {
+    border-radius: var(--border-radius);
+    padding : var(--padding-button);
+}

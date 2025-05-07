@@ -194,6 +194,7 @@ export type homePageProps = {
 }
 
 export type DateProps={
+	id: number;
 	place :string;
 	public: string;
 	date : Date;
@@ -201,4 +202,12 @@ export type DateProps={
 	hour : string;
 	isPassed: number;
 	spectacleId?: number;
+}
+
+export type InterventionAdminProps = {
+	id: number;
+	year : string;
+	label: string;
+	isPassed : number;
+	mediationId?: number;
 }

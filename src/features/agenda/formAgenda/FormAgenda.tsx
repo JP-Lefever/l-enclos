@@ -9,21 +9,22 @@ import {toast} from "react-toastify";
 
 export default function FormAgenda() {
 
-    const {register, formState:{errors}, handleSubmit}= useForm<DateProps>()
+    const {register, formState:{errors}, handleSubmit,reset}= useForm<DateProps>()
 
-    const onSubmit = async (data:DateProps) => {
+    const onSubmit = async (data:Omit<DateProps, "id">) => {
     console.log(data)
         const response = await addNewDate(data)
 
         if (response?.success){
             toast.success(response.message)
-        }
+            reset()
+        } else{toast.error("Une erreur est survenue.")}
     }
 
     return <>
         <section className={styles.section}>
                 <legend className={styles.legend}>
-                    Ajouter une date
+                    Ajouter une date de spectacle
                 </legend>
             <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
                 <fieldset className={styles.fieldset}>

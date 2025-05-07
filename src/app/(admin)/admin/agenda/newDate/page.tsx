@@ -1,9 +1,10 @@
-import FormAgenda from "@/features/agenda/formAgenda/FormAgenda";
+
+import AddNewDate from "@/features/agenda/addNewDate/AddNewDate";
 
 export default function AgendaPage(){
     return(
         <>
-        <FormAgenda/>
+<AddNewDate/>
         </>
 
     )
