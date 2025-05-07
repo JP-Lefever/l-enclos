@@ -81,7 +81,8 @@ export type cardDataProps = {
 	image_url: string;
 };
 
-//A utiliser
+// A utiliser
+
 export type buttonSpecProps = {
 	id: number;
 	name: string;
@@ -155,12 +156,16 @@ export type CompagnieProps = {
 };
 
 export type ContactProps = {
+	id:string;
 	firstname: string;
 	lastname: string;
 	organism?: string;
 	email: string;
 	subject: string;
+	date : string;
 	message: string;
+
+	is_treated : boolean;
 };
 
 export type ResultProps =
@@ -176,6 +181,7 @@ export type UsersProps = {
 	lastname: string;
 	email: string;
 	password: string;
+
 	role_id: number;
 };
 
@@ -185,5 +191,23 @@ export type homePageProps = {
 	image : string,
 	paragraph : string,
 	button : string,
+}
 
+export type DateProps={
+	id: number;
+	place :string;
+	public: string;
+	date : Date;
+	city : string;
+	hour : string;
+	isPassed: number;
+	spectacleId?: number;
+}
+
+export type InterventionAdminProps = {
+	id: number;
+	year : string;
+	label: string;
+	isPassed : number;
+	mediationId?: number;
 }

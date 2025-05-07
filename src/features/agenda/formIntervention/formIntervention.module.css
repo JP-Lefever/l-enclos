@@ -1,0 +1,77 @@
+.section{
+    width: 100vw;
+    margin: auto ;
+    display: flex;
+
+}
+.legend{
+    background-color: var(--secondary-color);
+    width:30vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--title-font), serif;
+    font-size: 3em;
+    padding : 1vh 1vw;
+    letter-spacing: var(--letter-spacing);
+    color: var(--main-color);
+}
+.form {
+    display: flex;
+    width: 70vw;
+    border: 1px solid ;
+    justify-content : space-around;
+}
+.fieldset{
+    display: flex;
+    flex-direction: column;
+    border:none;
+    padding: 1em;
+    gap : 1.5em;
+}
+.fieldset:first-child{
+    width: 100%;
+}
+.fieldset:last-child{
+    width: 100%;
+}
+
+.fieldset label {
+    text-transform: uppercase;
+    font-weight: bold;
+
+}
+
+.fieldset input {
+    border: none;
+    outline: none   ;
+    border-bottom: 2px solid ;
+}
+.fieldset input:focus{
+    border:none;
+    border-bottom: 2px solid ;
+}
+.select{
+    border: none;
+    outline: none   ;
+    border-bottom: 2px solid ;
+}
+.select:focus{
+    border-bottom: 2px solid ;
+}
+
+.button{
+    background-color: var(--secondary-color);
+    border-radius: var(--border-radius);
+    padding: var(--padding-button);
+    color: var(--main-color);
+    text-transform: uppercase;
+    border: var(--secondary-color);
+    margin-top : 3em;
+    font-weight: bold;
+}
+
+.errors {
+    color : red;
+    font-size: 1em;
+}

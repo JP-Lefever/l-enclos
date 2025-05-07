@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import styles from "./loginForm.module.css";
 import type { UsersProps } from "@/types/definitions";
 import { getSession, signIn } from "next-auth/react";
-import getRole from "@/lib/utils/slug";
+import getRole from "@/lib/utils/getRole";
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
 
