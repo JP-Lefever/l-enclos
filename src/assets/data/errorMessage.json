@@ -3,5 +3,6 @@
 	"minLenght": "Le champs doit comporter au moins 2 caractères",
 	"regex": "Certains caractères ne sont pas autorisés",
 	"email": "Veuillez renseigner un email valide",
-	"password": "Le password doit comporter 1 majuscule, 1 minuscule, au moins 1 caractère spécial"
+	"password": "Le password doit comporter 1 majuscule, 1 minuscule, au moins 1 caractère spécial",
+	"special" : "Les caractère <> ne sont pas autorisés"
 }

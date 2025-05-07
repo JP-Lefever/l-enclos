@@ -46,11 +46,11 @@
 .link {
 	display: flex;
 	flex-direction: column;
-
+	position: relative;
 	border: none;
 	text-align: left;
 	font-size: 2em;
-
+	cursor: pointer;
 	color: var(--main-color);
 	text-decoration: none;
 	background: linear-gradient(
@@ -71,6 +71,36 @@
 }
 
 .link:hover {
+	background-size: 100% 100%;
+}
+
+.subLink {
+	display: flex;
+	flex-direction: column;
+	border: none;
+	text-align: left;
+	font-size: 1.4em;
+	position: absolute;
+	color: var(--main-color);
+	text-decoration: none;
+	background: linear-gradient(
+			to top,
+			var(--main-color) 0%,
+			var(--main-color) 3px,
+			transparent 2px
+	)
+	no-repeat;
+
+	background-size: 0 100%;
+	transition: background-size .3s;
+	padding-bottom: 0.2em;
+	text-transform: uppercase;
+	@media screen and (max-width: 568px) {
+		font-size: 1em;
+	}
+}
+
+.subLink:hover {
 	background-size: 100% 100%;
 }
 

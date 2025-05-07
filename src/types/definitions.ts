@@ -81,7 +81,8 @@ export type cardDataProps = {
 	image_url: string;
 };
 
-//A utiliser
+// A utiliser
+
 export type buttonSpecProps = {
 	id: number;
 	name: string;
@@ -190,5 +191,14 @@ export type homePageProps = {
 	image : string,
 	paragraph : string,
 	button : string,
+}
 
+export type DateProps={
+	place :string;
+	public: string;
+	date : Date;
+	city : string;
+	hour : string;
+	isPassed: number;
+	spectacleId?: number;
 }
