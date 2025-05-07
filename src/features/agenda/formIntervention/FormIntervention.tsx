@@ -29,7 +29,7 @@ export default function FormIntervention() {
             </legend>
             <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
                 <fieldset className={styles.fieldset}>
-                    <label htmlFor="year">Année de l'intervention</label>
+                    <label htmlFor="year">{"Année de l'intervention"}</label>
                     <input type="text" {...register("year" ,{required: errorMessage.require,
                         pattern: {
                             value : /^[^<>]*$/,
