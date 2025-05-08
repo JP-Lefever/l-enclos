@@ -1,5 +1,5 @@
 import Message from "@/features/contact/message/Message";
-import {readMessage} from "@/features/contact/message/messageAction";
+import {readMessage} from "@/features/contact/contact.action";
 import {ContactProps} from "@/types/definitions";
 
 export default async function DetailMessagePage(props: { params: Promise<{ id: string }> }){

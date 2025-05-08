@@ -200,8 +200,18 @@ export type DateProps={
 	date : Date;
 	city : string;
 	hour : string;
-	isPassed: number;
+	isPassed: number ;
 	spectacleId?: number;
+}
+export type ModifyDateProps={
+	id: string;
+	place :string;
+	public: string;
+	date : string;
+	city : string;
+	hour : string;
+	is_passed:  number;
+	spectacle_id?: number;
 }
 
 export type InterventionAdminProps = {
