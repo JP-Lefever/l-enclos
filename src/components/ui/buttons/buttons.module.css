@@ -9,6 +9,10 @@
 .buttonDate {
     border-radius: var(--border-radius);
     padding : var(--padding-button);
+    font-family: var(--font-paragraph), serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.2em;
 }
 
 /*button Mediation page*/

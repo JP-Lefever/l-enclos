@@ -1,0 +1,16 @@
+.section {
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 100vw;
+    min-height: 100vh;
+    margin: auto;
+
+background: var(--primary-color);
+}
+.h2 {
+    font-family: var(--title-font), serif;
+    font-size: 3em;
+    letter-spacing: var(--letter-spacing);
+    margin: var(--margin-between);
+}
