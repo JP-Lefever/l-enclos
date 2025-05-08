@@ -80,7 +80,7 @@
 	border: none;
 	text-align: left;
 	font-size: 1.4em;
-	position: absolute;
+
 	color: var(--main-color);
 	text-decoration: none;
 	background: linear-gradient(
@@ -99,7 +99,10 @@
 		font-size: 1em;
 	}
 }
+.divSubLink {
+	position: absolute;
 
+}
 .subLink:hover {
 	background-size: 100% 100%;
 }

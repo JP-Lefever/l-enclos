@@ -54,3 +54,14 @@ export const contactSchema = z.object({
 			message: "Le message ne peut pas contenir que des espaces",
 		}),
 });
+
+export const modifyDateSchema = z.object({
+	id: z.string().uuid(),
+	place : z.string().regex(/^[^<>]*$/, {message: "Les caractères <> ne sont pas autorisés"}).nonempty( {message: "Champ requis"}),
+	public : z.string().regex(/^[^<>]*$/, {message: "Les caractères <> ne sont pas autorisés"}).nonempty( {message: "Champ requis"}),
+	date : z.string(),
+	city : z.string().regex(/^[^<>]*$/, {message: "Les caractères <> ne sont pas autorisés"}).nonempty( {message: "Champ requis"}),
+	hour : z.string().regex(/^[^<>]*$/, {message: "Les caractères <> ne sont pas autorisés"}).nonempty( {message: "Champ requis"}),
+	is_passed : z.coerce.number({required_error: "Le champ est obligatoiree"}),
+	spectacle_id : z.coerce.number().optional()
+})

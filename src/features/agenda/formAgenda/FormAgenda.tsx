@@ -3,7 +3,7 @@ import styles from "./formAgenda.module.css"
 import {useForm} from "react-hook-form";
 import errorMessage from "@/assets/data/errorMessage.json"
 import {DateProps} from "@/types/definitions";
-import {addNewDate} from "@/features/agenda/formAgenda/formAgenda.action";
+import {addNewDate} from "@/features/agenda/agenda.action";
 import {toast} from "react-toastify";
 
 
@@ -12,7 +12,7 @@ export default function FormAgenda() {
     const {register, formState:{errors}, handleSubmit,reset}= useForm<DateProps>()
 
     const onSubmit = async (data:Omit<DateProps, "id">) => {
-    console.log(data)
+
         const response = await addNewDate(data)
 
         if (response?.success){

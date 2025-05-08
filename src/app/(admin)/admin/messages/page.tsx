@@ -1,5 +1,5 @@
 import MessageList from "@/features/contact/messageList/MessageList";
-import {readAllMessages} from "@/features/contact/messageList/MessageList.action";
+import {readAllMessages} from "@/features/contact/contact.action";
 import {ContactProps} from "@/types/definitions";
 
 export default async function MessagesPage() {

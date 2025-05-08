@@ -3,7 +3,7 @@ import styles from "./formIntervention.module.css"
 import {useForm} from "react-hook-form";
 import errorMessage from "@/assets/data/errorMessage.json"
 import { InterventionAdminProps} from "@/types/definitions";
-import {addNewIntervention} from "@/features/agenda/formIntervention/formIntervention.action";
+import {addNewIntervention} from "@/features/agenda/agenda.action";
 import {toast} from "react-toastify";
 
 

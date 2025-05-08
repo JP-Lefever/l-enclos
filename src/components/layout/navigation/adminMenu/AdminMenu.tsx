@@ -21,7 +21,10 @@ export default function NavMenu({
 							Dates
 						</button>
 						{openMenuDate && (
+							<div className={styles.divSubLink}>
 							<Link className={styles.subLink} href="/admin/agenda/newDate" onClick={closeMenuAction}>Ajouter une date</Link>
+							<Link className={styles.subLink} href="/admin/agenda/editDate" onClick={closeMenuAction}>Modifier une date</Link>
+							</div>
 						)}
 					</li>
 
