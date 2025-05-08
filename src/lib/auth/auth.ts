@@ -1,7 +1,7 @@
 import Credentials from "next-auth/providers/credentials";
 import { authConfig } from "./auth.config";
 import { loginSchema } from "../utils/validationSchema";
-import { getUserByEmail } from "@/services/auth/action";
+import { getUserByEmail } from "@/features/auth/auth.action";
 import { verifyPassword } from "../utils/argon";
 import NextAuth from "next-auth";
 

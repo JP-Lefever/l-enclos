@@ -1,6 +1,6 @@
 "use server";
 
-import Users from "./repository";
+import Users from "./Auth.repository";
 
 export async function getUserByEmail(email: string) {
 	const user = Users.readUserByEmail(email);

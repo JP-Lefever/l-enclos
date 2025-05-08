@@ -1,6 +1,6 @@
 'use client'
 import styles from "./deleteConfirmation.module.css"
-import {destroyMessage} from "@/features/contact/message/messageAction";
+import {destroyMessage} from "@/features/contact/contact.action";
 import {toast} from "react-toastify";
 import {redirect} from "next/navigation";
 

@@ -4,7 +4,7 @@ import {ContactProps} from "@/types/definitions";
 import {formatedDate} from "@/lib/helpers/formatedDate";
 import {useEffect, useState} from "react";
 
-import { updateStatus} from "@/features/contact/message/messageAction";
+import { updateStatus} from "@/features/contact/contact.action";
 import Link from "next/link";
 import {createPortal} from "react-dom";
 import DeleteConfirmation from "@/features/contact/deleteConfirmation/DeleteConfirmation";

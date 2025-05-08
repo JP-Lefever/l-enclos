@@ -1,8 +1,6 @@
 import {format} from "date-fns";
 
 
-
-
 const formatedDate = (value : string) =>{
     return format(value, 'dd-MM-yyyy');
 

@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { subjectOptions } from "@/assets/data/placeholder-data-contact";
 import errorMessage from "../../../assets/data/errorMessage.json";
 import type { ContactProps } from "@/types/definitions";
-import { addMessage } from "./contact.action";
+import { addMessage } from "@/features/contact/contact.action";
 import { toast } from "react-toastify";
 
 export default function AdminContact() {
