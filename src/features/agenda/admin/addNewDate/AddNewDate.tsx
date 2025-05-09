@@ -1,8 +1,9 @@
 "use client"
-import FormAgenda from "@/features/agenda/formAgenda/FormAgenda";
-import FormIntervention from "@/features/agenda/formIntervention/FormIntervention";
+
 import {ButtonsAgenda} from "@/components/ui/buttons/Buttons"
 import {useState} from "react";
+import FormAgenda from "@/features/agenda/admin/formAgenda/FormAgenda";
+import FormIntervention from "@/features/agenda/admin/formIntervention/FormIntervention";
 
 export default  function AddNewDate(){
 const [isOpenDate, setIsOpenDate] = useState(false);

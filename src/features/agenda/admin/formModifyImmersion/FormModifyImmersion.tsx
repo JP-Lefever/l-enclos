@@ -7,7 +7,7 @@ import {useState} from "react";
 import {CircleCheckBig, FilePenLine, Trash2} from "lucide-react";
 import {editIntervention} from "@/features/agenda/agenda.action";
 import {toast} from "react-toastify";
-import {DeleteConfirmationImmersion} from "@/features/agenda/deleteConfirmation/DeleteConfirmation";
+import {DeleteConfirmationImmersion} from "@/features/agenda/admin/deleteConfirmation/DeleteConfirmation";
 import {createPortal} from "react-dom";
 
 

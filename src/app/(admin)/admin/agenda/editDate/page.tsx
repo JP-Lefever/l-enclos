@@ -1,4 +1,4 @@
-import ModifyDate from "@/features/agenda/modifyDate/ModifyDate";
+import ModifyDate from "@/features/agenda/admin/modifyDate/ModifyDate";
 import {readAllDate, readAllInterventions} from "@/features/agenda/agenda.action";
 
 export  default async function EditDatePage(){
