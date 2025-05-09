@@ -1,16 +1,28 @@
-import {DateProps, InterventionAdminProps, ModifyDateProps} from "@/types/definitions";
+import {DateProps, InterventionAdminProps, ModifyDateProps, ModifyImmersionProps} from "@/types/definitions";
 import postgres from 'postgres';
+
+
+
+type ReadAllDateProps = {
+    data?: ModifyDateProps[] ;
+    error?:string;
+}
+
+type ReadAllImmersionProps = {
+    data?: ModifyImmersionProps[] ;
+    error?:string;
+}
 
 
 const sql = postgres(process.env.POSTGRES_URL as string, {ssl:"require"});
 
-type ReadAllDateProps = {
-    data?: ModifyDateProps[];
-    error?:string;
-}
-        const safeValue = (value : undefined | number)=>{
+
+const safeValue = (value : undefined | number)=>{
             return     value === undefined ? null : value
         }
+const convertBool = (value: number) =>{
+    return value !== 0
+}
 
 class AgendaRepository{
     async createNewDate(data :Omit<DateProps, "id">){
@@ -33,14 +45,7 @@ class AgendaRepository{
 
     async createNewIntervention(data : Omit<InterventionAdminProps, "id">){
 
-        const convertBool = (value: number) =>{
-            return value !== 0
-        }
-        const safeValue = (value : undefined | number)=>{
-            return value === undefined ? null : value
-        }
 
-        console.log(data)
 
         try {
             await sql`
@@ -71,19 +76,50 @@ class AgendaRepository{
 
     }
 
-    async updateDate(data: ModifyDateProps) {
+    async updateDate(data: Omit<ModifyDateProps, "id">, id : string) {
 
         try {
              await sql`
             UPDATE agenda
             SET date = ${data.date}, place= ${data.place}, city=${data.city}, public=${data.public}, hour=${data.hour}, is_passed=${data.is_passed}, spectacle_id=${safeValue(data.spectacle_id)}
-            WHERE id= ${data.id};
+            WHERE id= ${id};
             `;
             return { message : "La date a bien été modifiée"}
         }catch (err){
             console.error(err)
             return {message : "une erreur est survenue"}
         }
+    }
+
+    async readAllInterventions() : Promise<ReadAllImmersionProps> {
+
+        try {
+         const result=  await sql <ModifyImmersionProps[]>`
+            SELECT *
+            FROM intervention
+            ORDER BY year;
+            `
+            return {data : result}
+        }catch(err){
+            console.error(err);
+            return {error :"une erreur est survenue"}
+        }
+    }
+
+    async updateImmersion(data : Omit<ModifyImmersionProps, "id">, id : string) {
+
+        try {
+            await sql `
+            UPDATE intervention
+            SET year= ${data.year},label= ${data.label},is_passed=${data.is_passed}, mediation_id=${data.mediation_id}
+            WHERE id = ${id};
+            `
+            return {message : "La date d'immersion a bien été mise à jour"}
+        } catch (err){
+            console.error(err)
+            return {message : "Une erreur est survenue"}
+        }
+
     }
 }
 

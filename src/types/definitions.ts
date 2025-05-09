@@ -221,3 +221,10 @@ export type InterventionAdminProps = {
 	isPassed : number;
 	mediationId?: number;
 }
+export type ModifyImmersionProps = {
+	id: string;
+	year : string;
+	label: string;
+	is_passed : number;
+	mediation_id: number;
+}

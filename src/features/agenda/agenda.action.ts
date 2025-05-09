@@ -1,7 +1,7 @@
 "use server"
-import {DateProps, ModifyDateProps} from "@/types/definitions";
+import {DateProps, ModifyDateProps, ModifyImmersionProps} from "@/types/definitions";
 
-import {interventionSchema} from "@/lib/utils/validationSchema";
+import {interventionSchema, modifyInterventionSchema} from "@/lib/utils/validationSchema";
 import AgendaRepository from "@/features/agenda/Agenda.repository";
 import {dateSchema, modifyDateSchema} from "@/lib/utils/validationSchema";
 import {InterventionAdminProps} from "@/types/definitions";
@@ -43,18 +43,41 @@ const readAllDate = async ()=>{
 
     return {data, error}
 }
-const editDate = async (data : ModifyDateProps)=>{
+
+const editDate = async (data : Omit<ModifyDateProps, "id">, id : string)=>{
 
     const safeData = modifyDateSchema.safeParse(data);
 
     if (!safeData.success) {
         return console.error(safeData.error);
     }
-    console.log(safeData.data)
-    const newDate = await AgendaRepository.updateDate(safeData.data)
+    const newDate = await AgendaRepository.updateDate(safeData.data, id)
 
     return {success : true, message : newDate.message};
 }
 
 
-export {addNewDate,addNewIntervention,readAllDate, editDate};
+const readAllInterventions = async ()=>{
+
+    const {data, error} =  await AgendaRepository.readAllInterventions()
+
+return {data, error}
+}
+
+
+const editIntervention = async (data : Omit<ModifyImmersionProps, "id">, id : string)=>{
+
+    const safeData = modifyInterventionSchema.safeParse(data);
+
+    if (!safeData.success) {
+        return console.error(safeData.error);
+    }
+
+    const result = await AgendaRepository.updateImmersion(safeData.data, id)
+
+    return {success : true, message : result.message};
+
+}
+
+
+export {addNewDate,addNewIntervention,readAllDate, editDate,readAllInterventions, editIntervention};

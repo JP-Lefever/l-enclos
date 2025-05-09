@@ -56,7 +56,6 @@ export const contactSchema = z.object({
 });
 
 export const modifyDateSchema = z.object({
-	id: z.string().uuid(),
 	place : z.string().regex(/^[^<>]*$/, {message: "Les caractères <> ne sont pas autorisés"}).nonempty( {message: "Champ requis"}),
 	public : z.string().regex(/^[^<>]*$/, {message: "Les caractères <> ne sont pas autorisés"}).nonempty( {message: "Champ requis"}),
 	date : z.string(),
@@ -64,4 +63,11 @@ export const modifyDateSchema = z.object({
 	hour : z.string().regex(/^[^<>]*$/, {message: "Les caractères <> ne sont pas autorisés"}).nonempty( {message: "Champ requis"}),
 	is_passed : z.coerce.number({required_error: "Le champ est obligatoiree"}),
 	spectacle_id : z.coerce.number().optional()
+})
+
+export const modifyInterventionSchema = z.object({
+	year: z.string().regex(/^[^<>]*$/,{message : "Les caractères <> sont interdits"}).nonempty({message : "Champs requis"}),
+	label : z.string().regex(/^[^<>]*$/,{message : "Les caractères <> sont interdits"}).nonempty({message : "Champs requis"}),
+	is_passed : z.coerce.number({required_error:"Champs requis"}),
+	mediation_id: z.coerce.number({required_error:"Champs requis"}),
 })

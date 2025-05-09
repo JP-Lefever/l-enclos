@@ -1,20 +1,21 @@
 "use client"
 import styles from "./modifyDate.module.css"
-import { ModifyDateProps} from "@/types/definitions";
+import {ModifyDateProps, ModifyImmersionProps} from "@/types/definitions";
 import FormModifyDate from "@/features/agenda/formModifyDate/FormModifyDate";
 import {ButtonsAgenda} from "@/components/ui/buttons/Buttons";
 import {useState} from "react";
+import FormModifyImmersion from "@/features/agenda/formModifyImmersion/FormModifyImmersion";
 
 
-export default function ModifyDate({dates}: {dates : ModifyDateProps[]}) {
+export default function ModifyDate({dates, immersions}: {dates : ModifyDateProps[], immersions: ModifyImmersionProps[]}) {
 
 const [isOpenDate, setIsOpenDate] = useState(false);
     const [isOpenInter, setIsOpenInter] = useState(false);
 
     return <>
-            <h2 className={styles.h2}>
-                Modifier une date
-            </h2>
+        <section>
+
+            <h2 className={styles.h2}>Modifier une date</h2>
         <ButtonsAgenda setIsOpenDate={setIsOpenDate} setIsOpenInter={setIsOpenInter}/>
 
         {isOpenDate && (
@@ -26,9 +27,13 @@ const [isOpenDate, setIsOpenDate] = useState(false);
         </section>
             )}
         {isOpenInter && (
-            <section className={styles.section}>
-                <h2>Inter</h2>
+            <section className={styles.sectionImm}>
+                {immersions.map((i : ModifyImmersionProps) => (
+                <FormModifyImmersion key={i.id} immersions={i}/>
+                ))}
             </section>
             )}
+
+        </section>
     </>
 }

@@ -19,7 +19,6 @@ const {id, place,  date, city, hour, is_passed, spectacle_id} = dates
 
 
     const {register, formState:{errors}, handleSubmit}= useForm<ModifyDateProps>({defaultValues: {
-        id:id,
         place : place,
         public : dates.public,
         date : formatedDate2(date),
@@ -37,7 +36,7 @@ const {id, place,  date, city, hour, is_passed, spectacle_id} = dates
 
     const onSubmitEdit = async (data: ModifyDateProps) => {
 
-        const response = await editDate(data)
+        const response = await editDate(data, id)
 
         if(response?.success){
             toast.success(response.message)
@@ -102,7 +101,7 @@ const {id, place,  date, city, hour, is_passed, spectacle_id} = dates
                     <option value={2}>{"J'ai 17ans pour toujours"}</option>
                 </select>
                 {errors.spectacle_id && <p className={styles.errors}>{errors.spectacle_id.message as string}</p>}
-                <input hidden={true} type='text' {...register("id")}/>
+
             </fieldset>
             <section className={styles.sectionButton}>
 
