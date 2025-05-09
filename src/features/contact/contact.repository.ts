@@ -82,9 +82,10 @@ class Contact {
             await sql`
             DELETE FROM contact
             WHERE id = ${id}`
+            return {message : "Le message a bien été supprimé"}
         }catch(error){
             console.error("Une erreur est survenue : ", error);
-            return  "Une erreur est survenue"
+            return {message : "Une erreur est survenue"}
         }
 
     }
