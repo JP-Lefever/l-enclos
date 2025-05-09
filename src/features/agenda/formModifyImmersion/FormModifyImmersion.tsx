@@ -12,7 +12,7 @@ import {toast} from "react-toastify";
 export default function FormModifyImmersion({immersions} : {immersions: ModifyImmersionProps}) {
 
   const {id, year, label, is_passed, mediation_id} = immersions;
-  console.log(id)
+
 
   const {register, handleSubmit} = useForm<ModifyImmersionProps>({
       defaultValues : {
@@ -53,7 +53,7 @@ export default function FormModifyImmersion({immersions} : {immersions: ModifyIm
                     message : ErrorMessage.special
                 }})}/>
             <select className={edit ? styles.disabled : styles.editable}  disabled={edit} {...register("is_passed")}>
-                <option value="#">Veuillez choisir si l'intervetion est passée</option>
+                <option value="#">{"Veuillez choisir si l'intervetion est passée"}</option>
                 <option value="0">Non</option>
                 <option value="1">Oui</option>
             </select>

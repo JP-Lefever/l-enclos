@@ -26,9 +26,6 @@ const convertBool = (value: number) =>{
 
 class AgendaRepository{
     async createNewDate(data :Omit<DateProps, "id">){
-        const convertBool = (value : number) => {
-            return value !== 0;
-        }
 
         try {
             await sql `
@@ -44,8 +41,6 @@ class AgendaRepository{
 
 
     async createNewIntervention(data : Omit<InterventionAdminProps, "id">){
-
-
 
         try {
             await sql`
