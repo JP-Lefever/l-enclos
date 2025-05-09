@@ -21,7 +21,7 @@ export function DeleteConfirmationDate({ id, closeModaleAction } : {id:string, c
             <section className={styles.overlay}>
 
                 <article className={styles.section}>
-                    <h3>Etes vous sur de vouloir supprimer le message ?</h3>
+                    <h3>Etes vous sur de vouloir supprimer la date  ?</h3>
                     <span className={styles.sectionButton}>
             <button onClick={()=>handleClickDelete(id)} type="button">Oui</button>
             <button onClick={closeModaleAction} type="button">non</button>
@@ -50,7 +50,7 @@ export function DeleteConfirmationImmersion({ id, closeModaleAction } : {id:stri
             <section className={styles.overlay}>
 
                 <article className={styles.section}>
-                    <h3>Etes vous sur de vouloir supprimer le message ?</h3>
+                    <h3>Etes vous sur de vouloir supprimer la date ?</h3>
                     <span className={styles.sectionButton}>
             <button onClick={()=>handleClickDelete(id)} type="button">Oui</button>
             <button onClick={closeModaleAction} type="button">non</button>
