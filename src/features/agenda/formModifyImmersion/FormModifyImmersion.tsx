@@ -7,6 +7,8 @@ import {useState} from "react";
 import {CircleCheckBig, FilePenLine, Trash2} from "lucide-react";
 import {editIntervention} from "@/features/agenda/agenda.action";
 import {toast} from "react-toastify";
+import {DeleteConfirmationImmersion} from "@/features/agenda/deleteConfirmation/DeleteConfirmation";
+import {createPortal} from "react-dom";
 
 
 export default function FormModifyImmersion({immersions} : {immersions: ModifyImmersionProps}) {
@@ -27,6 +29,11 @@ export default function FormModifyImmersion({immersions} : {immersions: ModifyIm
   const handleClickEdit = ()=>{
       return setEdit(!edit);
   }
+
+  const [openDeleteModal, setOpenDeleteModal] = useState<boolean>(false)
+    const handleCloseDeleteModal = ()=>{
+      setOpenDeleteModal(!openDeleteModal)
+    }
 
   const onSubmit = async (data : ModifyImmersionProps)=>{
 
@@ -72,7 +79,10 @@ export default function FormModifyImmersion({immersions} : {immersions: ModifyIm
                 {!edit &&
                     <button  className={styles.buttonValidate} type="submit"><CircleCheckBig size={36}/></button>
                 }
-                <button onClick={handleClickEdit} className={styles.buttonDelete} type="button"><Trash2 size={36}/></button>
+                <button onClick={handleCloseDeleteModal} className={styles.buttonDelete} type="button"><Trash2 size={36}/></button>
+                {openDeleteModal && (
+                    createPortal(<DeleteConfirmationImmersion id={id} closeModaleAction={handleCloseDeleteModal}/>, document.body)
+                )}
             </section>
         </form>
 

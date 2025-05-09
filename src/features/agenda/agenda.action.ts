@@ -86,5 +86,12 @@ const deleteDate = async (id : string)=>{
     return {success : true, message : result.message};
 }
 
+const deleteDateImmersion = async (id : string)=>{
 
-export {addNewDate,addNewIntervention,readAllDate, editDate,readAllInterventions, editIntervention, deleteDate};
+    const result = await AgendaRepository.destroyImmersionDate(id)
+
+    return {success : true, message : result.message};
+}
+
+
+export {addNewDate,addNewIntervention,readAllDate, editDate,readAllInterventions, editIntervention, deleteDate, deleteDateImmersion};
