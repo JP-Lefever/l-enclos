@@ -130,6 +130,20 @@ class AgendaRepository{
             return {message : "Une erreur est survenue"}
         }
     }
+
+    async destroyImmersionDate(id : string){
+
+        try {
+            await sql`
+            DELETE FROM intervention
+            WHERE id= ${id};
+            `
+            return {message : "La date a bien été supprimée"}
+        } catch (err){
+            console.error(err)
+            return {message : "Une erreur est survenue"}
+        }
+    }
 }
 
 export default new AgendaRepository();
