@@ -1,0 +1,43 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.section {
+    background-color: var(--main-color);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    min-width: 20vw;
+
+}
+.sectionButton {
+    display:flex;
+    justify-content: space-around;
+    margin: var(--margin-between);
+}
+
+.section button:first-of-type {
+    padding: 1vh 2vw;
+    background-color : green;
+    border-radius: var(--border-radius);
+    text-transform: uppercase;
+    color: var(--main-color);
+}
+.section button:last-of-type {
+    padding: 1vh 2vw;
+    background-color : red;
+    border-radius: var(--border-radius);
+    text-transform: uppercase;
+    color: var(--main-color);
+}

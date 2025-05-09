@@ -9,6 +9,8 @@ import { CircleCheckBig } from 'lucide-react';
 import {editDate} from "@/features/agenda/agenda.action";
 import {toast} from "react-toastify";
 import {formatedDate2} from "@/lib/helpers/formatedDate";
+import {createPortal} from "react-dom";
+import DeleteConfirmation from "@/features/agenda/deleteConfirmation/DeleteConfirmation";
 
 
 export default function FormModifyDate({ dates}: {dates : ModifyDateProps } ) {
@@ -32,6 +34,11 @@ const {id, place,  date, city, hour, is_passed, spectacle_id} = dates
 
     const handleClickEdit = ()=>{
         setEdit(!edit)
+    }
+
+    const[openDeleteModal, setOpenDeleteModal] = useState(false)
+    const handleClickDelete = ()=>{
+        setOpenDeleteModal(!openDeleteModal)
     }
 
     const onSubmitEdit = async (data: ModifyDateProps) => {
@@ -111,7 +118,10 @@ const {id, place,  date, city, hour, is_passed, spectacle_id} = dates
             {!edit &&
                 <button  className={styles.buttonValidate} type="submit"><CircleCheckBig size={36}/></button>
             }
-                <button onClick={handleClickEdit} className={styles.buttonDelete} type="button"><Trash2 size={36}/></button>
+                <button onClick={handleClickDelete} className={styles.buttonDelete} type="button"><Trash2 size={36}/></button>
+                {openDeleteModal && (
+                    createPortal(<DeleteConfirmation closeModaleAction ={handleClickDelete} id={id}/>, document.body)
+                )}
             </section>
         </form>
         </>

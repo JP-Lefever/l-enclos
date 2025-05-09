@@ -116,6 +116,20 @@ class AgendaRepository{
         }
 
     }
+
+    async destroyDate(id : string){
+
+        try {
+            await sql`
+            DELETE FROM agenda
+            WHERE id= ${id};
+            `
+            return {message : "La date a bien été supprimée"}
+        } catch (err){
+            console.error(err)
+            return {message : "Une erreur est survenue"}
+        }
+    }
 }
 
 export default new AgendaRepository();

@@ -79,5 +79,12 @@ const editIntervention = async (data : Omit<ModifyImmersionProps, "id">, id : st
 
 }
 
+const deleteDate = async (id : string)=>{
 
-export {addNewDate,addNewIntervention,readAllDate, editDate,readAllInterventions, editIntervention};
+    const result = await AgendaRepository.destroyDate(id)
+
+    return {success : true, message : result.message};
+}
+
+
+export {addNewDate,addNewIntervention,readAllDate, editDate,readAllInterventions, editIntervention, deleteDate};
