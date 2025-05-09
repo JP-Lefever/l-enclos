@@ -1,21 +1,11 @@
-
-
 .form{
-    width: fit-content;
-    margin: var(--margin-between) auto;
-    border :none;
-
-}
-
-.fieldset {
     display: flex;
     flex-direction: column;
-    border: none;
+    margin : auto;
 }
 
-.fieldset:first-child input:first-child{
+.form input:first-of-type {
     font-weight: bold;
-
 }
 
 .disabled {
@@ -46,8 +36,8 @@
     transition: all 0.2s ease-in-out;
 }
 
-.fieldset input:focus,
-.fieldset select:focus{
+.form input:focus,
+.form select:focus{
     border-color: var(--primary-color);
     box-shadow: 0 0 0 2px var(--primary-color);
     opacity: 90%;

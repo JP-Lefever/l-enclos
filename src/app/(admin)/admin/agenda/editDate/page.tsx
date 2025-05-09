@@ -1,14 +1,16 @@
 import ModifyDate from "@/features/agenda/modifyDate/ModifyDate";
-import {readAllDate} from "@/features/agenda/agenda.action";
+import {readAllDate, readAllInterventions} from "@/features/agenda/agenda.action";
 
 export  default async function EditDatePage(){
 
-    const {data, error} = await readAllDate()
+    const {data: dates, error: datesError} = await readAllDate()
+
+    const {data: interventions, error: interventionsError} = await readAllInterventions()
+
 
     return (<>
-        {!error && data &&
-    <ModifyDate dates={data}/>
+        {!datesError && !interventionsError && dates && interventions &&
+    <ModifyDate dates={dates} immersions={interventions} />
         }
-
     </>)
 }
