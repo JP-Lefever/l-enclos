@@ -10,24 +10,24 @@ export default function NavMenu({
 				className={`${styles.section} ${openMenu ? styles.isOpen : styles.isClose}`}
 			>
 				<ul className={styles.ul}>
-					<Link className={styles.link} href="/" onClick={closeMenu}>
+					<li><Link className={styles.link} href="/" onClick={closeMenu}>
 						Accueil
-					</Link>
-					<Link className={styles.link} href="/compagnie" onClick={closeMenu}>
+					</Link></li>
+					<li><Link className={styles.link} href="/compagnie" onClick={closeMenu}>
 						Compagnie
-					</Link>
-					<Link className={styles.link} href="/spectacles" onClick={closeMenu}>
+					</Link></li>
+						<li><Link className={styles.link} href="/spectacles" onClick={closeMenu}>
 						Spectacle
-					</Link>
-					<Link className={styles.link} href="/mediation" onClick={closeMenu}>
+					</Link></li>
+							<li><Link className={styles.link} href="/mediation" onClick={closeMenu}>
 						Mediations
-					</Link>
-					<Link className={styles.link} href="/agenda/creation" onClick={closeMenu}>
+					</Link></li>
+								<li><Link className={styles.link} href="/agenda/creation" onClick={closeMenu}>
 						Les dates
-					</Link>
-					<Link className={styles.link} href="/contact" onClick={closeMenu}>
+					</Link></li>
+									<li><Link className={styles.link} href="/contact" onClick={closeMenu}>
 						Contact
-					</Link>
+					</Link></li>
 				</ul>
 				<button className={styles.button} type="button" onClick={closeMenu}>
 					X

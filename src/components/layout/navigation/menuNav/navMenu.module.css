@@ -9,6 +9,7 @@
 	background-color: var(--secondary-color);
 	transform: translateY(-100vh);
 	align-items: center;
+	z-index: 12;
 }
 .isOpen {
 	animation: slideIn 1s ease-out forwards;
@@ -22,7 +23,7 @@
 	width: fit-content;
 	height: fit-content;
 	position: relative;
-	bottom: 30vh;
+	bottom: 35vh;
 	background-color: var(--secondary-color);
 	border: none;
 	font-size: 3em;
@@ -31,33 +32,64 @@
 	@media screen and (max-width: 568px) {
 		bottom: 30vh;
 		left: 5vw;
+		font-size: 2em;
 	}
+}
+.button:hover {
+	color : var(--main-color);
 }
 
 .ul {
 	display: flex;
 	flex-direction: column;
-	gap: 8vh;
+	gap: 4vh;
+	list-style: none;
+}
+.ul li {
+	position: relative;
+	padding-left: 1rem;
+	margin-bottom: 0.75rem;
+}
+
+
+.ul li::before{
+	content: '';
+	position : absolute;
+	left: -5vw;
+	top: 0;
+	width: 4em;
+	height: 4em;
+	background: url("/images/puce.gif") no-repeat center center ;
+
+	background-size: contain;
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out;
+}
+.ul li:hover::before {
+	opacity: 1;
 }
 .link {
 	display: flex;
 	flex-direction: column;
-	gap: 8vh;
-	font-size: 2em;
+	font-size: 3em;
 	font-weight: bold;
 	color: black;
 	text-decoration: none;
-	background: linear-gradient(to top, black 0%, black 3px, transparent 2px)
+	background: linear-gradient(to top, var(--main-color) 0%, var(--main-color) 3px, transparent 2px)
 		no-repeat;
 
 	background-size: 0 100%;
 	transition: background-size .3s;
 	padding-bottom: 0.2em;
 	text-transform: uppercase;
+	@media screen and (max-width: 568px){
+		font-size: 2em;
+	}
 }
 
 .link:hover {
 	background-size: 100% 100%;
+	color: var(--main-color)
 }
 
 @keyframes slideIn {

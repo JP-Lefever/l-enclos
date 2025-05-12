@@ -60,7 +60,7 @@ export default function AdminContact() {
 									},
 								})}
 							/>
-							{errors.lastname && (<p className={styles.errors}>errors.lastname.message as string</p>)}
+							{errors.lastname && (<p className={styles.errors}>{errors.lastname.message}</p>)}
 							<label className={styles.label} htmlFor="firstname">
 								Prénom
 							</label>
@@ -79,7 +79,7 @@ export default function AdminContact() {
 									},
 								})}
 							/>
-							{errors.firstname && (<p className={styles.errors}>errors.firstname.message as string</p>)}
+							{errors.firstname && (<p className={styles.errors}>{errors.firstname.message}</p>)}
 							<label className={styles.label} htmlFor="email">
 								Email
 							</label>
@@ -98,7 +98,7 @@ export default function AdminContact() {
 									},
 								})}
 							/>
-							{errors.email && (<p className={styles.errors}>errors.email.message as string</p>)}
+							{errors.email && (<p className={styles.errors}>{errors.email.message}</p>)}
 						</fieldset>
 						<fieldset className={styles.fieldset}>
 							<select
@@ -111,7 +111,7 @@ export default function AdminContact() {
 									</option>
 								))}
 							</select>
-							{errors.subject && (<p className={styles.errors}>errors.subject.message as string</p>)}
+							{errors.subject && (<p className={styles.errors}>{errors.subject.message} </p>)}
 						</fieldset>
 						<fieldset className={styles.fieldset}>
 							<label className={styles.labelArea} htmlFor="message">
@@ -127,7 +127,7 @@ export default function AdminContact() {
 									},
 								})}
 							/>
-							{errors.message && (<p className={styles.errors}>errors.subject.message as string</p>)}
+							{errors.message && (<p className={styles.errors}>{errors.message.message}</p>)}
 						</fieldset>
 						<button className={styles.button} type="submit">
 							Envoyer

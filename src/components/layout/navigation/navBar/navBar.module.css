@@ -2,9 +2,14 @@
 	display: flex;
 	padding: 1em;
 	align-items: center;
-	margin-left: 1em;
+
+	position: sticky;
+	top: 0;
+	z-index:10;
+	background-color: var(--main-color);
+	width: 100vw;
 	@media screen and (max-width: 568px) {
-		margin-left: 0em;
+		margin-left: 0;
 	}
 }
 .logo {

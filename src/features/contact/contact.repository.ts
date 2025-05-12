@@ -4,7 +4,7 @@ import postgres from "postgres";
 
 const sql = postgres(process.env.POSTGRES_URL as string, { ssl: "require" });
 
-class Contact {
+class ContactRepository {
     async createMessage(data :Omit<ContactProps, "id" | "date" | "is_treated">): Promise<ResultProps> {
         const { firstname, lastname, email, organism, message,subject } = data;
 
@@ -90,5 +90,5 @@ class Contact {
 
     }
 }
-
-export default new Contact();
+const Contact = new ContactRepository()
+export default Contact;
