@@ -1,7 +1,4 @@
-import {
-	ScrollAnimation,
-	ScrollAnimation2,
-} from "@/components/ui/animation/ScrollAnimation";
+
 
 import PresCompagnie from "@/features/compagnie/presCompagnie/PresCompagnie";
 import PresMediation from "@/features/mediation/presMediation/PresMediation";
@@ -14,17 +11,17 @@ export default function Home() {
 			<section>
 				<AutoPlay />
 			</section>
-			<ScrollAnimation>
+			<section>
 				<PresCompagnie />
-			</ScrollAnimation>
+			</section>
 
-			<ScrollAnimation2>
+			<section>
 				<PresSpectacles />
-			</ScrollAnimation2>
+			</section>
 
-			<ScrollAnimation>
+			<section>
 				<PresMediation />
-			</ScrollAnimation>
+			</section>
 		</>
 	);
 }

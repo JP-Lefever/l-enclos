@@ -2,12 +2,16 @@ import Link from "next/link";
 import styles from "./presCompagnie.module.css";
 import Image from "next/image";
 import {generalesInformations} from "@/assets/data/placeholder-data-homePage";
+import {
+	ScrollAnimation,
+	ScrollAnimation2,
+} from "@/components/ui/animation/ScrollAnimation";
 
 export default function PresCompagnie() {
 	return (
 		<>
 			<section className={styles.section}>
-				<figure>
+				<ScrollAnimation>
 					<Image
 						className={styles.image}
 						src={generalesInformations[0].image}
@@ -15,9 +19,9 @@ export default function PresCompagnie() {
 						width={1080}
 						height={860}
 					/>
-				</figure>
+				</ScrollAnimation>
 
-				<article>
+				<ScrollAnimation2>
 					<h1 className={styles.h1}>
 						{generalesInformations[0].title}
 					</h1>
@@ -28,7 +32,7 @@ export default function PresCompagnie() {
 					<Link className={styles.link} href="/compagnie">
 						{generalesInformations[0].button}
 					</Link>
-				</article>
+				</ScrollAnimation2>
 			</section>
 		</>
 	);
