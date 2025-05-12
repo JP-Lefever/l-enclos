@@ -1,26 +1,28 @@
-import styles from "@/features/spectacle/detailSpectacle/detailSpectacle.module.css";
+import styles from "./cardSpectacleDate.module.css"
 import {ScrollAnimation} from "@/components/ui/animation/ScrollAnimation";
 import {ModifyDateProps} from "@/types/definitions";
+import {formatedDate} from "@/lib/helpers/formatedDate";
+
 
 export default function CardSpectacleDate({datesSpec}: {datesSpec : ModifyDateProps }){
 console.log(datesSpec);
-    const {date, place,  hour} = datesSpec;
+    const { place, hour, date, city, spectacle_id} = datesSpec;
+
+    const spectacleName = (value : number | undefined)=>{
+        return value === 1 ? "Te souviens-tu du jour ou j'ai coupé mes cheveux ?" : value === 2 ? "J'ai 17ans pour toujours" : ""
+    }
+
     return(<>
 
-        <section className={styles.articles}>
-            <ScrollAnimation className={styles.articleDate}>
-                <h3 className={styles.h3Date}>A venir</h3>
-                <article className={styles.divDate}>
-                            <article >
-
+        <section className={styles.section}>
+                            <article className={styles.articles}>
+                                <h2 className={styles.h2}>{formatedDate(date)}</h2>
+                                <h3 className={styles.h3}>{spectacleName(spectacle_id)}</h3>
+                                <p>{city}</p>
                                 <p className={styles.pDate1}>{place}</p>
-                                <p className={styles.pDate2}>{datesSpec.public} </p>
-                                <p className={styles.pDate2}>{hour}</p>
+                                <p>{datesSpec.public} </p>
+                                <p>{hour}</p>
                             </article>
-                </article>
-
-            </ScrollAnimation>
-
         </section>
     </>)
 }

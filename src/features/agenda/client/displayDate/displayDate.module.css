@@ -1,0 +1,29 @@
+
+.section {
+    width: 100vw;
+    min-height : 100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-end;
+    background : linear-gradient(to right, var(--main-color) 8%, var(--primary-color) 8%);
+    margin: var(--margin-between) 0;
+}
+.article{
+    display: grid;
+    grid-template-columns:repeat(4, 1fr);
+    width :90vw;
+    gap: 4em;
+
+    padding: var(--margin-between) 0;
+}
+.figure {
+   display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image{
+    width: 30vh;
+    height: auto;
+    rotate: -45deg;
+}
