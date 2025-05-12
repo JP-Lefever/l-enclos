@@ -2,12 +2,16 @@ import Link from "next/link";
 import styles from "./presMediation.module.css";
 import Image from "next/image";
 import {generalesInformations} from "@/assets/data/placeholder-data-homePage";
+import {
+	ScrollAnimation,
+	ScrollAnimation2,
+} from "@/components/ui/animation/ScrollAnimation";
 
 export default function PresMediation() {
 	return (
 		<>
 			<section className={styles.section}>
-				<figure className={styles.figure}>
+				<ScrollAnimation className={styles.figure}>
 					<Image
 						className={styles.image}
 						src={generalesInformations[2].image}
@@ -15,9 +19,9 @@ export default function PresMediation() {
 						width={1080}
 						height={860}
 					/>
-				</figure>
+				</ScrollAnimation>
 
-				<article className={styles.article}>
+				<ScrollAnimation2 className={styles.article}>
 					<h1 className={styles.h1}>{generalesInformations[2].title}</h1>
 
 						<p className={styles.paragraph}>
@@ -27,7 +31,7 @@ export default function PresMediation() {
 							{generalesInformations[2].button}
 						</Link>
 
-				</article>
+				</ScrollAnimation2>
 			</section>
 		</>
 	);
