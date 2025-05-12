@@ -51,10 +51,9 @@
     display: flex;
     width: fit-content;
     margin: auto;
-
     gap: 10vw;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 
 }
 
@@ -97,4 +96,37 @@
         height: 25vh;
         width: 35vw;
     }
+}
+
+/*button date agenda client side*/
+.sectionAgenda {
+    display: flex;
+    width: fit-content;
+    margin: var(--margin-between) auto;
+    gap: 5vw;
+
+}
+
+.linkDates {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 20vh;
+    text-decoration: none;
+    padding : var(--margin-between);
+    color : var(--third-color);
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: var(--border-radius);
+
+}
+
+
+.isActiveLink {
+    background-color: var(--secondary-color);
+}
+.image{
+    width : 5vw;
+    height : auto;
 }
