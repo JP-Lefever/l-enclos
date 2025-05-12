@@ -8,9 +8,7 @@ export default function SpectaclesPage() {
 			<section className={styles.section}>
 				<h1 className={styles.h1}>créations</h1>
 			</section>
-			<section>
-				<ButtonsSpec />
-			</section>
+
 			<section>
 				<CardSpec />
 			</section>

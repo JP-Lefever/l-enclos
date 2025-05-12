@@ -1,6 +1,6 @@
 .main {
 	background-color: var(--third-color);
-	margin-bottom: var(--margin-between);
+	margin: var(--margin-between) 0 ;
 	height: 100vh;
 	display: flex;
 	align-items: center;
