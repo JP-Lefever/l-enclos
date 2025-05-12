@@ -4,6 +4,7 @@ import Link from "next/link";
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
 import {buttonSpec} from "@/assets/data/placeholder-data-spectacle";
+import Image from "next/image";
 
 
 const ButtonsAgenda = ({setIsOpenDate, setIsOpenInter} : {  setIsOpenDate : (s:boolean)=>void,  setIsOpenInter : (s:boolean)=>void})=>{
@@ -49,28 +50,22 @@ const ButtonsSpec= ()=> {
     const pathname = usePathname();
     return (
         <>
-            <section className={styles.specButtons}>
+            <section className={styles.sectionAgenda}>
                 {buttonSpec.map((b) => (
                     <article
-                        key={b.id}
-                        className={clsx(styles.articleSpec, {
-                            [styles.isActive]: pathname === b.link,
-                        })}
-                    >
+                     key = {b.id}>
                         <Link
                             href={b.link}
-                            className={clsx(styles.buttonSpec, {
-                                [styles.isActiveSpec]: pathname === b.link,
+                            className={clsx(styles.linkDates, {
+                                [styles.isActiveLink] : pathname === b.link
                             })}
                             type="button"
                         >
-                            {/* <Image
-								className={styles.image}
-								src={b.img_src}
-								width={128}
-								height={84}
-								alt={b.name}
-							/> */}
+                            <Image className={styles.image}
+                                   src="/images/logo.png"
+                                   width={1024}
+                                   height={1024}
+                                   alt="Dates spectacle"/>
                             <p className={styles.textSpec}>{b.name}</p>
                         </Link>
                     </article>
@@ -80,5 +75,40 @@ const ButtonsSpec= ()=> {
     );
 }
 
+const ButtonsDates = ()=>{
+    const pathname = usePathname();
+    return(
+        <>
+    <section className={styles.sectionAgenda}>
+        <article>
+            <Link className={clsx(styles.linkDates, {
+            [styles.isActiveLink] : pathname === "/agenda/creation"
+            })} href="/agenda/creation">
+                <Image className={styles.image}
+                       src="/images/logo.png"
+                       width={1024}
+                       height={1024}
+                       alt="Dates spectacle"/>
+                <p>Dates spectacles</p>
+            </Link>
+        </article>
+        <article >
 
-export  {ButtonsAgenda, ButtonMediation, ButtonsSpec};
+            <Link className={clsx(styles.linkDates, {
+                [styles.isActiveLink] : pathname === "/agenda/immersions"
+            })} href="/agenda/immersions">
+                 <Image
+                     className={styles.image}
+                     src="/images/logo.png"
+                     width={1024}
+                     height={1024}
+                     alt="Dates immersions"/>
+                <p>{"Dates d'immersion"}</p>
+            </Link>
+        </article>
+    </section>
+    </>)
+}
+
+
+export  {ButtonsAgenda, ButtonMediation, ButtonsSpec, ButtonsDates};

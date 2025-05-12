@@ -27,6 +27,7 @@
 	border: none;
 	font-size: 3em;
 	color: var(--third-color);
+	cursor: pointer;
 	@media screen and (max-width: 568px) {
 		bottom: 30vh;
 		left: 5vw;

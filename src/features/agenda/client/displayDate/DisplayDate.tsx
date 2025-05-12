@@ -15,7 +15,6 @@ export default function DisplayDate({datesSpec}: {datesSpec : ModifyDateProps[] 
         </figure>
         {datesSpec.map((d)=>(
         <CardSpectacleDate key={d.id} datesSpec={d}/>
-
         ))}
     </article>
 </section>
