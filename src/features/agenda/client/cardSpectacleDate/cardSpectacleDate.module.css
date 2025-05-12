@@ -1,0 +1,31 @@
+.articles {
+    width: 15vw;
+    display : flex;
+    flex-direction: column;
+    gap: 0.5em;
+    text-transform: uppercase;
+    font-weight: bold;
+    @media screen and (max-width: 568px) {
+        width: 40vw;
+    }
+    @media screen and (min-width: 568px) and (max-width: 1024px) {
+        width: 25vw;
+    }
+}
+
+.h2{
+    font-weight: bold;
+    border-bottom : 2px solid black;
+    padding-bottom : 0.5em;
+}
+.h3{
+    color: var(--main-color);
+    border-bottom : 2px solid black;
+    padding-bottom : 0.5em;
+
+}
+
+.pDate1{
+    border-bottom : 2px solid black;
+    padding-bottom : 0.5em;
+}

@@ -10,7 +10,7 @@ import {editDate} from "@/features/agenda/agenda.action";
 import {toast} from "react-toastify";
 import {formatedDate2} from "@/lib/helpers/formatedDate";
 import {createPortal} from "react-dom";
-import  {DeleteConfirmationDate} from "@/features/agenda/deleteConfirmation/DeleteConfirmation";
+import  {DeleteConfirmationDate} from "@/features/agenda/admin/deleteConfirmation/DeleteConfirmation";
 
 
 

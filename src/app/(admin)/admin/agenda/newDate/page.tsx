@@ -1,5 +1,5 @@
+import AddNewDate from "@/features/agenda/admin/addNewDate/AddNewDate";
 
-import AddNewDate from "@/features/agenda/addNewDate/AddNewDate";
 
 export default function AgendaPage(){
     return(

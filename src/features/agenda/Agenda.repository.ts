@@ -144,6 +144,21 @@ class AgendaRepository{
             return {message : "Une erreur est survenue"}
         }
     }
+
+    async readAllDateComing() : Promise <ReadAllDateProps>{
+
+        try{
+            const result= await sql <ModifyDateProps[]>`
+            SELECT * 
+            FROM agenda
+            WHERE is_passed = FALSE;
+            `
+            return {data : result}
+        } catch (err) {
+            console.error(err);
+            return {error : "Une erreur est survenue"}
+        }
+    }
 }
 
 export default new AgendaRepository();

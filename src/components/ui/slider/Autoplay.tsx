@@ -49,7 +49,7 @@ const AutoPlay = () => {
 							className={styles.photoCarousel}
 							src={p.photo}
 							alt={p.service}
-							fill
+							fill={true}
 						/>
 					</figure>
 				))}

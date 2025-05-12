@@ -6,6 +6,7 @@ export default function CompagniePage() {
 		<>
 			<section className={styles.section}>
 				<h1 className={styles.h1}>Histoire</h1>
+
 			</section>
 			<section>
 				<Histoire />

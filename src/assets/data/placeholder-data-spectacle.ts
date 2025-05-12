@@ -256,7 +256,7 @@ const buttonSpec = [
 	{
 		id: 2,
 		name: "les dates",
-		link: "/dates",
+		link: "/agenda",
 		img_src: "/images/chair.png",
 	},
 ];
