@@ -14,7 +14,8 @@ console.log(datesSpec);
 
     return(<>
 
-        <section className={styles.section}>
+
+        <ScrollAnimation className={styles.section}>
                             <article className={styles.articles}>
                                 <h2 className={styles.h2}>{formatedDate(date)}</h2>
                                 <h3 className={styles.h3}>{spectacleName(spectacle_id)}</h3>
@@ -23,6 +24,7 @@ console.log(datesSpec);
                                 <p>{datesSpec.public} </p>
                                 <p>{hour}</p>
                             </article>
-        </section>
+        </ScrollAnimation>
+
     </>)
 }

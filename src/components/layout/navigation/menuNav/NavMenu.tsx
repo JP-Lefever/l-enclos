@@ -22,6 +22,9 @@ export default function NavMenu({
 					<Link className={styles.link} href="/mediation" onClick={closeMenu}>
 						Mediations
 					</Link>
+					<Link className={styles.link} href="/agenda" onClick={closeMenu}>
+						Les dates
+					</Link>
 					<Link className={styles.link} href="/contact" onClick={closeMenu}>
 						Contact
 					</Link>
