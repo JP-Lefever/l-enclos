@@ -50,28 +50,22 @@ const ButtonsSpec= ()=> {
     const pathname = usePathname();
     return (
         <>
-            <section className={styles.specButtons}>
+            <section className={styles.sectionAgenda}>
                 {buttonSpec.map((b) => (
                     <article
-                        key={b.id}
-                        className={clsx(styles.articleSpec, {
-                            [styles.isActive]: pathname === b.link,
-                        })}
-                    >
+                     key = {b.id}>
                         <Link
                             href={b.link}
-                            className={clsx(styles.buttonSpec, {
-                                [styles.isActiveSpec]: pathname === b.link,
+                            className={clsx(styles.linkDates, {
+                                [styles.isActiveLink] : pathname === b.link
                             })}
                             type="button"
                         >
-                            {/* <Image
-								className={styles.image}
-								src={b.img_src}
-								width={128}
-								height={84}
-								alt={b.name}
-							/> */}
+                            <Image className={styles.image}
+                                   src="/images/logo.png"
+                                   width={1024}
+                                   height={1024}
+                                   alt="Dates spectacle"/>
                             <p className={styles.textSpec}>{b.name}</p>
                         </Link>
                     </article>
