@@ -92,7 +92,7 @@ class AgendaRepository{
          const result=  await sql <ModifyImmersionProps[]>`
             SELECT *
             FROM intervention
-            ORDER BY year;
+            ORDER BY year DESC;
             `
             return {data : result}
         }catch(err){
@@ -159,6 +159,8 @@ class AgendaRepository{
             return {error : "Une erreur est survenue"}
         }
     }
+
+
 }
 
 export default new AgendaRepository();

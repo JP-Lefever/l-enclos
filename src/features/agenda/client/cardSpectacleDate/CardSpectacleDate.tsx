@@ -5,7 +5,7 @@ import {formatedDate} from "@/lib/helpers/formatedDate";
 
 
 export default function CardSpectacleDate({datesSpec}: {datesSpec : ModifyDateProps }){
-console.log(datesSpec);
+
     const { place, hour, date, city, spectacle_id} = datesSpec;
 
     const spectacleName = (value : number | undefined)=>{
