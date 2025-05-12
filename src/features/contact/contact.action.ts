@@ -43,8 +43,9 @@ const updateStatus = async (id: string, status: boolean)=>{
 
 const destroyMessage = async (id:string)=>{
 
-    return Contact.deleteMessage(id);
+    const result = await Contact.deleteMessage(id);
 
+    return {success : true, message : result.message}
 }
 
 export {readMessage, updateStatus,destroyMessage, addMessage,readAllMessages}

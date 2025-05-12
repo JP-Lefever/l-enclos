@@ -1,0 +1,33 @@
+.section{
+    background-image: url("/images/container.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 85vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    @media screen and (max-width: 568px) {
+        background-image: url("/images/container.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 40vh;
+        width: 100vw;
+    }
+}
+
+.h1 {
+    font-family: var(--title-font), serif;
+    font-size: var(--size-title);
+    letter-spacing: var(--letter-spacing);
+    color: var(--main-color);
+
+    @media screen and (max-width: 568px) {
+        font-size: 3em;
+        position: relative;
+
+    }
+}

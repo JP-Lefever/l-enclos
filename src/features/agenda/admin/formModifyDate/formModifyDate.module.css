@@ -1,0 +1,81 @@
+
+
+.form{
+    width: fit-content;
+    margin: var(--margin-between) auto;
+    border :none;
+
+}
+
+.fieldset {
+    display: flex;
+    flex-direction: column;
+    border: none;
+}
+
+.fieldset:first-child input:first-child{
+    font-weight: bold;
+
+}
+
+.disabled {
+    background-color: var(--primary-color);
+    padding: var(--padding-button);
+    border: none;
+    border-bottom: 1px solid var(--third-color);
+    font-family: var(--font-paragraph),serif;
+    font-size: 1.2em;
+    color: var(--third-color);
+    opacity:1;
+    line-height: var(--line-height);
+    outline: none;
+    transition: all 0.2s ease-in-out;
+}
+.editable{
+    box-shadow:8px 8px 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--third-color);
+    padding: var(--padding-button);
+    border: none;
+    border-bottom: 1px solid var(--main-color);
+    font-family: var(--font-paragraph),serif;
+    font-size: 1.2em;
+    color: var(--main-color);
+    opacity:1;
+    line-height: var(--line-height);
+    outline: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.fieldset input:focus,
+.fieldset select:focus{
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px var(--primary-color);
+    opacity: 90%;
+}
+
+.sectionButton{
+    width: fit-content;
+    margin: var(--margin-between) auto;
+    display: flex;
+    gap: 2em;
+}
+
+.buttonModify{
+    background-color: var(--secondary-color);
+
+    border-radius: 50%;
+    padding: 1vh;
+}
+
+.buttonValidate {
+    background-color: green;
+    border-radius: 50%;
+    padding: 1vh;
+}
+
+.buttonDelete{
+    background-color: red;
+
+    border-radius: 50%;
+    padding: 1vh;
+}

@@ -1,4 +1,4 @@
-import {ButtonsSpec} from "@/components/ui/buttons/Buttons"
+
 import styles from "./page.module.css";
 import CardSpec from "@/features/spectacle/cardSpec/CardSpec";
 
@@ -8,9 +8,7 @@ export default function SpectaclesPage() {
 			<section className={styles.section}>
 				<h1 className={styles.h1}>créations</h1>
 			</section>
-			<section>
-				<ButtonsSpec />
-			</section>
+
 			<section>
 				<CardSpec />
 			</section>

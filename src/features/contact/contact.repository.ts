@@ -4,7 +4,7 @@ import postgres from "postgres";
 
 const sql = postgres(process.env.POSTGRES_URL as string, { ssl: "require" });
 
-class Contact {
+class ContactRepository {
     async createMessage(data :Omit<ContactProps, "id" | "date" | "is_treated">): Promise<ResultProps> {
         const { firstname, lastname, email, organism, message,subject } = data;
 
@@ -82,12 +82,13 @@ class Contact {
             await sql`
             DELETE FROM contact
             WHERE id = ${id}`
+            return {message : "Le message a bien été supprimé"}
         }catch(error){
             console.error("Une erreur est survenue : ", error);
-            return  "Une erreur est survenue"
+            return {message : "Une erreur est survenue"}
         }
 
     }
 }
-
-export default new Contact();
+const Contact = new ContactRepository()
+export default Contact;

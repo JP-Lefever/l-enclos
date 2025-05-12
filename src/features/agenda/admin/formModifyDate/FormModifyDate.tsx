@@ -9,6 +9,9 @@ import { CircleCheckBig } from 'lucide-react';
 import {editDate} from "@/features/agenda/agenda.action";
 import {toast} from "react-toastify";
 import {formatedDate2} from "@/lib/helpers/formatedDate";
+import {createPortal} from "react-dom";
+import  {DeleteConfirmationDate} from "@/features/agenda/admin/deleteConfirmation/DeleteConfirmation";
+
 
 
 export default function FormModifyDate({ dates}: {dates : ModifyDateProps } ) {
@@ -19,7 +22,6 @@ const {id, place,  date, city, hour, is_passed, spectacle_id} = dates
 
 
     const {register, formState:{errors}, handleSubmit}= useForm<ModifyDateProps>({defaultValues: {
-        id:id,
         place : place,
         public : dates.public,
         date : formatedDate2(date),
@@ -35,9 +37,14 @@ const {id, place,  date, city, hour, is_passed, spectacle_id} = dates
         setEdit(!edit)
     }
 
+    const[openDeleteModal, setOpenDeleteModal] = useState(false)
+    const handleClickDelete = ()=>{
+        setOpenDeleteModal(!openDeleteModal)
+    }
+
     const onSubmitEdit = async (data: ModifyDateProps) => {
 
-        const response = await editDate(data)
+        const response = await editDate(data, id)
 
         if(response?.success){
             toast.success(response.message)
@@ -102,7 +109,7 @@ const {id, place,  date, city, hour, is_passed, spectacle_id} = dates
                     <option value={2}>{"J'ai 17ans pour toujours"}</option>
                 </select>
                 {errors.spectacle_id && <p className={styles.errors}>{errors.spectacle_id.message as string}</p>}
-                <input hidden={true} type='text' {...register("id")}/>
+
             </fieldset>
             <section className={styles.sectionButton}>
 
@@ -112,7 +119,10 @@ const {id, place,  date, city, hour, is_passed, spectacle_id} = dates
             {!edit &&
                 <button  className={styles.buttonValidate} type="submit"><CircleCheckBig size={36}/></button>
             }
-                <button onClick={handleClickEdit} className={styles.buttonDelete} type="button"><Trash2 size={36}/></button>
+                <button onClick={handleClickDelete} className={styles.buttonDelete} type="button"><Trash2 size={36}/></button>
+                {openDeleteModal && (
+                    createPortal(<DeleteConfirmationDate closeModaleAction ={handleClickDelete} id={id}/>, document.body)
+                )}
             </section>
         </form>
         </>

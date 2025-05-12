@@ -9,6 +9,7 @@
 	background-color: var(--secondary-color);
 	transform: translateY(-100vh);
 	align-items: center;
+	z-index: 12;
 }
 .isOpen {
 	animation: slideIn 1s ease-out forwards;
@@ -27,6 +28,7 @@
 	border: none;
 	font-size: 3em;
 	color: var(--main-color);
+	cursor: pointer;
 	@media screen and (max-width: 568px) {
 		bottom: 40vh;
 		font-weight: lighter;

@@ -128,7 +128,7 @@
 	text-transform: uppercase;
 	font-weight: bold;
 	margin: var(--margin-between) 0;
-
+	cursor : pointer;
 	@media screen and (max-width: 568px) {
 		width: 80vw;
 		margin: var(--margin-section) 0vh;
