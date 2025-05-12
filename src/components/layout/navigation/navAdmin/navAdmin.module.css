@@ -2,6 +2,10 @@
 	display: flex;
 	padding: 1em;
 	align-items: center;
+	position: sticky;
+	top: 0;
+	z-index:10;
+	background-color: white;
 }
 .logo {
 	width: 10em;
