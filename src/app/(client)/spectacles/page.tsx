@@ -1,4 +1,4 @@
-import {ButtonsSpec} from "@/components/ui/buttons/Buttons"
+
 import styles from "./page.module.css";
 import CardSpec from "@/features/spectacle/cardSpec/CardSpec";
 

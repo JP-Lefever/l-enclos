@@ -162,5 +162,5 @@ class AgendaRepository{
 
 
 }
-
-export default new AgendaRepository();
+const agendaRepository = new AgendaRepository()
+export default agendaRepository;

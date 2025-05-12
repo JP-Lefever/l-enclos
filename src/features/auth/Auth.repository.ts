@@ -2,7 +2,7 @@ import postgres from "postgres";
 
 const sql = postgres(process.env.POSTGRES_URL as string, { ssl: "require" });
 
-class Users {
+class UsersRepository {
 	async readUserByEmail(email: string) {
 		try {
 			const user = await sql`
@@ -20,5 +20,5 @@ class Users {
 		}
 	}
 }
-
-export default new Users();
+const Users = new UsersRepository()
+export default Users
