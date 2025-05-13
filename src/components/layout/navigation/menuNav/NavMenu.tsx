@@ -22,7 +22,7 @@ export default function NavMenu({
 							<li><Link className={styles.link} href="/mediation" onClick={closeMenu}>
 						Mediations
 					</Link></li>
-								<li><Link className={styles.link} href="/agenda/creation" onClick={closeMenu}>
+								<li><Link className={styles.link} href="/agenda/spectacles" onClick={closeMenu}>
 						Les dates
 					</Link></li>
 									<li><Link className={styles.link} href="/contact" onClick={closeMenu}>
