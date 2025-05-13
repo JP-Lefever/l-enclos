@@ -47,9 +47,9 @@ const {id, place,  date, city, hour, is_passed, spectacle_id} = dates
         const response = await editDate(data, id)
 
         if(response?.success){
-            toast.success(response.message)
+            toast.success("La date a bien été modifiée")
             setEdit(!edit)
-        } else{toast.error("Une erreur est survenue.")}
+        } else{toast.error(response.error)}
 
     }
 

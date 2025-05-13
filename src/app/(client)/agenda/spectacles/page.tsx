@@ -5,14 +5,23 @@ import {readAllDateComing} from "@/features/agenda/agenda.action";
 
 export default async function AgendaPage(){
 
-    const {data, error} = await readAllDateComing()
+    const allSpectacleDate = await readAllDateComing()
+
+    //remplacer par not found
+    if(!allSpectacleDate.success){
+        return<>
+        <section>
+            <p>Une erreur est survenue</p>
+        </section>
+        </>
+    }
 
     return (<>
 
             <section>
-        {!error && data &&
-        <DisplayDate datesSpec={data}/>
-        }
+
+        <DisplayDate datesSpec={allSpectacleDate.data}/>
+
             </section>
     </>)
 }
