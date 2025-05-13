@@ -5,6 +5,9 @@ import React from "react";
 import {ButtonsDates} from "@/components/ui/buttons/Buttons";
 import { paragraphFont } from "@/components/ui/font";
 import "../../globals.css"
+import ScrollToTopOnLoad from "@/components/ui/scroller/ScollToTop";
+
+
 
 export default function Layout({
                                    children,
@@ -13,17 +16,17 @@ export default function Layout({
 }>) {
     return (
       <>
-        <main className={paragraphFont.className}>
+            <ScrollToTopOnLoad/>
             <section className={styles.section}>
                 <h1 className={styles.h1}>Agenda</h1>
             </section>
             <section >
                 <ButtonsDates/>
             </section>
-            <section>
+             <section className={paragraphFont.className}>
             {children}
+
             </section>
-        </main>
 
       </>
 

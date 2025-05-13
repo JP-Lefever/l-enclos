@@ -82,8 +82,8 @@ const ButtonsDates = ()=>{
     <section className={styles.sectionAgenda}>
         <article>
             <Link className={clsx(styles.linkDates, {
-            [styles.isActiveLink] : pathname === "/agenda/creation"
-            })} href="/agenda/creation">
+            [styles.isActiveLink] : pathname === "/agenda/spectacles"
+            })} href="/agenda/spectacles">
                 <Image className={styles.image}
                        src="/images/logo.png"
                        width={1024}
