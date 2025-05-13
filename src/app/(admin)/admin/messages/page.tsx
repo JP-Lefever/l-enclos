@@ -1,12 +1,21 @@
 import MessageList from "@/features/contact/messageList/MessageList";
 import {readAllMessages} from "@/features/contact/contact.action";
-import {ContactProps} from "@/types/definitions";
+
 
 export default async function MessagesPage() {
 
-    const messages : Promise<ContactProps[]> | unknown = await readAllMessages();
+    const messages  = await readAllMessages();
+
+    //remplacer par not found
+    if(!messages.success){
+        return <>
+        <section>
+            <p>Une erreur est survenue</p>
+        </section>
+        </>
+    }
 
     return <>
-    <MessageList messages = {messages}/>
+    <MessageList messages = {messages.data}/>
     </>
 }
