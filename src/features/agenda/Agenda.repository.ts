@@ -1,19 +1,6 @@
 import {DateProps, InterventionAdminProps, ModifyDateProps, ModifyImmersionProps} from "@/types/definitions";
 import postgres from 'postgres';
-
-
-
-type ReadAllDateProps = {
-    data?: ModifyDateProps[] ;
-    error?:string;
-}
-
-type ReadAllImmersionProps = {
-    data?: ModifyImmersionProps[] ;
-    error?:string;
-}
-
-type Result<T> = | {success : true, data: T} | {success : false, error : string};
+import type {Result} from "@/types/definitions";
 
 
 const sql = postgres(process.env.POSTGRES_URL as string, {ssl:"require"});

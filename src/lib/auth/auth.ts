@@ -24,18 +24,18 @@ export const authOptions = {
 
 				//check user email
 				const user = await getUserByEmail(email);
-				if (!user) throw new Error("Email ou mot de pass invalide");
+				if (!user.success) throw new Error(user.error);
 
 				//check user password
-				const validPassword = await verifyPassword(password, user.password);
+				const validPassword = await verifyPassword(password, user.data.password);
 				if (!validPassword) throw new Error("Email ou mot de pass invalide");
-				console.log(validPassword);
+
 				return {
-					id: user.id,
-					firstname: user.firstname,
-					lastname: user.lastname,
-					email: user.email,
-					role_id: user.role_id,
+					id: user.data.id,
+					firstname: user.data.firstname,
+					lastname: user.data.lastname,
+					email: user.data.email,
+					role_id: user.data.role_id,
 				};
 			},
 		}),

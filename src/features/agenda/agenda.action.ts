@@ -3,8 +3,7 @@ import {DateProps, ModifyDateProps, ModifyImmersionProps} from "@/types/definiti
 import AgendaRepository from "@/features/agenda/Agenda.repository";
 import {dateSchema, modifyDateSchema, interventionSchema, modifyInterventionSchema} from "@/lib/utils/validationSchema";
 import {InterventionAdminProps} from "@/types/definitions";
-
-type Result<T> = |{success : true, data: T} | {success : false, error : string};
+import type {Result} from "@/types/definitions";
 
 
 const addNewIntervention = async (data : Omit<InterventionAdminProps, "id">) : Promise<Result<null>> => {
