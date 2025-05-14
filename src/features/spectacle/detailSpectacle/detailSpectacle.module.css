@@ -306,7 +306,7 @@ display: grid;
 /*date*/
 .sectionDate {
 	background-color: var(--third-color);
-	height: 80vh;
+	min-height: 70vh;
 	margin: var(--margin-between) 0;
 	@media screen and (max-width: 1024px) {
 		height: fit-content;
@@ -369,44 +369,62 @@ display: grid;
 	text-align: left;
 }
 .divDate {
-	display: flex;
-	justify-content: space-around;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2em;
 	margin-top: 5vh;
-	height: 40vh;
+
+	padding: var(--margin-between) ;
+
 
 	@media screen and (max-width: 1024px) {
 		display: flex;
 		flex-direction: column;
 		height: fit-content;
 		gap: 5vh;
+		padding: 0 ;
 	}
 }
+
+.formatDate{
+	width: 20vw;
+	@media screen and (max-width: 1024px) {
+		width: 70vw;
+	}
+}
+
 .h4Date {
 	color: var(--main-color);
-	font-size: 1.4em;
+	font-size: 2.5em;
 	text-align: left;
-	padding-bottom: 1em;
+	font-weight: normal;
+	padding-bottom: 0.5em;
 	border-bottom: solid 1px;
 	border-color: var(--main-color);
 }
 
 .pDate1 {
 	color: var(--main-color);
-	font-size: 1.4em;
+	font-size: 1.2em;
 	text-align: left;
 	padding-bottom: 1em;
 	border-bottom: solid 1px;
 	border-color: var(--main-color);
-	font-weight: bold;
+
+	text-transform: uppercase;
 }
-.pDate2 {
+.pDate2,
+.pDate3{
 	color: var(--main-color);
-	font-size: 1.4em;
+	font-size: 1.2em;
 	text-align: left;
+	text-transform: uppercase;
+	margin-top:0.5em;
 }
 
 .divDatePass {
 	display: flex;
+
 	flex-direction: column;
 	justify-content: center;
 	margin-top: 5vh;
