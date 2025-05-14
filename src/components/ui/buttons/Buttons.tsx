@@ -3,7 +3,6 @@ import styles from "./buttons.module.css"
 import Link from "next/link";
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
-import {buttonSpec} from "@/assets/data/placeholder-data-spectacle";
 import Image from "next/image";
 
 
@@ -32,44 +31,12 @@ const ButtonMediation= ()=>  {
                 <Link className={styles.linkMediation} href="#primaire">
                     Primaire
                 </Link>
-                <Link className={styles.linkMediation} href="#college" type="button">
+                <Link className={styles.linkMediation} href="#college" >
                     College
                 </Link>
-                <Link className={styles.linkMediation} href="#ephad" type="button">
+                <Link className={styles.linkMediation} href="#ephad" >
                     Ephad
                 </Link>
-            </section>
-        </>
-    );
-}
-
-
-
-
-const ButtonsSpec= ()=> {
-    const pathname = usePathname();
-    return (
-        <>
-            <section className={styles.sectionAgenda}>
-                {buttonSpec.map((b) => (
-                    <article
-                     key = {b.id}>
-                        <Link
-                            href={b.link}
-                            className={clsx(styles.linkDates, {
-                                [styles.isActiveLink] : pathname === b.link
-                            })}
-                            type="button"
-                        >
-                            <Image className={styles.image}
-                                   src="/images/logo.png"
-                                   width={1024}
-                                   height={1024}
-                                   alt="Dates spectacle"/>
-                            <p className={styles.textSpec}>{b.name}</p>
-                        </Link>
-                    </article>
-                ))}
             </section>
         </>
     );
@@ -111,4 +78,4 @@ const ButtonsDates = ()=>{
 }
 
 
-export  {ButtonsAgenda, ButtonMediation, ButtonsSpec, ButtonsDates};
+export  {ButtonsAgenda, ButtonMediation,  ButtonsDates};
