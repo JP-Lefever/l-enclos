@@ -251,13 +251,13 @@ const buttonSpec = [
 		id: 1,
 		name: "les créations",
 		link: "/spectacles",
-		img_src: "/images/test.png",
+		img_src: "" ,
 	},
 	{
 		id: 2,
 		name: "les dates",
 		link: "/agenda/creation",
-		img_src: "/images/chair.png",
+		img_src: "",
 	},
 ];
 
