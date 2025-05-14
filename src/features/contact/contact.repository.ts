@@ -1,4 +1,4 @@
-import type { ContactProps, ResultProps } from "@/types/definitions";
+import type { ContactProps } from "@/types/definitions";
 import postgres from "postgres";
 import type {Result} from "@/types/definitions"
 
@@ -63,7 +63,7 @@ class ContactRepository {
 
     async updateStatus(id : string, status:boolean) : Promise<Result<null>> {
         try {
-           const result= await sql`
+           await sql`
         UPDATE contact
         SET is_treated=${status}
         WHERE id = ${id};

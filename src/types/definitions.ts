@@ -1,6 +1,5 @@
 export type Result<T> = | {success : true, data: T} | {success : false, error : string};
 
-//FRONT
 export type SpectacleProps = {
 	id: number;
 	status: string;
@@ -116,12 +115,6 @@ export type ContactProps = {
 	is_treated : boolean;
 };
 
-export type ResultProps =
-	| {
-			success: true;
-			message: string;
-	  }
-	| { message: string };
 
 export type UsersProps = {
 	id: string;
