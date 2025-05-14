@@ -20,7 +20,7 @@ export default function LoginForm() {
 			email,
 			password,
 		});
-		console.log(data);
+
 		if (response?.ok) {
 			const session = await getSession();
 			const role = session && getRole(session.user.role_id);
@@ -31,7 +31,7 @@ export default function LoginForm() {
 			} else {
 				toast.error("Mot de pass ou identifiant incorrect");
 			}
-		}
+		}else {toast.error(response?.error)}
 	};
 
 	return (

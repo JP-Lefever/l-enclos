@@ -3,14 +3,24 @@ import {readAllDate, readAllInterventions} from "@/features/agenda/agenda.action
 
 export  default async function EditDatePage(){
 
-    const {data: dates, error: datesError} = await readAllDate()
 
-    const {data: interventions, error: interventionsError} = await readAllInterventions()
+    const datesResult= await readAllDate()
 
+    const datesImmersions = await readAllInterventions()
+
+
+    //remplacer par not found
+    if (!datesResult.success || !datesImmersions.success){
+        return <>
+        <section>
+            <p>Une erreur est survenue</p>
+        </section>
+        </>
+    }
 
     return (<>
-        {!datesError && !interventionsError && dates && interventions &&
-    <ModifyDate dates={dates} immersions={interventions} />
-        }
+
+    <ModifyDate dates={datesResult.data} immersions={datesImmersions.data} />
+
     </>)
 }

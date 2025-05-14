@@ -1,17 +1,6 @@
 import {DateProps, InterventionAdminProps, ModifyDateProps, ModifyImmersionProps} from "@/types/definitions";
 import postgres from 'postgres';
-
-
-
-type ReadAllDateProps = {
-    data?: ModifyDateProps[] ;
-    error?:string;
-}
-
-type ReadAllImmersionProps = {
-    data?: ModifyImmersionProps[] ;
-    error?:string;
-}
+import type {Result} from "@/types/definitions";
 
 
 const sql = postgres(process.env.POSTGRES_URL as string, {ssl:"require"});
@@ -25,37 +14,37 @@ const convertBool = (value: number) =>{
 }
 
 class AgendaRepository{
-    async createNewDate(data :Omit<DateProps, "id">){
+    async createNewDate(data :Omit<DateProps, "id">) : Promise<Result<null>>{
 
         try {
             await sql `
         INSERT INTO agenda(place, public, date, city, hour, is_passed,spectacle_id)
         VALUES(${data.place},${data.public},${data.date},${data.city},${data.hour},${convertBool(data.isPassed)},${safeValue(data.spectacleId)});
 `;
-            return {success : true, message : "La date a bien été ajoutée"}
+            return {success : true, data : null}
         }catch(err){
             console.log(err)
-            return { message : "Une erreur est survenue"}
+            return { success : false, error : "Une erreur est survenue"}
         }
     }
 
 
-    async createNewIntervention(data : Omit<InterventionAdminProps, "id">){
+    async createNewIntervention(data : Omit<InterventionAdminProps, "id">) : Promise<Result<null>>{
 
         try {
             await sql`
         INSERT INTO intervention(year, label, is_passed, mediation_id)
         VALUES (${data.year}, ${data.label},${convertBool(data.isPassed)}, ${safeValue(data.mediationId)});
 `
-            return {success:true, message : "L'intervention a bien été ajoutée"}
+            return {success:true, data : null}
         }catch(err){
             console.error(err)
-            return {message : "Une erreur est survenue"}
+            return {success: false, error : "Une erreur est survenue"}
         }
     }
 
 
-    async readAllDate() : Promise<ReadAllDateProps> {
+    async readAllDate() : Promise<Result<ModifyDateProps[]>> {
         try {
             const result= await sql<ModifyDateProps[]>`
                 SELECT *
@@ -63,15 +52,15 @@ class AgendaRepository{
                 ORDER BY date;
             `;
 
-            return {data : result}
+            return {success : true, data : result}
         } catch (err) {
             console.error(err);
-            return {error :"une erreur est survenue"}
+            return {success: false, error :"une erreur est survenue"}
         }
 
     }
 
-    async updateDate(data: Omit<ModifyDateProps, "id">, id : string) {
+    async updateDate(data: Omit<ModifyDateProps, "id">, id : string) : Promise<Result<null>> {
 
         try {
              await sql`
@@ -79,14 +68,14 @@ class AgendaRepository{
             SET date = ${data.date}, place= ${data.place}, city=${data.city}, public=${data.public}, hour=${data.hour}, is_passed=${data.is_passed}, spectacle_id=${safeValue(data.spectacle_id)}
             WHERE id= ${id};
             `;
-            return { message : "La date a bien été modifiée"}
+            return { success: true, data : null}
         }catch (err){
             console.error(err)
-            return {message : "une erreur est survenue"}
+            return {success: false, error : "une erreur est survenue"}
         }
     }
 
-    async readAllInterventions() : Promise<ReadAllImmersionProps> {
+    async readAllInterventions() : Promise<Result<ModifyImmersionProps[]>> {
 
         try {
          const result=  await sql <ModifyImmersionProps[]>`
@@ -94,14 +83,14 @@ class AgendaRepository{
             FROM intervention
             ORDER BY year DESC;
             `
-            return {data : result}
+            return {success : true ,data : result}
         }catch(err){
             console.error(err);
-            return {error :"une erreur est survenue"}
+            return {success : false, error :"une erreur est survenue"}
         }
     }
 
-    async updateImmersion(data : Omit<ModifyImmersionProps, "id">, id : string) {
+    async updateImmersion(data : Omit<ModifyImmersionProps, "id">, id : string) : Promise<Result<null>> {
 
         try {
             await sql `
@@ -109,43 +98,43 @@ class AgendaRepository{
             SET year= ${data.year},label= ${data.label},is_passed=${data.is_passed}, mediation_id=${data.mediation_id}
             WHERE id = ${id};
             `
-            return {message : "La date d'immersion a bien été mise à jour"}
+            return {success: true, data : null}
         } catch (err){
             console.error(err)
-            return {message : "Une erreur est survenue"}
+            return {success: false, error : "Une erreur est survenue"}
         }
 
     }
 
-    async destroyDate(id : string){
+    async destroyDate(id : string) : Promise<Result<null>> {
 
         try {
             await sql`
             DELETE FROM agenda
             WHERE id= ${id};
             `
-            return {message : "La date a bien été supprimée"}
+            return {success : true, data: null}
         } catch (err){
             console.error(err)
-            return {message : "Une erreur est survenue"}
+            return {success: false, error : "Une erreur est survenue"}
         }
     }
 
-    async destroyImmersionDate(id : string){
+    async destroyImmersionDate(id : string) : Promise<Result<null>> {
 
         try {
             await sql`
             DELETE FROM intervention
             WHERE id= ${id};
             `
-            return {message : "La date a bien été supprimée"}
+            return {success: true, data: null}
         } catch (err){
             console.error(err)
-            return {message : "Une erreur est survenue"}
+            return {success: false, error : "Une erreur est survenue"}
         }
     }
 
-    async readAllDateComing() : Promise <ReadAllDateProps>{
+    async readAllDateComing() : Promise <Result<ModifyDateProps[]>>{
 
         try{
             const result= await sql <ModifyDateProps[]>`
@@ -153,10 +142,10 @@ class AgendaRepository{
             FROM agenda
             WHERE is_passed = FALSE;
             `
-            return {data : result}
+            return {success: true, data : result}
         } catch (err) {
             console.error(err);
-            return {error : "Une erreur est survenue"}
+            return {success: false, error : "Une erreur est survenue"}
         }
     }
 

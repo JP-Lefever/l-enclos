@@ -10,9 +10,9 @@ export default function DeleteConfirmation({ id, closeModaleAction } : {id:strin
     const handleClickDelete = async (id: string)=>{
             const response = await destroyMessage(id)
         if (response.success){
-            toast.success(response.message)
+            toast.success("Le message a bien été supprimé")
             redirect("/admin/messages")
-        }
+        } else {toast.error(response.error);}
 
     }
 

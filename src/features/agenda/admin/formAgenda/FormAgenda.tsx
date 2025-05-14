@@ -16,9 +16,9 @@ export default function FormAgenda() {
         const response = await addNewDate(data)
 
         if (response?.success){
-            toast.success(response.message)
+            toast.success("La date a bien été ajoutée")
             reset()
-        } else{toast.error("Une erreur est survenue.")}
+        } else{toast.error(response.error)}
     }
 
     return <>
