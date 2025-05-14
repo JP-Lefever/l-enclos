@@ -6,14 +6,22 @@ import {readAllInterventions} from "@/features/agenda/agenda.action";
 
 export default async function immersionsDatePage(){
 
-    const {data, error} = await readAllInterventions()
+    const datesImmersion = await readAllInterventions()
+
+    if (!datesImmersion.success){
+        return <>
+        <section>
+            <p>Dates introuvalbes</p>
+        </section>
+        </>
+    }
 
      return (<>
 
         <section>
-            {!error && data &&
-            <DisplayImmersion data={data}/>
-            }
+
+            <DisplayImmersion data={datesImmersion.data}/>
+
         </section>
     </>)
 }
