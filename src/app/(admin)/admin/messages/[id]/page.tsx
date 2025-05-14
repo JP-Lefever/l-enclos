@@ -1,5 +1,6 @@
 import Message from "@/features/contact/message/Message";
 import {readMessage} from "@/features/contact/contact.action";
+import {notFound} from "next/navigation";
 
 
 export default async function DetailMessagePage(props: { params: Promise<{ id: string }> }){
@@ -9,13 +10,9 @@ const id= params.id;
 
 const fullMessage  = await readMessage(id);
 
-//remplacer par 404
+
 if(!fullMessage.success){
-    return <>
-    <section>
-        <p>Message introuvable</p>
-    </section>
-    </>
+    notFound()
 }
 
     return <>

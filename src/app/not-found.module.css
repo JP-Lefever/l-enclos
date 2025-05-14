@@ -1,0 +1,26 @@
+.section {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--third-color);
+    align-items: center;
+    justify-content: center;
+    gap:2em;
+    height: 100vh;
+    color: var(--main-color);
+}
+
+.h1 {
+    font-family: var(--title-font), serif;
+    font-size : var(--size-title);
+    letter-spacing: var(--letter-spacing);
+}
+
+.link {
+    text-decoration: none;
+    color : var(--main-color);
+    font-size: 2em;
+
+}
+.link:hover {
+    color: var(--primary-color);
+}

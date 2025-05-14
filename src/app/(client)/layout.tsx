@@ -1,38 +1,22 @@
-import { paragraphFont } from "@/components/ui/font";
-import styles from "./layout.module.css";
+
 
 import "../globals.css";
 
 import NavBar from "@/components/layout/navigation/navBar/NavBar";
 import Footer from "@/components/layout/footer/Footer";
 import React from "react";
-import {Bounce, ToastContainer} from "react-toastify";
 
-export default function rootLayout({
+
+export default function LayoutClient({
 	children,
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="fr">
-			<body className={`${paragraphFont.className} ${styles.body}`}>
-			<ToastContainer
-				position="top-right"
-				autoClose={2000}
-				hideProgressBar={true}
-				newestOnTop={false}
-				closeOnClick={false}
-				rtl={false}
-				pauseOnFocusLoss
-				draggable
-				pauseOnHover
-				theme="colored"
-				transition={Bounce}
-			/>
+		<>
 				<NavBar />
 				<main>{children}</main>
 				<Footer />
-			</body>
-		</html>
-	);
+		</>
+	)
 }
