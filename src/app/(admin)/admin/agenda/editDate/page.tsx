@@ -1,5 +1,6 @@
 import ModifyDate from "@/features/agenda/admin/modifyDate/ModifyDate";
 import {readAllDate, readAllInterventions} from "@/features/agenda/agenda.action";
+import { notFound } from "next/navigation";
 
 export  default async function EditDatePage(){
 
@@ -9,13 +10,8 @@ export  default async function EditDatePage(){
     const datesImmersions = await readAllInterventions()
 
 
-    //remplacer par not found
     if (!datesResult.success || !datesImmersions.success){
-        return <>
-        <section>
-            <p>Une erreur est survenue</p>
-        </section>
-        </>
+        notFound()
     }
 
     return (<>
