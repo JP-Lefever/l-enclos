@@ -16,9 +16,9 @@ export default function FormIntervention() {
        const response= await addNewIntervention(data)
 
         if(response?.success){
-            toast.success(response.message)
+            toast.success("L'intervention a bien été ajoutée")
             reset()
-        }else{toast.error("Une erreur est survenue.")}
+        }else{toast.error(response.error)}
 
     }
 

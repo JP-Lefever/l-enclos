@@ -40,9 +40,9 @@ export default function FormModifyImmersion({immersions} : {immersions: ModifyIm
       const response = await editIntervention(data, id)
 
       if(response?.success){
-          toast.success(response.message)
+          toast.success("La data a bien été modifiée")
           setEdit(!edit);
-      } else {toast.error("une erreur est survenue")}
+      } else {toast.error(response.error)}
   }
 
     return(<>

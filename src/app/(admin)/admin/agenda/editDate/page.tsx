@@ -1,16 +1,22 @@
 import ModifyDate from "@/features/agenda/admin/modifyDate/ModifyDate";
 import {readAllDate, readAllInterventions} from "@/features/agenda/agenda.action";
+import { notFound } from "next/navigation";
 
 export  default async function EditDatePage(){
 
-    const {data: dates, error: datesError} = await readAllDate()
 
-    const {data: interventions, error: interventionsError} = await readAllInterventions()
+    const datesResult= await readAllDate()
 
+    const datesImmersions = await readAllInterventions()
+
+
+    if (!datesResult.success || !datesImmersions.success){
+        notFound()
+    }
 
     return (<>
-        {!datesError && !interventionsError && dates && interventions &&
-    <ModifyDate dates={dates} immersions={interventions} />
-        }
+
+    <ModifyDate dates={datesResult.data} immersions={datesImmersions.data} />
+
     </>)
 }

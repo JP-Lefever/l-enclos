@@ -1,18 +1,24 @@
 
 import DisplayDate from "@/features/agenda/client/displayDate/DisplayDate";
 import {readAllDateComing} from "@/features/agenda/agenda.action";
+import {notFound} from "next/navigation";
 
 
 export default async function AgendaPage(){
 
-    const {data, error} = await readAllDateComing()
+    const allSpectacleDate = await readAllDateComing()
+
+
+    if(!allSpectacleDate.success){
+       notFound()
+    }
 
     return (<>
 
             <section>
-        {!error && data &&
-        <DisplayDate datesSpec={data}/>
-        }
+
+        <DisplayDate datesSpec={allSpectacleDate.data}/>
+
             </section>
     </>)
 }

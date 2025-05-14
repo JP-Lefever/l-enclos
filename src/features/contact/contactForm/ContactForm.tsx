@@ -14,10 +14,10 @@ export default function AdminContact() {
 		const response = await addMessage(data);
 
 		if (response?.success) {
-			toast.success(response.message);
+			toast.success("Le message a bien été envoyé");
 			reset();
 		} else {
-			toast.error("Un erreur est survenue, veuillez rééssayer ulterieurement");
+			toast.error(response.error);
 		}
 	};
 

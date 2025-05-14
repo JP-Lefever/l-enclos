@@ -1,51 +1,68 @@
 "use server";
 
-import type { ContactProps } from "@/types/definitions";
+import type { Result, ContactProps } from "@/types/definitions";
 import Contact from "@/features/contact/contact.repository";
 import {contactSchema} from "@/lib/utils/validationSchema";
 
 
 
-const addMessage= async (data: Omit<ContactProps, "id" | "date" | "is_treated">)=> {
+const addMessage= async (data: Omit<ContactProps, "id" | "date" | "is_treated">) : Promise<Result<null>> => {
     const parsedData = contactSchema.safeParse(data);
 
+    //voir pour retourner des erreurs completes, changer le typage
     if (!parsedData.success) {
-        return { success: false, error: parsedData.error.flatten().fieldErrors };
+        return { success: false, error: "Données invalides" };
     }
-    try {
-        const result = await Contact.createMessage(parsedData.data);
-        if (parsedData.success) {
-            return { success: true, message: result.message };
+        const res = await Contact.createMessage(parsedData.data);
+
+        if (!res.success) {
+            return { success: false, error: res.error };
         }
-    } catch (error) {
-        return { success: false, error };
+        return {success: true, data: null};
+
+}
+
+
+const readMessage = async (id: string) : Promise<Result<ContactProps>> =>{
+
+   const res =  await Contact.readMessage(id);
+
+   if(!res.success){
+       return { success: false, error: res.error };
+   }
+   return {success: true, data: res.data};
+}
+
+const readAllMessages= async() : Promise<Result<ContactProps[]>> =>{
+
+    const res = await Contact.readAllMessages();
+    if (!res.success){
+        return {success : false, error : res.error}
     }
-}
-
-
-const readMessage = async (id: string)=>{
-
-    return await Contact.readMessage(id);
-}
-
-const readAllMessages= async()=>{
-
-    return  Contact.readAllMessages();
-
+    return {success : true, data : res.data}
 }
 
 
 
-const updateStatus = async (id: string, status: boolean)=>{
+const updateStatus = async (id: string, status: boolean) :Promise<Result<null>> =>{
 
-    return  Contact.updateStatus(id, status);
+   const res = await  Contact.updateStatus(id, status);
+
+   if(!res.success){
+       return { success: false, error: res.error };
+   }
+   return {success: true, data : null}
 }
 
-const destroyMessage = async (id:string)=>{
+const destroyMessage = async (id:string) : Promise<Result<null>> =>{
 
     const result = await Contact.deleteMessage(id);
 
-    return {success : true, message : result.message}
+    if(!result.success){
+        return { success: false, error: result.error };
+    }
+
+    return {success : true, data : null}
 }
 
 export {readMessage, updateStatus,destroyMessage, addMessage,readAllMessages}
