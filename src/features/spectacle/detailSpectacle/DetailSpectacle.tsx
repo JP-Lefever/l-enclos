@@ -1,29 +1,32 @@
 "use client";
 import styles from "./detailSpectacle.module.css";
 import type {
+	ModifyDateProps,
 	Partnair,
-	PastSpectacleDateProps,
-	SpectacleDateProps,
+
 	SpectacleProps,
 } from "@/types/definitions";
 import Image from "next/image";
 import Markdown from "react-markdown";
-import {
-	partnair,
-	date,
-	datePassed,
-} from "@/assets/data/placeholder-data-spectacle";
+import {partnair,} from "@/assets/data/placeholder-data-spectacle";
 import { ChevronRight } from "lucide-react";
 import { AutoPlaySpec } from "@/components/ui/slider/Autoplay";
 import {
 	ScrollAnimation,
 	ScrollAnimation2,
 } from "@/components/ui/animation/ScrollAnimation";
+import {formatedDate} from "@/lib/helpers/formatedDate";
+import {notFound} from "next/navigation";
+import {ButtonsSpectaclePage} from "@/components/ui/buttons/Buttons";
 
 export default function DetailSpectacle({
 	cardData,
 	id,
-}: { cardData: SpectacleProps[]; id: string }) {
+	dates,
+	datesPassed,
+}: { cardData: SpectacleProps[]; id: string, dates : ModifyDateProps[], datesPassed : ModifyDateProps[] }) {
+
+
 	const data: SpectacleProps | undefined = cardData.find(
 		(c) => c.id === Number(id),
 	);
@@ -32,18 +35,18 @@ export default function DetailSpectacle({
 		(p) => p.id_spec === Number(id),
 	);
 
-	const dateSpec: SpectacleDateProps[] = date.filter(
-		(p) => p.id_spec === Number(id),
+	const dateSpec: ModifyDateProps[] = dates.filter(
+		(d) => d.spectacle_id === Number(id),
 	);
 
-	const dateSpecOver: PastSpectacleDateProps[] = datePassed.filter(
-		(p) => p.id_spec === Number(id),
+	const dateSpecOver: ModifyDateProps[] = datesPassed.filter(
+		(p) => p.spectacle_id ===Number(id)
 	);
 
 	const carousel = AutoPlaySpec(Number(id));
 
 	if (!data) {
-		return "Spectacle introuvable";
+		notFound();
 	}
 	return (
 		<>
@@ -73,9 +76,10 @@ export default function DetailSpectacle({
 					</article>
 				</ScrollAnimation>
 
+			<ButtonsSpectaclePage/>
 
 			<section className={styles.sectionPres}>
-				<ScrollAnimation className={styles.imagePresSpec}>
+				<ScrollAnimation id="presentation"  className={styles.imagePresSpec}>
 					<Image
 						className={styles.imageSpec}
 						src={data.image_url}
@@ -103,9 +107,9 @@ export default function DetailSpectacle({
 			<section>
 				<article className={styles.articleCarousel}>{carousel}</article>
 			</section>
-			<ScrollAnimation className={styles.distribution}>
+			<ScrollAnimation id="distribution"  className={styles.distribution}>
 				<h2 className={styles.h2Dist}>DISTRIBUTION</h2>
-				<article className={styles.articleDistrib}>
+				<article  className={styles.articleDistrib}>
 					<article className={styles.divDistrib}>
 						<h3 className={styles.h3Dist}>Ecriture</h3>
 						<p className={styles.pDist}>{data.writing}</p>
@@ -172,7 +176,7 @@ export default function DetailSpectacle({
 					</article>
 				</article>
 			</ScrollAnimation>
-			<section className={styles.divTech}>
+			<section id="technique" className={styles.divTech}>
 				<ScrollAnimation className={styles.sectionTech}>
 					<h2 className={styles.h2Tech}>Technique</h2>
 					<article className={styles.articleTech}>
@@ -184,9 +188,9 @@ export default function DetailSpectacle({
 						<p className={styles.pDist}> {data.regie}</p>
 					</article>
 				</ScrollAnimation>
-				<ScrollAnimation2 className={styles.sectionPartnair}>
+				<ScrollAnimation2 id="partenaires" className={styles.sectionPartnair}>
 					<h2 className={styles.h2Partnair}>Les partenaires</h2>
-					<article className={styles.articlePartnair}>
+					<article  className={styles.articlePartnair}>
 						{partnairSpec.map((s) => (
 							<p className={styles.pPartnair} key={s.id}>
 								<ChevronRight />
@@ -196,7 +200,7 @@ export default function DetailSpectacle({
 					</article>
 				</ScrollAnimation2>
 			</section>
-			<ScrollAnimation className={styles.sectionDate}>
+			<ScrollAnimation id="dates"  className={styles.sectionDate}>
 				<h2 className={styles.h2Date}>Les Dates</h2>
 				<section className={styles.articles}>
 					<ScrollAnimation className={styles.articleDate}>
@@ -204,10 +208,10 @@ export default function DetailSpectacle({
 						<article className={styles.divDate}>
 							{dateSpec
 								? dateSpec.map((d) => (
-										<article key={d.id}>
-											<h4 className={styles.h4Date}>{d.date}</h4>
-											<p className={styles.pDate1}>{d.place}</p>
-											<p className={styles.pDate2}>{d.info} </p>
+										<article className={styles.formatDate} key={d.id}>
+											<h4 className={styles.h4Date}>{formatedDate(d.date)}</h4>
+											<p className={styles.pDate3}>{d.place}</p>
+											<p className={styles.pDate1}>{d.city} </p>
 											<p className={styles.pDate2}>{d.hour}</p>
 										</article>
 									))

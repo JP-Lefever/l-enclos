@@ -172,94 +172,6 @@ const partnair = [
 	},
 ];
 
-const date = [
-	{
-		id: 1,
-		id_spec: 1,
-		date: "06/05/2025 ",
-		place: "Théâtre des Préambules",
-		info: "Scolaire CP/CE1",
-		hour: "10h et à 14h30",
-	},
-	{
-		id: 2,
-		id_spec: 1,
-		date: " 10/05/2025",
-		place: "Auditorium de Balma",
-		info: "Scolaire CM1/CM2",
-		hour: "10h et à 14h30",
-	},
-	{
-		id: 3,
-		id_spec: 1,
-		date: "09/02/2025",
-		place: "Collectif Tohu Bohu",
-		info: "Annulé",
-	},
-];
-
-const datePassed = [
-	{
-		id: 1,
-		id_spec: 1,
-		place: "Théâtre des Préambules (31)",
-	},
-	{
-		id: 2,
-		id_spec: 1,
-		place: "Théâtre du Fil à Plomb (31).",
-	},
-	{
-		id: 3,
-		id_spec: 1,
-		place: "Salle Boris Vian (31)",
-	},
-	{
-		id: 9,
-		id_spec: 1,
-		place: "Festival TAPAGES au Théâtre du Grand Rond (31)",
-	},
-	{
-		id: 4,
-		id_spec: 1,
-		place: "Centre Culturel de Soupetard (31)",
-	},
-	{
-		id: 5,
-		id_spec: 1,
-		place: "Théâtre du Chien Blanc (31)",
-	},
-	{
-		id: 6,
-		id_spec: 1,
-		place: "Première : Théâtre des Préambules (31)",
-	},
-	{
-		id: 7,
-		id_spec: 2,
-		place: "Première : Espace Marcel Pagnol (31)",
-	},
-	{
-		id: 8,
-		id_spec: 2,
-		place: "Avant-première : Espace Palumbo (31)",
-	},
-];
-
-const buttonSpec = [
-	{
-		id: 1,
-		name: "les créations",
-		link: "/spectacles",
-		img_src: "" ,
-	},
-	{
-		id: 2,
-		name: "les dates",
-		link: "/agenda/creation",
-		img_src: "",
-	},
-];
 
 const photo = [
 	{
@@ -392,4 +304,4 @@ const photo = [
 	},
 ];
 
-export { cardData, buttonSpec, partnair, date, datePassed, photo };
+export { cardData, partnair, photo };

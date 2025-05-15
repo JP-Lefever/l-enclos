@@ -44,6 +44,9 @@ export default function NavBar() {
 						/>
 					</Link>
 				</section>
+				<section className={styles.logSection}>
+				<Link className={styles.linkLog} href="/login">PRO</Link>
+				</section>
 			</nav>
 		</>
 	);
