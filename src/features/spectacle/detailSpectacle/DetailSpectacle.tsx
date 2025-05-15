@@ -17,6 +17,7 @@ import {
 } from "@/components/ui/animation/ScrollAnimation";
 import {formatedDate} from "@/lib/helpers/formatedDate";
 import {notFound} from "next/navigation";
+import {ButtonsSpectaclePage} from "@/components/ui/buttons/Buttons";
 
 export default function DetailSpectacle({
 	cardData,
@@ -75,9 +76,10 @@ export default function DetailSpectacle({
 					</article>
 				</ScrollAnimation>
 
+			<ButtonsSpectaclePage/>
 
 			<section className={styles.sectionPres}>
-				<ScrollAnimation className={styles.imagePresSpec}>
+				<ScrollAnimation id="presentation"  className={styles.imagePresSpec}>
 					<Image
 						className={styles.imageSpec}
 						src={data.image_url}
@@ -105,9 +107,9 @@ export default function DetailSpectacle({
 			<section>
 				<article className={styles.articleCarousel}>{carousel}</article>
 			</section>
-			<ScrollAnimation className={styles.distribution}>
+			<ScrollAnimation id="distribution"  className={styles.distribution}>
 				<h2 className={styles.h2Dist}>DISTRIBUTION</h2>
-				<article className={styles.articleDistrib}>
+				<article  className={styles.articleDistrib}>
 					<article className={styles.divDistrib}>
 						<h3 className={styles.h3Dist}>Ecriture</h3>
 						<p className={styles.pDist}>{data.writing}</p>
@@ -174,7 +176,7 @@ export default function DetailSpectacle({
 					</article>
 				</article>
 			</ScrollAnimation>
-			<section className={styles.divTech}>
+			<section id="technique" className={styles.divTech}>
 				<ScrollAnimation className={styles.sectionTech}>
 					<h2 className={styles.h2Tech}>Technique</h2>
 					<article className={styles.articleTech}>
@@ -186,9 +188,9 @@ export default function DetailSpectacle({
 						<p className={styles.pDist}> {data.regie}</p>
 					</article>
 				</ScrollAnimation>
-				<ScrollAnimation2 className={styles.sectionPartnair}>
+				<ScrollAnimation2 id="partenaires" className={styles.sectionPartnair}>
 					<h2 className={styles.h2Partnair}>Les partenaires</h2>
-					<article className={styles.articlePartnair}>
+					<article  className={styles.articlePartnair}>
 						{partnairSpec.map((s) => (
 							<p className={styles.pPartnair} key={s.id}>
 								<ChevronRight />
@@ -198,7 +200,7 @@ export default function DetailSpectacle({
 					</article>
 				</ScrollAnimation2>
 			</section>
-			<ScrollAnimation className={styles.sectionDate}>
+			<ScrollAnimation id="dates"  className={styles.sectionDate}>
 				<h2 className={styles.h2Date}>Les Dates</h2>
 				<section className={styles.articles}>
 					<ScrollAnimation className={styles.articleDate}>

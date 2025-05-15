@@ -28,15 +28,15 @@ const ButtonMediation= ()=>  {
     return (
         <>
             <section className={styles.mediationButton}>
-                <Link className={styles.linkMediation} href="#primaire">
+                <a className={styles.linkMediation} href="#primaire">
                     Primaire
-                </Link>
-                <Link className={styles.linkMediation} href="#college" >
+                </a>
+                <a className={styles.linkMediation} href="#college" >
                     College
-                </Link>
-                <Link className={styles.linkMediation} href="#ephad" >
+                </a>
+                <a className={styles.linkMediation} href="#ephad" >
                     Ephad
-                </Link>
+                </a>
             </section>
         </>
     );
@@ -77,5 +77,19 @@ const ButtonsDates = ()=>{
     </>)
 }
 
+const ButtonsSpectaclePage = ()=>{
+    const ancre = ["presentation", "distribution", "technique", "partenaires", "dates" ]
 
-export  {ButtonsAgenda, ButtonMediation,  ButtonsDates};
+    return (
+
+    <section className={styles.sectionButtonSpec}>
+        {ancre.map((a)=>(
+           <a href={`#${a}`} className={styles.linkSpec}  key={a} >{a}</a>
+        ))}
+
+    </section>
+        )
+}
+
+
+export  {ButtonsAgenda, ButtonMediation,  ButtonsDates, ButtonsSpectaclePage};
