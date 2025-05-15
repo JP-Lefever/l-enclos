@@ -7,11 +7,13 @@ import { type ReactNode, useRef } from "react";
 type ScrollAnimationType = {
 	children: ReactNode;
 	className?: string;
+	id?: string;
 };
 
 export const ScrollAnimation = ({
 	children,
 	className,
+	id,
 }: ScrollAnimationType) => {
 	const ref = useRef(null);
 	const isInView = useInView(ref, { once: true, amount: 0.2 });
@@ -24,6 +26,7 @@ export const ScrollAnimation = ({
 		<motion.div
 			ref={ref}
 			initial="hidden"
+			id={id}
 			className={className}
 			animate={isInView ? "visible" : "hiden"}
 			variants={variants}
@@ -36,6 +39,7 @@ export const ScrollAnimation = ({
 export const ScrollAnimation2 = ({
 	children,
 	className,
+	id,
 }: ScrollAnimationType) => {
 	const ref = useRef(null);
 	const isInView = useInView(ref, { once: true, amount: 0.2 });
@@ -49,6 +53,7 @@ export const ScrollAnimation2 = ({
 			ref={ref}
 			initial="hidden"
 			className={className}
+			id={id}
 			animate={isInView ? "visible" : "hiden"}
 			variants={variants}
 		>

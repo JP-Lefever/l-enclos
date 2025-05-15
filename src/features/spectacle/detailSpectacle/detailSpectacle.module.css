@@ -100,6 +100,9 @@
 		);
 	}
 }
+.imagePresSpec{
+	scroll-margin-top: 15vh;
+}
 
 .imageSpec {
 	width: 40vw;
@@ -169,7 +172,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-
+	scroll-margin-top: 15vh;
 	@media screen and (max-width: 1024px) {
 		height: fit-content;
 	}
@@ -224,6 +227,7 @@ display: grid;
 .divTech {
 	display: flex;
 	height: 60vh;
+	scroll-margin-top: 15vh;
 	@media screen and (max-width: 1024px) {
 		display: flex;
 		flex-direction: column;
@@ -249,7 +253,7 @@ display: grid;
 	padding-left: 2vw;
 	display: flex;
 	flex-direction: column;
-
+	scroll-margin-top: 15vh;
 	@media screen and (max-width: 1024px) {
 		width: 100vw;
 		padding-left: 5vw;
@@ -308,6 +312,7 @@ display: grid;
 	background-color: var(--third-color);
 	min-height: 70vh;
 	margin: var(--margin-between) 0;
+	scroll-margin-top: 15vh;
 	@media screen and (max-width: 1024px) {
 		height: fit-content;
 	}
