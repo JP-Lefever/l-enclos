@@ -5,9 +5,10 @@ import { useState } from "react";
 import Image from "next/image";
 import styles from "./navAdmin.module.css";
 import { createPortal } from "react-dom";
-
+import { Power} from 'lucide-react';
 import Link from "next/link";
 import AdminMenu from "../adminMenu/AdminMenu";
+import {signOut} from "next-auth/react";
 
 export default function NavAdmin() {
 	const [openMenu, setOpenMenu] = useState(false);
@@ -42,6 +43,9 @@ export default function NavAdmin() {
 							className={styles.logo}
 						/>
 					</Link>
+				</section>
+				<section className={styles.logSection}>
+					<button className={styles.linkLog} onClick={()=>signOut()} type="button"><Power size={36}/></button>
 				</section>
 			</nav>
 		</>

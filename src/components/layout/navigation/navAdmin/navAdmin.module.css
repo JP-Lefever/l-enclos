@@ -6,6 +6,13 @@
 	top: 0;
 	z-index:10;
 	background-color: white;
+	background-image:
+			linear-gradient(to right, var(--main-color) 0% 100%),
+			linear-gradient(to bottom, var(--primary-color) 15%, var(--secondary-color)15%);
+	background-size: 95% 100%, 5% 100%;
+	background-position: left top, right top;
+	background-repeat: no-repeat;
+	border-bottom: 1px solid var(--third-color);
 }
 .logo {
 	width: 10em;
@@ -14,4 +21,24 @@
 .image {
 	width: fit-content;
 	margin: auto;
+}
+
+.linkLog{
+	text-decoration: none;
+	background-color: var(--secondary-color);
+	color:var(--main-color);
+	font-size: 0.8em;
+	font-weight: bold;
+	border:none;
+	line-height: var(--line-height);
+	margin: 0;
+	cursor: pointer;
+}
+
+.logSection{
+	width: 3vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
 }
