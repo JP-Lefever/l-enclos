@@ -52,22 +52,7 @@
 }
 
 
-.ul li::before{
-	content: '';
-	position : absolute;
-	left: -5vw;
-	top: 0;
-	width: 4em;
-	height: 4em;
-	background: url("/images/puce.gif") no-repeat center center ;
 
-	background-size: contain;
-	opacity: 0;
-	transition: opacity 0.3s ease-in-out;
-}
-.ul li:hover::before {
-	opacity: 1;
-}
 .link {
 	display: flex;
 	flex-direction: column;
