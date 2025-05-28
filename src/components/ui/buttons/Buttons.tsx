@@ -1,6 +1,5 @@
 "use client"
 import styles from "./buttons.module.css"
-import Link from "next/link";
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
