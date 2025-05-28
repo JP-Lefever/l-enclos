@@ -1,4 +1,4 @@
-import Link from "next/link";
+
 import styles from "./presMediation.module.css";
 import Image from "next/image";
 import {generalesInformations} from "@/assets/data/placeholder-data-homePage";
@@ -6,6 +6,7 @@ import {
 	ScrollAnimation,
 	ScrollAnimation2,
 } from "@/components/ui/animation/ScrollAnimation";
+import TransitionLink from "@/components/ui/transitionLink/TransitionLink";
 
 export default function PresMediation() {
 	return (
@@ -27,9 +28,9 @@ export default function PresMediation() {
 						<p className={styles.paragraph}>
 							{generalesInformations[2].paragraph}
 						</p>
-						<Link className={styles.link} href="/mediation">
+						<TransitionLink className={styles.link} href="/mediation">
 							{generalesInformations[2].button}
-						</Link>
+						</TransitionLink>
 
 				</ScrollAnimation2>
 			</section>

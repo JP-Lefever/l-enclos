@@ -4,11 +4,12 @@ import type { cardDataProps } from "@/types/definitions";
 import styles from "./cardSpec.module.css";
 import { cardData } from "@/assets/data/placeholder-data-spectacle";
 import Image from "next/image";
-import Link from "next/link";
+
 import {
 	ScrollAnimation3,
 	ScrollAnimation4,
 } from "@/components/ui/animation/ScrollAnimation";
+import TransitionLink from "@/components/ui/transitionLink/TransitionLink";
 
 export default function CardSpec() {
 	return (
@@ -19,7 +20,7 @@ export default function CardSpec() {
 						{cardData.map((c: cardDataProps) => (
 							<ScrollAnimation4 key={c.id} >
 
-								<Link
+								<TransitionLink
 									href={`/spectacles/${c.id}`}
 									className={styles.article}
 									key={c.id}
@@ -34,7 +35,7 @@ export default function CardSpec() {
 										/>
 									</figure>
 									<h2 className={styles.h2}>{c.title}</h2>
-								</Link>
+								</TransitionLink>
 
 							</ScrollAnimation4>
 						))}
