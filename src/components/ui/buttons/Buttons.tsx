@@ -4,6 +4,7 @@ import Link from "next/link";
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
+import TransitionLink from "@/components/ui/transitionLink/TransitionLink";
 
 
 const ButtonsAgenda = ({setIsOpenDate, setIsOpenInter} : {  setIsOpenDate : (s:boolean)=>void,  setIsOpenInter : (s:boolean)=>void})=>{
@@ -48,7 +49,7 @@ const ButtonsDates = ()=>{
         <>
     <section className={styles.sectionAgenda}>
         <article>
-            <Link className={clsx(styles.linkDates, {
+            <TransitionLink className={clsx(styles.linkDates, {
             [styles.isActiveLink] : pathname === "/agenda/spectacles"
             })} href="/agenda/spectacles">
                 <Image className={styles.image}
@@ -57,11 +58,11 @@ const ButtonsDates = ()=>{
                        height={1024}
                        alt="Dates spectacle"/>
                 <p>Dates spectacles</p>
-            </Link>
+            </TransitionLink>
         </article>
         <article >
 
-            <Link className={clsx(styles.linkDates, {
+            <TransitionLink className={clsx(styles.linkDates, {
                 [styles.isActiveLink] : pathname === "/agenda/immersions"
             })} href="/agenda/immersions">
                  <Image
@@ -71,7 +72,7 @@ const ButtonsDates = ()=>{
                      height={1024}
                      alt="Dates immersions"/>
                 <p>{"Dates d'immersion"}</p>
-            </Link>
+            </TransitionLink>
         </article>
     </section>
     </>)

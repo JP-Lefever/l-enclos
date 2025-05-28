@@ -1,9 +1,10 @@
-import Link from "next/link";
+
 import styles from "./mediationEphad.module.css";
 import Image from "next/image";
 import {ScrollAnimation, ScrollAnimation2} from "@/components/ui/animation/ScrollAnimation";
 import {mediation} from "@/assets/data/placeholder-data-mediation";
 import Markdown from "react-markdown";
+import TransitionLink from "@/components/ui/transitionLink/TransitionLink";
 
 export default function MediationEphad() {
 	const id = 3;
@@ -23,9 +24,9 @@ export default function MediationEphad() {
 					<h1 className={styles.h1}>{mediation[2].name}</h1>
 					<article className={styles.paragraph}>
 					<Markdown>{mediation[2].pres}</Markdown>
-						<Link className={styles.link} href={`/mediation/${id}`}>
+						<TransitionLink className={styles.link} href={`/mediation/${id}`}>
 							Voir les ateliers
-						</Link>
+						</TransitionLink>
 					</article>
 				</ScrollAnimation>
 			</section>

@@ -15,6 +15,7 @@ export default function rootLayout({
     return (
         <html lang="fr">
         <body className={`${paragraphFont.className} ${styles.body}`}>
+        <div id={"page-transition"}/>
         <ToastContainer
             position="top-right"
             autoClose={2000}
@@ -29,6 +30,7 @@ export default function rootLayout({
             transition={Bounce}
         />
         <main>{children}</main>
+
 
         </body>
         </html>

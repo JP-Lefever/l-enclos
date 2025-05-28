@@ -1,9 +1,10 @@
-import Link from "next/link";
+
 import styles from "./mediationPrimaire.module.css";
 import Image from "next/image";
 import {ScrollAnimation, ScrollAnimation2} from "@/components/ui/animation/ScrollAnimation";
 import {mediation} from "@/assets/data/placeholder-data-mediation";
 import Markdown from "react-markdown";
+import TransitionLink from "@/components/ui/transitionLink/TransitionLink";
 
 export default function MediationPrimaire() {
 	const id = 1;
@@ -23,9 +24,9 @@ export default function MediationPrimaire() {
 					<h1 className={styles.h1}>{mediation[0].name}</h1>
 					<article className={styles.paragraph}>
 						<Markdown>{mediation[0].pres}</Markdown>
-						<Link className={styles.link} href={`/mediation/${id}`}>
+						<TransitionLink className={styles.link} href={`/mediation/${id}`}>
 							En savoir plus
-						</Link>
+						</TransitionLink>
 					</article>
 				</ScrollAnimation2>
 			</section>

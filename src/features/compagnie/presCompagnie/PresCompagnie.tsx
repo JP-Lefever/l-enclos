@@ -1,4 +1,4 @@
-import Link from "next/link";
+
 import styles from "./presCompagnie.module.css";
 import Image from "next/image";
 import {generalesInformations} from "@/assets/data/placeholder-data-homePage";
@@ -6,6 +6,7 @@ import {
 	ScrollAnimation,
 	ScrollAnimation2,
 } from "@/components/ui/animation/ScrollAnimation";
+import TransitionLink from "@/components/ui/transitionLink/TransitionLink";
 
 export default function PresCompagnie() {
 	return (
@@ -29,9 +30,9 @@ export default function PresCompagnie() {
 						{generalesInformations[0].paragraph}
 					</p>
 
-					<Link className={styles.link} href="/compagnie">
+					<TransitionLink className={styles.link} href="/compagnie">
 						{generalesInformations[0].button}
-					</Link>
+					</TransitionLink>
 				</ScrollAnimation2>
 			</section>
 		</>

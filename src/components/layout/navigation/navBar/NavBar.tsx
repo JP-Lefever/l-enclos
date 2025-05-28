@@ -8,6 +8,7 @@ import { createPortal } from "react-dom";
 
 import Link from "next/link";
 import NavMenu from "../menuNav/NavMenu";
+import TransitionLink from "@/components/ui/transitionLink/TransitionLink";
 
 export default function NavBar() {
 	const [openMenu, setOpenMenu] = useState(false);
@@ -34,7 +35,7 @@ export default function NavBar() {
 						)}
 				</section>
 				<section className={styles.image}>
-					<Link href="/">
+					<TransitionLink href="/">
 						<Image
 							src="/images/logo.png"
 							width={1280}
@@ -42,10 +43,10 @@ export default function NavBar() {
 							alt="logo compagnie l'enclos"
 							className={styles.logo}
 						/>
-					</Link>
+					</TransitionLink>
 				</section>
 				<section className={styles.logSection}>
-				<Link className={styles.linkLog} href="/login">PRO</Link>
+				<TransitionLink className={styles.linkLog} href="/login">PRO</TransitionLink>
 				</section>
 			</nav>
 		</>

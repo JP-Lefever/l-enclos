@@ -5,10 +5,33 @@
 body {
 	overflow-x: hidden;
 	scroll-behavior: smooth;
+	position: relative;
+	transition: transform 0.6s ease-in-out;
+	transform-origin: top;
 }
 .font-paragraph{
 	font-family: "Quicksand", sans-serif !important;
 }
+
+#page-transition {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: var(--secondary-color);
+	transform: scaleX(0);
+	transform-origin: left;
+	z-index: 9999;
+
+	transition: transform 0.6s ease-in-out;
+}
+#page-transition.active {
+	transform: scaleX(1);
+	pointer-events: all;
+}
+
+
 
 h1,
 h2 {
