@@ -52,17 +52,17 @@ export default function DetailSpectacle({
 		<>
 
 				<ScrollAnimation className={styles.articleInfo}>
+					<article className={styles.subArticle}>
 					<h2 className={styles.h2}>{data.status}</h2>
 					<h2 className={styles.h2Title}>{data.title}</h2>
-					<article className={styles.subArticle}>
-						<article className={styles.info}>
 						<h3 className={styles.h3}>Thématique</h3>
 						<p className={styles.p}>{data.theme}</p>
 						<h3 className={styles.h3}>Age</h3>
 						<p className={styles.p}>{data.public}</p>
 						<h3 className={styles.h3}>Durée</h3>
 						<p className={styles.p}>{data.duration}</p>
-						</article>
+
+					</article>
 						<ScrollAnimation2 >
 							<figure className={styles.imageWrapper}>
 							<Image
@@ -73,7 +73,6 @@ export default function DetailSpectacle({
 							/>
 							</figure>
 						</ScrollAnimation2>
-					</article>
 				</ScrollAnimation>
 
 			<ButtonsSpectaclePage/>

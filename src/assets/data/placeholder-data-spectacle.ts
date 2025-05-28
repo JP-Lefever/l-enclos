@@ -15,7 +15,7 @@ const cardData = [
 		illustration: "Mona Costa",
 		poster: "Julien Durand",
 		assistant: "Françoise Longeard, Mylène Mauries et Anita Schultz-Moszkowski",
-		theme: "égalité fille garçon",
+		theme: "Egalité fille garçon",
 		resume: `**Maya** n'est pas comme les filles de son école : elle aime avoir les cheveux courts, elle est toujours habillée en vêtements de sport et elle passe son temps à chasser Baradring Mangetout, une créature qui habite dans la forêt. **Théo**, c'est un garçon mais il a les cheveux longs, il adore prendre des photos de paysage et jouer avec son ami Nana, une poupée qu'il a piqué à sa petite sœur.
 
 Est ce grave qu'ils soient différents de leurs camarades de classe ?
@@ -44,7 +44,7 @@ Notre travail s'est axé principalement sur la recherche des notions même du **
 		writing: "Texte de Jacques Descorde",
 		directedBy: "Mariana Georgieva et Sandra Wichurski",
 		image_spec: "/images/affiche.png",
-		music: "GJunior Benyson, Guillaume Mahenc, Benoit Bornes et Idris Jimser",
+		music: "Junior Benyson, Guillaume Mahenc, Benoit Bornes et Idris Jimser",
 		sceno: "Ariane Germain",
 		light: "Rémi Dubot",
 		video: "Mathilde Foriel-Destezet",
