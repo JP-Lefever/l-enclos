@@ -5,8 +5,6 @@ import { useState } from "react";
 import Image from "next/image";
 import styles from "./navBar.module.css";
 import { createPortal } from "react-dom";
-
-import Link from "next/link";
 import NavMenu from "../menuNav/NavMenu";
 import TransitionLink from "@/components/ui/transitionLink/TransitionLink";
 
