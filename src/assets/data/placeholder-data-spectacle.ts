@@ -44,7 +44,7 @@ Notre travail s'est axé principalement sur la recherche des notions même du **
 		writing: "Texte de Jacques Descorde",
 		directedBy: "Mariana Georgieva et Sandra Wichurski",
 		image_spec: "/images/affiche.png",
-		music: "GJunior Benyson, Guillaume Mahenc, Benoit Bornes et Idris Jimser",
+		music: "Junior Benyson, Guillaume Mahenc, Benoit Bornes et Idris Jimser",
 		sceno: "Ariane Germain",
 		light: "Rémi Dubot",
 		video: "Mathilde Foriel-Destezet",
