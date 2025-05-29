@@ -13,7 +13,7 @@ export default function rootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="fr">
+        <html lang="fr" className={`${paragraphFont.variable}`}>
         <body className={`${paragraphFont.className} ${styles.body}`}>
         <div id={"page-transition"}/>
         <ToastContainer

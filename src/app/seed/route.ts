@@ -73,12 +73,12 @@ async function seedIntervention(){
 export async function GET() {
 	try {
 		await sql.begin(async () => {
-			initUuid();
-			contact();
-			role();
-			users();
-			seedAgenda();
-			seedIntervention();
+			await initUuid();
+			await contact();
+			await role();
+			await users();
+			await seedAgenda();
+			await seedIntervention();
 		});
 		return Response.json({ message: "Db mise a jour" });
 	} catch (error) {

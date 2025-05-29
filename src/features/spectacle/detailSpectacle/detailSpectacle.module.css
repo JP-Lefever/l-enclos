@@ -345,7 +345,7 @@ display: grid;
 	color: var(--main-color);
 	text-align: center;
 	@media screen and (max-width: 1024px) {
-		margin-top: 0vh;
+		margin-top: 0;
 		font-size: 3em;
 	}
 }
