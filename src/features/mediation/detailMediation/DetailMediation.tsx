@@ -54,22 +54,24 @@ export default function DetailMediation({
 				</ScrollAnimation>
 
 			<section className={styles.sectionPres}>
-				<ScrollAnimation className={styles.imageWrapperPres}>
+				<ScrollAnimation>
+					<figure className={styles.imagePresWrapper}>
 					<Image
 						className={styles.imageSpec}
 						src={data.photoDate}
 						alt="Affiche spectacle"
 						fill={true}
 					/>
+					</figure>
 				</ScrollAnimation>
-				<article className={styles.resume}>
 					<ScrollAnimation2>
+				<article className={styles.resume}>
 						<h2 className={styles.h2Pres}>{"LE PROPOS"}</h2>
 						<article className={styles.divResume}>
 							<Markdown>{data.pres}</Markdown>
 						</article>
-					</ScrollAnimation2>
 				</article>
+					</ScrollAnimation2>
 			</section>
 			<article className={styles.organisation}>
 				<h2 className={styles.h2Orga}>Organisation</h2>

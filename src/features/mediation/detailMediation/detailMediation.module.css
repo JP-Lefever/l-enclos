@@ -8,6 +8,7 @@
 	display: flex;
 	align-items: center;
 	gap: 2em;
+	margin : 0 0 var(--margin-between) 0;
 	@media screen and (max-width: 1024px) {
 		height: fit-content;
 		width: 100vw;
@@ -80,86 +81,77 @@
 .sectionPres {
 	display: flex;
 	align-items: center;
-	margin: var(--margin-between) 0;
-	background: linear-gradient(to right, var(--main-color) 35%, var(--secondary-color) 35%);
-
+	margin: var(--margin-section) 0;
+	justify-content: flex-end;
+	background : linear-gradient(to right, var(--main-color) 35%, var(--secondary-color) 35%);
+	width: 100vw;
+	min-height: 90vh;
+	gap: 3em;
 	@media screen and (max-width: 1024px) {
 		display: flex;
 		flex-direction: column;
-		background: linear-gradient(to right, var(--main-color) 0%, var(--secondary-color) 0%);
+		padding: var(--margin-section) ;
+		margin: 0;
+		gap: 1em;
+		background: linear-gradient(
+				to right,
+				var(--main-color) 0%,
+				var(--secondary-color) 0%
+		);
 	}
 }
-.imageWrapperPres{
+
+.imagePresWrapper{
 	position: relative;
 	width: 40vw;
-	height: 50vh;
-	margin: 0 0 0 10vw;
+	height: 60vh;
+
 	@media screen and (max-width: 1024px) {
-		position: relative;
 		width: 90vw;
-		height: 40vh;
-		margin: var(--margin-between) 0;
+		height: 30vh;
 
 	}
-	@media screen and (min-width: 1367px) {
-		position: relative;
-		width: 40vw;
-		height: 65vh;
-	}
+
 }
-
 .imageSpec {
 	object-fit: cover;
-
-	@media screen and (max-width: 1024px) {
-		width: 90vw;
-		height: auto;
-		left: 0;
-	}
-	@media screen and (min-width: 1367px) {
-		width: 30vw;
-		height: auto;
-	}
 }
+
 .resume {
 	border-color: var(--secondary-color);
-	padding: 4vw 2vw;
+	margin-right: 10vw;
 	height: fit-content;
-	background-color: var(--secondary-color);
+	line-height: var(--line-height);
+	font-size: 0.8em;
 
 	@media screen and (max-width: 1024px) {
 		height: fit-content;
 		width: 90vw;
-		padding: 2vw 2vw;
+		margin-right: 0;
+		margin-left : 1em;
 	}
 }
 .h2Pres {
 	font-family: var(--title-font), serif;
-	font-size: var(--size-h2);
+	font-size: 5em;
 	letter-spacing: var(--letter-spacing);
 	color: var(--third-color);
 	position: relative;
 	right: 8vw;
-	margin: var(--margin-between) 0;
-	line-height: var(--line-height);
-	@media screen and (min-width:569px) and (max-width: 1024px) {
-		font-size: 3em;
-		right: 0;
-	}
-	@media screen and (max-width: 568px) {
+	line-height: 1.5em;
+	z-index: 4;
+	@media screen and (max-width: 1024px) {
 		font-size: 1.5em;
 		right: 0;
 	}
 }
 .divResume {
-	width: 40vw;
+	width: 30vw;
 	line-height: var(--line-height);
 	@media screen and (max-width: 1024px) {
 		width: 80vw;
 	}
-	@media screen and (min-width: 1367px) {
-		width: 30vw;
-	}
+
 }
 
 /*organisation*/
