@@ -50,7 +50,7 @@
 	width: 30vw;
 	@media screen and (max-width: 1024px) {
 		font-size: 2em;
-		width: 90vw;
+		width: 100vw;
 	}
 
 }
@@ -98,6 +98,7 @@
 				var(--main-color) 0%,
 				var(--secondary-color) 0%
 		);
+		min-height: 40vh;
 	}
 }
 
@@ -157,16 +158,17 @@
 /*organisation*/
 
 .organisation {
-	width: 100vw;
+	width: 90vw;
 	background-color: var(--main-color);
-	padding: 2em;
+	padding: 0 2em;
 	height: fit-content;
-	border-top: solid 3px var(--third-color);
-	border-bottom: solid 3px var(--third-color);
+	border: solid 3px var(--third-color);
+	border-left: none;
 	margin: var(--margin-between) 0;
-	@media screen and (max-width: 568px) {
+	@media screen and (max-width: 1024px) {
 		width: 100vw;
 		height: auto;
+		border-right: none;
 	}
 }
 .h2Orga {
@@ -175,9 +177,10 @@
 	text-align: center;
 	letter-spacing: var(--letter-spacing);
 	color: var(--secondary-color);
-	line-height: var(--line-height);
+	margin-bottom: 5vh;
+
 	@media screen and (max-width: 568px) {
-		font-size: 1.5em;
+		font-size: 2em;
 		margin-bottom: 2vh;
 	}
 	@media screen and (min-width:569px) and (max-width: 1024px) {
@@ -192,13 +195,14 @@
 	gap: 4vw;
 	color: var(--third-color);
 	line-height: var(--line-height);
-	margin: 5vh 3vw;
-
+	margin: 5vh auto;
+	width : 80vw;
+	font-size: 1em;
 	@media screen and (max-width: 568px) {
 		display: flex;
 		flex-direction: column;
 		width: 85vw;
-		height: auto;
+		font-size: 0.8em;
 		margin: auto;
 	}
 }
@@ -209,14 +213,17 @@
 	margin-bottom: 2vh;
 	font-size: 1.8em;
 	@media screen and (max-width: 568px) {
-		font-size: 1.1em;
+		font-size: 1.2em;
 	}
 }
 
 .h3Orga {
 	color: var(--third-color);
-	font-size: 1.2em;
+	font-size: 1.4em;
 	margin-bottom: 1vh;
+	@media screen and (max-width: 568px) {
+		font-size: 1.2em;
+	}
 }
 
 /*Extract */
