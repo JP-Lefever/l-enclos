@@ -49,7 +49,7 @@ Jouer un personnage avec un texte, rendre crédible son personnage qui ne corres
 		final: "**Séance finale :** Restitution et Bilan",
 		presFinal: `Pour finir en beauté, **nous invitons les parents et des élèves d'autres classes à voir la forme théâtrale** créée pour l'occasion où chaque enfant devra affronter le stress de jouer devant un public. Nous prendrons également le temps de faire **un bilan** du chemin parcouru afin de connaitre les retours des enfants autour de cette expérience riche qu'ils ont vécu et des **réflexions qui ont émergé autour de la thématique.**`,
 		material: ["Costumes", "Paravents scéniques", "Enceinte"],
-		extract: `Extrait du conte « La Princesse au petit » pois d'Hans Christian Andersen`,
+		extract: `Extrait du conte « La Princesse au petit pois » d'Hans Christian Andersen`,
 		textExtract: `« Il était une fois un prince qui voulait épouser une princesse, mais une vraie princesse.
 
 Il fit le tour de la Terre pour en trouver une mais il y avait toujours quelque chose qui clochait ; des princesses, il n'en manquait pas, mais étaient elles de vraies princesses ?
