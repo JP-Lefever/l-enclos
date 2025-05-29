@@ -248,7 +248,7 @@
 	@media screen and (max-width: 568px) {
 		width: 90vw;
 		height: auto;
-		margin-left: 0vw;
+		margin-left: 0;
 	}
 }
 
@@ -316,13 +316,13 @@
 	width: 45vw;
 	line-height: var(--line-height);
 	@media screen and (max-width: 1024px) {
-		width: 100vw;
 		width: 90vw;
-		margin: var(--margin-section) auto;
+
+
 	}
 }
 .h2Thanks {
-	font-family: var(--title-font);
+	font-family: var(--title-font), sans-serif;
 	font-size: 4em;
 	text-align: center;
 	margin: 0.1em 0;
@@ -350,7 +350,7 @@
 	}
 }
 .h2Inter {
-	font-family: var(--title-font);
+	font-family: var(--title-font), sans-serif;
 	font-size: 4em;
 	text-align: center;
 	margin: 0.1em 0;
