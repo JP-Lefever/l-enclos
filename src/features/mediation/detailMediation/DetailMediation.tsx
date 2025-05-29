@@ -30,28 +30,29 @@ export default function DetailMediation({
 
 	return (
 		<>
-			<section className={styles.sectionInfo}>
+
 				<ScrollAnimation className={styles.articleInfo}>
+					<article className={styles.article}>
 					<h2 className={styles.h2}>{data.name}</h2>
 					<h2 className={styles.h3title}>{data.title}</h2>
-					<article className={styles.article}>
-						<article>
-							<h3 className={styles.h3}>{data.type}</h3>
-							<h3 className={styles.h3}>Public : {data.public}</h3>
-							<h3 className={styles.h3}>Durée : {data.duration}</h3>
-							<h3 className={styles.h3}>Theme : {data.theme}</h3>
-						</article>
-						<ScrollAnimation2 className={styles.imageWrapper}>
+					<h3 className={styles.h3}>{data.type}</h3>
+					<h3 className={styles.h3}>Public : {data.public}</h3>
+					<h3 className={styles.h3}>Durée : {data.duration}</h3>
+					<h3 className={styles.h3}>Theme : {data.theme}</h3>
+
+					</article>
+						<ScrollAnimation2 >
+							<figure className={styles.imageWrapper}>
 							<Image
 								className={styles.imagePres}
 								src={data.photoPres}
 								alt={data.title}
 								fill={true}
 							/>
+							</figure>
 						</ScrollAnimation2>
-					</article>
 				</ScrollAnimation>
-			</section>
+
 			<section className={styles.sectionPres}>
 				<ScrollAnimation className={styles.imageWrapperPres}>
 					<Image
