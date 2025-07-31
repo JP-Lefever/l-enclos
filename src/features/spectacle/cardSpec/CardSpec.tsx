@@ -12,6 +12,8 @@ import {
 import TransitionLink from "@/components/ui/transitionLink/TransitionLink";
 
 export default function CardSpec() {
+
+
 	return (
 		<>
 			<main className={styles.main}>
@@ -21,7 +23,7 @@ export default function CardSpec() {
 							<ScrollAnimation4 key={c.id} >
 
 								<TransitionLink
-									href={`/spectacles/${c.id}`}
+									href={`/spectacles/${c.slug}`}
 									className={styles.article}
 									key={c.id}
 								>

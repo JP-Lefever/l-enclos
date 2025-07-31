@@ -2,6 +2,7 @@ export type Result<T> = | {success : true, data: T} | {success : false, error : 
 
 export type SpectacleProps = {
 	id: number;
+	slug: string,
 	status: string;
 	title: string;
 	public: string;
@@ -28,12 +29,13 @@ export type SpectacleProps = {
 
 export type Partnair = {
 	id: number;
-	id_spec: number;
+	slug : string;
 	name: string;
 };
 
 export type cardDataProps = {
 	id: number;
+	slug: string;
 	title: string;
 	public: string;
 	image_url: string;
@@ -59,7 +61,7 @@ export type PhotoDataProps = {
 	id: number;
 	photo: string;
 	service: string;
-	id_spec?: number;
+	slug?: string;
 	id_med?: number;
 };
 
@@ -143,7 +145,7 @@ export type DateProps={
 	city : string;
 	hour : string;
 	isPassed: number ;
-	spectacleId?: number;
+	slug? : string;
 }
 export type ModifyDateProps={
 	id: string;
@@ -153,7 +155,7 @@ export type ModifyDateProps={
 	city : string;
 	hour : string;
 	is_passed:  number;
-	spectacle_id?: number;
+	slug?: string;
 }
 
 export type InterventionAdminProps = {

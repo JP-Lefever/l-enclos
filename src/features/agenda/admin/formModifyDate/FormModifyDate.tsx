@@ -16,7 +16,7 @@ import  {DeleteConfirmationDate} from "@/features/agenda/admin/deleteConfirmatio
 
 export default function FormModifyDate({ dates}: {dates : ModifyDateProps } ) {
 
-const {id, place,  date, city, hour, is_passed, spectacle_id} = dates
+const {id, place,  date, city, hour, is_passed, slug} = dates
 
 
 
@@ -28,7 +28,7 @@ const {id, place,  date, city, hour, is_passed, spectacle_id} = dates
         city : city,
         hour : hour,
         is_passed : is_passed ? 1 : 0,
-        spectacle_id: spectacle_id
+        slug: slug
         }})
 
     const [edit, setEdit] = useState(true)
@@ -103,12 +103,12 @@ const {id, place,  date, city, hour, is_passed, spectacle_id} = dates
 
                 {errors.is_passed && <p className={styles.errors}>{errors.is_passed.message as string}</p>}
 
-                <select className={edit ? styles.disabled : styles.editable}   disabled={edit}  {...register("spectacle_id",{required: errorMessage.require})}>
+                <select className={edit ? styles.disabled : styles.editable}   disabled={edit}  {...register("slug",{required: errorMessage.require})}>
                     <option value="#">Veuillez selectionner un spectacle</option>
-                    <option value={1}>{"Te souviens-tu du jour ou j'ai coupé mes cheveux"}</option>
-                    <option value={2}>{"J'ai 17ans pour toujours"}</option>
+                    <option value={"te-souviens-tu-du-jour-ou-j-ai-coupe-mes-cheveux"}>{"Te souviens-tu du jour ou j'ai coupé mes cheveux"}</option>
+                    <option value={"j-ai-17-ans-pour-toujours"}>{"J'ai 17ans pour toujours"}</option>
                 </select>
-                {errors.spectacle_id && <p className={styles.errors}>{errors.spectacle_id.message as string}</p>}
+                {errors.slug&& <p className={styles.errors}>{errors.slug.message as string}</p>}
 
             </fieldset>
             <section className={styles.sectionButton}>

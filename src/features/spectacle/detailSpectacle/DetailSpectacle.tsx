@@ -21,29 +21,29 @@ import {ButtonsSpectaclePage} from "@/components/ui/buttons/Buttons";
 
 export default function DetailSpectacle({
 	cardData,
-	id,
+											slug,
 	dates,
 	datesPassed,
-}: { cardData: SpectacleProps[]; id: string, dates : ModifyDateProps[], datesPassed : ModifyDateProps[] }) {
+}: { cardData: SpectacleProps[]; slug: string, dates : ModifyDateProps[], datesPassed : ModifyDateProps[] }) {
 
-console.log(cardData);
+
 	const data: SpectacleProps | undefined = cardData.find(
-		(c) => c.id === Number(id),
+		(c) => c.slug === slug,
 	);
-	console.log(data);
+
 	const partnairSpec: Partnair[] = partnair.filter(
-		(p) => p.id_spec === Number(id),
+		(p) => p.slug === slug,
 	);
 
 	const dateSpec: ModifyDateProps[] = dates.filter(
-		(d) => d.spectacle_id === Number(id),
+		(d) => d.slug === slug,
 	);
 
 	const dateSpecOver: ModifyDateProps[] = datesPassed.filter(
-		(p) => p.spectacle_id ===Number(id)
+		(p) => p.slug ===slug
 	);
 
-	const carousel = AutoPlaySpec(Number(id));
+	const carousel = AutoPlaySpec(slug);
 
 	if (!data) {
 		notFound();
