@@ -65,6 +65,7 @@ export type PhotoDataProps = {
 
 export type MediationProps = {
 	id: number;
+	slug: string;
 	name: string;
 	title: string;
 	photoPres: string;
@@ -95,7 +96,7 @@ export type MediationProps = {
 
 export type InterventionProps = {
 	id: number;
-	id_med: number;
+	slug : string;
 	date: string;
 	info: string;
 };

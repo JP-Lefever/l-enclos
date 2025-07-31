@@ -128,7 +128,7 @@ const AutoPlaySpec = (id: number) => {
 	);
 };
 
-const AutoPlayMed = (id: number) => {
+const AutoPlayMed = (slug : string) => {
 	const settings = {
 		dots: false,
 		infinite: true,
@@ -144,7 +144,7 @@ const AutoPlayMed = (id: number) => {
 		window.open(src);
 	};
 
-	const photoCarousel: PhotoDataProps[] = photo.filter((p) => p.id_med === id);
+	const photoCarousel: PhotoDataProps[] = photo.filter((p) => p.slug === slug);
 
 	const sliderRef = useRef<Slider>(null);
 

@@ -15,18 +15,20 @@ import {
 
 export default function DetailMediation({
 	mediation,
-	id,
-}: { mediation: MediationProps[]; id: string }) {
-	const data = mediation.find((m) => m.id === Number(id));
+											slug,
+}: { mediation: MediationProps[]; slug: string }) {
+
+
+	const data = mediation.find((m) => m.slug === slug);
 	const dataInter: InterventionProps[] = intervention.filter(
-		(i) => i.id_med === Number(id),
+		(i) => i.slug === slug,
 	);
 
 	if (!data) {
 		return <p>Projet Introuvable</p>;
 	}
 
-	const slider = AutoPlayMed(Number(id));
+	const slider = AutoPlayMed(slug);
 
 	return (
 		<>

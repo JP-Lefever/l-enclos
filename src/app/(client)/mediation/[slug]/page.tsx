@@ -2,14 +2,15 @@ import DetailMediation from "@/features/mediation/detailMediation/DetailMediatio
 import { mediation } from "@/assets/data/placeholder-data-mediation";
 
 export default async function DetailMediationPage(props: {
-	params: Promise<{ id: string }>;
+	params: Promise<{ slug: string }>;
 }) {
 	const params = await props.params;
-	const id = params.id;
+	const slug = params.slug;
+	console.log(slug);
 	return (
 		<>
 			<section>
-				<DetailMediation id={id} mediation={mediation} />
+				<DetailMediation slug={slug} mediation={mediation} />
 			</section>
 		</>
 	);
