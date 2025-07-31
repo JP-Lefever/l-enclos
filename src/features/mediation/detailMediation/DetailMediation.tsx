@@ -14,8 +14,7 @@ import {
 } from "@/components/ui/animation/ScrollAnimation";
 
 export default function DetailMediation({
-	mediation,
-											slug,
+	mediation, slug,
 }: { mediation: MediationProps[]; slug: string }) {
 
 

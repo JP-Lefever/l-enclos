@@ -6,7 +6,7 @@ export default async function DetailMediationPage(props: {
 }) {
 	const params = await props.params;
 	const slug = params.slug;
-	console.log(slug);
+
 	return (
 		<>
 			<section>
