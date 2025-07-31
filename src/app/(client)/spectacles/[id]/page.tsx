@@ -14,7 +14,7 @@ export default async function detailSpectaclePage(props: {
 	if(!dates.success || !datesPassed.success ) {
 		notFound();
 	}
-
+console.log(cardData);
 	return (
 		<>
 			<main>

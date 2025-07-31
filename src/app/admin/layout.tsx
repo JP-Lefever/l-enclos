@@ -1,5 +1,5 @@
 
-import "../../globals.css";
+import "../globals.css";
 import NavAdmin from "@/components/layout/navigation/navAdmin/navAdmin";
 import React from "react";
 
