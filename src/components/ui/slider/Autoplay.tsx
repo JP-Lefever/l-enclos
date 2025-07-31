@@ -64,7 +64,7 @@ const AutoPlay = () => {
 	);
 };
 
-const AutoPlaySpec = (id: number) => {
+const AutoPlaySpec = (slug : string) => {
 	const settings = {
 		dots: false,
 		infinite: true,
@@ -80,7 +80,7 @@ const AutoPlaySpec = (id: number) => {
 		window.open(src);
 	};
 
-	const photoCarousel: PhotoDataProps[] = photo.filter((p) => p.id_spec === id);
+	const photoCarousel: PhotoDataProps[] = photo.filter((p) => p.slug === slug);
 
 	const sliderRef = useRef<Slider>(null);
 

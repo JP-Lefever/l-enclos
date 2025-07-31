@@ -71,12 +71,12 @@ export default function FormAgenda() {
                     </select>
                     {errors.isPassed && <p className={styles.errors}>{errors.isPassed.message as string}</p>}
                     <label htmlFor="spectacleId">Spectacle concerné</label>
-                    <select className={styles.select} {...register("spectacleId",{required: errorMessage.require})}>
+                    <select className={styles.select} {...register("slug",{required: errorMessage.require})}>
                         <option value="#">Veuillez selectionner un spectacle</option>
-                        <option value={1}>{"Te souviens-tu du jour ou j'ai coupé mes cheveux"}</option>
-                        <option value={2}>{"J'ai 17ans pour toujours"}</option>
+                        <option value={"te-souviens-tu-du-jour-ou-j-ai-coupe-mes-cheveux"}>{"Te souviens-tu du jour ou j'ai coupé mes cheveux"}</option>
+                        <option value={"j-ai-17-ans-pour-toujours"}>{"J'ai 17ans pour toujours"}</option>
                     </select>
-                    {errors.spectacleId && <p className={styles.errors}>{errors.spectacleId.message as string}</p>}
+                    {errors.slug&& <p className={styles.errors}>{errors.slug.message as string}</p>}
                     <button className={styles.button} type="submit">Ajouter une date</button>
                 </fieldset>
 

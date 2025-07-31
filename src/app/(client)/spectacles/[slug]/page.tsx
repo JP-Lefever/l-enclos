@@ -4,21 +4,21 @@ import {readAllDate, readAllDatePassed} from "@/features/spectacle/spectacle.act
 import {notFound} from "next/navigation";
 
 export default async function detailSpectaclePage(props: {
-	params: Promise<{ id: string }>;
+	params: Promise<{ slug: string }>;
 }) {
 	const params = await props.params;
-	const id = params.id;
+	const slug = params.slug;
 	const dates = await readAllDate()
 	const datesPassed = await readAllDatePassed()
 
 	if(!dates.success || !datesPassed.success ) {
 		notFound();
 	}
-console.log(cardData);
+
 	return (
 		<>
 			<main>
-				<DetailSpectacle dates={dates.data} datesPassed={datesPassed.data} id={id} cardData={cardData} />
+				<DetailSpectacle dates={dates.data} datesPassed={datesPassed.data} slug={slug} cardData={cardData} />
 			</main>
 		</>
 	);

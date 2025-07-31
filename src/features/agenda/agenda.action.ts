@@ -30,7 +30,7 @@ const addNewDate = async (data : Omit<DateProps, "id">) :Promise<Result<null>> =
     if (!safeData.success) {
         return {success: false, error : "Données invalides"};
     }
-
+    console.log(safeData.data);
     const res = await AgendaRepository.createNewDate(safeData.data);
 
     if(!res.success){
