@@ -20,7 +20,7 @@ export const dateSchema = z.object({
 	city : z.string().regex(/^[^<>]*$/, {message: "Les caractères <> ne sont pas autorisés"}).nonempty( {message: "Champ requis"}),
 	hour : z.string().regex(/^[^<>]*$/, {message: "Les caractères <> ne sont pas autorisés"}).nonempty( {message: "Champ requis"}),
 	isPassed : z.coerce.number({required_error: "Le champ est obligatoiree"}),
-	spectacleId : z.coerce.number().optional()
+	slug : z.string().optional()
 })
 
 export const interventionSchema = z.object({
@@ -62,7 +62,7 @@ export const modifyDateSchema = z.object({
 	city : z.string().regex(/^[^<>]*$/, {message: "Les caractères <> ne sont pas autorisés"}).nonempty( {message: "Champ requis"}),
 	hour : z.string().regex(/^[^<>]*$/, {message: "Les caractères <> ne sont pas autorisés"}).nonempty( {message: "Champ requis"}),
 	is_passed : z.coerce.number({required_error: "Le champ est obligatoiree"}),
-	spectacle_id : z.coerce.number().optional()
+	slug : z.string().optional()
 })
 
 export const modifyInterventionSchema = z.object({

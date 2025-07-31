@@ -6,7 +6,7 @@ import type {Result} from "@/types/definitions";
 const sql = postgres(process.env.POSTGRES_URL as string, {ssl:"require"});
 
 
-const safeValue = (value : undefined | number)=>{
+const safeValue = (value : undefined | number | string)=>{
             return     value === undefined ? null : value
         }
 const convertBool = (value: number) =>{
@@ -18,8 +18,8 @@ class AgendaRepository{
 
         try {
             await sql `
-        INSERT INTO agenda(place, public, date, city, hour, is_passed,spectacle_id)
-        VALUES(${data.place},${data.public},${data.date},${data.city},${data.hour},${convertBool(data.isPassed)},${safeValue(data.spectacleId)});
+        INSERT INTO agenda(place, public, date, city, hour, is_passed,slug)
+        VALUES(${data.place},${data.public},${data.date},${data.city},${data.hour},${convertBool(data.isPassed)},${safeValue(data.slug)});
 `;
             return {success : true, data : null}
         }catch(err){
@@ -65,7 +65,7 @@ class AgendaRepository{
         try {
              await sql`
             UPDATE agenda
-            SET date = ${data.date}, place= ${data.place}, city=${data.city}, public=${data.public}, hour=${data.hour}, is_passed=${data.is_passed}, spectacle_id=${safeValue(data.spectacle_id)}
+            SET date = ${data.date}, place= ${data.place}, city=${data.city}, public=${data.public}, hour=${data.hour}, is_passed=${data.is_passed}, slug=${safeValue(data.slug)}
             WHERE id= ${id};
             `;
             return { success: true, data : null}

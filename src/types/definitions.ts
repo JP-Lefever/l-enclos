@@ -145,7 +145,7 @@ export type DateProps={
 	city : string;
 	hour : string;
 	isPassed: number ;
-	spectacleId?: number;
+	slug? : string;
 }
 export type ModifyDateProps={
 	id: string;
