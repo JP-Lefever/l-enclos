@@ -7,7 +7,7 @@ import Markdown from "react-markdown";
 import TransitionLink from "@/components/ui/transitionLink/TransitionLink";
 
 export default function MediationPrimaire() {
-	const id = 1;
+	const slug = "primaire";
 	return (
 		<>
 			<section className={styles.section}>
@@ -24,7 +24,7 @@ export default function MediationPrimaire() {
 					<h1 className={styles.h1}>{mediation[0].name}</h1>
 					<article className={styles.paragraph}>
 						<Markdown>{mediation[0].pres}</Markdown>
-						<TransitionLink className={styles.link} href={`/mediation/${id}`}>
+						<TransitionLink className={styles.link} href={`/mediation/${slug}`}>
 							En savoir plus
 						</TransitionLink>
 					</article>

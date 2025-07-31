@@ -270,37 +270,37 @@ const photo = [
 		id: 17,
 		photo: "/images/ephad/carou1.jpg",
 		service: "carousel_ephad",
-		id_med: 3,
+		slug: "ephad",
 	},
 	{
 		id: 18,
 		photo: "/images/ephad/carou2.jpg",
 		service: "carousel_ephad",
-		id_med: 3,
+		slug: "ephad",
 	},
 	{
 		id: 19,
 		photo: "/images/ephad/carou3.jpg",
 		service: "carousel_ephad",
-		id_med: 3,
+		slug: "ephad",
 	},
 	{
 		id: 20,
 		photo: "/images/ephad/carou4.jpg",
 		service: "carousel_ephad",
-		id_med: 3,
+		slug: "ephad",
 	},
 	{
 		id: 21,
 		photo: "/images/ephad/carou5.jpg",
 		service: "carousel_ephad",
-		id_med: 3,
+		slug: "ephad",
 	},
 	{
 		id: 22,
 		photo: "/images/ephad/carou6.jpg",
 		service: "carousel_ephad",
-		id_med: 3,
+		slug: "ephad",
 	},
 ];
 

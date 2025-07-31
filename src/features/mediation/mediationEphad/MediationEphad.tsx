@@ -7,7 +7,7 @@ import Markdown from "react-markdown";
 import TransitionLink from "@/components/ui/transitionLink/TransitionLink";
 
 export default function MediationEphad() {
-	const id = 3;
+	const slug = "ephad"
 	return (
 		<>
 			<section className={styles.section}>
@@ -24,7 +24,7 @@ export default function MediationEphad() {
 					<h1 className={styles.h1}>{mediation[2].name}</h1>
 					<article className={styles.paragraph}>
 					<Markdown>{mediation[2].pres}</Markdown>
-						<TransitionLink className={styles.link} href={`/mediation/${id}`}>
+						<TransitionLink className={styles.link} href={`/mediation/${slug}`}>
 							Voir les ateliers
 						</TransitionLink>
 					</article>
