@@ -1,6 +1,7 @@
 const mediation = [
 	{
 		id: 1,
+		slug : "primaire",
 		name: "Théâtre-Primaire",
 		title: `"Chevalier comme un garçon, princesse comme une fille ?"`,
 		photoPres: "/images/primaire2.png",
@@ -60,6 +61,7 @@ C'était difficile à apprécier ; toujours une chose ou l'autre ne lui semblait
 	},
 	{
 		id: 2,
+		slug : "college",
 		name: "Théâtre-College",
 		title: `"Du texte à la scène ! Autour de Stroboscopie de Sébastien Joanniez" 
 `,
@@ -114,6 +116,7 @@ Apprendre à jouer un texte de théâtre, développer son esprit de groupe, l'é
 	},
 	{
 		id: 3,
+		slug: "ephad",
 		name: "théâtre - EPHAD",
 		title: `"Le crépitement du vinyle"`,
 		photoPres: "/images/mediation_ephad.jpg",
@@ -163,49 +166,49 @@ Favoriser le lâcher prise, la confiance en soi, travailler sur la voix, l'écou
 const intervention = [
 	{
 		id: 1,
-		id_med: 1,
+		slug: "primaire",
 		date: "Année 2021-22 :",
 		info: "Projet réalisé à l'école élémentaire publique Jean Zay (31).",
 	},
 	{
 		id: 2,
-		id_med: 1,
+		slug: "primaire",
 		date: "Année 2022-23 :",
 		info: "Projet réalisé à l'école élémentaire publique Niboul (31).",
 	},
 	{
 		id: 3,
-		id_med: 1,
+		slug: "primaire",
 		date: "Année 2023-24 :",
 		info: "Projet réalisé à l'école élémentaire publique Fontaine Bayonne (31)",
 	},
 	{
 		id: 4,
-		id_med: 2,
+		slug: "college",
 		date: "Année 2022-23 :",
 		info: "Projet réalisé au sein du collège Bellevue (31).",
 	},
 	{
 		id: 5,
-		id_med: 2,
+		slug: "college",
 		date: "Année 2023-24 :",
 		info: "Projet réalisé au sein du collège Jean Mermoz (31)",
 	},
 	{
 		id: 6,
-		id_med: 3,
+		slug: "ephad",
 		date: "Année 2021-22 :",
 		info: "Projet réalisé au sein de l'EHPAD Le Castelet à Muret (31).",
 	},
 	{
 		id: 7,
-		id_med: 3,
+		slug: "ephad",
 		date: "Année 2022-23 :",
 		info: "Projet réalisé au sein de l'EHPAD Tiers Temps à Blagnac (31).",
 	},
 	{
 		id: 8,
-		id_med: 3,
+		slug: "ephad",
 		date: "Année 2023-24 :",
 		info: "Projet réalisé au de l'EHPAD La Tout Totier Edenis à Castelginest (31)",
 	},
