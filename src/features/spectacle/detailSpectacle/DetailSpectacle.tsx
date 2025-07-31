@@ -26,11 +26,11 @@ export default function DetailSpectacle({
 	datesPassed,
 }: { cardData: SpectacleProps[]; slug: string, dates : ModifyDateProps[], datesPassed : ModifyDateProps[] }) {
 
-console.log(cardData);
+
 	const data: SpectacleProps | undefined = cardData.find(
 		(c) => c.slug === slug,
 	);
-	console.log(data);
+
 	const partnairSpec: Partnair[] = partnair.filter(
 		(p) => p.slug === slug,
 	);
