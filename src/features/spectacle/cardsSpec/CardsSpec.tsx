@@ -10,8 +10,9 @@ import {
 	ScrollAnimation4,
 } from "@/components/ui/animation/ScrollAnimation";
 import TransitionLink from "@/components/ui/transitionLink/TransitionLink";
+import CardSpec from "@/features/spectacle/cardSpec/cardSpec";
 
-export default function CardSpec() {
+export default function CardsSpec() {
 
 
 	return (
@@ -22,22 +23,7 @@ export default function CardSpec() {
 						{cardData.map((c: cardDataProps) => (
 							<ScrollAnimation4 key={c.id} >
 
-								<TransitionLink
-									href={`/spectacles/${c.slug}`}
-									className={styles.article}
-									key={c.id}
-								>
-									<p className={styles.p}>{c.public}</p>
-									<figure className={styles.imageWrapper}>
-										<Image
-											className={styles.image}
-											src={c.image_url}
-											alt="Affiche spectacle"
-											fill
-										/>
-									</figure>
-									<h2 className={styles.h2}>{c.title}</h2>
-								</TransitionLink>
+								<CardSpec data ={c}/>
 
 							</ScrollAnimation4>
 						))}

@@ -154,10 +154,10 @@
 
 /*distribution*/
 .distribution {
-	width: 100vw;
+	width: 90vw;
 	background-color: var(--main-color);
-	border-top: solid 3px var(--third-color);
-	border-bottom: solid 3px var(--third-color);
+	border: solid 3px var(--third-color);
+	border-left: none;
 	min-height: 90vh;
 	margin: var(--margin-between) 0;
 	display: flex;
