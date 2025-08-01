@@ -18,11 +18,11 @@ export default function TransitionLink({href, className, children, onClick, ...p
         const transitionElement = document.getElementById("page-transition")
         if (!transitionElement) return;
         transitionElement?.classList.add("active");
-        await sleep(500)
+        await sleep(1000)
         router.push(href)
-        await sleep(500)
+        await sleep(1000)
         transitionElement?.classList.remove("active")
-        await sleep(500)
+        await sleep(1000)
     }
 
     return (<>
