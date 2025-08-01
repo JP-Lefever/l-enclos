@@ -1,11 +1,16 @@
 import { paragraphFont } from "@/components/ui/font";
 import styles from "./layout.module.css";
-
 import "./globals.css";
-
-
 import React from "react";
 import {Bounce, ToastContainer} from "react-toastify";
+import {Metadata} from "next";
+
+export const metadata : Metadata = {
+    title : "Compagnie L'Enclos | Compagnie de théatre contemporain",
+    description : "Compagnie de théatre contemporain, mediation et action culturelle dans la région occitanie",
+    icons : "/images/logo.png",
+
+}
 
 export default function rootLayout({
                                        children,
