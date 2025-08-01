@@ -1,6 +1,6 @@
 
 import styles from "./page.module.css";
-import CardSpec from "@/features/spectacle/cardSpec/CardSpec";
+import CardsSpec from "@/features/spectacle/cardsSpec/CardsSpec";
 import {Metadata} from "next";
 
 export const metadata : Metadata = {
@@ -18,7 +18,7 @@ export default function SpectaclesPage() {
 			</section>
 
 			<section>
-				<CardSpec />
+				<CardsSpec />
 			</section>
 		</>
 	);
