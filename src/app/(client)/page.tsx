@@ -2,9 +2,10 @@
 
 
 import PresMediation from "@/components/mediation/presMediation/PresMediation";
-import PresSpectacles from "@/features/spectacle/presSpectacles/PresSpectacles";
+
 import { AutoPlay } from "@/components/ui/slider/Autoplay";
 import PresCompagnie from "@/components/compagnie/presCompagnie/PresCompagnie";
+import PresSpectacles from "@/components/spectacle/presSpectacles/PresSpectacles";
 
 
 export default function Home() {

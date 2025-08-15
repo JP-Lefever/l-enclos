@@ -1,8 +1,9 @@
-import DetailSpectacle from "@/features/spectacle/detailSpectacle/DetailSpectacle";
+
 import { cardData } from "@/assets/data/placeholder-data-spectacle";
 
 import {notFound} from "next/navigation";
 import {readAllDatePassed, readAllDateSpec} from "@/features/agenda/agenda.action";
+import DetailSpectacle from "@/components/spectacle/detailSpectacle/DetailSpectacle";
 
 export default async function detailSpectaclePage(props: {
 	params: Promise<{ slug: string }>;
