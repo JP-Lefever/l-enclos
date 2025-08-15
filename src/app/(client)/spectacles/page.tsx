@@ -1,7 +1,8 @@
 
 import styles from "./page.module.css";
-import CardsSpec from "@/features/spectacle/cardsSpec/CardsSpec";
+
 import {Metadata} from "next";
+import CardsSpec from "@/components/spectacle/cardsSpec/CardsSpec";
 
 export const metadata : Metadata = {
 	title : "Compagnie L'Enclos | Créations artistiques",

@@ -1,9 +1,11 @@
-import MediationPrimaire from "@/features/mediation/mediationPrimaire/MediationPrimaire";
+
 import styles from "./page.module.css";
-import MediationCollege from "@/features/mediation/mediationCollege/MediationCollege";
-import MediationEphad from "@/features/mediation/mediationEphad/MediationEphad";
+
 import {ButtonMediation}  from "@/components/ui/buttons/Buttons"
 import {Metadata} from "next";
+import MediationPrimaire from "@/components/mediation/mediationPrimaire/MediationPrimaire";
+import MediationCollege from "@/components/mediation/mediationCollege/MediationCollege";
+import MediationEphad from "@/components/mediation/mediationEphad/MediationEphad";
 
 export const metadata : Metadata = {
 	title : "Compagnie L'Enclos | Médiations culturelles",
