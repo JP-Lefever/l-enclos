@@ -5,6 +5,8 @@ import {dateSchema, modifyDateSchema, interventionSchema, modifyInterventionSche
 import {InterventionAdminProps} from "@/types/definitions";
 import type {Result} from "@/types/definitions";
 
+import agendaRepository from "@/features/agenda/Agenda.repository";
+
 
 const addNewIntervention = async (data : Omit<InterventionAdminProps, "id">) : Promise<Result<null>> => {
 
@@ -129,6 +131,25 @@ const readAllDateComing = async () : Promise<Result<ModifyDateProps[]>> =>{
 }
 
 
+const readAllDateSpec = async () : Promise<Result<ModifyDateProps[]>> => {
+
+    const res = await agendaRepository.readDateComing()
+
+    if (!res.success) {
+        return {success: false, error : res.error}
+    }
+    return {success: true, data: res.data}
+}
+
+const readAllDatePassed = async () : Promise<Result<ModifyDateProps[]>> => {
+
+    const res = await agendaRepository.readDatePassed()
+
+    if (!res.success) {
+        return {success: false, error : res.error}
+    }
+    return {success: true, data: res.data}
+}
 
 
-export {addNewDate,addNewIntervention,readAllDate, editDate,readAllInterventions, editIntervention, deleteDate, deleteDateImmersion,readAllDateComing};
+export {addNewDate,addNewIntervention,readAllDate, editDate,readAllInterventions, editIntervention, deleteDate, deleteDateImmersion,readAllDateComing, readAllDateSpec,readAllDatePassed};

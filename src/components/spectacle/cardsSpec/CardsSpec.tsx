@@ -7,7 +7,8 @@ import {
 	ScrollAnimation3,
 	ScrollAnimation4,
 } from "@/components/ui/animation/ScrollAnimation";
-import CardSpec from "@/features/spectacle/cardSpec/cardSpec";
+import CardSpec from "@/components/spectacle/cardSpec/cardSpec";
+
 
 
 export default function CardsSpec() {

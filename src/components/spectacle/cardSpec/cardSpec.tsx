@@ -1,5 +1,5 @@
 import TransitionLink from "@/components/ui/transitionLink/TransitionLink";
-import styles from "@/features/spectacle/cardsSpec/cardSpec.module.css";
+import styles from "@/components/spectacle/cardsSpec/cardSpec.module.css";
 import Image from "next/image";
 import type {cardDataProps} from "@/types/definitions";
 
