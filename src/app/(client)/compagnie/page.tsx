@@ -1,6 +1,7 @@
-import Histoire from "@/features/compagnie/histoire/Histoire";
+
 import styles from "./page.module.css";
 import {Metadata} from "next";
+import Histoire from "@/components/compagnie/histoire/Histoire";
 
 export const metadata : Metadata = {
 	title : "Compagnie L'Enclos | L'histoire",
