@@ -43,7 +43,8 @@ const readAllMessages= async() : Promise<Result<ContactProps[]>> =>{
     if (!res.success){
         return {success : false, error : res.error}
     }
-    revalidatePath("/admin/messages")
+
+
     return {success : true, data : res.data}
 }
 
@@ -56,6 +57,7 @@ const updateStatus = async (id: string, status: boolean) :Promise<Result<null>> 
    if(!res.success){
        return { success: false, error: res.error };
    }
+
     revalidatePath("/admin/messages")
    return {success: true, data : null}
 }
@@ -67,6 +69,7 @@ const destroyMessage = async (id:string) : Promise<Result<null>> =>{
     if(!result.success){
         return { success: false, error: result.error };
     }
+
     revalidatePath("/admin/messages")
     return {success : true, data : null}
 }
