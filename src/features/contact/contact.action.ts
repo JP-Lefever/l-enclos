@@ -3,6 +3,7 @@
 import type { Result, ContactProps } from "@/types/definitions";
 import Contact from "@/features/contact/contact.repository";
 import {contactSchema} from "@/lib/utils/validationSchema";
+import {revalidatePath} from "next/cache";
 
 
 
@@ -18,6 +19,8 @@ const addMessage= async (data: Omit<ContactProps, "id" | "date" | "is_treated">)
         if (!res.success) {
             return { success: false, error: res.error };
         }
+
+        revalidatePath("/admin/messages")
         return {success: true, data: null};
 
 }
@@ -30,6 +33,7 @@ const readMessage = async (id: string) : Promise<Result<ContactProps>> =>{
    if(!res.success){
        return { success: false, error: res.error };
    }
+
    return {success: true, data: res.data};
 }
 
@@ -39,6 +43,7 @@ const readAllMessages= async() : Promise<Result<ContactProps[]>> =>{
     if (!res.success){
         return {success : false, error : res.error}
     }
+    revalidatePath("/admin/messages")
     return {success : true, data : res.data}
 }
 
@@ -51,6 +56,7 @@ const updateStatus = async (id: string, status: boolean) :Promise<Result<null>> 
    if(!res.success){
        return { success: false, error: res.error };
    }
+    revalidatePath("/admin/messages")
    return {success: true, data : null}
 }
 
@@ -61,7 +67,7 @@ const destroyMessage = async (id:string) : Promise<Result<null>> =>{
     if(!result.success){
         return { success: false, error: result.error };
     }
-
+    revalidatePath("/admin/messages")
     return {success : true, data : null}
 }
 
