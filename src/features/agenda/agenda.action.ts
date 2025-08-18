@@ -5,7 +5,7 @@ import {dateSchema, modifyDateSchema, interventionSchema, modifyInterventionSche
 import {InterventionAdminProps} from "@/types/definitions";
 import type {Result} from "@/types/definitions";
 
-import agendaRepository from "@/features/agenda/Agenda.repository";
+import {revalidatePath} from "next/cache";
 
 
 const addNewIntervention = async (data : Omit<InterventionAdminProps, "id">) : Promise<Result<null>> => {
@@ -21,6 +21,8 @@ const addNewIntervention = async (data : Omit<InterventionAdminProps, "id">) : P
     if(!res.success){
         return {success : false, error : res.error}
     }
+
+    revalidatePath("/agenda/immersions")
 
     return {success : true, data: null}
 }
@@ -38,6 +40,8 @@ const addNewDate = async (data : Omit<DateProps, "id">) :Promise<Result<null>> =
     if(!res.success){
         return {success : false, error : res.error}
     }
+
+    revalidatePath("/agenda/spectacles")
 
     return {success: true, data: null};
 
@@ -65,6 +69,9 @@ const editDate = async (data : Omit<ModifyDateProps, "id">, id : string) : Promi
     if(!res.success){
         return {success : false, error : res.error}
     }
+
+    revalidatePath("/agenda/spectacles")
+    revalidatePath("/admin/agenda/editDate")
 
     return {success : true, data : null};
 }
@@ -96,6 +103,9 @@ const editIntervention = async (data : Omit<ModifyImmersionProps, "id">, id : st
         return {success : false, error : result.error}
     }
 
+    revalidatePath("/agenda/immersions")
+    revalidatePath("/admin/agenda/editDate")
+
     return {success : true, data : null};
 
 }
@@ -106,6 +116,10 @@ const deleteDate = async (id : string) : Promise<Result<null>> =>{
 if(!result.success){
     return {success : false, error : result.error}
 }
+
+    revalidatePath("/agenda/spectacles")
+    revalidatePath("/admin/agenda/editDate")
+
     return {success : true, data : null};
 }
 
@@ -116,6 +130,8 @@ const deleteDateImmersion = async (id : string) : Promise<Result<null>> =>{
     if(!result.success){
         return {success : false, error : result.error}
     }
+    revalidatePath("/agenda/immersions")
+    revalidatePath("/admin/agenda/editDate")
 
     return {success : true, data : null};
 }
@@ -133,7 +149,7 @@ const readAllDateComing = async () : Promise<Result<ModifyDateProps[]>> =>{
 
 const readAllDateSpec = async () : Promise<Result<ModifyDateProps[]>> => {
 
-    const res = await agendaRepository.readDateComing()
+    const res = await AgendaRepository.readDateComing()
 
     if (!res.success) {
         return {success: false, error : res.error}
@@ -143,7 +159,7 @@ const readAllDateSpec = async () : Promise<Result<ModifyDateProps[]>> => {
 
 const readAllDatePassed = async () : Promise<Result<ModifyDateProps[]>> => {
 
-    const res = await agendaRepository.readDatePassed()
+    const res = await AgendaRepository.readDatePassed()
 
     if (!res.success) {
         return {success: false, error : res.error}
