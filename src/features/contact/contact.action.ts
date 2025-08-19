@@ -77,7 +77,7 @@ const destroyMessage = async (id:string) : Promise<Result<null>> =>{
 
 const sendMail = async(data : ContactProps) : Promise<Result<string>> =>{
 
-const {firstname, lastname, organism, email, subject, date, message} = data
+const {firstname, lastname,  email, subject,  message} = data
 
     try {
         const transporter = nodemailer.createTransport({
@@ -90,20 +90,16 @@ const {firstname, lastname, organism, email, subject, date, message} = data
             }
         })
         await transporter.sendMail({
-            from : `"Nouveau message L'Enclos" <${process.env.SMTP_USER}>`,
+            from : `"Nouveau message du site L'Enclos" <${process.env.SMTP_USER}>`,
             to : process.env.CONTACT_RECEIVER,
             subject: `Nouveau message de ${firstname} ${lastname}`,
             text : `
-            Email : ${email},
-            Organism: ${organism},
-            Subject: ${subject},
-            date: ${date},
+            Email : ${email},      
+            Subject: ${subject},           
             Message : ${message}`,
             html : `
                 <h1>Email: ${email}</h1>,
                 <h2>Subject: ${subject}</h2>,
-                <h3>Organism: ${organism}</h3>,
-                <h4>Date: ${date}</h4>,
                 <p>Message: ${message}</p>`,
             replyTo: email,
         })
