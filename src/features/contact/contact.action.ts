@@ -4,6 +4,7 @@ import type { Result, ContactProps } from "@/types/definitions";
 import Contact from "@/features/contact/contact.repository";
 import {contactSchema} from "@/lib/utils/validationSchema";
 import {revalidatePath} from "next/cache";
+import nodemailer from "nodemailer"
 
 
 
@@ -74,4 +75,48 @@ const destroyMessage = async (id:string) : Promise<Result<null>> =>{
     return {success : true, data : null}
 }
 
-export {readMessage, updateStatus,destroyMessage, addMessage,readAllMessages}
+const sendMail = async(data : ContactProps) : Promise<Result<string>> =>{
+
+const {firstname, lastname, organism, email, subject, date, message} = data
+
+    try {
+        const transporter = nodemailer.createTransport({
+            host : process.env.SMTP_HOST,
+            port : parseInt(process.env.SMTP_PORT || "587", 10),
+            secure : false,
+            auth : {
+                user : process.env.SMTP_USER,
+                pass : process.env.SMTP_PASS,
+            }
+        })
+        await transporter.sendMail({
+            from : `"Nouveau message L'Enclos" <${process.env.SMTP_USER}>`,
+            to : process.env.CONTACT_RECEIVER,
+            subject: `Nouveau message de ${firstname} ${lastname}`,
+            text : `
+            Email : ${email},
+            Organism: ${organism},
+            Subject: ${subject},
+            date: ${date},
+            Message : ${message}`,
+            html : `
+                <h1>Email: ${email}</h1>,
+                <h2>Subject: ${subject}</h2>,
+                <h3>Organism: ${organism}</h3>,
+                <h4>Date: ${date}</h4>,
+                <p>Message: ${message}</p>`,
+            replyTo: email,
+        })
+
+
+        return {success: true, data: "Le message a bien été envoyé"}
+
+    } catch (error) {
+        console.error(error)
+        return {success: false, error: "Une erreur est survenue"}
+
+    }
+
+}
+
+export {readMessage, updateStatus,destroyMessage, addMessage,readAllMessages, sendMail}
