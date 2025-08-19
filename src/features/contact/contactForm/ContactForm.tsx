@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { subjectOptions } from "@/assets/data/placeholder-data-contact";
 import errorMessage from "../../../assets/data/errorMessage.json";
 import type { ContactProps } from "@/types/definitions";
-import { addMessage } from "@/features/contact/contact.action";
+import {addMessage, sendMail} from "@/features/contact/contact.action";
 import { toast } from "react-toastify";
 
 export default function AdminContact() {
@@ -14,8 +14,13 @@ export default function AdminContact() {
 		const response = await addMessage(data);
 
 		if (response?.success) {
-			toast.success("Le message a bien été envoyé");
-			reset();
+			const mailRes = await sendMail(data);
+
+			if (mailRes.success) {
+				toast.success("Le message a bien été envoyé");
+				reset();
+		}
+
 		} else {
 			toast.error(response.error);
 		}
