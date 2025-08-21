@@ -6,11 +6,12 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 
-import { useRef } from "react";
+import {useRef, useState} from "react";
 import { ChevronRight } from "lucide-react";
 import { ChevronLeft } from "lucide-react";
 import { photo } from "@/assets/data/placeholder-data-spectacle";
 import type { PhotoDataProps } from "@/types/definitions";
+import LightboxUi from "@/components/ui/lightboxUi/LightboxUi";
 
 const AutoPlay = () => {
 	const settings = {
@@ -75,10 +76,9 @@ const AutoPlaySpec = (slug : string) => {
 		autoplaySpeed: 5000,
 		cssEase: "linear",
 	};
+	const [openLightbox, setOpenLightbox] = useState(false);
+	const [index, setIndex] = useState(0);
 
-	const handleClick = (src: string) => {
-		window.open(src);
-	};
 
 	const photoCarousel: PhotoDataProps[] = photo.filter((p) => p.slug === slug);
 
@@ -106,7 +106,7 @@ const AutoPlaySpec = (slug : string) => {
 				<ChevronLeft size={72} />
 			</button>
 			<Slider ref={sliderRef} {...settings}>
-				{photoCarousel.map((p) => (
+				{photoCarousel.map((p, i ) => (
 					<div key={p.id}>
 						<div key={p.id} className={styles.slideSpec}>
 							<Image
@@ -114,7 +114,10 @@ const AutoPlaySpec = (slug : string) => {
 								src={p.photo}
 								alt={p.service}
 								fill
-								onClick={() => handleClick(p.photo)}
+								onClick={() => {
+									setIndex(i)
+									setOpenLightbox(true)
+								}}
 							/>
 						</div>
 					</div>
@@ -124,6 +127,7 @@ const AutoPlaySpec = (slug : string) => {
 			<button className={styles.buttonSpec} type="button" onClick={nextSlide}>
 				<ChevronRight size={72} />
 			</button>
+			<LightboxUi open={openLightbox} onClose={()=>setOpenLightbox(false)} photo={photoCarousel} index={index} setIndex={setIndex} />
 		</div>
 	);
 };
@@ -140,9 +144,10 @@ const AutoPlayMed = (slug : string) => {
 		cssEase: "linear",
 	};
 
-	const handleClick = (src: string) => {
-		window.open(src);
-	};
+	const [openLightbox, setOpenLightbox] = useState(false);
+	const [index, setIndex] = useState(0);
+
+
 
 	const photoCarousel: PhotoDataProps[] = photo.filter((p) => p.slug === slug);
 
@@ -172,7 +177,7 @@ const AutoPlayMed = (slug : string) => {
 				</button>
 			)}
 			<Slider ref={sliderRef} {...settings}>
-				{photoCarousel.map((p) => (
+				{photoCarousel.map((p, i) => (
 					<div key={p.id}>
 						<div key={p.id} className={styles.slideSpec}>
 							<Image
@@ -180,7 +185,11 @@ const AutoPlayMed = (slug : string) => {
 								src={p.photo}
 								alt={p.service}
 								fill
-								onClick={() => handleClick(p.photo)}
+								onClick={() => {
+									setIndex(i)
+									setOpenLightbox(true)
+
+								}}
 							/>
 						</div>
 					</div>
@@ -191,6 +200,7 @@ const AutoPlayMed = (slug : string) => {
 					<ChevronRight size={72} />
 				</button>
 			)}
+			<LightboxUi open={openLightbox} onClose={()=>setOpenLightbox(false)} photo={photoCarousel} index={index} setIndex={setIndex} />
 		</div>
 	);
 };
