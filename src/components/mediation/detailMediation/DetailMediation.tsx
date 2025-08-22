@@ -12,6 +12,7 @@ import {
 	ScrollAnimation,
 	ScrollAnimation2,
 } from "@/components/ui/animation/ScrollAnimation";
+import {notFound} from "next/navigation";
 
 export default function DetailMediation({
 	mediation, slug,
@@ -24,7 +25,7 @@ export default function DetailMediation({
 	);
 
 	if (!data) {
-		return <p>Projet Introuvable</p>;
+		notFound();
 	}
 
 	const slider = AutoPlayMed(slug);

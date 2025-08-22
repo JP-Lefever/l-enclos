@@ -8,9 +8,12 @@ import type { ContactProps } from "@/types/definitions";
 import {addMessage, sendMail} from "@/features/contact/contact.action";
 import { toast } from "react-toastify";
 
-export default function AdminContact() {
+export default function ContactForm() {
+
 	const { register, handleSubmit, formState:{errors}, reset } = useForm<ContactProps>();
+
 	const onSubmit = async (data: ContactProps) => {
+
 		const response = await addMessage(data);
 
 		if (response?.success) {
