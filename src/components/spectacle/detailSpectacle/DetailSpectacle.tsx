@@ -21,7 +21,7 @@ import {ButtonsSpectaclePage} from "@/components/ui/buttons/Buttons";
 
 export default function DetailSpectacle({
 	cardData,
-											slug,
+	slug,
 	dates,
 	datesPassed,
 }: { cardData: SpectacleProps[]; slug: string, dates : ModifyDateProps[], datesPassed : ModifyDateProps[] }) {
