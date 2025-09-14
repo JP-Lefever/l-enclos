@@ -123,7 +123,7 @@
 	margin-right: 10vw;
 	height: fit-content;
 	line-height: var(--line-height);
-	font-size: 0.8em;
+
 
 	@media screen and (max-width: 1024px) {
 		height: fit-content;
@@ -134,12 +134,10 @@
 }
 .h2Pres {
 	font-family: var(--title-font), serif;
-	font-size: 5em;
+	font-size: 2em;
 	letter-spacing: var(--letter-spacing);
 	color: var(--third-color);
-	position: relative;
-	right: 8vw;
-	line-height: 1.5em;
+	line-height: var(--line-height);
 	z-index: 4;
 	@media screen and (max-width: 1024px) {
 		font-size: 1.5em;

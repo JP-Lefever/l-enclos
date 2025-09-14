@@ -37,7 +37,7 @@
 	position: relative;
 	right: var(--position);
 	color: var(--primary-color);
-	line-height: var(--line-height);
+	line-height: 1.6em;
 	letter-spacing: var(--letter-spacing);
 	width: 20vw;
 	@media screen and (max-width: 568px) {
@@ -55,6 +55,7 @@
 .paragraph {
 	margin: var(--margin-section);
 	line-height: var(--line-height);
+
 	@media screen and (min-width: 1367px) {
 		width: 30vw;
 	}
