@@ -23,6 +23,7 @@
 	line-height: var(--line-height);
 	padding-top: 10vh;
 	height: fit-content;
+	white-space: pre-line;
 
 	@media screen and (max-width: 568px) {
 		padding-top: 0;

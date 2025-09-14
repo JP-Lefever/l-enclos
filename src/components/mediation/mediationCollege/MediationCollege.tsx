@@ -25,7 +25,7 @@ export default function MediationCollege() {
 					<h1 className={styles.h1}>{mediation[1].name}</h1>
 
 						<article className={styles.paragraph}>
-							<Markdown>{mediation[1].pres}</Markdown>
+							<Markdown>{mediation[1].shortPres}</Markdown>
 						<TransitionLink className={styles.link} href={`/mediation/${slug}`}>
 							En savoir plus
 						</TransitionLink>

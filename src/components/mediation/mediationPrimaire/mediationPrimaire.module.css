@@ -13,7 +13,6 @@
 		flex-direction: column;
 		width: 100vw;
 		height: fit-content;
-		margin: var(--margin-between) auto;
 		background: linear-gradient(to right, var(--main-color) 0%, var(--secondary-color) 0%);
 		padding: var(--margin-section) 0;
 	}
@@ -38,17 +37,12 @@
 .h1 {
 	font-size: 4em;
 	font-family: var(--title-font), serif;
-
-	position: relative;
-	right: 1.5em;
 	color: var(--main-color);
 	line-height: var(--line-height);
 	letter-spacing: var(--letter-spacing);
 
 	@media screen and (max-width: 1024px) {
 		font-size: 2em;
-		position: relative;
-		right: 0;
 		text-align: center;
 	}
 }
@@ -56,9 +50,10 @@
 .paragraph {
 	width: 40vw;
 	line-height: var(--line-height);
+
 	@media screen and (max-width: 1024px) {
 		width: 90vw;
-		margin: 0;
+		margin: var(--margin-between) auto;
 	}
 	@media screen and (min-width: 1367px) {
 		width: 35vw;
@@ -78,9 +73,9 @@
 	text-align: center;
 	display: block;
 	margin: var(--margin-between) 0;
-	@media screen and (max-width: 568px) {
+	@media screen and (max-width: 1024px) {
 		width: 90vw;
-		margin: 0;
+		margin: var(--margin-between) 0;
 	}
 }
 

@@ -23,7 +23,7 @@ export default function MediationEphad() {
 				<ScrollAnimation className={styles.sec} >
 					<h1 className={styles.h1}>{mediation[2].name}</h1>
 					<article className={styles.paragraph}>
-					<Markdown>{mediation[2].pres}</Markdown>
+					<Markdown>{mediation[2].shortPres}</Markdown>
 						<TransitionLink className={styles.link} href={`/mediation/${slug}`}>
 							Voir les ateliers
 						</TransitionLink>

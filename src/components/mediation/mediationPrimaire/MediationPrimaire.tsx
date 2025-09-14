@@ -23,7 +23,7 @@ export default function MediationPrimaire() {
 				<ScrollAnimation2>
 					<h1 className={styles.h1}>{mediation[0].name}</h1>
 					<article className={styles.paragraph}>
-						<Markdown>{mediation[0].pres}</Markdown>
+						<Markdown>{mediation[0].shortPres}</Markdown>
 						<TransitionLink className={styles.link} href={`/mediation/${slug}`}>
 							En savoir plus
 						</TransitionLink>
