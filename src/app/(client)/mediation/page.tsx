@@ -20,21 +20,20 @@ export default function MediationPage() {
 			<section className={styles.section}>
 				<h1 className={styles.h1}>Mediations</h1>
 			</section>
+
 			<ButtonMediation />
 
-				<section id="primaire" >
-					<MediationPrimaire />
-				</section>
+			<section id="primaire" >
+				<MediationPrimaire />
+			</section>
 
+			<section id="college" >
+				<MediationCollege />
+			</section>
 
-				<section id="college" >
-					<MediationCollege />
-				</section>
-
-
-				<section id="ephad">
-					<MediationEphad />
-				</section>
+			<section id="ephad">
+				<MediationEphad />
+			</section>
 
 		</>
 	);

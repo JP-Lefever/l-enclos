@@ -52,12 +52,11 @@ Notre travail s'est axé principalement sur la recherche des notions même du **
 		video: "Mathilde Foriel-Destezet",
 		assistant: "Magali Zaphiropoulo, Anita Schulski",
 		theme: "L'adolescence",
-		resume: `**Stella et Adèle**, deux amies de 17 ans, passent une énième nuit, perchées sur le toit de leur immeuble.
-		Stella ne parle plus à son père suite à la mort de sa mère. Adèle attend depuis plusieurs jours des nouvelles de son amoureux qui s'est enfui de chez lui.  
-		
-**Obnubilées par leurs préoccupations personnelles, les deux filles traversent des nuits ensemble** à rêver d'une vie meilleure. Elles inventent des histoires sur la vie des gens qu'elles aperçoivent à travers les fenêtres et balcons encore éclairés des immeubles d'en face. Elles se moquent du désespoir des autres pour ne pas penser aux fragilités de leurs propres histoires.  
-		
-**Mais cette nuit sera différente.** Cette nuit marquera le point final de leur enfance et ne leur permettra plus d'échapper à leurs destinés.`,
+		resume: `**Stella et Adèle**, deux amies de 17 ans, passent une énième nuit, perchées sur le toit de leur immeuble. Stella ne parle plus à son père suite à la mort de sa mère. Adèle attend depuis plusieurs jours des nouvelles de son amoureux qui s’est enfui de chez lui. Obnubilées par leurs préoccupations personnelles, les deux filles traversent des nuits ensemble à rêver d’une vie meilleure. Elles inventent des histoires sur la vie des gens qu’elles aperçoivent à travers les fenêtres et balcons encore éclairés des immeubles d’en face. Elles se moquent du désespoir des autres pour ne pas penser aux fragilités de leurs propres histoires. Mais cette nuit sera différente. Cette nuit marquera le point final de leur enfance et ne leur permettra plus d'échapper à leurs destinées.`,
+		propos : `“J’ai 17 ans pour toujours” est avant tout une fiction qui raconte l’histoire de ces deux adolescentes dont le quotidien n’est pas toujours rose. Stella et Adèle montent chaque nuit sur ce toit pour fuir la triste réalité des adultes qui les entourent, pour traverser le monde à leurs manières avec leurs espoirs d’une vie où tout semble encore possible. Mais que se passe t-il quand on arrive à l’âge où l’on ne peut plus faire semblant, où la réalité vient percuter nos idéaux, où le doute s’installe sur l’accomplissement de nos rêves, que notre horizon semble se rétrécir à l’image des fenêtres qui s’éteignent les unes après les autres, plus la nuit avance…
+
+Par le texte de Jacque Descorde, nous avons voulu explorés cette adolescence là, livrée à elle même, immergée dans les immeubles, la pauvreté et le chômage. Nous avons souhaité mettre en lumière ces adolescents qui grandissent sans figure repère pour les accompagner, au sein de foyers familiaux complexe et qui malgré la brutalité de leur vie gardent une rage de vivre et une soif d’idéaux. A l’image de Stella et Adèle qui rêvent pour l’une de trouver son étoile qui la guidera et pour l’autre de partir très loin d’ici pour rejoindre son amoureux. Nous avons également été touchés par la poésie de l’écriture de ce texte, par la volonté de raconter l’amitié comme un moyen de s’en sortir.
+`,
 		jauge: "200 personnes",
 		plateau: "Ouverture 8 m / profondeur 6 m / hauteur 3,5 m sous projecteurs.",
 		regie: `Sol recouvert de tapis de danse noir. Salle noir total. Besoin d'une salle équipée en son et en lumière. 

@@ -76,7 +76,7 @@ export default function DetailMediation({
 					</ScrollAnimation2>
 			</section>
 			<article className={styles.organisation}>
-				<h2 className={styles.h2Orga}>Organisation</h2>
+				<h2 className={styles.h2Orga}>Déroulement</h2>
 				<h3 className={styles.h3Deroul}>{data.organisation}</h3>
 				<article className={styles.articleOrga}>
 					<ScrollAnimation>
@@ -89,14 +89,6 @@ export default function DetailMediation({
 						</span>
 					</ScrollAnimation>
 
-					<ScrollAnimation2 className={styles.divDistrib}>
-						<h3 className={styles.h3Orga}>
-							<Markdown>{data.second}</Markdown>
-						</h3>
-						<span className={styles.p}>
-							<Markdown>{data.presSecond}</Markdown>
-						</span>
-					</ScrollAnimation2>
 					{data.third && (
 						<ScrollAnimation className={styles.divDistrib}>
 							<h3 className={styles.h3Orga}>
@@ -106,6 +98,16 @@ export default function DetailMediation({
 								<Markdown>{data.presThird}</Markdown>
 							</span>
 						</ScrollAnimation>
+					)}
+					{data.second && (
+						<ScrollAnimation2 className={styles.divDistrib}>
+							<h3 className={styles.h3Orga}>
+								<Markdown>{data.second}</Markdown>
+							</h3>
+							<span className={styles.p}>
+								<Markdown>{data.presSecond}</Markdown>
+							</span>
+						</ScrollAnimation2>
 					)}
 					{data.fourth && (
 						<ScrollAnimation2 className={styles.divDistrib}>
@@ -119,7 +121,7 @@ export default function DetailMediation({
 							</>
 						</ScrollAnimation2>
 					)}
-
+					{data.final && (
 					<ScrollAnimation className={styles.divDistrib}>
 						<>
 							<h3 className={styles.h3Orga}>
@@ -130,6 +132,7 @@ export default function DetailMediation({
 							</span>
 						</>
 					</ScrollAnimation>
+					)}
 
 					{data.material && (
 						<ScrollAnimation2 className={styles.divDistrib}>
