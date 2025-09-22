@@ -1,11 +1,8 @@
-
 import styles from "./page.module.css";
 
-import {ButtonMediation}  from "@/components/ui/buttons/Buttons"
 import {Metadata} from "next";
-import MediationPrimaire from "@/components/mediation/mediationPrimaire/MediationPrimaire";
-import MediationCollege from "@/components/mediation/mediationCollege/MediationCollege";
-import MediationEphad from "@/components/mediation/mediationEphad/MediationEphad";
+import {mediation} from "@/assets/data/placeholder-data-mediation";
+import CardMediation from "@/components/mediation/cardMediation/CardMediation";
 
 export const metadata : Metadata = {
 	title : "Compagnie L'Enclos | Médiations culturelles",
@@ -18,22 +15,19 @@ export default function MediationPage() {
 	return (
 		<>
 			<section className={styles.section}>
-				<h1 className={styles.h1}>Mediations</h1>
+				<article className={styles.article}>
+					<h1 className={styles.h1}>Ateliers</h1>
+				</article>
+			</section>
+			<section className={styles.sectionCard}>
+					<h2 className={styles.h2}>{"Découvrez les ateliers de La Compagnie L'Enclos, adaptés à trois tranches d’âge différentes."}</h2>
+					<article className={styles.articleCard} >
+						{mediation.map(m => (
+								<CardMediation key={m.id} data={m}/>
+						))}
+					</article>
 			</section>
 
-			<ButtonMediation />
-
-			<section id="primaire" >
-				<MediationPrimaire />
-			</section>
-
-			<section id="college" >
-				<MediationCollege />
-			</section>
-
-			<section id="ephad">
-				<MediationEphad />
-			</section>
 
 		</>
 	);
