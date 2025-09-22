@@ -15,11 +15,15 @@ export default function SpectaclesPage() {
 	return (
 		<>
 			<section className={styles.section}>
-				<h1 className={styles.h1}>créations</h1>
+				<article className={styles.article}>
+					<h1 className={styles.h1}>créations</h1>
+				</article>
 			</section>
-
-			<section>
-				<CardsSpec />
+			<section className={styles.sectionCard}>
+				<h2 className={styles.h2}>{"Découvrez les créations de La Compagnie L'Enclos"}</h2>
+				<article className={styles.articleCard}>
+					<CardsSpec />
+				</article>
 			</section>
 		</>
 	);
