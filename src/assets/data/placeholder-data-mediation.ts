@@ -87,7 +87,7 @@ Nous avons souhaité proposer ce projet aux adolescents car c'est une période o
 		slug: "ephad",
 		name: "EPHAD",
 		title: `"Le crépitement du vinyle"`,
-		photoPres: "/images/mediation_ephad.jpg",
+		photoPres: "/images/ephad/carou3.jpg",
 		photoSeance: "/images/ephad1.jpg",
 		photoDate: "/images/ephad2.jpg",
 		type: "Parcours théâtral",

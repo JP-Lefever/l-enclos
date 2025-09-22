@@ -1,0 +1,31 @@
+.article {
+    width: 20vw;
+    text-decoration: none;
+    color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    transition: transform 0.3s ease-in-out;
+}
+
+.article:hover {
+    transform: scale(1.05);
+    color: var(--secondary-color);
+}
+
+.imageWrapper {
+    width: 20vw;
+    height: 40vh;
+    position: relative;
+}
+
+.image {
+    object-fit: cover;
+}
+
+.div {
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+    justify-content: flex-end;
+}
