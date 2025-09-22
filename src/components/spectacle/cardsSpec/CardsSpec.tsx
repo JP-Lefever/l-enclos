@@ -16,7 +16,7 @@ export default function CardsSpec() {
 
 	return (
 		<>
-			<main className={styles.main}>
+
 				<ScrollAnimation3>
 					<section className={styles.section}>
 						{cardData.map((c: cardDataProps) => (
@@ -28,7 +28,7 @@ export default function CardsSpec() {
 						))}
 					</section>
 				</ScrollAnimation3>
-			</main>
+
 		</>
 	);
 }
