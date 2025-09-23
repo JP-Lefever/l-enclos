@@ -24,23 +24,6 @@ const ButtonsAgenda = ({setIsOpenDate, setIsOpenInter} : {  setIsOpenDate : (s:b
     </section>
     </>
 }
-const ButtonMediation= ()=>  {
-    return (
-        <>
-            <section className={styles.mediationButton}>
-                <a className={styles.linkMediation} href="#primaire">
-                    Primaire
-                </a>
-                <a className={styles.linkMediation} href="#college" >
-                    College
-                </a>
-                <a className={styles.linkMediation} href="#ephad" >
-                    Ephad
-                </a>
-            </section>
-        </>
-    );
-}
 
 const ButtonsDates = ()=>{
     const pathname = usePathname();
@@ -77,19 +60,5 @@ const ButtonsDates = ()=>{
     </>)
 }
 
-const ButtonsSpectaclePage = ()=>{
-    const ancre = ["presentation", "distribution", "technique", "partenaires", "dates" ]
 
-    return (
-
-    <section className={styles.sectionButtonSpec}>
-        {ancre.map((a)=>(
-           <a href={`#${a}`} className={styles.linkSpec}  key={a} >{a}</a>
-        ))}
-
-    </section>
-        )
-}
-
-
-export  {ButtonsAgenda, ButtonMediation,  ButtonsDates, ButtonsSpectaclePage};
+export  {ButtonsAgenda, ButtonsDates };

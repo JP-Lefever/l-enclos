@@ -3,7 +3,6 @@ import styles from "./detailSpectacle.module.css";
 import type {
 	ModifyDateProps,
 	Partnair,
-
 	SpectacleProps,
 } from "@/types/definitions";
 import Image from "next/image";
@@ -17,7 +16,7 @@ import {
 } from "@/components/ui/animation/ScrollAnimation";
 import {formatedDate} from "@/lib/helpers/formatedDate";
 import {notFound} from "next/navigation";
-import {ButtonsSpectaclePage} from "@/components/ui/buttons/Buttons";
+
 
 export default function DetailSpectacle({
 	cardData,
@@ -50,43 +49,121 @@ export default function DetailSpectacle({
 	}
 	return (
 		<>
-
+			<section className={styles.sectionHead}>
 				<ScrollAnimation className={styles.articleInfo}>
-					<article className={styles.subArticle}>
-					<h2 className={styles.h2}>{data.status}</h2>
-					<h2 className={styles.h2Title}>{data.title}</h2>
-						<h3 className={styles.h3}>Thématique</h3>
-						<p className={styles.p}>{data.theme}</p>
-						<h3 className={styles.h3}>Age</h3>
-						<p className={styles.p}>{data.public}</p>
-						<h3 className={styles.h3}>Durée</h3>
-						<p className={styles.p}>{data.duration}</p>
-
-					</article>
-						<ScrollAnimation2 >
-							<figure className={styles.imageWrapper}>
+					<ScrollAnimation2 >
+						<figure className={styles.imageWrapper}>
 							<Image
 								className={styles.imagePres}
-								src={data.image_spec}
+								src={data.image_url}
 								alt={data.title}
 								fill={true}
 							/>
-							</figure>
-						</ScrollAnimation2>
+						</figure>
+					</ScrollAnimation2>
+						<div className={styles.divHead}>
+								<div>
+									<h2 className={styles.h2}>{data.status}</h2>
+									<h2 className={styles.h2Title}>{data.title}</h2>
+								</div>
+							<article className={styles.subArticle}>
+								<div>
+									<h3 className={styles.h3}>Thématique</h3>
+									<p className={styles.p}>{data.theme}</p>
+								</div>
+								<div>
+									<h3 className={styles.h3}>Age</h3>
+									<p className={styles.p}>{data.public}</p>
+								</div>
+								<div>
+									<h3 className={styles.h3}>Durée</h3>
+									<p className={styles.p}>{data.duration}</p>
+								</div>
+								<div>
+									<h3 className={styles.h3}>Jauge : </h3>
+									<p className={styles.pDist}>{data.jauge}</p>
+								</div>
+								<div>
+									<h3 className={styles.h3}>Plateau : </h3>
+									<p className={styles.pDist}>{data.plateau}</p>
+								</div>
+								<div>
+									<h3 className={styles.h3}>Régie : </h3>
+									<p className={styles.pDist}> {data.regie}</p>
+								</div>
+
+							</article>
+
+							<article  className={styles.articleDistrib}>
+								<article className={styles.divDistrib}>
+									<h3 className={styles.h3}>Ecriture</h3>
+									<p className={styles.pDist}>{data.writing}</p>
+								</article>
+								<article className={styles.divDistrib}>
+									<h3 className={styles.h3}>Mise en scène</h3>
+									<p className={styles.pDist}>{data.directedBy}</p>
+								</article>
+								{data.interpretation && (
+									<article className={styles.divDistrib}>
+										<h3 className={styles.h3}>Interpretation</h3>
+										<p className={styles.pDist}>{data.interpretation}</p>
+									</article>
+								)}
+								<article className={styles.divDistrib}>
+									<h3 className={styles.h3}>Composition musicales</h3>
+									<p className={styles.pDist}>{data.music}</p>
+								</article>
+								{data.illustration && (
+									<article className={styles.divDistrib}>
+										<>
+											<h3 className={styles.h3}>Illustration</h3>
+											<p className={styles.pDist}>{data.illustration}</p>
+										</>
+									</article>
+								)}
+								{data.sceno && (
+									<article className={styles.divDistrib}>
+										<>
+											<h3 className={styles.h3}>Conception scenographique</h3>
+											<p className={styles.pDist}>{data.sceno}</p>
+										</>
+									</article>
+								)}
+								{data.light && (
+									<article className={styles.divDistrib}>
+										<>
+											<h3 className={styles.h3}>Creation lumière</h3>
+											<p className={styles.pDist}>{data.light}</p>
+										</>
+									</article>
+								)}
+								{data.video && (
+									<article className={styles.divDistrib}>
+										<>
+											<h3 className={styles.h3}>Vidéaste</h3>
+											<p className={styles.pDist}>{data.video}</p>
+										</>
+									</article>
+								)}
+								{data.illustration && (
+									<article className={styles.divDistrib}>
+										<>
+											<h3 className={styles.h3}>
+												Mise en page de la plaquette et affiche
+											</h3>
+											<p className={styles.pDist}>{data.illustration}</p>
+										</>
+									</article>
+								)}
+								<article className={styles.divDistrib}>
+									<h3 className={styles.h3}>Oeil exterieur</h3>
+									<p className={styles.pDist}>{data.assistant}</p>
+								</article>
+							</article>
+						</div>
 				</ScrollAnimation>
-
-			<ButtonsSpectaclePage/>
-
+			</section>
 			<section className={styles.sectionPres}>
-				<ScrollAnimation id="presentation"  className={styles.imagePresSpec}>
-					<Image
-						className={styles.imageSpec}
-						src={data.image_url}
-						alt="Affiche spectacle"
-						width={1080}
-						height={860}
-					/>
-				</ScrollAnimation>
 					<ScrollAnimation2 className={styles.resume}>
 						<article className={styles.divResume}>
 						<h2 className={styles.h2Pres}>{"L'HISTOIRE"}</h2>
@@ -100,107 +177,31 @@ export default function DetailSpectacle({
 								</article>
 							</>
 						)}
+
 					</ScrollAnimation2>
 
 			</section>
-			<section>
-				<article className={styles.articleCarousel}>{carousel}</article>
-			</section>
-			<ScrollAnimation id="distribution"  className={styles.distribution}>
-				<h2 className={styles.h2Dist}>DISTRIBUTION</h2>
-				<article  className={styles.articleDistrib}>
-					<article className={styles.divDistrib}>
-						<h3 className={styles.h3Dist}>Ecriture</h3>
-						<p className={styles.pDist}>{data.writing}</p>
-					</article>
-					<article className={styles.divDistrib}>
-						<h3 className={styles.h3Dist}>Mise en scène</h3>
-						<p className={styles.pDist}>{data.directedBy}</p>
-					</article>
-					{data.interpretation && (
-						<article className={styles.divDistrib}>
-							<h3 className={styles.h3Dist}>Interpretation</h3>
-							<p className={styles.pDist}>{data.interpretation}</p>
-						</article>
-					)}
-					<article className={styles.divDistrib}>
-						<h3 className={styles.h3Dist}>Composition musicales</h3>
-						<p className={styles.pDist}>{data.music}</p>
-					</article>
-					{data.illustration && (
-						<article className={styles.divDistrib}>
-							<>
-								<h3 className={styles.h3Dist}>Illustration</h3>
-								<p className={styles.pDist}>{data.illustration}</p>
-							</>
-						</article>
-					)}
-					{data.sceno && (
-						<article className={styles.divDistrib}>
-							<>
-								<h3 className={styles.h3Dist}>Conception scenographique</h3>
-								<p className={styles.pDist}>{data.sceno}</p>
-							</>
-						</article>
-					)}
-					{data.light && (
-						<article className={styles.divDistrib}>
-							<>
-								<h3 className={styles.h3Dist}>Creation lumière</h3>
-								<p className={styles.pDist}>{data.light}</p>
-							</>
-						</article>
-					)}
-					{data.video && (
-						<article className={styles.divDistrib}>
-							<>
-								<h3 className={styles.h3Dist}>Vidéaste</h3>
-								<p className={styles.pDist}>{data.video}</p>
-							</>
-						</article>
-					)}
-					{data.illustration && (
-						<article className={styles.divDistrib}>
-							<>
-								<h3 className={styles.h3Dist}>
-									Mise en page de la plaquette et affiche
-								</h3>
-								<p className={styles.pDist}>{data.illustration}</p>
-							</>
-						</article>
-					)}
-					<article className={styles.divDistrib}>
-						<h3 className={styles.h3Dist}>Oeil exterieur</h3>
-						<p className={styles.pDist}>{data.assistant}</p>
-					</article>
-				</article>
-			</ScrollAnimation>
 			<section id="technique" className={styles.divTech}>
-				<ScrollAnimation className={styles.sectionTech}>
-					<h2 className={styles.h2Tech}>Technique</h2>
-					<article className={styles.articleTech}>
-						<h3 className={styles.h3Dist}>Jauge : </h3>
-						<p className={styles.pDist}>{data.jauge}</p>
-						<h3 className={styles.h3Dist}>Plateau : </h3>
-						<p className={styles.pDist}>{data.plateau}</p>
-						<h3 className={styles.h3Dist}>Régie : </h3>
-						<p className={styles.pDist}> {data.regie}</p>
-					</article>
-				</ScrollAnimation>
-				<ScrollAnimation2 id="partenaires" className={styles.sectionPartnair}>
-					<h2 className={styles.h2Partnair}>Les partenaires</h2>
-					<article  className={styles.articlePartnair}>
+				<ScrollAnimation2 id="partenaires" className={styles.sectionPartner}>
+					<h2 className={styles.h2Pres}>Les partenaires</h2>
+					<article  className={styles.articlePartner}>
 						{partnairSpec.map((s) => (
-							<p className={styles.pPartnair} key={s.id}>
+							<div key={s.id} className={styles.list}>
 								<ChevronRight />
-								{s.name}
-							</p>
+								<p className={styles.pPartnair} >
+									{s.name}
+								</p>
+							</div>
 						))}
 					</article>
 				</ScrollAnimation2>
 			</section>
+			<section>
+				<article className={styles.articleCarousel}>{carousel}</article>
+			</section>
+
 			<ScrollAnimation id="dates"  className={styles.sectionDate}>
-				<h2 className={styles.h2Date}>Les Dates</h2>
+				<h2 className={styles.h2Date}>Dates</h2>
 				<section className={styles.articles}>
 					<ScrollAnimation className={styles.articleDate}>
 						<h3 className={styles.h3Date}>A venir</h3>

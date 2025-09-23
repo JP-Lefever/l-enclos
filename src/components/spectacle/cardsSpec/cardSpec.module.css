@@ -1,14 +1,4 @@
-.main {
-	background-color: var(--third-color);
-	margin: var(--margin-between) 0 ;
-	height: 100vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	@media screen and (max-width: 568px) {
-		height: fit-content;
-	}
-}
+
 
 .section {
 	display: flex;
