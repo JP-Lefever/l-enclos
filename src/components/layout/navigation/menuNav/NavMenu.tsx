@@ -18,7 +18,7 @@ export default function NavMenu({
 						Compagnie
 					</TransitionLink></li>
 						<li><TransitionLink className={styles.link} href="/spectacles" onClick={closeMenu}>
-						Spectacle
+						Spectacles
 					</TransitionLink></li>
 							<li><TransitionLink className={styles.link} href="/mediation" onClick={closeMenu}>
 						Mediations
