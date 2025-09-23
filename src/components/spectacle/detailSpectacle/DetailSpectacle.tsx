@@ -16,7 +16,7 @@ import {
 } from "@/components/ui/animation/ScrollAnimation";
 import {formatedDate} from "@/lib/helpers/formatedDate";
 import {notFound} from "next/navigation";
-import {ButtonsSpectaclePage} from "@/components/ui/buttons/Buttons";
+
 
 export default function DetailSpectacle({
 	cardData,
@@ -163,8 +163,6 @@ export default function DetailSpectacle({
 						</div>
 				</ScrollAnimation>
 			</section>
-			{/*<ButtonsSpectaclePage/>*/}
-
 			<section className={styles.sectionPres}>
 					<ScrollAnimation2 className={styles.resume}>
 						<article className={styles.divResume}>
