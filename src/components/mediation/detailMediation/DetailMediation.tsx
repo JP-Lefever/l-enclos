@@ -31,18 +31,9 @@ export default function DetailMediation({
 	const slider = AutoPlayMed(slug);
 
 	return (
-		<>
-
+		<section className={styles.section}>
+			<section className={styles.sectionHead}>
 				<ScrollAnimation className={styles.articleInfo}>
-					<article className={styles.article}>
-					<h2 className={styles.h2}>{data.name}</h2>
-					<h2 className={styles.h3title}>{data.title}</h2>
-					<h3 className={styles.h3}>{data.type}</h3>
-					<h3 className={styles.h3}>Public : {data.public}</h3>
-					<h3 className={styles.h3}>Durée : {data.duration}</h3>
-					<h3 className={styles.h3}>Theme : {data.theme}</h3>
-
-					</article>
 						<ScrollAnimation2 >
 							<figure className={styles.imageWrapper}>
 							<Image
@@ -53,33 +44,67 @@ export default function DetailMediation({
 							/>
 							</figure>
 						</ScrollAnimation2>
+						<article className={styles.divHead}>
+							<div>
+								<h2 className={styles.h2}>{data.type} : {data.name} </h2>
+								<h2 className={styles.h2Title}>{data.title}</h2>
+							</div>
+							<article className={styles.subArticle}>
+								<div>
+									<h3 className={styles.h3}>{"Public"}</h3>
+									<p>{data.public}</p>
+								</div>
+								<div>
+									<h3 className={styles.h3}>{"Durée"}</h3>
+									<p>{data.duration}</p>
+								</div>
+								<div>
+									<h3 className={styles.h3}>{"Theme"}</h3>
+									<p>{data.theme}</p>
+								</div>
+							</article>
+							<ScrollAnimation2 className={styles.sectionInter}>
+								<h2 className={styles.h2Inter}>Interventions</h2>
+								<article className={styles.articleInter}>
+									{dataInter.map((i) => (
+										<article  key={i.id}>
+											<h3 className={styles.h3}>{i.date}</h3>
+											<p className={styles.pInter}>{i.info}</p>
+										</article>
+									))}
+								</article>
+								<ScrollAnimation className={styles.sectionInter}>
+									<h2 className={styles.h2Inter}>Remerciement</h2>
+									<article className={styles.articleThanks}>
+										<p className={styles.pThanks}> {data.thanks}</p>
+									</article>
+								</ScrollAnimation>
+							</ScrollAnimation2>
+						</article>
 				</ScrollAnimation>
-
+			</section>
 			<section className={styles.sectionPres}>
-				<ScrollAnimation>
-					<figure className={styles.imagePresWrapper}>
-					<Image
-						className={styles.imageSpec}
-						src={data.photoDate}
-						alt="Affiche spectacle"
-						fill={true}
-					/>
-					</figure>
-				</ScrollAnimation>
-					<ScrollAnimation2>
-				<article className={styles.resume}>
-						<h2 className={styles.h2Pres}>{"LE PROPOS"}</h2>
+					<ScrollAnimation2 className={styles.resume}>
 						<article className={styles.divResume}>
+							<h2 className={styles.h2Pres}>{"LE PROPOS"}</h2>
 							<Markdown>{data.pres}</Markdown>
 						</article>
-				</article>
+						{data.extract && (
+							<article className={styles.divResume}>
+								<h2 className={styles.h2Pres}>{data.extract}</h2>
+								<h3 className={styles.h3Extract}>{data.extractName}</h3>
+								<Markdown>{data.textExtract}</Markdown>
+							</article>
+
+
+						)}
 					</ScrollAnimation2>
 			</section>
-			<article className={styles.organisation}>
-				<h2 className={styles.h2Orga}>Déroulement</h2>
-				<h3 className={styles.h3Deroul}>{data.organisation}</h3>
+			<section className={styles.organisation}>
+				<h2 className={styles.h2Pres}>Déroulement</h2>
+
 				<article className={styles.articleOrga}>
-					<ScrollAnimation>
+					<ScrollAnimation className={styles.divDistrib}>
 						<h3 className={styles.h3Orga}>
 							<Markdown>{data.first}</Markdown>
 						</h3>
@@ -147,51 +172,12 @@ export default function DetailMediation({
 						</ScrollAnimation2>
 					)}
 				</article>
-			</article>
-			{data.extract && (
-				<section className={styles.sectionExtract}>
-					<ScrollAnimation>
-						<Image
-							className={styles.imageExtract}
-							src={data.photoSeance}
-							alt="photo d'enfants jouant des personnages "
-							width={1080}
-							height={860}
-						/>
-					</ScrollAnimation>
-					<ScrollAnimation2 className={styles.extract}>
-						<h2 className={styles.h2Extract}>{data.extract}</h2>
-						<article className={styles.divExtract}>
-							<Markdown>{data.textExtract}</Markdown>
-						</article>
-					</ScrollAnimation2>
-				</section>
-			)}
+			</section>
+
 
 			<section className={styles.carousel}>{slider}</section>
 
-			<section className={styles.divThanks}>
-				<ScrollAnimation className={styles.sectionThanks}>
-					<h2 className={styles.h2Thanks}>Remerciement</h2>
-					<article className={styles.articleThanks}>
-						<p className={styles.pThanks}> {data.thanks}</p>
-					</article>
-				</ScrollAnimation>
-				<ScrollAnimation2 className={styles.sectionInter}>
-					<h2 className={styles.h2Inter}>Interventions</h2>
-					<article>
-						{dataInter.map((i) => (
-							<article className={styles.articleInter} key={i.id}>
-								<h3>{i.date}</h3>
-								<p className={styles.pInter}>
-									<ChevronRight />
-									{i.info}
-								</p>
-							</article>
-						))}
-					</article>
-				</ScrollAnimation2>
-			</section>
-		</>
+
+		</section>
 	);
 }
