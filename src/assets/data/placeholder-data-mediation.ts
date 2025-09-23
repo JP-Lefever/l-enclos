@@ -3,7 +3,7 @@ const mediation = [
 		id: 1,
 		slug : "primaire",
 		name: "Primaire",
-		title: `"Chevalier comme un garçon, princesse comme une fille ?"`,
+		title: "Chevalier comme un garçon, princesse comme une fille ?",
 		photoPres: "/images/primaire2.png",
 		photoSeance: "/images/primaire1.jpg",
 		photoDate: "/images/mediation.webp",
@@ -26,7 +26,8 @@ const mediation = [
 		fourth: "**Temps 4 :** La représentation",
 		presFourth: `Le travail de répétition se terminera avec une représentation au sein de la structure d'acceuil (école, centre sociaux, ALSH...)`,
 		material: ["- Costumes", "- Paravents scéniques", "- Enceinte"],
-		extract: `Extrait du conte « La Princesse au petit pois » d'Hans Christian Andersen`,
+		extract: "Extrait du conte ",
+		extractName : "La Princesse au petit pois » d'Hans Christian Andersen",
 		textExtract: `« Il était une fois un prince qui voulait épouser une princesse, mais une vraie princesse.
 
 Il fit le tour de la Terre pour en trouver une mais il y avait toujours quelque chose qui clochait ; des princesses, il n'en manquait pas, mais étaient elles de vraies princesses ?
@@ -39,8 +40,7 @@ C'était difficile à apprécier ; toujours une chose ou l'autre ne lui semblait
 		id: 2,
 		slug : "college",
 		name: "College",
-		title: `"Du texte à la scène ! Autour de Stroboscopie de Sébastien Joanniez" 
-`,
+		title: "Du texte à la scène ! Autour de Stroboscopie de Sébastien Joanniez",
 		photoPres: "/images/college2.png",
 		photoSeance: "/images/college1.webp",
 		photoDate: "/images/mediation_college.jpg",
@@ -64,7 +64,8 @@ Nous avons souhaité proposer ce projet aux adolescents car c'est une période o
 		presThird: `Pour finir, nous ferons un travail de mise en scène des extraits choisis en portant une attention à la distribution, à la mise en espace, à la scénographie, à la partition sonore.`,
 		final: "**Séance finale :** La représentation",
 		presFinal: `Le travail de répétition se terminera avec une représentation au sein de la structure d'acceuil (école, centre sociaux, ALSH...)`,
-		extract: `Extrait de la pièce : "Stroboscopie"`,
+		extract: "Extrait de la pièce ",
+		extractName: "Stroboscopie",
 		textExtract: `Chœur filles : Tu me trouves grosse ?
 
 		
@@ -86,7 +87,7 @@ Nous avons souhaité proposer ce projet aux adolescents car c'est une période o
 		id: 3,
 		slug: "ephad",
 		name: "EPHAD",
-		title: `"Le crépitement du vinyle"`,
+		title: "Le crépitement du vinyle",
 		photoPres: "/images/ephad/carou3.jpg",
 		photoSeance: "/images/ephad1.jpg",
 		photoDate: "/images/ephad2.jpg",

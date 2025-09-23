@@ -92,6 +92,7 @@ export type MediationProps = {
 	presFinal?: string;
 	material?: string[];
 	extract?: string;
+	extractName?: string;
 	textExtract?: string;
 	thanks: string;
 	credit?: string;

@@ -168,6 +168,7 @@ const AutoPlayMed = (slug : string) => {
 	return (
 		<div className={styles.containerSpec}>
 			{photoCarousel.length > 0 && (
+				<>
 				<button
 					className={styles.buttonSpec}
 					type="button"
@@ -175,7 +176,7 @@ const AutoPlayMed = (slug : string) => {
 				>
 					<ChevronLeft size={72} />
 				</button>
-			)}
+
 			<Slider ref={sliderRef} {...settings}>
 				{photoCarousel.map((p, i) => (
 					<div key={p.id}>
@@ -195,10 +196,11 @@ const AutoPlayMed = (slug : string) => {
 					</div>
 				))}
 			</Slider>
-			{photoCarousel.length > 0 && (
+
 				<button className={styles.buttonSpec} type="button" onClick={nextSlide}>
 					<ChevronRight size={72} />
 				</button>
+				</>
 			)}
 			<LightboxUi open={openLightbox} onClose={()=>setOpenLightbox(false)} photo={photoCarousel} index={index} setIndex={setIndex} />
 		</div>
