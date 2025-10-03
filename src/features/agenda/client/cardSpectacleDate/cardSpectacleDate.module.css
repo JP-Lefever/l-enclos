@@ -19,7 +19,7 @@
     padding-bottom : 0.5em;
 }
 .h3{
-    color: var(--main-color);
+    color: var(--secondary-color);
     border-bottom : 2px solid black;
     padding-bottom : 0.5em;
 
