@@ -14,7 +14,7 @@
 	font-family: var(--title-font), sans-serif;
 	font-size: var(--size-title);
 	letter-spacing: var(--letter-spacing);
-	color: var(--primary-color);
+	color: var(--secondary-color);
 	@media screen and (max-width: 1024px) {
 		font-size: 3em;
 	}

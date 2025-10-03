@@ -36,7 +36,7 @@
 	font-family: var(--title-font), serif;
 	position: relative;
 	right: var(--position);
-	color: var(--primary-color);
+	color: var(--third-color);
 	line-height: 1.6em;
 	letter-spacing: var(--letter-spacing);
 	width: 20vw;
