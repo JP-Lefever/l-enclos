@@ -42,7 +42,7 @@
 	font-size: var(--size-title);
 	font-family: var(--title-font), serif;
 	letter-spacing: var(--letter-spacing);
-	color: var(--primary-color);
+	color: var(--secondary-color);
 	text-transform: uppercase;
 	line-height: var(--line-height);
 	width: 45vw;
