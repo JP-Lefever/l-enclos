@@ -2,7 +2,6 @@
 import styles from "./presCompagnie.module.css";
 import {generalesInformations} from "@/assets/data/placeholder-data-homePage";
 import {
-	ScrollAnimation,
 	ScrollAnimation2,
 } from "@/components/ui/animation/ScrollAnimation";
 

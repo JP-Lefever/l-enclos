@@ -1,9 +1,7 @@
 
 import styles from "./presSpectacles.module.css";
-import Image from "next/image";
 import {generalesInformations} from "@/assets/data/placeholder-data-homePage";
 import {
-	ScrollAnimation,
 	ScrollAnimation2,
 } from "@/components/ui/animation/ScrollAnimation";
 import TransitionLink from "@/components/ui/transitionLink/TransitionLink";

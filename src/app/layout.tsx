@@ -1,4 +1,4 @@
-import { paragraphFont } from "@/components/ui/font";
+import { paragraphFont, titleFont } from "@/components/ui/font";
 import styles from "./layout.module.css";
 import "./globals.css";
 import React from "react";
@@ -18,7 +18,7 @@ export default function rootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="fr" className={`${paragraphFont.variable}`}>
+        <html lang="fr" className={`${paragraphFont.variable}  ${titleFont.variable}`}>
         <body className={`${paragraphFont.className} ${styles.body}`}>
         <div id={"page-transition"}/>
         <ToastContainer
