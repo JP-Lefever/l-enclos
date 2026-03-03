@@ -134,6 +134,7 @@ export type UsersProps = {
 export type homePageProps = {
 	id: number,
 	title : string,
+	subtitle?: string,
 	image : string,
 	paragraph : string,
 	button : string,

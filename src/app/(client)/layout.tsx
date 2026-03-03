@@ -1,7 +1,6 @@
 
 
 import "../globals.css";
-
 import NavBar from "@/components/layout/navigation/navBar/NavBar";
 import Footer from "@/components/layout/footer/Footer";
 import React from "react";

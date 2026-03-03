@@ -1,67 +1,40 @@
 .section {
 	display: flex;
-	width: 90vw;
-	overflow-x: hidden;
-	margin: auto auto var(--margin-between);
-	@media screen and (max-width: 568px) {
-		display: flex;
-		flex-direction: column;
-		width: 100vw;
-		margin: auto;
-		align-items: center;
-	}
-	@media screen and (min-width: 1367px) {
-		width: 100vw;
-		align-items: center;
-		justify-content: center;
-	}
-	@media screen and (min-width: 768px) and (max-width: 1024px) {
-		width: 90vw;
-	}
+	width: 100vw;
+	align-items: center;
+	justify-content: center;
+	margin: 5vh 0;
+	font-family: var(--font-title), sans-serif;
+
 }
 
-.image {
-	width: 40vw;
-	height: auto;
-	@media screen and (max-width: 568px) {
-		width: 90vw;
-	}
-	@media screen and (min-width: 1367px) {
-		width: 30vw;
-	}
-}
+
 
 .h1 {
-	font-size: var(--size-title);
-	font-family: var(--title-font), serif;
-	position: relative;
-	right: var(--position);
-	color: var(--third-color);
+	font-size: 1.5em;
+	font-weight: 600;
+	color: grey;
 	line-height: 1.6em;
 	letter-spacing: var(--letter-spacing);
-	width: 20vw;
-	@media screen and (max-width: 568px) {
-		font-size: var(--size-title-responsive);
-		position: initial;
-		text-align: center;
-		width: 90vw;
-		margin: auto;
-	}
-	@media screen and (min-width: 768px) and (max-width: 1024px) {
-		font-size: var(--size-title-responsive);
-	}
+	text-align: center;
+
 }
 
-.paragraph {
-	margin: var(--margin-section);
-	line-height: var(--line-height);
+.h2 {
+	font-size: 3em;
+	width: 40vw;
+	text-align: center;
+	font-weight: bold;
+	margin : 3vh 0
+}
 
-	@media screen and (min-width: 1367px) {
-		width: 30vw;
-	}
-	@media screen and (min-width: 768px) and (max-width: 1024px) {
-		width: 45vw;
-	}
+
+.paragraph {
+	line-height: var(--line-height);
+	text-align: center;
+	color: grey;
+	width: 40vw;
+
 }
 
 .link {
@@ -75,10 +48,5 @@
 	text-align: center;
 	text-transform: uppercase;
 	margin: var(--margin-section);
-	@media screen and (max-width: 568px) {
-		width: 90vw;
-	}
-	@media screen and (min-width: 768px) and (max-width: 1024px) {
-		width: 45vw;
-	}
+
 }
