@@ -3,8 +3,9 @@
 	width: 100vw;
 	align-items: center;
 	justify-content: center;
-	margin: 5vh 0;
+	margin: 5vh auto;
 	font-family: var(--font-title), sans-serif;
+
 
 }
 
@@ -17,7 +18,9 @@
 	line-height: 1.6em;
 	letter-spacing: var(--letter-spacing);
 	text-align: center;
-
+	@media screen and (max-width: 568px) {
+		font-size: 1em;
+	}
 }
 
 .h2 {
@@ -25,7 +28,17 @@
 	width: 40vw;
 	text-align: center;
 	font-weight: bold;
-	margin : 3vh 0
+	margin : 3vh 0;
+	@media screen and (max-width: 568px) {
+		width: 100vw;
+		font-size: 2.5em;
+	}
+	@media screen and (min-width: 568px) and (max-width: 1024px) {
+		width: 80vw;
+	}
+	@media screen and (min-width: 1024px) and (max-width: 1280px) {
+		width: 60vw;
+	}
 }
 
 
@@ -34,7 +47,15 @@
 	text-align: center;
 	color: grey;
 	width: 40vw;
-
+	@media screen and (max-width: 568px) {
+		width: 100vw;
+	}
+	@media screen and (min-width: 568px) and (max-width: 1024px) {
+		width: 80vw;
+	}
+	@media screen and (min-width: 1024px) and (max-width: 1280px) {
+		width: 60vw;
+	}
 }
 
 .link {
