@@ -2,34 +2,32 @@
 
 
 import PresMediation from "@/components/mediation/presMediation/PresMediation";
-
 import { AutoPlay } from "@/components/ui/slider/Autoplay";
 import PresCompagnie from "@/components/compagnie/presCompagnie/PresCompagnie";
 import PresSpectacles from "@/components/spectacle/presSpectacles/PresSpectacles";
 import CompanyArticle from "@/components/compagnie/companyArticle/CompanyArticle";
-
+import styles from "./page.module.css"
 
 export default function Home() {
 
 
 	return (
-		<>
-			<section>
+		<section className={styles.section}>
+			<article>
 				<AutoPlay />
-			</section>
-			<section>
+			</article>
+			<article>
 				<PresCompagnie />
-			</section>
-			<section>
+			</article>
+			<article>
 				<CompanyArticle/>
-			</section>
-			<section>
+			</article>
+			<article>
 				<PresSpectacles />
-			</section>
-
-			<section>
+			</article>
+			<article>
 				<PresMediation />
-			</section>
-		</>
+			</article>
+		</section>
 	);
 }
