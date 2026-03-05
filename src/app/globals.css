@@ -8,15 +8,9 @@ body {
 	position: relative;
 	transition: transform 0.6s ease-in-out;
 	transform-origin: top;
-	background-image: linear-gradient(to right,  rgba(0, 0, 0, 0.04) 1px, transparent 1px);
-	background-size: 60px 100%;
-	background-color: #efeeee !important;
-
 
 }
-.font-paragraph{
-	font-family: "Quicksand", sans-serif !important;
-}
+
 
 #page-transition {
 	position: fixed;
@@ -48,8 +42,10 @@ h2 {
 }
 :root {
 	--font-title: var(--font-title);
-	--primary-color: #F6F6F6;
-	--secondary-color: #7097ec;
+	--other-font : var(--other-font);
+	--primary-color: #E68E7C;
+	--secondary-color: #273371;
+	--secondary-color-light: rgba(39, 51, 113, 0.1);
 	--third-color: #000100;
 	--main-color: #ffffff;
 	--title-font: "edo";

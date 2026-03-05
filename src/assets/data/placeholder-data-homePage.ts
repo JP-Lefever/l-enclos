@@ -13,7 +13,7 @@ const generalesInformations : homePageProps[]  = [
     },
     {
         id: 2,
-        title : "Les créations de la compagnie L'Enclos",
+        title : "Les créations ",
         image : "/images/17ans/17ans5.jpg",
         paragraph : `Depuis 2019, la Compagnie L'Enclos a crée deux spectacles : « Te souviens tu du jour où j'ai coupé mes cheveux ? » sur la thématique de l'égalité garçon fille en direction des primaires et « J'ai 17 ans pour toujours » de Jacques Descorde sur l'adolecence en manque de repère. Un troisième spectacle est en cours de création nommé « Homo Sapiens 5.0 » traitant de l'impact de la technologie sur nos sociétés modernes et son devenir.`,
         button : "voir les créations"
@@ -22,7 +22,7 @@ const generalesInformations : homePageProps[]  = [
     },
     {
         id: 3,
-        title : "Les immersion",
+        title : "Les immersions",
         image : "/images/ephad/carou6.jpg",
         paragraph : `Les immersions sont des projets de création en direction de publics spécifiques (primaires, collège, EHPAD, centre social...) dans un but soit de questionner sur des thématiques en lien avec les spectacles de la compagnie, soit de proposer une expérience artistique à des publics éloignés de l'offre culturelle. Ces immersions nous permettent de créer autrement, en mettant les publics au cœur du processus de création, d'utiliser l'art comme un outil d'épanouissement.`,
         button : "voir les immersions"

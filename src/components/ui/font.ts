@@ -1,4 +1,4 @@
-import { Quicksand, Montserrat } from "next/font/google";
+import { Quicksand, Montserrat, Red_Hat_Display    } from "next/font/google";
 
 export const paragraphFont = Quicksand({
 	weight: "400",
@@ -12,4 +12,11 @@ export const titleFont = Montserrat({
 	subsets: ["latin"],
 
 	variable: "--font-title",
+});
+
+export const otherFont = Red_Hat_Display({
+	weight: ["400", "500","600","800"],
+	subsets: ["latin"],
+
+	variable: "--other-font",
 });

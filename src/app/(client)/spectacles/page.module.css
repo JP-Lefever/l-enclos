@@ -1,53 +1,99 @@
-.section {
-	background-color: var(--third-color);
+.page {
+	background-color: var(--secondary-color-light);
 }
 
-.article {
-	background-image: url("/images/affiche.png");
-	width: 60vw;
-	min-height: 40vh;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
-	margin: auto;
-	border-bottom-right-radius: 10px;
-	border-bottom-left-radius: 10px;
-	position: relative;
-	@media screen and (max-width: 569px) {
-		background-image: url("/images/spectacle_enclos.jpg");
-		background-size: cover;
-		background-position: center;
-		background-repeat: no-repeat;
-		min-height: 40vh;
-		width: 100vw;
+.section {
+	display: flex;
+	align-items: center;
+	min-height: 55vh;
+	@media screen and (max-width: 1024px) {
+		display: flex;
+		flex-direction: column;
+
 	}
+	@media screen and (min-width: 1024px) and (max-width: 1280px) {
+		gap: 4em;
+
+	}
+
 }
+
 
 .h1 {
-	font-family: var(--title-font), serif;
-	font-size: var(--size-title);
-	letter-spacing: var(--letter-spacing);
-	color: var(--main-color);
-	text-align: center;
-	width: 40vw;
-	margin: auto;
-	position: absolute;
-	bottom: -5vh;
-	left: 50%;
-	transform : translateX(-50%);
-	background-color: var(--third-color);
-	border-radius: var(--border-radius);
+	width: 15vw;
+	font-family: var(--title-font), sans-serif !important;
+	font-size: 3em;
+	font-weight: lighter;
+	margin-left: 1em;
+	display: grid;
+	place-items: center start;
+	min-height: 25vh;
+	position: relative;
+	padding-bottom: 1rem;
 	@media screen and (max-width: 568px) {
+		width: 100%;
+		place-items: center center;
+		text-align: center;
+		margin-left: 0;
+		font-size: 2em;
+		min-height: 15vh;
+	}
+	@media screen and (min-width: 568px) and (max-width: 1024px) {
+		width: 100%;
+		place-items: center center;
+		margin-left: 0;
 		font-size: 3em;
-		position: relative;
-		top: 25vh;
+		min-height: 15vh;
 	}
 }
 
+.h1::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 5vw;
+	width: 2vw;
+	height: 3px;
+	background: var(--third-color);
+	@media screen and (max-width: 1024px) {
+		position: absolute;
+		bottom: 0;
+		transform: translateX(-50%);
+		left: 50%;
+		width: 10vw;
+	}
+}
+
+.h2 {
+ 	width: 80vw;
+	font-family: var(--other-font), sans-serif !important;
+	font-size: 5em;
+	font-weight: 600;
+	text-align: center;
+	border-bottom: 3px solid var(--third-color);
+	min-height: 25vh;
+	display: grid;
+	place-items: center center;
+	text-transform: uppercase;
+	@media screen and (max-width: 568px) {
+		width: 90vw;
+		place-items: center left;
+		font-size: 3em;
+		margin: 15vh auto;
+	}
+	@media screen and (min-width: 568px) and (max-width: 1024px) {
+		width: 90vw;
+		min-height: 15vh;
+		margin-top: 5vh;
+	}
+	@media screen and (min-width: 1024px) and (max-width: 1280px) {
+		width: 75vw;
+
+	}
+}
 
 .sectionCard {
 	min-height: 100vh;
-	background-color: var(--third-color);
 	display: flex;
 	flex-direction: column;
 
@@ -58,15 +104,11 @@
 	width: 80vw;
 	margin: 0 auto;
 	justify-content: center;
+	@media screen and (max-width: 568px) {
+		width: 100%;
 
-
+	}
 }
 
-.h2 {
-	color: var(--main-color);
-	width: 70vw;
-	margin: 15vh auto 5vh auto;
-	text-align: center;
 
-}
 

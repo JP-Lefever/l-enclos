@@ -7,11 +7,14 @@
 	@media screen and (max-width: 568px) {
 		display: flex;
 		flex-direction: column;
-	}
-	@media screen and (min-width: 768px) and (max-width: 1024px) {
-		gap: 4em;
 
 	}
+	@media screen and (min-width: 568px) and (max-width: 1024px) {
+		gap: 4em;
+		display: flex;
+		flex-direction: column;
+	}
+
 }
 
 .article {
@@ -23,23 +26,67 @@
 	text-decoration: none;
 	margin: var(--margin-section);
 	transition: transform 0.3s ease-in-out;
-	color: var(--main-color);
+	color: var(--third-color);
+	font-family: var(--font-title),sans-serif;
 	@media screen and (max-width: 568px) {
 		height: fit-content;
 	}
 
 }
-.article:hover {
-	transform: scale(1.05);
-	color: var(--secondary-color);
+
+
+.imageWrapper {
+	position: relative;
+	width: 23vw;
+	min-height: 65vh;
+	overflow: hidden;
+	@media screen and (max-width: 568px) {
+		width: 90vw;
+	}
+	@media screen and (min-width: 568px) and (max-width: 1024px) {
+		width: 70vw;
+		min-height: 70vh;
+	}
+	@media screen and (min-width: 1024px) and (max-width: 1280px) {
+		width: 30vw;
+		min-height: 65vh;
+	}
 }
 
-.p {
+.image {
+	object-fit: cover;
+	transition: transform 0.7s ease;
+}
+
+.image:hover {
+	transform: scale(1.03);
+}
+
+.h2 {
 	text-transform: uppercase;
+	width: 25vw;
 	text-align: center;
+	font-weight: 800;
+	margin : 1em 0 0.5em 0;
 	@media screen and (max-width: 568px) {
 		width: 90vw;
 
+	}
+	@media screen and (min-width: 568px) and (max-width: 1024px) {
+		width: 70vw;
+
+	}
+	@media screen and (min-width: 1024px) and (max-width: 1280px) {
+		width: 30vw;
+
+	}
+}
+
+.p {
+	text-align: center;
+	@media screen and (max-width: 568px) {
+		width: 90vw;
+		margin-bottom: 4em;
 	}
 	@media screen and (min-width: 768px) and (max-width: 1024px) {
 		margin-bottom: 0;
@@ -47,45 +94,5 @@
 	}
 }
 
-.h2 {
-	text-transform: uppercase;
-	width: 25vw;
-	text-align: center;
-	@media screen and (max-width: 568px) {
-		width: 90vw;
-		margin-bottom: var(--margin-section);
-		font-size: 1.2em;
-	}
-	@media screen and (min-width: 768px) and (max-width: 1024px) {
-		margin-top: 0;
-		width: 35vw;
-	}
-	@media screen and (min-width: 1367px) {
-		width: 20vw;
-		margin: var(--margin-section) auto;
-	}
-}
-
-
-
-
-.imageWrapper {
-	position: relative;
-	width: 30vw;
-	height: 55vh;
-	margin: var(--margin-section);
-
-	@media screen and (max-width: 568px) {
-		width: 90vw;
-	}
-	@media screen and (min-width: 768px) and (max-width: 1024px) {
-		width: 40vw;
-		height: 40vh;
-	}
-}
-
-.image {
-	object-fit: contain;
-}
 
 
