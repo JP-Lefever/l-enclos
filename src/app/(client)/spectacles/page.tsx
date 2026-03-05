@@ -3,6 +3,7 @@ import styles from "./page.module.css";
 
 import {Metadata} from "next";
 import CardsSpec from "@/components/spectacle/cardsSpec/CardsSpec";
+import {ScrollAnimation2} from "@/components/ui/animation/ScrollAnimation";
 
 export const metadata : Metadata = {
 	title : "Compagnie L'Enclos | Créations artistiques",
@@ -13,18 +14,18 @@ export const metadata : Metadata = {
 
 export default function SpectaclesPage() {
 	return (
-		<>
-			<section className={styles.section}>
-				<article className={styles.article}>
-					<h1 className={styles.h1}>créations</h1>
-				</article>
-			</section>
-			<section className={styles.sectionCard}>
-				<h2 className={styles.h2}>{"Découvrez les créations de La Compagnie L'Enclos"}</h2>
+		<section className={styles.page}>
+			<article className={styles.section}>
+				<h1 className={styles.h1}>{"La compagnie L'Enclos"}</h1>
+				<ScrollAnimation2>
+					<h2 className={styles.h2}>{"Les  créations "}</h2>
+				</ScrollAnimation2>
+			</article>
+			<article className={styles.sectionCard}>
 				<article className={styles.articleCard}>
 					<CardsSpec />
 				</article>
-			</section>
-		</>
+			</article>
+		</section>
 	);
 }
