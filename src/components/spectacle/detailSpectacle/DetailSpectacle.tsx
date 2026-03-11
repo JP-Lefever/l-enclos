@@ -73,30 +73,30 @@ export default function DetailSpectacle({
 							</>
 						)}
 					</article>
-					<ScrollAnimation className={styles.articleInfo}>
-						<article className={styles.story}>
+					<article className={styles.articleInfo}>
+						<ScrollAnimation className={styles.story}>
 							<Markdown>{data.resume}</Markdown>
-						</article>
-						<figure className={styles.imageWrapper}>
+						</ScrollAnimation>
+						<ScrollAnimation2 className={styles.imageWrapper}>
 							<Image
 								className={styles.imagePres}
 								src={data.image_url}
 								alt={data.title}
 								fill={true}
 							/>
-						</figure>
-					</ScrollAnimation>
+						</ScrollAnimation2>
+					</article>
 				</header>
 
 				<section>
 					<article className={styles.articleCarousel}>{carousel}</article>
 				</section>
 
-				<ScrollAnimation2 className={styles.tech}>
-					<article className={styles.title}>
+				<section className={styles.tech}>
+					<ScrollAnimation2 className={styles.title}>
 						<h2 className={styles.h2Info}>{"Informations Techniques"}</h2>
-					</article>
-					<article className={styles.infoTech} >
+					</ScrollAnimation2>
+					<ScrollAnimation className={styles.infoTech} >
 						<div>
 							<h3 className={styles.h3}>Thématique</h3>
 							<p className={styles.p}>{data.theme}</p>
@@ -111,7 +111,7 @@ export default function DetailSpectacle({
 						</div>
 
 						{!open &&
-						<button className={styles.button} type={"button"} onClick={handleOpenInfo}>{"Voir plus +"}</button>
+						<button className={styles.button} type={"button"} onClick={handleOpenInfo}>{"Voir plus"}</button>
 						}
 
 						{open && (
@@ -188,22 +188,22 @@ export default function DetailSpectacle({
 						)}
 
 					{open &&
-						<button className={styles.button} type={"button"} onClick={handleOpenInfo}>{"Voir moins -"}</button>
+						<button className={styles.button} type={"button"} onClick={handleOpenInfo}>{"Voir moins"}</button>
 					}
-					</article>
+					</ScrollAnimation>
 
-				</ScrollAnimation2>
+				</section>
 
-				<ScrollAnimation2 className={styles.sectionPartner}>
-					<article className={styles.title}>
+				<section className={styles.sectionPartner}>
+					<ScrollAnimation2 className={styles.title}>
 						<h2 className={styles.h2Info}>{"Production soutiens et résidences"}</h2>
-					</article>
-					<article  className={styles.articlePartner}>
+					</ScrollAnimation2>
+					<ScrollAnimation  className={styles.articlePartner}>
 						{partnairSpec.map((s) => (
 								<p key={s.id} className={styles.h3}>{s.name}</p>
 						))}
-					</article>
-				</ScrollAnimation2>
+					</ScrollAnimation>
+				</section>
 
 
 				<ScrollAnimation className={styles.sectionDate}>
