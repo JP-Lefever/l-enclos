@@ -121,7 +121,7 @@
 	width: 40vw;
 	@media screen and (max-width: 568px) {
 		text-align: center;
-
+		width: 95vw;
 	}
 }
 
