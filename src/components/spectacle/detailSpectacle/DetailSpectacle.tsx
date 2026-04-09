@@ -45,11 +45,25 @@ export default function DetailSpectacle({
 
 	const carousel = AutoPlaySpec(slug);
 
-	const [open, setOpen] = useState(false);
+	const [openDistrib, setOpenDistrib] = useState(false);
+	const [openTech, setOpenTech] = useState(false);
+	const [openProd, setOpenProd] = useState(false);
 
-	const handleOpenInfo = ()=> {
-		setOpen(!open);
+	const handleOpenTech = ()=> {
+		setOpenTech(!openTech);
 	}
+
+	const handleOpenDistrib = () =>{
+		setOpenDistrib(!openDistrib);
+	}
+
+	const handleOpenProd = () =>{
+		setOpenProd(!openProd);
+	}
+
+	const firstPartnair = partnairSpec.slice(0,3)
+	const lastPartnair = partnairSpec.slice(3)
+
 
 	if (!data) {
 		notFound();
@@ -88,15 +102,93 @@ export default function DetailSpectacle({
 					</article>
 				</header>
 
-				<section>
+				<section className={styles.carousel}>
 					<article className={styles.articleCarousel}>{carousel}</article>
 				</section>
 
-				<section className={styles.tech}>
+				<section className={styles.section}>
+					<ScrollAnimation2 className={styles.title}>
+						<h2 className={styles.h2Info}>{"Distribution"}</h2>
+					</ScrollAnimation2>
+					<ScrollAnimation className={styles.info}>
+						<div>
+							<h3 className={styles.h3}>Ecriture</h3>
+							<p className={styles.p}>{data.writing}</p>
+						</div>
+						<div>
+							<h3 className={styles.h3}>Mise en scène</h3>
+							<p className={styles.p}>{data.directedBy}</p>
+						</div>
+						{data.interpretation && (
+							<div>
+								<h3 className={styles.h3}>Interpretation</h3>
+								<p className={styles.p}>{data.interpretation}</p>
+							</div>
+						)}
+
+						{!openDistrib && (
+							<button className={styles.button}  type={"button"} onClick={handleOpenDistrib}>{"Voir plus"}</button>
+						)}
+
+						{openDistrib && (
+							<>
+								<div>
+									<h3 className={styles.h3}>Composition musicales</h3>
+									<p className={styles.p}>{data.music}</p>
+								</div>
+
+								{data.illustration && (
+									<div>
+										<h3 className={styles.h3}>Illustration</h3>
+										<p className={styles.p}>{data.illustration}</p>
+									</div>
+								)}
+								{data.sceno && (
+									<div>
+										<h3 className={styles.h3}>Conception scenographique</h3>
+										<p className={styles.p}>{data.sceno}</p>
+									</div>
+								)}
+								{data.light && (
+									<div>
+										<h3 className={styles.h3}>Creation lumière</h3>
+										<p className={styles.p}>{data.light}</p>
+									</div>
+								)}
+								{data.video && (
+									<div>
+										<h3 className={styles.h3}>Vidéaste</h3>
+										<p className={styles.p}>{data.video}</p>
+									</div>
+								)}
+								{data.illustration && (
+									<div>
+										<h3 className={styles.h3}>
+											Mise en page de la plaquette et affiche
+										</h3>
+										<p className={styles.p}>{data.illustration}</p>
+									</div>
+								)}
+								<div>
+									<h3 className={styles.h3}>Oeil exterieur</h3>
+									<p className={styles.p}>{data.assistant}</p>
+								</div>
+							</>
+							)}
+
+						{openDistrib && (
+							<button className={styles.button}  type={"button"} onClick={handleOpenDistrib}>{"Voir moins"}</button>
+						)}
+
+					</ScrollAnimation>
+
+				</section>
+
+				<section className={styles.section}>
 					<ScrollAnimation2 className={styles.title}>
 						<h2 className={styles.h2Info}>{"Informations Techniques"}</h2>
 					</ScrollAnimation2>
-					<ScrollAnimation className={styles.infoTech} >
+					<ScrollAnimation className={styles.info} >
 						<div>
 							<h3 className={styles.h3}>Thématique</h3>
 							<p className={styles.p}>{data.theme}</p>
@@ -110,11 +202,11 @@ export default function DetailSpectacle({
 							<p className={styles.p}>{data.duration}</p>
 						</div>
 
-						{!open &&
-						<button className={styles.button} type={"button"} onClick={handleOpenInfo}>{"Voir plus"}</button>
+						{!openTech &&
+						<button className={styles.button} type={"button"} onClick={handleOpenTech}>{"Voir plus"}</button>
 						}
 
-						{open && (
+						{openTech && (
 							<>
 							<div>
 								<h3 className={styles.h3}>Jauge : </h3>
@@ -128,80 +220,46 @@ export default function DetailSpectacle({
 								<h3 className={styles.h3}>Régie : </h3>
 								<p className={styles.p}> {data.regie}</p>
 							</div>
-							<div className={styles.divDistrib}>
-								<h3 className={styles.h3}>Ecriture</h3>
-								<p className={styles.p}>{data.writing}</p>
-							</div>
-							<div className={styles.divDistrib}>
-								<h3 className={styles.h3}>Mise en scène</h3>
-								<p className={styles.p}>{data.directedBy}</p>
-							</div>
 
-
-						{data.interpretation && (
-							<div>
-								<h3 className={styles.h3}>Interpretation</h3>
-								<p className={styles.p}>{data.interpretation}</p>
-							</div>
-						)}
-						<div>
-							<h3 className={styles.h3}>Composition musicales</h3>
-							<p className={styles.p}>{data.music}</p>
-						</div>
-						{data.illustration && (
-							<div>
-									<h3 className={styles.h3}>Illustration</h3>
-									<p className={styles.p}>{data.illustration}</p>
-							</div>
-						)}
-						{data.sceno && (
-							<div>
-									<h3 className={styles.h3}>Conception scenographique</h3>
-									<p className={styles.p}>{data.sceno}</p>
-							</div>
-						)}
-						{data.light && (
-							<div>
-									<h3 className={styles.h3}>Creation lumière</h3>
-									<p className={styles.p}>{data.light}</p>
-							</div>
-						)}
-						{data.video && (
-							<div>
-									<h3 className={styles.h3}>Vidéaste</h3>
-									<p className={styles.p}>{data.video}</p>
-							</div>
-						)}
-						{data.illustration && (
-							<div>
-									<h3 className={styles.h3}>
-										Mise en page de la plaquette et affiche
-									</h3>
-									<p className={styles.p}>{data.illustration}</p>
-							</div>
-						)}
-						<div>
-							<h3 className={styles.h3}>Oeil exterieur</h3>
-							<p className={styles.p}>{data.assistant}</p>
-						</div>
 							</>
 						)}
 
-					{open &&
-						<button className={styles.button} type={"button"} onClick={handleOpenInfo}>{"Voir moins"}</button>
+					{openTech &&
+						<button className={styles.button} type={"button"} onClick={handleOpenTech}>{"Voir moins"}</button>
 					}
 					</ScrollAnimation>
 
 				</section>
 
-				<section className={styles.sectionPartner}>
+
+				<section className={styles.section}>
 					<ScrollAnimation2 className={styles.title}>
 						<h2 className={styles.h2Info}>{"Production soutiens et résidences"}</h2>
 					</ScrollAnimation2>
-					<ScrollAnimation  className={styles.articlePartner}>
-						{partnairSpec.map((s) => (
-								<p key={s.id} className={styles.h3}>{s.name}</p>
-						))}
+					<ScrollAnimation  className={styles.info}>
+						{firstPartnair.map((f)=>
+							<ul key={f.id}>
+								<li className={styles.li} key={f.id}>{f.name}</li>
+							</ul>
+						)}
+						{!openProd &&
+							<button className={styles.button} type={"button"} onClick={handleOpenProd}>{"Voir plus"}</button>
+						}
+						{openProd && (
+							<>
+								{lastPartnair.map((l)=>
+									<ul key={l.id}>
+										<li className={styles.li}>{l.name}</li>
+									</ul>
+								)}
+							</>
+						)}
+						{openProd &&
+							<button className={styles.button} type={"button"} onClick={handleOpenProd}>{"Voir moins"}</button>
+						}
+						{/*{partnairSpec.map((s) => (*/}
+						{/*		<p key={s.id} className={styles.h3}>{s.name}</p>*/}
+						{/*))}*/}
 					</ScrollAnimation>
 				</section>
 
