@@ -67,7 +67,7 @@
 	text-align: center;
 	font-size: 3em;
 	text-transform: uppercase;
-	width: 70vw;
+	width: 50vw;
 	font-weight: bold;
 	margin: auto;
 	@media screen and (max-width: 1024px) {
@@ -82,7 +82,7 @@
 .propos{
 	color : grey;
 	padding-bottom: 1em;
-	width: 60vw;
+	width: 70vw;
 	margin: 5vh auto;
 	@media screen and (max-width: 1024px) {
 		width: 95vw;
@@ -96,9 +96,10 @@
 .articleInfo{
 	display: flex;
 	flex-direction: row-reverse;
-	justify-content: center;
+	justify-content: space-around;
 	align-items: center;
 	width: 60vw;
+	gap: 1em;
 	margin: 0 auto 10vh auto;
 	padding-right: 1vw;
 	@media screen and (max-width: 568px) {
@@ -118,7 +119,8 @@
 }
 
 .story {
-	width: 40vw;
+	width: 25vw;
+	font-size: 1.3em;
 	@media screen and (max-width: 568px) {
 		text-align: center;
 		width: 95vw;
@@ -126,8 +128,8 @@
 }
 
 .imageWrapper {
-	width: 25vw;
-	height: 50vh;
+	width: 30vw;
+	height: 80vh;
 	position: relative;
 	@media screen and (max-width: 568px) {
 		width: 80vw;
@@ -145,15 +147,19 @@
 	object-fit: contain;
 }
 
+/*carousel*/
+.carousel{
+	margin-bottom: 10vh;
+}
 
 /*info techniques*/
 
-.tech{
+.section{
 	width: 80vw;
-	margin: 10vh auto;
+	margin: auto;
 	display: flex;
 	gap: 1em;
-	padding-bottom: 2vh;
+	padding-bottom: 4vh;
 	@media screen and (max-width: 568px) {
 		width: 95vw;
 	}
@@ -170,7 +176,7 @@
 	}
 }
 
-.infoTech{
+.info{
 	border-top: 2px solid var(--third-color);
 	width: 40vw;
 	@media screen and (max-width: 568px) {
@@ -186,6 +192,11 @@
 .p {
 	color : grey;
 	font-weight: 600;
+}
+
+.li{
+	margin : 0.5em 0;
+	list-style: none;
 }
 
 .button {
@@ -207,34 +218,12 @@
 	}
 }
 
-/*partenaires*/
-.sectionPartner{
-	width: 80vw;
-	margin: -10vh auto 10vh auto;
-	display: flex;
-	border-bottom: 2px solid var(--third-color);
-	padding : 2vh 0;
-	gap : 1em;
-	@media screen and (max-width: 568px) {
-		width: 95vw;
-
-	}
-}
-
-.articlePartner {
-	border-top: 2px solid var(--third-color);
-	width: 40vw;
-	@media screen and (max-width: 568px) {
-		width: 42.5vw;
-
-	}
-}
 
 /*date*/
 .sectionDate {
 	background-color: var(--third-color);
 	padding: 5vh 0;
-
+	margin-top: 10vh ;
 	@media screen and (max-width: 1024px) {
 		height: fit-content;
 
