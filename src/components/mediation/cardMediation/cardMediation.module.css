@@ -6,11 +6,10 @@
     display: flex;
     flex-direction: column;
     gap: 1em;
-    transition: transform 0.3s ease-in-out;
+
 }
 
 .article:hover {
-    transform: scale(1.05);
     color: var(--secondary-color);
 }
 
@@ -22,11 +21,18 @@
     width: 20vw;
     height: 40vh;
     position: relative;
+    overflow: hidden;
 }
 
 .image {
     object-fit: cover;
+    transition : transform 0.7s ease-in-out;
 }
+
+.image:hover {
+    transform: scale(1.05);
+}
+
 
 .div {
     display: flex;
