@@ -1,167 +1,229 @@
-.section {
-	margin-bottom: 5vh;
+.page {
+	background-color: var(--secondary-color-light);
 }
 
-.sectionHead {
-	background-color: var(--third-color);
-	height: 90vh;
-	display: flex;
+.buttonBack{
+	margin-top: 2vh;
+	border: grey 3px solid;
+	text-decoration: none;
+	font-weight: bold;
+	color: var(--third-color);
+	text-align: center;
+	padding: var(--padding-button);
+	text-transform: uppercase;
+	width: 10vw;
+	font-family: var(--font-title), sans-serif;
+	position: absolute;
+	top : 15vh;
+	left : 5vh;
 
+	@media screen and (max-width: 568px) {
+		width: fit-content;
+		position: absolute;
+		top : 20vh;
+
+	}
+	@media screen and (min-width: 568px) and (max-width: 1024px) {
+		width: fit-content;
+		top : 10vh;
+
+	}
+	@media screen and (min-width: 1024px) and (max-width: 1280px) {
+		width: fit-content;
+	}
 }
 
-.articleInfo{
-	display: flex;
-	align-items: center;
-	width: 80vw;
-	margin : auto;
-	color: var(--main-color);
-	gap: 3em;
-
-
+/*header */
+.h1 {
+	font-size: 1.5em;
+	font-weight: 600;
+	color: grey;
+	line-height: 1.6em;
+	letter-spacing: var(--letter-spacing);
+	text-align: center;
+	margin-top: 10vh;
+	@media screen and (max-width: 568px) {
+		font-size: 1em;
+		margin-top: 20vh;
+	}
 }
 
-.divHead{
-	height: 80vh;
-}
-
-.imageWrapper {
-	width: 35vw;
-	height: 80vh;
-	position: relative;
-
-}
-
-.imagePres {
-	object-fit: cover;
-}
-
-.subArticle{
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	border-bottom : solid 1px var(--main-color);
-	padding-bottom: 5vh;
-	gap: 2em;
-
-
-}
-
-.subArticle div {
+.head{
 	display: flex;
 	flex-direction: column;
-	gap: 0.5em;
-
-}
-
-.h2{
-	color: var(--third-color);
-	font-weight: bold;
-	background-color: var(--primary-color);
-	width: fit-content;
-	padding : var(--padding-button);
-	border-radius: var(--border-radius);
-	margin-bottom: 0.5em;
-
+	gap : 1em;
+	text-align: center;
+	width: 80vw;
+	margin: auto;
+	@media screen and (max-width: 1024px) {
+		width: 95vw;
+	}
+	@media screen and (min-width: 1024px) and (max-width: 1280px) {
+		width: 80vw;
+	}
 }
 
 .h2Title {
-	font-family: var(--title-font), sans-serif;
+	text-align: center;
 	font-size: 3em;
-	margin-bottom: 5vh;
+	text-transform: uppercase;
+	width: 70vw;
+	font-weight: bold;
+	margin: auto;
+	@media screen and (max-width: 1024px) {
+		width: 90vw;
+		font-size: 2.5em;
+	}
+	@media screen and (min-width: 1024px) and (max-width: 1280px) {
+		width: 80vw;
+	}
 }
 
-.h3{
-	color : var(--secondary-color);
-
+.propos{
+	color : grey;
+	padding-bottom: 1em;
+	width: 60vw;
+	margin: 5vh auto;
+	@media screen and (max-width: 1024px) {
+		width: 95vw;
+		margin: 2vh auto;
+	}
+	@media screen and (min-width: 1024px) and (max-width: 1280px) {
+		width: 75vw;
+	}
 }
 
-.h3Extract{
-	color : var(--secondary-color);
-	font-style: italic;
-}
+.articleInfo{
 
-
-.sectionPres{
-	width: 90vw;
-	margin : 5vh auto;
 	display: flex;
+	flex-direction: row-reverse;
 	justify-content: center;
-
+	align-items: center;
+	width: 80vw;
+	margin: 0 auto 5vh auto;
+	gap: 3em;
+	@media screen and (max-width: 568px) {
+		display: flex;
+		flex-direction: column-reverse;
+		width: 95vw;
+		margin: 0 auto 10vh auto;
+	}
+	@media screen and (min-width: 568px) and (max-width: 1024px) {
+		width: 95vw;
+		gap: 1em;
+	}
+	@media screen and (min-width: 1024px) and (max-width: 1280px) {
+		width: 95vw;
+		gap: 2em;
+	}
 }
 
-.resume {
-	display: flex;
-	gap: 1em;
+.story {
+	width: 25vw;
+	line-height: 1.5em;
+	font-weight: bold;
+	@media screen and (max-width: 568px) {
+		text-align: center;
+		width: 95vw;
+	}
 }
 
-.divResume {
+.imageWrapper {
+
 	width: 40vw;
-	border : 2px solid var(--third-color);
-	padding : 1em;
-	margin-bottom : 5vh;
-	line-height: var(--line-height);
-	min-height: 35vh;
+	height: 60vh;
+	position: relative;
+	@media screen and (max-width: 568px) {
+		width: 80vw;
+		height: 50vh;
+		margin-bottom: 4vh;
+	}
+	@media screen and (min-width: 568px) and (max-width: 1024px) {
+		width: 40vw;
+		height: 50vh;
+
+	}
 }
 
-.divResume:last-child {
-	position : relative;
-	top: 5vh;
-	background-color: var(--third-color);
-	color : var(--main-color);
+.imagePres {
+	object-fit: contain;
 }
 
-.h2Pres {
-	font-family: var(--title-font), sans-serif;
-	font-size: 3em;
-	line-height: var(--line-height);
+/*carousel*/
+.carousel{
+	margin-bottom: 10vh;
+	margin-top: 10vh;
 }
 
-.organisation {
-	width: 90vw;
-	margin : 5vh auto;
-	border : 2px solid var(--third-color);
-	padding : 1em;
-	background-color: var(--third-color);
-	color: var(--primary-color);
-	line-height: var(--line-height);
-}
+/*info techniques*/
 
-.articleOrga {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 1em;
-
-}
-
-.h3Orga{
-	color: var(--secondary-color);
-}
-
-.divDistrib {
+.section{
+	width: 80vw;
+	margin: auto;
 	display: flex;
-	flex-direction: column;
-	gap: 0.5em;
-
-}
-
-.sectionInter {
-	margin : 5vh auto;
-}
-
-.h2Inter {
-
-	margin-bottom: 2vh;
-}
-
-.articleInter {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
 	gap: 1em;
-	padding-bottom: 5vh;
-	border-bottom : 1px solid var(--main-color);
+	padding-bottom: 4vh;
+	@media screen and (max-width: 568px) {
+		width: 95vw;
+	}
+}
+.section:last-child{
+	padding-bottom: 10vh;
 }
 
-.articleInter article {
-	display: flex;
-	flex-direction: column;
-	gap: 0.5em;
+.h2Info {
+	width: 40vw;
+	font-size: 2.5em;
+	font-weight: bolder;
+	border-top: 2px solid var(--third-color);
+	@media screen and (max-width: 568px) {
+		width: 42.5vw;
+		font-size: 1.5em;
+	}
 }
+
+.info{
+	border-top: 2px solid var(--third-color);
+	width: 40vw;
+	@media screen and (max-width: 568px) {
+		width: 42.5vw;
+
+	}
+}
+
+.h3 {
+	margin : 0.5em 0;
+}
+
+.p {
+	color : grey;
+	font-weight: 600;
+	line-height: 1.5em;
+}
+
+.li{
+	margin : 0.5em 0;
+	list-style: none;
+	color : grey;
+	font-weight: 600;
+}
+
+.button {
+	margin-top: 2vh;
+	border: grey 3px solid;
+	text-decoration: none;
+	font-weight: bold;
+	color: var(--third-color);
+	text-align: center;
+	padding: var(--padding-button);
+	text-transform: uppercase;
+	width: 10vw;
+	font-family: var(--font-title), sans-serif;
+	background-color: inherit;
+	cursor: pointer;
+	@media screen and (max-width: 1280px) {
+		width: fit-content;
+
+	}
+}
+
