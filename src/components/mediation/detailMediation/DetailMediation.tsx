@@ -12,6 +12,9 @@ import {
 	ScrollAnimation2,
 } from "@/components/ui/animation/ScrollAnimation";
 import {notFound} from "next/navigation";
+import TransitionLink from "@/components/ui/transitionLink/TransitionLink";
+import React from "react";
+
 
 export default function DetailMediation({
 	mediation, slug,
@@ -29,154 +32,140 @@ export default function DetailMediation({
 
 	const slider = AutoPlayMed(slug);
 
+	const [open, setOpen] = React.useState(false);
+
+	const handleOpen = (): void => {
+		setOpen(!open);
+	}
+
+
 	return (
-		<section className={styles.section}>
-			<section className={styles.sectionHead}>
-				<ScrollAnimation className={styles.articleInfo}>
-						<ScrollAnimation2 >
-							<figure className={styles.imageWrapper}>
-							<Image
-								className={styles.imagePres}
-								src={data.photoPres}
-								alt={data.title}
-								fill={true}
-							/>
-							</figure>
-						</ScrollAnimation2>
-						<article className={styles.divHead}>
-							<div>
-								<h2 className={styles.h2}>{data.type} : {data.name} </h2>
-								<h2 className={styles.h2Title}>{data.title}</h2>
-							</div>
-							<article className={styles.subArticle}>
-								<div>
-									<h3 className={styles.h3}>{"Public"}</h3>
-									<p>{data.public}</p>
-								</div>
-								<div>
-									<h3 className={styles.h3}>{"Durée"}</h3>
-									<p>{data.duration}</p>
-								</div>
-								<div>
-									<h3 className={styles.h3}>{"Theme"}</h3>
-									<p>{data.theme}</p>
-								</div>
+		<section className={styles.page}>
+			<TransitionLink href={"/mediation"} className={styles.buttonBack}>{"Retour"}</TransitionLink>
+			<header className={styles.sectionHead}>
+				<article className={styles.head}>
+					<h1 className={styles.h1}>{"La Compagnie L'Enclos"}</h1>
+					<h2 className={styles.h2Title}>{data.title}</h2>
+					<article className={styles.propos}>
+								<Markdown>{data.shortPres}</Markdown>
+					</article>
+				</article>
+				<article className={styles.articleInfo}>
+					<ScrollAnimation className={styles.story}>
+						<Markdown>{data.pres}</Markdown>
+					</ScrollAnimation>
+					<ScrollAnimation2 className={styles.imageWrapper}>
+						<Image
+							className={styles.imagePres}
+							src={data.photoPres}
+							alt={data.title}
+							fill={true}
+						/>
+					</ScrollAnimation2>
+				</article>
+			</header>
+
+			<section className={styles.carousel}>
+				<article className={styles.articleCarousel}>{slider}</article>
+			</section>
+
+			<section className={styles.section}>
+				<ScrollAnimation2 className={styles.title}>
+					<h2 className={styles.h2Info}>{"Informations générales"}</h2>
+				</ScrollAnimation2>
+				<ScrollAnimation className={styles.info}>
+					<article>
+						<h3 className={styles.h3}>Public</h3>
+						<p className={styles.p}>{data.public}</p>
+					</article>
+					<article>
+						<h3 className={styles.h3}>Durée</h3>
+						<p className={styles.p}>{data.duration}</p>
+					</article>
+					<article>
+						<h3 className={styles.h3}>Thème</h3>
+						<p className={styles.p}>{data.theme}</p>
+					</article>
+				</ScrollAnimation>
+			</section>
+
+			<section className={styles.section}>
+				<ScrollAnimation2 className={styles.title}>
+					<h2 className={styles.h2Info}>{"Déroulement du cycle"}</h2>
+				</ScrollAnimation2>
+				<ScrollAnimation className={styles.info} >
+					<article>
+						<h3 className={styles.h3}>{data.first}</h3>
+						<p className={styles.p}>{data.presFirst}</p>
+					</article>
+					<article>
+						<h3 className={styles.h3}>{data.second}</h3>
+						<p className={styles.p}>{data.presSecond}</p>
+					</article>
+
+					{!open && (
+						<button type={"button"} className={styles.button} onClick={handleOpen}>{"Voir plus"}</button>
+					)}
+					{open && (
+						<>
+							<article>
+								<h3 className={styles.h3}>{data.third}</h3>
+								<p className={styles.p}>{data.presThird}</p>
 							</article>
-							<ScrollAnimation2 className={styles.sectionInter}>
-								<h2 className={styles.h2Inter}>Interventions</h2>
-								<article className={styles.articleInter}>
-									{dataInter.map((i) => (
-										<article  key={i.id}>
-											<h3 className={styles.h3}>{i.date}</h3>
-											<p className={styles.pInter}>{i.info}</p>
-										</article>
+							<article>
+								<h3 className={styles.h3}>{data.fourth}</h3>
+								<p className={styles.p}>{data.presFourth}</p>
+							</article>
+							<article>
+								{data.material && (
+									<>
+									<h3 className={styles.h3}>{"Matériel fourni par la compagnie L'Enclos :"}</h3>
+									{data.material.map((m,i) => (
+										<ul key={i}>
+											<li className={styles.li}>{m}</li>
+										</ul>
 									))}
-								</article>
-								<ScrollAnimation className={styles.sectionInter}>
-									<h2 className={styles.h2Inter}>Remerciement</h2>
-									<article className={styles.articleThanks}>
-										<p className={styles.pThanks}> {data.thanks}</p>
-									</article>
-								</ScrollAnimation>
-							</ScrollAnimation2>
+									</>
+								)}
+							</article>
+
+						</>
+					)}
+					{open && (
+						<button type={"button"} className={styles.button} onClick={handleOpen}>{"Voir moins"}</button>
+					)}
+				</ScrollAnimation>
+			</section>
+
+
+			<section className={styles.section}>
+				<ScrollAnimation2 className={styles.title}>
+					<h2 className={styles.h2Info}>{"Interventions"}</h2>
+				</ScrollAnimation2>
+				<ScrollAnimation  className={styles.info}>
+						{dataInter.map((m)=>(
+							<article key={m.id}>
+								<h3 className={styles.h3}>{m.date}</h3>
+								<p className={styles.p}>{m.info}</p>
+							</article>
+						))}
+				</ScrollAnimation>
+			</section>
+			<section className={styles.section}>
+				<ScrollAnimation2 className={styles.title}>
+					<h2 className={styles.h2Info}>{"Remerciements"}</h2>
+				</ScrollAnimation2>
+				<ScrollAnimation  className={styles.info}>
+
+						<article>
+							<h3 className={styles.h3}></h3>
+							<p className={styles.p}>{data.thanks}</p>
 						</article>
 				</ScrollAnimation>
 			</section>
-			<section className={styles.sectionPres}>
-					<ScrollAnimation2 className={styles.resume}>
-						<article className={styles.divResume}>
-							<h2 className={styles.h2Pres}>{"LE PROPOS"}</h2>
-							<Markdown>{data.pres}</Markdown>
-						</article>
-						{data.extract && (
-							<article className={styles.divResume}>
-								<h2 className={styles.h2Pres}>{data.extract}</h2>
-								<h3 className={styles.h3Extract}>{data.extractName}</h3>
-								<Markdown>{data.textExtract}</Markdown>
-							</article>
 
-
-						)}
-					</ScrollAnimation2>
-			</section>
-			<section className={styles.organisation}>
-				<h2 className={styles.h2Pres}>Déroulement</h2>
-
-				<article className={styles.articleOrga}>
-					<ScrollAnimation className={styles.divDistrib}>
-						<h3 className={styles.h3Orga}>
-							<Markdown>{data.first}</Markdown>
-						</h3>
-
-						<span className={styles.p}>
-							<Markdown>{data.presFirst}</Markdown>
-						</span>
-					</ScrollAnimation>
-
-					{data.third && (
-						<ScrollAnimation className={styles.divDistrib}>
-							<h3 className={styles.h3Orga}>
-								<Markdown>{data.third}</Markdown>
-							</h3>
-							<span className={styles.pDist}>
-								<Markdown>{data.presThird}</Markdown>
-							</span>
-						</ScrollAnimation>
-					)}
-					{data.second && (
-						<ScrollAnimation2 className={styles.divDistrib}>
-							<h3 className={styles.h3Orga}>
-								<Markdown>{data.second}</Markdown>
-							</h3>
-							<span className={styles.p}>
-								<Markdown>{data.presSecond}</Markdown>
-							</span>
-						</ScrollAnimation2>
-					)}
-					{data.fourth && (
-						<ScrollAnimation2 className={styles.divDistrib}>
-							<>
-								<h3 className={styles.h3Orga}>
-									<Markdown>{data.fourth}</Markdown>
-								</h3>
-								<span className={styles.pDist}>
-									<Markdown>{data.presFourth}</Markdown>
-								</span>
-							</>
-						</ScrollAnimation2>
-					)}
-					{data.final && (
-					<ScrollAnimation className={styles.divDistrib}>
-						<>
-							<h3 className={styles.h3Orga}>
-								<Markdown>{data.final}</Markdown>
-							</h3>
-							<span className={styles.pDist}>
-								<Markdown>{data.presFinal}</Markdown>
-							</span>
-						</>
-					</ScrollAnimation>
-					)}
-
-					{data.material && (
-						<ScrollAnimation2 className={styles.divDistrib}>
-							<h3 className={styles.h3Orga}>
-								{"Matériel fourni par la compagnie L'Enclos : "}
-							</h3>
-							{data.material.map((d) => (
-								<p key={d} className={styles.pDist}>
-									{d}
-								</p>
-							))}
-						</ScrollAnimation2>
-					)}
-				</article>
-			</section>
-
-
-			<section className={styles.carousel}>{slider}</section>
 
 
 		</section>
-	);
+			);
 }
