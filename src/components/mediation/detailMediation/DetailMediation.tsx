@@ -13,7 +13,8 @@ import {
 } from "@/components/ui/animation/ScrollAnimation";
 import {notFound} from "next/navigation";
 import TransitionLink from "@/components/ui/transitionLink/TransitionLink";
-import {formatedDate} from "@/lib/helpers/formatedDate";
+import React from "react";
+
 
 export default function DetailMediation({
 	mediation, slug,
@@ -31,7 +32,13 @@ export default function DetailMediation({
 
 	const slider = AutoPlayMed(slug);
 
-	console.log(dataInter)
+	const [open, setOpen] = React.useState(false);
+
+	const handleOpen = (): void => {
+		setOpen(!open);
+	}
+
+
 	return (
 		<section className={styles.page}>
 			<TransitionLink href={"/mediation"} className={styles.buttonBack}>{"Retour"}</TransitionLink>
@@ -95,27 +102,38 @@ export default function DetailMediation({
 						<h3 className={styles.h3}>{data.second}</h3>
 						<p className={styles.p}>{data.presSecond}</p>
 					</article>
-					<article>
-						<h3 className={styles.h3}>{data.third}</h3>
-						<p className={styles.p}>{data.presThird}</p>
-					</article>
-					<article>
-						<h3 className={styles.h3}>{data.fourth}</h3>
-						<p className={styles.p}>{data.presFourth}</p>
-					</article>
-					<article>
-						{data.material && (
-							<>
-							<h3 className={styles.h3}>{"Matériel fourni par la compagnie L'Enclos :"}</h3>
-							{data.material.map((m,i) => (
-								<ul key={i}>
-									<li className={styles.p}>{m}</li>
-								</ul>
-							))}
-							</>
-						)}
 
-					</article>
+					{!open && (
+						<button type={"button"} className={styles.button} onClick={handleOpen}>{"Voir plus"}</button>
+					)}
+					{open && (
+						<>
+							<article>
+								<h3 className={styles.h3}>{data.third}</h3>
+								<p className={styles.p}>{data.presThird}</p>
+							</article>
+							<article>
+								<h3 className={styles.h3}>{data.fourth}</h3>
+								<p className={styles.p}>{data.presFourth}</p>
+							</article>
+							<article>
+								{data.material && (
+									<>
+									<h3 className={styles.h3}>{"Matériel fourni par la compagnie L'Enclos :"}</h3>
+									{data.material.map((m,i) => (
+										<ul key={i}>
+											<li className={styles.li}>{m}</li>
+										</ul>
+									))}
+									</>
+								)}
+							</article>
+
+						</>
+					)}
+					{open && (
+						<button type={"button"} className={styles.button} onClick={handleOpen}>{"Voir moins"}</button>
+					)}
 				</ScrollAnimation>
 			</section>
 
