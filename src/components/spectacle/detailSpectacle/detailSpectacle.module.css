@@ -120,7 +120,8 @@
 
 .story {
 	width: 25vw;
-	font-size: 1.3em;
+	line-height: 1.5em;
+	font-weight: bold;
 	@media screen and (max-width: 568px) {
 		text-align: center;
 		width: 95vw;
