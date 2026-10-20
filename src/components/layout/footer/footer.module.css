@@ -3,8 +3,8 @@
 	justify-content: space-between;
 	text-align: center;
 	padding: 2vh;
-	background-color: var(--main-color);
 	align-items: center;
+	background-color: var(--main-color);
 	line-height: 4vh;
 	overflow-x: hidden;
 	color: var(--third-color);
