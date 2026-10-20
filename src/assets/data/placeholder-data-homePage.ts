@@ -13,7 +13,7 @@ const generalesInformations : homePageProps[]  = [
     },
     {
         id: 2,
-        title : "Les spéctacles",
+        title : "Les spectacles",
         image : "/images/te_souviens_tu_jeux2.webp",
         paragraph : `Depuis 2019, la Compagnie L'Enclos a crée deux spectacles : « Te souviens tu du jour où j'ai coupé mes cheveux ? » sur la thématique de l'égalité garçon fille en direction des primaires et « J'ai 17 ans pour toujours » de Jacques Descorde sur l'adolecence en manque de repère. Un troisième spectacle est en cours de création nommé « Homo Sapiens 5.0 » traitant de l'impact de la technologie sur nos sociétés modernes et son devenir.`,
         button : "voir les créations"
