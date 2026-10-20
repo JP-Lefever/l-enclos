@@ -177,22 +177,27 @@ const partnair = [
 const photo = [
 	{
 		id: 1,
-		photo: "/images/affiche.png",
+		photo: "/images/homeCarousel/1.webp",
 		service: "carousel_accueil",
 	},
 	{
 		id: 2,
-		photo: "/images/j_ai_17_ans_scene.jpg",
+		photo: "/images/homeCarousel/2.webp",
 		service: "carousel_accueil",
 	},
 	{
 		id: 3,
-		photo: "/images/j_ai_17ans_pour_toujours.png",
+		photo: "/images/homeCarousel/3.webp",
 		service: "carousel_accueil",
 	},
 	{
 		id: 4,
-		photo: "/images/te_souviens_tu.jpg",
+		photo: "/images/homeCarousel/4.webp",
+		service: "carousel_accueil",
+	},
+	{
+		id: 22,
+		photo: "/images/homeCarousel/5.webp",
 		service: "carousel_accueil",
 	},
 	{

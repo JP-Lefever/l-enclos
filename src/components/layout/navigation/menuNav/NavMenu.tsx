@@ -12,22 +12,22 @@ export default function NavMenu({
 			>
 				<ul className={styles.ul}>
 					<li><TransitionLink className={styles.link} href="/" onClick={closeMenu}>
-						Accueil
+						{"Accueil"}
 					</TransitionLink></li>
 					<li><TransitionLink className={styles.link} href="/compagnie" onClick={closeMenu}>
-						Compagnie
+						{"Compagnie"}
 					</TransitionLink></li>
 						<li><TransitionLink className={styles.link} href="/spectacles" onClick={closeMenu}>
-						Spectacles
+						{"Spectacles"}
 					</TransitionLink></li>
 							<li><TransitionLink className={styles.link} href="/mediation" onClick={closeMenu}>
-						Mediations
+						{"Créations collectives"}
 					</TransitionLink></li>
 								<li><TransitionLink className={styles.link} href="/agenda/spectacles" onClick={closeMenu}>
-						Les dates
+						{"Agenda"}
 					</TransitionLink></li>
 									<li><TransitionLink className={styles.link} href="/contact" onClick={closeMenu}>
-						Contact
+						{"Contact"}
 					</TransitionLink></li>
 				</ul>
 				<button className={styles.button} type="button" onClick={closeMenu}>
