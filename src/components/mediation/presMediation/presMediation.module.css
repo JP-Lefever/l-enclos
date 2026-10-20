@@ -1,6 +1,6 @@
 .section{
 	width: 70vw;
-	margin : 10vh auto;
+	margin : auto;
 	display: flex;
 	flex-direction: row-reverse;
 	align-items: center;
@@ -29,11 +29,11 @@
 	width: 50vw;
 	height: 50vh;
 	display: flex;
-	background-image: url("/images/ephad/carou3.jpg");
+	background-image: url("/images/immersion.webp");
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-attachment: fixed;
-	background-position: top right;
+	background-position: bottom right;
 	@media screen and (max-width: 568px){
 		width: 100%;
 		margin-top : 10vh;
