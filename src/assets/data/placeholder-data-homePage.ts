@@ -25,7 +25,7 @@ const generalesInformations : homePageProps[]  = [
         title : "Les créations collectives",
         image : "/images/ephad/carou6.jpg",
         paragraph : `Les immersions sont des projets de création en direction de publics spécifiques (primaires, collège, EHPAD, centre social...) dans un but soit de questionner sur des thématiques en lien avec les spectacles de la compagnie, soit de proposer une expérience artistique à des publics éloignés de l'offre culturelle. Ces immersions nous permettent de créer autrement, en mettant les publics au cœur du processus de création, d'utiliser l'art comme un outil d'épanouissement.`,
-        button : "voir les immersions"
+        button : "voir les créations"
 
 
     }

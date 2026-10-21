@@ -13,7 +13,7 @@ export default function PresMediation() {
 				<article className={styles.article}/>
 				<ScrollAnimation2 className={styles.content}>
 					<h1 className={styles.h1}>{generalesInformations[2].title}</h1>
-					<TransitionLink className={styles.link} href="/spectacles">
+					<TransitionLink className={styles.link} href="/mediation">
 						{generalesInformations[2].button}
 					</TransitionLink>
 				</ScrollAnimation2>
