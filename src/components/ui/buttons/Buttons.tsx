@@ -60,5 +60,26 @@ const ButtonsDates = ()=>{
     </>)
 }
 
+export const buttonCompany = ({setIsOpenHistory, setIsOpenTeam} : {  setIsOpenHistory : (s:boolean)=>void,  setIsOpenTeam : (s:boolean)=>void})=>{
+
+    const handleClickHistory = ()=>{
+        setIsOpenHistory(true)
+        setIsOpenTeam(false)
+    }
+    const handleClickTeam = ()=>{
+        setIsOpenHistory(true)
+        setIsOpenTeam(false)
+    }
+
+
+    return (
+        <article>
+            <section className={styles.AgendaButtons}>
+                <button onClick={handleClickDate} className={styles.buttonDate} type="button">{"L'histoire"}</button>
+                <button onClick={handleClickInter} className={styles.buttonDate} type="button">{"L'équipe"}</button>
+            </section>
+        </article>
+        )
+}
 
 export  {ButtonsAgenda, ButtonsDates };
