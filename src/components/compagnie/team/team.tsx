@@ -22,9 +22,13 @@ console.log(isOpen)
                             </figure>
                             <h2 className={styles.h2}>{c.name}</h2>
                             <h3 className={styles.h3}>{c.role}</h3>
-                            {isOpen === c.name && (
+                            <div
+                                className={`${styles.description} ${
+                                    isOpen === c.name ? styles.descriptionOpen : ""
+                                }`}
+                            >
                                 <p>{c.description}</p>
-                            )}
+                            </div>
                         </article>
                     ))}
 
