@@ -15,7 +15,7 @@ export default function NavMenu({
 						{"Accueil"}
 					</TransitionLink></li>
 					<li><TransitionLink className={styles.link} href="/compagnie" onClick={closeMenu}>
-						{"Compagnie"}
+						{"La Compagnie"}
 					</TransitionLink></li>
 						<li><TransitionLink className={styles.link} href="/spectacles" onClick={closeMenu}>
 						{"Spectacles"}
