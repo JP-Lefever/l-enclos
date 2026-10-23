@@ -175,3 +175,11 @@ export type ModifyImmersionProps = {
 	is_passed : number;
 	mediation_id: number;
 }
+
+export type TeamsProps = {
+	id: number;
+	image : string;
+	name : string;
+	role : string;
+	description : string;
+}

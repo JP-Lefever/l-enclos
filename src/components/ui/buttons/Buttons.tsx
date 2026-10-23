@@ -60,5 +60,30 @@ const ButtonsDates = ()=>{
     </>)
 }
 
+const ButtonCompany = ({isOpenTeam, isOpenHistory, setIsOpenHistory, setIsOpenTeam} : { isOpenTeam : boolean, isOpenHistory : boolean, setIsOpenHistory : (s:boolean)=>void,  setIsOpenTeam : (s:boolean)=>void})=>{
 
-export  {ButtonsAgenda, ButtonsDates };
+    const handleClickHistory = ()=>{
+        setIsOpenHistory(true)
+        setIsOpenTeam(false)
+    }
+    const handleClickTeam = ()=>{
+        setIsOpenHistory(false)
+        setIsOpenTeam(true)
+    }
+
+
+    return (
+        <article>
+            <section className={styles.companyButtons}>
+                <button type="button" onClick={handleClickHistory} className={clsx(styles.link, {
+                    [styles.isActive] : isOpenHistory
+                })}>{"L'histoire"}</button>
+                <button onClick={handleClickTeam} type="button" className={clsx(styles.link, {
+                    [styles.isActive] : isOpenTeam
+                })}>{"L'équipe"}</button>
+            </section>
+        </article>
+        )
+}
+
+export  {ButtonCompany, ButtonsAgenda, ButtonsDates };

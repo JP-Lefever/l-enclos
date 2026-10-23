@@ -1,34 +1,115 @@
+.page {
+	background-color: var(--secondary-color-light);
+}
+
 .section {
-	background-image: url("/images/histoire.jpg");
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	min-height: 85vh;
-	width: 100vw;
-	overflow-x: hidden;
+	display: flex;
+	align-items: center;
+	min-height: 55vh;
+
+	@media screen and (max-width: 1024px) {
+		display: flex;
+		flex-direction: column;
+
+	}
+	@media screen and (min-width: 1024px) and (max-width: 1280px) {
+		gap: 4em;
+
+	}
+
+}
+
+
+.h1 {
+	width: 15vw;
+	font-family: var(--title-font), sans-serif !important;
+	font-size: 3em;
+	font-weight: lighter;
+	margin-left: 1em;
+	display: grid;
+	place-items: center start;
+	min-height: 25vh;
+	position: relative;
+	padding-bottom: 1rem;
 	@media screen and (max-width: 568px) {
-		background-image: url("/images/histoire.jpg");
-		background-size: cover;
-		background-position: center;
-		background-repeat: no-repeat;
-		min-height: 40vh;
-		width: 100vw;
+		width: 100%;
+		place-items: center center;
+		text-align: center;
+		margin-left: 0;
+		font-size: 2em;
+		min-height: 15vh;
+	}
+	@media screen and (min-width: 568px) and (max-width: 1024px) {
+		width: 100%;
+		place-items: center center;
+		margin-left: 0;
+		font-size: 3em;
+		min-height: 15vh;
 	}
 }
 
-.h1 {
-	font-family: var(--title-font), serif;
-	font-size: var(--size-title);
-	letter-spacing: var(--letter-spacing);
-	color: var(--main-color);
-	display: block;
-	text-align: center;
-	position: relative;
-	top: 50vh;
-	left: 10vw;
-	@media screen and (max-width: 568px) {
-		font-size: 3em;
-		position: relative;
-		top: 25vh;
+.h1::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 5vw;
+	width: 2vw;
+	height: 3px;
+	background: var(--third-color);
+	@media screen and (max-width: 1024px) {
+		position: absolute;
+		bottom: 0;
+		transform: translateX(-50%);
+		left: 50%;
+		width: 10vw;
 	}
 }
+
+.h2 {
+	width: 80vw;
+	font-family: var(--other-font), sans-serif !important;
+	font-size: 5em;
+	font-weight: 600;
+	text-align: center;
+	border-bottom: 3px solid var(--third-color);
+	min-height: 25vh;
+	display: grid;
+	place-items: center center;
+	text-transform: uppercase;
+	@media screen and (max-width: 568px) {
+		width: 90vw;
+		place-items: center left;
+		font-size: 3em;
+		margin: 15vh auto;
+	}
+	@media screen and (min-width: 568px) and (max-width: 1024px) {
+		width: 90vw;
+		min-height: 15vh;
+		margin-top: 5vh;
+	}
+	@media screen and (min-width: 1024px) and (max-width: 1280px) {
+		width: 75vw;
+
+	}
+}
+
+.sectionCard {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+
+}
+
+.articleCard {
+	display: flex;
+	width: 80vw;
+	margin: 0 auto;
+	justify-content: center;
+	@media screen and (max-width: 568px) {
+		width: 100%;
+
+	}
+}
+
+
+
