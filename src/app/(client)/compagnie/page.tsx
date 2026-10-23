@@ -4,6 +4,7 @@ import {Metadata} from "next";
 import Histoire from "@/components/compagnie/histoire/Histoire";
 import {ScrollAnimation2} from "@/components/ui/animation/ScrollAnimation";
 import Team from "@/components/compagnie/team/team";
+import About from "@/components/compagnie/about/About";
 
 
 export const metadata : Metadata = {
@@ -23,10 +24,7 @@ export default function CompagniePage() {
 					</ScrollAnimation2>
 				</article>
 				<article className={styles.sectionCard}>
-					<Histoire/>
-				</article>
-				<article className={styles.sectionCard}>
-					<Team/>
+				<About/>
 				</article>
 			</section>
 		</>
