@@ -41,7 +41,7 @@ Notre travail s'est axé principalement sur la recherche des notions même du **
 		status: "En diffusion",
 		title: "J'ai 17ans pour toujours",
 		public: "Tout public, à partir de 14 ans.",
-		image_url: "/images/affiche_17ans.png",
+		image_url: "/images/jai_17ans.webp",
 		duration: "1 heure",
 		writing: "Texte de Jacques Descorde",
 		directedBy: "Mariana Georgieva et Sandra Wichurski",
@@ -63,6 +63,30 @@ Par le texte de Jacque Descorde, nous avons voulu explorés cette adolescence l�
 		
 				Régisseur (son, vidéo, lumière) compagnie.`,
 	},
+	{
+		id: 3,
+		slug: "Homo",
+		status: "En cours de création",
+		title: "Homo sapiens 5.0",
+		public: "Tout public, à partir de 14 ans.",
+		image_url: "/images/homo_sapiens.webp",
+		duration: "",
+		writing: "",
+		directedBy: "Sandra Wichurski",
+		image_spec: "/images/homo_sapiens.webp",
+		music: "",
+		sceno: "",
+		light: "",
+		video: "",
+		assistant: "",
+		theme: "",
+		resume: "",
+		propos :"Spectacle en cours de construction",
+		jauge: "",
+		plateau: "",
+		regie: "",
+	},
+
 ];
 
 const partnair = [
