@@ -18,7 +18,7 @@ export default function SpectaclesPage() {
 			<article className={styles.section}>
 				<h1 className={styles.h1}>{"La compagnie L'Enclos"}</h1>
 				<ScrollAnimation2>
-					<h2 className={styles.h2}>{"Les  créations "}</h2>
+					<h2 className={styles.h2}>{"Les spéctacles"}</h2>
 				</ScrollAnimation2>
 			</article>
 			<article className={styles.sectionCard}>
