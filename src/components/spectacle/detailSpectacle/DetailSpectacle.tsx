@@ -79,17 +79,37 @@ export default function DetailSpectacle({
 					<article className={styles.head}>
 						<h1 className={styles.h1}>{"La Compagnie L'Enclos"}</h1>
 						<h2 className={styles.h2Title}>{data.title}</h2>
-						{data.propos && (
+						{data.slug === "j-ai-17-ans-pour-toujours" &&
+						<h2 className={styles.h2sub}>{data.writing}</h2>
+						}
+						{data.propos &&
+						(
 							<>
 								<article className={styles.propos}>
-									<Markdown>{data.propos}</Markdown>
+									<Markdown>{data.theme}</Markdown>
+								</article>
+							</>
+						)}
+						{data.status && (
+							<>
+								<article className={styles.status}>
+									<Markdown>{data.status}</Markdown>
 								</article>
 							</>
 						)}
 					</article>
 					<article className={styles.articleInfo}>
+
 						<ScrollAnimation className={styles.story}>
-							<Markdown>{data.resume}</Markdown>
+								<h4 className={styles.h4}>{"L'histoire"}</h4>
+							{data.resume.split("\n").map((paragraph, i) => (
+								<p className={styles.text} key={i}><Markdown>{paragraph}</Markdown></p>
+							))}
+								<h4 className={styles.h4}>{"Note d'intention"}</h4>
+							{data.propos && data.propos.split("\n").map((paragraph, i) => (
+								<p className={styles.text} key={i}><Markdown>{paragraph}</Markdown></p>
+							))}
+
 						</ScrollAnimation>
 						<ScrollAnimation2 className={styles.imageWrapper}>
 							<Image
@@ -133,7 +153,7 @@ export default function DetailSpectacle({
 						{openDistrib && (
 							<>
 								<div>
-									<h3 className={styles.h3}>Composition musicales</h3>
+									<h3 className={styles.h3}>Composition musicale</h3>
 									<p className={styles.p}>{data.music}</p>
 								</div>
 
@@ -166,7 +186,7 @@ export default function DetailSpectacle({
 										<h3 className={styles.h3}>
 											Mise en page de la plaquette et affiche
 										</h3>
-										<p className={styles.p}>{data.illustration}</p>
+										<p className={styles.p}>{data.poster}</p>
 									</div>
 								)}
 								<div>
