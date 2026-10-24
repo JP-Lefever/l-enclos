@@ -20,7 +20,6 @@ const cardData : SpectacleProps[] = [
 		assistant: "Françoise Longeard, Mylène Mauries et Anita Schultz-Moszkowski",
 		theme: "Spectacle familial sur l’égalité fille-garçon",
 		resume: `Maya n'est pas comme les filles de son école : elle aime avoir les cheveux courts, elle est toujours habillée en vêtements de sport et elle passe son temps à chasser Baradring Mangetout, une créature qui habite dans la forêt. Thé, c'est un garçon mais il a les cheveux longs, il adore prendre des photos de paysage et jouer avec son ami Nana, une poupée qu'il a piqué à sa petite sœur.
-
 Est ce grave qu'ils soient différents de leurs camarades de classe ?
 Est ce qu'ils sont normaux ? 
 Moqués par les autres enfants et observés avec étonnement par les adultes, Maya et Théo vont se rencontrer, se dévoiler l'un à l'autre lors des péripéties qu'ils traverseront ensemble et découvrir à leur façon la complexité et la beauté du monde pour petit à petit se l'approprier.
@@ -37,7 +36,7 @@ Dispose d'une version hors les murs (matériel necessaire : 1 enceiente`,
 	{
 		id: 2,
 		slug: "j-ai-17-ans-pour-toujours",
-		status: "En diffusion",
+		status: "Création 2029",
 		title: "J'ai 17ans pour toujours",
 		public: "Tout public, à partir de 14 ans.",
 		image_url: "/images/jai_17ans.webp",
@@ -63,12 +62,12 @@ Dispose d'une version hors les murs (matériel necessaire : 1 enceiente`,
 	{
 		id: 3,
 		slug: "Homo",
-		status: "En cours de création",
+		status: "Création 2030",
 		title: "Homo sapiens 5.0",
 		public: "Tout public, à partir de 14 ans.",
 		image_url: "/images/homo_sapiens.webp",
 		duration: "",
-		writing: "",
+		writing: "Ecrit par Sandra Wichurski",
 		directedBy: "Sandra Wichurski",
 		image_spec: "/images/homo_sapiens.webp",
 		music: "",
@@ -76,9 +75,10 @@ Dispose d'une version hors les murs (matériel necessaire : 1 enceiente`,
 		light: "",
 		video: "",
 		assistant: "",
-		theme: "",
-		resume: "",
-		propos :"Spectacle en cours de construction",
+		theme: "Spectacle tout public sur les dérives d’une société toujours plus connectée",
+		resume: `Homo Sapiens 5.0 raconte l'histoire de Nelle, Soli et Habi, dans le monde dystopique de l'an 2070. Assistés par leur IA, ils habitent ce nouveau monde où ils n'ont plus à travailler, où il n'est plus nécessaire de se déplacer grâce à leur Digital Box : la machine qui a remplacé toutes les autres machines et qui, avec ses multiples fonctionnalités, leur assure une vie parfaitement confortable et sécurisée. Jusqu'au jour où un bug dans la matrice va venir bouleverser leurs Certitudes… 
+		`,
+		propos :"Homo Sapiens 5.0 tente de dialoguer autour de notre dépendance toujours plus grandissante au numérique, de l’omniprésence de la technologie dans nos vies comme moyen d’asservissement, de la diminution de notre rapport au réel, à l’authentique, à la nature. Du danger de la perte de notre esprit réfléchi, curieux et créateur au sein d’une société ultra-numérisée. De notre addiction collective au virtuel au détriment de la réalité. Homo Sapiens 5.0 propose une vision où les humains ne peuvent plus vivre sans la machine, où ils sont assignés à résidence par leur propre volonté, où la solitude est devenue la nouvelle normalité. Cette vision poussée volontairement à l’extrême est un moyen de faire réagir, d’amener à la réflexion autour de nous, de l’humain, du monde de demain, de nos moyens d’action pour nous protéger de la déferlante numérique.",
 		jauge: "",
 		plateau: "",
 		regie: "",

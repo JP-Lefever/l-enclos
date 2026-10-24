@@ -12,7 +12,7 @@ export type SpectacleProps = {
 	writing: string;
 	directedBy: string;
 	interpretation?: string;
-	music: string;
+	music?: string;
 	illustration?: string;
 	poster?: string;
 	assistant: string;

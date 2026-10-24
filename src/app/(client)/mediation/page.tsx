@@ -19,7 +19,7 @@ export default function MediationPage() {
 				<article className={styles.section}>
 					<h1 className={styles.h1}>{"La compagnie L'Enclos"}</h1>
 					<ScrollAnimation2>
-						<h2 className={styles.h2}>{"Les Médiations "}</h2>
+						<h2 className={styles.h2}>{"Les créations collectives"}</h2>
 					</ScrollAnimation2>
 				</article>
 
