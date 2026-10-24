@@ -266,13 +266,13 @@ export default function DetailSpectacle({
 
 				</section>
 
-				{!lastPartnair && !firstPartnair && (
+
 				<section className={styles.section}>
 					<ScrollAnimation2 className={styles.title}>
 						<h2 className={styles.h2Info}>{"Production soutiens et résidences"}</h2>
 					</ScrollAnimation2>
 					<ScrollAnimation  className={styles.info}>
-						{firstPartnair.map((f)=>
+						{firstPartnair && firstPartnair.map((f)=>
 							<ul key={f.id}>
 								<li className={styles.li} key={f.id}>{f.name}</li>
 							</ul>
@@ -295,7 +295,7 @@ export default function DetailSpectacle({
 
 					</ScrollAnimation>
 				</section>
-				)}
+
 
 				<ScrollAnimation className={styles.sectionDate}>
 					<h2 className={styles.h2Date}>Dates</h2>
