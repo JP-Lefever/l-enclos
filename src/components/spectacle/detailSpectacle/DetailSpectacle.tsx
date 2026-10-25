@@ -82,6 +82,9 @@ export default function DetailSpectacle({
 						{data.slug === "j-ai-17-ans-pour-toujours" &&
 						<h2 className={styles.h2sub}>{data.writing}</h2>
 						}
+						{data.slug === "Homo" &&
+							<h2 className={styles.h2sub}>{data.writing}</h2>
+						}
 						{data.propos &&
 						(
 							<>
@@ -146,16 +149,18 @@ export default function DetailSpectacle({
 							</div>
 						)}
 
-						{!openDistrib && (
+						{!openDistrib && data.music && data.illustration && data.sceno && data.light && data.video && data.illustration && data.assistant &&(
 							<button className={styles.button}  type={"button"} onClick={handleOpenDistrib}>{"Voir plus"}</button>
 						)}
 
 						{openDistrib && (
 							<>
-								<div>
-									<h3 className={styles.h3}>Composition musicale</h3>
-									<p className={styles.p}>{data.music}</p>
-								</div>
+								{data.music && (
+									<div>
+										<h3 className={styles.h3}>Composition musicale</h3>
+										<p className={styles.p}>{data.music}</p>
+									</div>
+								)}
 
 								{data.illustration && (
 									<div>
@@ -189,14 +194,16 @@ export default function DetailSpectacle({
 										<p className={styles.p}>{data.poster}</p>
 									</div>
 								)}
-								<div>
-									<h3 className={styles.h3}>Oeil exterieur</h3>
-									<p className={styles.p}>{data.assistant}</p>
-								</div>
+								{data.assistant && (
+									<div>
+										<h3 className={styles.h3}>Oeil exterieur</h3>
+										<p className={styles.p}>{data.assistant}</p>
+									</div>
+								)}
 							</>
 							)}
 
-						{openDistrib && (
+						{openDistrib && data.music && data.illustration && data.sceno && data.light && data.video && data.illustration && data.assistant &&(
 							<button className={styles.button}  type={"button"} onClick={handleOpenDistrib}>{"Voir moins"}</button>
 						)}
 
@@ -217,34 +224,42 @@ export default function DetailSpectacle({
 							<h3 className={styles.h3}>Age</h3>
 							<p className={styles.p}>{data.public}</p>
 						</div>
-						<div>
-							<h3 className={styles.h3}>Durée</h3>
-							<p className={styles.p}>{data.duration}</p>
-						</div>
+						{data.duration && (
+							<div>
+								<h3 className={styles.h3}>Durée</h3>
+								<p className={styles.p}>{data.duration}</p>
+							</div>
+						)}
 
-						{!openTech &&
+						{!openTech && data.jauge && data.plateau && data.regie &&
 						<button className={styles.button} type={"button"} onClick={handleOpenTech}>{"Voir plus"}</button>
 						}
 
 						{openTech && (
 							<>
-							<div>
-								<h3 className={styles.h3}>Jauge : </h3>
-								<p className={styles.p}>{data.jauge}</p>
-							</div>
-							<div>
-								<h3 className={styles.h3}>Plateau : </h3>
-								<p className={styles.p}>{data.plateau}</p>
-							</div>
-							<div>
-								<h3 className={styles.h3}>Régie : </h3>
-								<p className={styles.p}> {data.regie}</p>
-							</div>
+							{data.jauge && (
+								<div>
+									<h3 className={styles.h3}>Jauge : </h3>
+									<p className={styles.p}>{data.jauge}</p>
+								</div>
+								)}
+							{data.plateau && (
+								<div>
+									<h3 className={styles.h3}>Plateau : </h3>
+									<p className={styles.p}>{data.plateau}</p>
+								</div>
+							)}
+							{data.regie && (
+								<div>
+									<h3 className={styles.h3}>Régie : </h3>
+									<p className={styles.p}> {data.regie}</p>
+								</div>
+							)}
 
 							</>
 						)}
 
-					{openTech &&
+					{openTech && data.jauge && data.plateau && data.regie &&
 						<button className={styles.button} type={"button"} onClick={handleOpenTech}>{"Voir moins"}</button>
 					}
 					</ScrollAnimation>
@@ -257,7 +272,7 @@ export default function DetailSpectacle({
 						<h2 className={styles.h2Info}>{"Production soutiens et résidences"}</h2>
 					</ScrollAnimation2>
 					<ScrollAnimation  className={styles.info}>
-						{firstPartnair.map((f)=>
+						{firstPartnair && firstPartnair.map((f)=>
 							<ul key={f.id}>
 								<li className={styles.li} key={f.id}>{f.name}</li>
 							</ul>
@@ -277,9 +292,7 @@ export default function DetailSpectacle({
 						{openProd &&
 							<button className={styles.button} type={"button"} onClick={handleOpenProd}>{"Voir moins"}</button>
 						}
-						{/*{partnairSpec.map((s) => (*/}
-						{/*		<p key={s.id} className={styles.h3}>{s.name}</p>*/}
-						{/*))}*/}
+
 					</ScrollAnimation>
 				</section>
 

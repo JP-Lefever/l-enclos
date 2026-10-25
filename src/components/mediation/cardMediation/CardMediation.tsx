@@ -24,8 +24,8 @@ export default function CardMediation( {data} : {data : MediationProps}) {
                 />
             </figure>
             <div className={styles.div}>
-                <ArrowRight/>
-                <p>{"En savoir plus"}</p>
+                {/*<ArrowRight/>*/}
+                <p>{data.title}</p>
             </div>
         </TransitionLink>
     )
