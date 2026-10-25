@@ -1,5 +1,7 @@
 //Spectacles
-const cardData = [
+import {SpectacleProps} from "@/types/definitions";
+
+const cardData : SpectacleProps[] = [
 	{
 		id: 1,
 		slug: "te-souviens-tu-du-jour-ou-j-ai-coupe-mes-cheveux",
@@ -16,47 +18,41 @@ const cardData = [
 		illustration: "Mona Costa",
 		poster: "Julien Durand",
 		assistant: "Françoise Longeard, Mylène Mauries et Anita Schultz-Moszkowski",
-		theme: "Egalité fille garçon",
-		resume: `**Maya** n'est pas comme les filles de son école : elle aime avoir les cheveux courts, elle est toujours habillée en vêtements de sport et elle passe son temps à chasser Baradring Mangetout, une créature qui habite dans la forêt. **Théo**, c'est un garçon mais il a les cheveux longs, il adore prendre des photos de paysage et jouer avec son ami Nana, une poupée qu'il a piqué à sa petite sœur.
-
+		theme: "Spectacle familial sur l’égalité fille-garçon",
+		resume: `Maya n'est pas comme les filles de son école : elle aime avoir les cheveux courts, elle est toujours habillée en vêtements de sport et elle passe son temps à chasser Baradring Mangetout, une créature qui habite dans la forêt. Thé, c'est un garçon mais il a les cheveux longs, il adore prendre des photos de paysage et jouer avec son ami Nana, une poupée qu'il a piqué à sa petite sœur.
 Est ce grave qu'ils soient différents de leurs camarades de classe ?
-
-**Est ce qu'ils sont normaux ?**
-
-Moqués par les autres enfants et observés avec étonnement par les adultes, **Maya et Théo vont se rencontrer**, se dévoiler l'un à l'autre lors des péripéties qu'ils traverseront ensemble et découvrir à leur façon la complexité et la beauté du monde pour petit à petit se l'approprier.`,
+Est ce qu'ils sont normaux ? 
+Moqués par les autres enfants et observés avec étonnement par les adultes, Maya et Théo vont se rencontrer, se dévoiler l'un à l'autre lors des péripéties qu'ils traverseront ensemble et découvrir à leur façon la complexité et la beauté du monde pour petit à petit se l'approprier.
+`,
 		propos: `
 
-La pièce parle avant tout de la **découverte de soi**, du retour à l'enfance, des premières collisions de l'individu avec l'opinion dominante, des codes de genre que les parents transmettent inconsciemment à leurs enfants. Nous revendiquons le besoin pour chaque enfant de trouver son propre chemin vers ce qui fera de lui un **adulte ouvert d'esprit et bien dans sa peau.**
-
-Notre travail s'est axé principalement sur la recherche des notions même du **féminin** et du **masculin** dans toutes leurs complexités. Nous avons souhaité regarder ces deux forces à la façon du yin et du yang, indissociables, complémentaires dans l'équilibre de chaque individu qu'il soit homme ou femme. Ainsi, nous souhaitons que chacun puisse affronter les carcans dans lesquels la société moderne souhaite dès notre plus jeune âge nous enfermer (les publicités, les jouets, les codes couleurs…).`,
+La pièce parle avant tout de la découverte de soi, du retour à l'enfance, des premières collisions de l'individu avec l'opinion dominante, des codes de genre que les parents transmettent inconsciemment à leurs enfants. Nous revendiquons le besoin pour chaque enfant de trouver son propre chemin vers ce qui fera de lui un adulte ouvert d'esprit et bien dans sa peau.\nNotre travail s'est axé principalement sur la recherche des notions même du féminin et du masculin dans toutes leurs complexités. Nous avons souhaité regarder ces deux forces à la façon du yin et du yang, indissociables, complémentaires dans l'équilibre de chaque individu qu'il soit homme ou femme. Ainsi, nous souhaitons que chacun puisse affronter les carcans dans lesquels la société moderne souhaite dès notre plus jeune âge nous enfermer (les publicités, les jouets, les codes couleurs…).`,
 		jauge: "200 personnes",
 		plateau: "Ouverture 5 m / profondeur 4 m / hauteur 3,5 m sous projecteurs.",
-		regie: `Besoin d'une salle équipée en son et en lumière. Régisseur compagnie.
-
-				Version avec technique réduite possible.`,
+		regie: `Besoin d'une salle équipée en son et en lumière. Régisseur compagnie. Version avec technique réduite possible.
+		
+Dispose d'une version hors les murs (matériel necessaire : 1 enceiente`,
 	},
 	{
 		id: 2,
 		slug: "j-ai-17-ans-pour-toujours",
-		status: "En diffusion",
+		status: "Création 2029",
 		title: "J'ai 17ans pour toujours",
 		public: "Tout public, à partir de 14 ans.",
 		image_url: "/images/jai_17ans.webp",
 		duration: "1 heure",
 		writing: "Texte de Jacques Descorde",
 		directedBy: "Mariana Georgieva et Sandra Wichurski",
+		interpretation: "Anita Schultz-Moszkowskiet Sandra Wichurski",
 		image_spec: "/images/affiche.png",
 		music: "Junior Benyson, Guillaume Mahenc, Benoit Bornes et Idris Jimser",
 		sceno: "Ariane Germain",
-		light: "Rémi Dubot",
-		video: "Mathilde Foriel-Destezet",
-		assistant: "Magali Zaphiropoulo, Anita Schulski",
-		theme: "L'adolescence",
-		resume: `**Stella et Adèle**, deux amies de 17 ans, passent une énième nuit, perchées sur le toit de leur immeuble. Stella ne parle plus à son père suite à la mort de sa mère. Adèle attend depuis plusieurs jours des nouvelles de son amoureux qui s’est enfui de chez lui. Obnubilées par leurs préoccupations personnelles, les deux filles traversent des nuits ensemble à rêver d’une vie meilleure. Elles inventent des histoires sur la vie des gens qu’elles aperçoivent à travers les fenêtres et balcons encore éclairés des immeubles d’en face. Elles se moquent du désespoir des autres pour ne pas penser aux fragilités de leurs propres histoires. Mais cette nuit sera différente. Cette nuit marquera le point final de leur enfance et ne leur permettra plus d'échapper à leurs destinées.`,
-		propos : `“J’ai 17 ans pour toujours” est avant tout une fiction qui raconte l’histoire de ces deux adolescentes dont le quotidien n’est pas toujours rose. Stella et Adèle montent chaque nuit sur ce toit pour fuir la triste réalité des adultes qui les entourent, pour traverser le monde à leurs manières avec leurs espoirs d’une vie où tout semble encore possible. Mais que se passe t-il quand on arrive à l’âge où l’on ne peut plus faire semblant, où la réalité vient percuter nos idéaux, où le doute s’installe sur l’accomplissement de nos rêves, que notre horizon semble se rétrécir à l’image des fenêtres qui s’éteignent les unes après les autres, plus la nuit avance…
-
-Par le texte de Jacque Descorde, nous avons voulu explorés cette adolescence là, livrée à elle même, immergée dans les immeubles, la pauvreté et le chômage. Nous avons souhaité mettre en lumière ces adolescents qui grandissent sans figure repère pour les accompagner, au sein de foyers familiaux complexe et qui malgré la brutalité de leur vie gardent une rage de vivre et une soif d’idéaux. A l’image de Stella et Adèle qui rêvent pour l’une de trouver son étoile qui la guidera et pour l’autre de partir très loin d’ici pour rejoindre son amoureux. Nous avons également été touchés par la poésie de l’écriture de ce texte, par la volonté de raconter l’amitié comme un moyen de s’en sortir.
-`,
+		light: "Rémi Dubot et Benjamin Cambronne",
+		assistant: "Magali Zaphiropoulo, Anita Schultz-Moszkowskiet",
+		theme: "Spectacle tout public sur l’adolescence en manque de repères",
+		resume: `Stella et Adèle, deux amies de 17 ans, passent une énième nuit, perchées sur le toit de leur immeuble. Stella ne parle plus à son père suite à la mort de sa mère. Adèle attend depuis plusieurs jours des nouvelles de son amoureux qui s’est enfui de chez lui.\n Obnubilées par leurs préoccupations personnelles, les deux filles traversent des nuits ensemble à rêver d’une vie meilleure. Elles inventent des histoires sur la vie des gens qu’elles aperçoivent à travers les fenêtres et balcons encore éclairés des immeubles d’en face. Elles se moquent du désespoir des autres pour ne pas penser aux fragilités de leurs propres histoires.\n Mais cette nuit sera différente. Cette nuit marquera le point final de leur enfance et ne leur permettra plus d'échapper à leurs destinées.
+		`,
+		propos :  `“J’ai 17 ans pour toujours” est avant tout une fiction qui raconte l’histoire de ces deux adolescentes dont le quotidien n’est pas toujours rose. Stella et Adèle montent chaque nuit sur ce toit pour fuir la triste réalité des adultes qui les entourent, pour traverser le monde à leur manière, avec leurs espoirs d’une vie où tout semble encore possible. Mais que se passe-t-il quand on arrive à l’âge où l’on ne peut plus faire semblant, où la réalité vient percuter nos idéaux, où le doute s’installe quant à l’accomplissement de nos rêves, où notre horizon semble se rétrécir à l’image des fenêtres qui s’éteignent les unes après les autres, au fil de la nuit…\nPar le texte de Jacques Descorde, nous avons voulu explorer cette adolescence-là, livrée à elle-même, immergée dans les immeubles, la pauvreté et le chômage. Nous avons souhaité mettre en lumière ces adolescents qui grandissent sans figure de repère pour les accompagner, au sein de foyers familiaux complexes et qui, malgré la brutalité de leur vie, gardent une rage de vivre et une soif d’idéaux. À l’image de Stella et Adèle, qui rêvent, pour l’une, de trouver son étoile qui la guidera et, pour l’autre, de partir très loin d’ici pour rejoindre son amoureux.`,
 		jauge: "200 personnes",
 		plateau: "Ouverture 8 m / profondeur 6 m / hauteur 3,5 m sous projecteurs.",
 		regie: `Sol recouvert de tapis de danse noir. Salle noir total. Besoin d'une salle équipée en son et en lumière. 
@@ -66,12 +62,12 @@ Par le texte de Jacque Descorde, nous avons voulu explorés cette adolescence l�
 	{
 		id: 3,
 		slug: "Homo",
-		status: "En cours de création",
+		status: "Création 2030",
 		title: "Homo sapiens 5.0",
 		public: "Tout public, à partir de 14 ans.",
 		image_url: "/images/homo_sapiens.webp",
 		duration: "",
-		writing: "",
+		writing: "Ecrit par Sandra Wichurski",
 		directedBy: "Sandra Wichurski",
 		image_spec: "/images/homo_sapiens.webp",
 		music: "",
@@ -79,9 +75,10 @@ Par le texte de Jacque Descorde, nous avons voulu explorés cette adolescence l�
 		light: "",
 		video: "",
 		assistant: "",
-		theme: "",
-		resume: "",
-		propos :"Spectacle en cours de construction",
+		theme: "Spectacle tout public sur les dérives d’une société toujours plus connectée",
+		resume: `Homo Sapiens 5.0 raconte l'histoire de Nelle, Soli et Habi, dans le monde dystopique de l'an 2070. Assistés par leur IA, ils habitent ce nouveau monde où ils n'ont plus à travailler, où il n'est plus nécessaire de se déplacer grâce à leur Digital Box : la machine qui a remplacé toutes les autres machines et qui, avec ses multiples fonctionnalités, leur assure une vie parfaitement confortable et sécurisée. Jusqu'au jour où un bug dans la matrice va venir bouleverser leurs Certitudes… 
+		`,
+		propos :"Homo Sapiens 5.0 tente de dialoguer autour de notre dépendance toujours plus grandissante au numérique, de l’omniprésence de la technologie dans nos vies comme moyen d’asservissement, de la diminution de notre rapport au réel, à l’authentique, à la nature. Du danger de la perte de notre esprit réfléchi, curieux et créateur au sein d’une société ultra-numérisée. De notre addiction collective au virtuel au détriment de la réalité. Homo Sapiens 5.0 propose une vision où les humains ne peuvent plus vivre sans la machine, où ils sont assignés à résidence par leur propre volonté, où la solitude est devenue la nouvelle normalité. Cette vision poussée volontairement à l’extrême est un moyen de faire réagir, d’amener à la réflexion autour de nous, de l’humain, du monde de demain, de nos moyens d’action pour nous protéger de la déferlante numérique.",
 		jauge: "",
 		plateau: "",
 		regie: "",
@@ -108,7 +105,7 @@ const partnair = [
 	{
 		id: 4,
 		slug: "te-souviens-tu-du-jour-ou-j-ai-coupe-mes-cheveux",
-		name: "le Chapeau rouge (31)",
+		name: "Centre d'animation Lalande (31)",
 	},
 	{
 		id: 5,
@@ -118,12 +115,7 @@ const partnair = [
 	{
 		id: 6,
 		slug: "te-souviens-tu-du-jour-ou-j-ai-coupe-mes-cheveux",
-		name: "Théâtre de la Brique Rouge",
-	},
-	{
-		id: 7,
-		slug: "te-souviens-tu-du-jour-ou-j-ai-coupe-mes-cheveux",
-		name: "Espace Bazacle (31)",
+		name: "Théâtre de la Brique Rouge, Espace Bazacle (31)",
 	},
 	{
 		id: 8,
@@ -143,7 +135,7 @@ const partnair = [
 	{
 		id: 11,
 		slug: "te-souviens-tu-du-jour-ou-j-ai-coupe-mes-cheveux",
-		name: "Avec l'aide du Conseil Départemental de la Haute Garonne",
+		name: "Avec l'aide financière du Conseil Départemental de la Haute Garonne",
 	},
 	{
 		id: 12,
@@ -170,11 +162,7 @@ const partnair = [
 		slug: "j-ai-17-ans-pour-toujours",
 		name: "La Filature de Mazel (30)",
 	},
-	{
-		id: 17,
-		slug: "j-ai-17-ans-pour-toujours",
-		name: `Avec l'aide du Conseil Départemental de la Haute Garonne`,
-	},
+
 	{
 		id: 18,
 		slug: "j-ai-17-ans-pour-toujours",
@@ -193,7 +181,7 @@ const partnair = [
 	{
 		id: 21,
 		slug: "j-ai-17-ans-pour-toujours",
-		name: "Avec l'aide du département de la Haute Garonne dans le cadre de « Artistes en scène, dispositif exceptionnel d'aide à la résidence de création avec actions culturelles et diffusion »",
+		name: "Avec l'aide financière et matérielledu département de la Haute Garonne dans le cadre de « Artistes en scène, dispositif exceptionnel d'aide à la résidence de création avec actions culturelles et diffusion »",
 	},
 ];
 
@@ -329,6 +317,30 @@ const photo = [
 	{
 		id: 22,
 		photo: "/images/ephad/carou6.jpg",
+		service: "carousel_ephad",
+		slug: "ephad",
+	},
+	{
+		id: 23,
+		photo: "/images/ephad/carou7.webp",
+		service: "carousel_ephad",
+		slug: "ephad",
+	},
+	{
+		id: 24,
+		photo: "/images/ephad/carou8.webp",
+		service: "carousel_ephad",
+		slug: "ephad",
+	},
+	{
+		id: 24,
+		photo: "/images/ephad/carou9.webp",
+		service: "carousel_ephad",
+		slug: "ephad",
+	},
+	{
+		id: 26,
+		photo: "/images/ephad/carou10.webp",
 		service: "carousel_ephad",
 		slug: "ephad",
 	},

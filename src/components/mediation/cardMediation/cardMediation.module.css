@@ -38,5 +38,7 @@
     display: flex;
     align-items: center;
     gap: 0.4em;
-    justify-content: flex-end;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5em;
 }

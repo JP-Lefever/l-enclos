@@ -81,9 +81,9 @@
 
 .propos{
 	color : grey;
-	padding-bottom: 1em;
 	width: 60vw;
-	margin: 5vh auto;
+	margin: 1vh auto 10vh auto;
+	font-size: 1.5em;
 	@media screen and (max-width: 1024px) {
 		width: 95vw;
 		margin: 2vh auto;
@@ -94,14 +94,13 @@
 }
 
 .articleInfo{
-
 	display: flex;
 	flex-direction: row-reverse;
 	justify-content: center;
 	align-items: center;
 	width: 80vw;
+	gap: 2em;
 	margin: 0 auto 5vh auto;
-	gap: 3em;
 	@media screen and (max-width: 568px) {
 		display: flex;
 		flex-direction: column-reverse;
@@ -119,18 +118,21 @@
 }
 
 .story {
-	width: 25vw;
+	width: 30vw;
 	line-height: 1.5em;
-	font-weight: bold;
 	@media screen and (max-width: 568px) {
 		text-align: center;
 		width: 95vw;
 	}
 }
 
+.text{
+	margin-top : 1em
+}
+
 .imageWrapper {
 
-	width: 40vw;
+	width: 25vw;
 	height: 60vh;
 	position: relative;
 	@media screen and (max-width: 568px) {

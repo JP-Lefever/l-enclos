@@ -2,7 +2,7 @@
 
 import styles from "./detailMediation.module.css";
 import Image from "next/image";
-import type { InterventionProps, MediationProps } from "@/types/definitions";
+import {InterventionAdminProps, InterventionProps, MediationProps, ModifyImmersionProps} from "@/types/definitions";
 
 import Markdown from "react-markdown";
 import { intervention } from "@/assets/data/placeholder-data-mediation";
@@ -16,15 +16,20 @@ import TransitionLink from "@/components/ui/transitionLink/TransitionLink";
 import React from "react";
 
 
+
+
+
 export default function DetailMediation({
-	mediation, slug,
-}: { mediation: MediationProps[]; slug: string }) {
+	mediation, slug, date
+}: { mediation: MediationProps[]; slug: string ; date : ModifyImmersionProps[] }) {
 
 
 	const data = mediation.find((m) => m.slug === slug);
-	const dataInter: InterventionProps[] = intervention.filter(
-		(i) => i.slug === slug,
+	const dataInter: ModifyImmersionProps[] = date.filter(
+		(i) => i.mediation_id === data?.id,
 	);
+
+console.log(dataInter);
 
 	if (!data) {
 		notFound();
@@ -52,7 +57,9 @@ export default function DetailMediation({
 				</article>
 				<article className={styles.articleInfo}>
 					<ScrollAnimation className={styles.story}>
-						<Markdown>{data.pres}</Markdown>
+						{data.pres.split("\n").map((paragraph, i) => (
+							<article className={styles.text} key={i}><Markdown>{paragraph}</Markdown></article>
+						))}
 					</ScrollAnimation>
 					<ScrollAnimation2 className={styles.imageWrapper}>
 						<Image
@@ -91,10 +98,11 @@ export default function DetailMediation({
 
 			<section className={styles.section}>
 				<ScrollAnimation2 className={styles.title}>
-					<h2 className={styles.h2Info}>{"Déroulement du cycle"}</h2>
+					<h2 className={styles.h2Info}>{"Déroulement du projet"}</h2>
 				</ScrollAnimation2>
 				<ScrollAnimation className={styles.info} >
 					<article>
+						{data.id === 3 ? <h3 className={styles.h3}>{"FACE A (année 1)"}</h3> : ""}
 						<h3 className={styles.h3}>{data.first}</h3>
 						<p className={styles.p}>{data.presFirst}</p>
 					</article>
@@ -102,7 +110,6 @@ export default function DetailMediation({
 						<h3 className={styles.h3}>{data.second}</h3>
 						<p className={styles.p}>{data.presSecond}</p>
 					</article>
-
 					{!open && (
 						<button type={"button"} className={styles.button} onClick={handleOpen}>{"Voir plus"}</button>
 					)}
@@ -140,20 +147,20 @@ export default function DetailMediation({
 
 			<section className={styles.section}>
 				<ScrollAnimation2 className={styles.title}>
-					<h2 className={styles.h2Info}>{"Interventions"}</h2>
+					<h2 className={styles.h2Info}>{"Lieux de création"}</h2>
 				</ScrollAnimation2>
 				<ScrollAnimation  className={styles.info}>
 						{dataInter.map((m)=>(
 							<article key={m.id}>
-								<h3 className={styles.h3}>{m.date}</h3>
-								<p className={styles.p}>{m.info}</p>
+								<h3 className={styles.h3}>{m.year}</h3>
+								<p className={styles.p}>{m.label}</p>
 							</article>
 						))}
 				</ScrollAnimation>
 			</section>
 			<section className={styles.section}>
 				<ScrollAnimation2 className={styles.title}>
-					<h2 className={styles.h2Info}>{"Remerciements"}</h2>
+					<h2 className={styles.h2Info}>{"Projets soutenus financièrement par"}</h2>
 				</ScrollAnimation2>
 				<ScrollAnimation  className={styles.info}>
 
