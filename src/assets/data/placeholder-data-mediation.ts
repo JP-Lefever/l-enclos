@@ -92,7 +92,7 @@ La création artistique va leur permettre de partager une expérience commune, d
 		type: "Parcours théâtral",
 		public: "Personnes de plus de 60ans vivant ) domicile ou en EHPAD",
 		duration: "Adaptable",
-		theme: "LE SOUVENIR, transmission, Lien intergénérationnel",
+		theme: "Le souvenir, transmission, le lien intergénérationnel, l'anvancée en age",
 		shortPres : `Projet de création à destination des résidents en EHPAD`,
 		pres: `Le crépitement du vinyle est un projet de création artistique à destination des résidents d’EHPAD et des personnes de plus de 60 ans (en génerale isolées). Le processus de création se fait en prenant en compte les spécificités des lieux et de ses habitants. L'œuvre finale présentée devant un public est le résultat de deux axes qui se répondent pour créer un objet hybride donnant naissance à une représentation et une exposition au sein de l’établissement ou à proximité (salle des fêtes du village, EHPAD partenaires). Le projet se construit sur deux années : la FACE A puis la FACE B : 
 
@@ -111,8 +111,7 @@ La FACE B (année 2) se construit de la même manière que la FACE A mais cette 
 		presFourth : "Le déroulement reste le même, en trois temps mais cette fois ci, les témoignages évoquent la vie au présent, celle au sein de l’EHPAD ou dans les foyers et aboutit à une exposition avec casques audio et portraits réalisés par un photographe des personnes interviewées. La représentation quand à elle évolue vers une “tournée” à l’extérieur de l’établissement. ",
 		material: [
 			"Enregistreur zoom",
-			"Vidéoprojecteur",
-			"Extraits vidéo, texte",
+			"Paravaents scenique",
 			"Objet d'époque",
 			"Cubes d'exposition",
 			"Radios (4)",
@@ -120,7 +119,7 @@ La FACE B (année 2) se construit de la même manière que la FACE A mais cette 
 		],
 
 		thanks:
-			"Le Conseil Départemental de la Haute Garonne, les animatrices des EHPAD (Cathy Morant, Marie-Christine Durban, Martine) ,Aurélié Bordet (art thérapeute) Hee Jen Kim et Mathilde Foriel-Destezet (vidéaste et montage), Mélissa Mathieu (curateur d'art) et Pauline Drolet (régisseuse), les résidents.",
+			"Le Conseil Départemental de la Haute Garonne, par la DRAC, par le département du Lot, par le département du Tarn et Garon les animatrices des EHPAD (Cathy Morant, Marie-Christine Durban, Martine) ,Aurélié Bordet (art thérapeute) Hee Jen Kim et Mathilde Foriel-Destezet (vidéaste et montage), Mélissa Mathieu (curateur d'art) et Pauline Drolet (régisseuse), les résidents.",
 	},
 ];
 
