@@ -320,6 +320,30 @@ const photo = [
 		service: "carousel_ephad",
 		slug: "ephad",
 	},
+	{
+		id: 23,
+		photo: "/images/ephad/carou7.webp",
+		service: "carousel_ephad",
+		slug: "ephad",
+	},
+	{
+		id: 24,
+		photo: "/images/ephad/carou8.webp",
+		service: "carousel_ephad",
+		slug: "ephad",
+	},
+	{
+		id: 24,
+		photo: "/images/ephad/carou9.webp",
+		service: "carousel_ephad",
+		slug: "ephad",
+	},
+	{
+		id: 26,
+		photo: "/images/ephad/carou10.webp",
+		service: "carousel_ephad",
+		slug: "ephad",
+	},
 ];
 
 export { cardData, partnair, photo };

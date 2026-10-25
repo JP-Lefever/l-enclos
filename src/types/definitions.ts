@@ -88,14 +88,12 @@ export type MediationProps = {
 	presThird?: string;
 	fourth?: string;
 	presFourth?: string;
-	final?: string;
-	presFinal?: string;
 	material?: string[];
 	extract?: string;
 	extractName?: string;
 	textExtract?: string;
 	thanks: string;
-	credit?: string;
+
 };
 
 export type InterventionProps = {

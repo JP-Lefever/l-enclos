@@ -1,4 +1,6 @@
-const mediation = [
+import {MediationProps} from "@/types/definitions";
+
+const mediation : MediationProps[] = [
 	{
 		id: 1,
 		slug : "primaire",
@@ -8,14 +10,14 @@ const mediation = [
 		photoSeance: "/images/primaire1.jpg",
 		photoDate: "/images/mediation.webp",
 		type: "Parcours théâtral",
-		public: "8/12 ANS",
+		public: "8/12 ans",
 		duration: "Adaptable",
 		theme: "Egalité fille-Garçon",
-		shortPres: "« Chevalier comme un garçon, princesse comme une fille » est un projet de création de spectacle à destination des enfants de 7 à 11 ans. Par ce projet, les enfants pourront être au cœur du processus de création d'un spectacle sur la thématique de l'égalité fille-garçon.",
-		pres: `« Chevalier comme un garçon, princesse comme une fille » est un projet de création de spectacle à destination des enfants de 7 à 11 ans. Par ce projet, les enfants pourront être au cœur du processus de création d'un spectacle sur la thématique de l'égalité fille-garçon. Comme trame de narration, nous avons choisit de travailler sur l'univers du conte. Les enfants pourront créer leur propre conte libéré des stéréotypes de genre auquel ce dernier a tendance à s'enfermer (le chevalier fort et courageux, la princesse douce et jolie). A travers cette expérience artistique, les enfants pourront se questionner ensemble sur les normes qui régissent les genres, être porteurs d'idée de narration de nouvelles histoires contées, jouer les personnages qu'ils ont eux-même inventés pour se représenter devant un public.`,
-		organisation: "Le processus de création du spectacle se déroulera en plusieurs étapes :",
-		first: `Temps 1 : Travail de recherche autour du conte classique`,
-
+		organisation: "Le projet se déroule en 3 temps :",
+		shortPres: "Projet de création à destination des primaires sur la thématique de l’égalité fille-garçon",
+		pres: `Par ce projet, les enfants pourront être au coeur du processus de création d'un spectacle sur la thématique de l'égalité fille-garçon. Comme trame de narration, nous avons choisit de travailler sur l'univers du conte. Les enfants pourront créer leur propre conte libéré des stéréotypes de genre auquel ce dernier a tendance à s'enfermer (le chevalier fort et courageux, la princesse douce et jolie). 
+A travers cette expérience artistique, les enfants pourront se questionner ensemble sur les normes qui régissent les genres, être porteurs d'idée de narration de nouvelles histoires contées, jouer les personnages qu'ils ont eux-même inventés pour se représenter devant un public.`,
+		first: "Temps 1 : Découverte du projet",
 		presFirst: `Nous travaillerons sur des extraits de conte classique que nous connaissons tous pour jouer les situations que l'on retrouve dedans, tout en identifiant ce qui nous pose question sur le rôle attribué à chacun des genres.`,
 		second: "Temps 2 : Improvisation autour du conte contemporain",
 		presSecond: `Par le biais de situation de conte contemporain, les enfants devront improviser et faire des propositions de narration de ces situations afin de réinventer les caractéristiques des personnages qui peuplent les contes classiques, leurs rôles, la place qu'ils tiennent au sein de l'histoire.
@@ -34,27 +36,24 @@ Il fit le tour de la Terre pour en trouver une mais il y avait toujours quelque 
 
 C'était difficile à apprécier ; toujours une chose ou l'autre ne lui semblait pas parfaite. Il rentra chez lui tout triste, il aurait tant voulu rencontrer une véritable princesse. »`,
 		thanks:
-			"La Mairie de Toulouse, les instituteurs des écoles (Antoine, Matthieu et Laure) et les enfants.",
+			`La Mairie de Toulouse dans le cadre de l'appel à projet "Passeport pour l'art", les instituteurs des écoles (Antoine, Matthieu et Laure) et les enfants.`,
 	},
 	{
 		id: 2,
 		slug : "college",
 		name: "Projet de création - College",
-		title: "Du texte à la scène ! Autour de Stroboscopie de Sébastien Joanniez",
+		title: "Autour de Stroboscopie",
 		photoPres: "/images/ado.webp",
 		photoSeance: "/images/college1.webp",
 		photoDate: "/images/mediation_college.jpg",
 		type: "Parcours théâtral",
-		public: "12/16 ANS",
+		public: "12/16 ans",
 		duration: "Adaptable",
 		theme: "Egalité fille-Garçon",
-		shortPres: "« Autour de Stroboscopie» est un projet de création de spectacle à destination des jeunes de 12 à 16 ans. Par ce projet, les jeunes pourront être au cœur du processus de création d'un spectacle sur la thématique de l'égalité fille-garçon.",
-		pres: `« Autour de Stroboscopie» est un projet de création de spectacle à destination des jeunes de 12 à 16 ans. Par ce projet, les jeunes pourront être au cœur du processus de création d'un spectacle sur la thématique de l'égalité fille-garçon. Comme trame de narration, nous avons choisit de travailler sur
-
-des extraits du texte « Stroboscopie » de Sébastien Joanniez. qui met en scène **la rencontre entre un garçon et une fille** qui discutent ensemble « de ce qu'ils croient savoir de l'autre ».
-
-
-Nous avons souhaité proposer ce projet aux adolescents car c'est une période où les fractures entre garçon-filles se creusent, où les croyances stéréotypées s'affirment, où chacun reste de son côté ne comprenant pas les réactions du sexe opposé. La création artistique va leur permettre de partager une expérience commune, de n'avoir pas d'autre choix que de se réunir pour mieux avancer dans le travail scénique, de se soutenir lors du stress provoqué par la représentation et surtout de pouvoir communiquer sur leurs différences mais aussi sur tout ce qui les réunit, d'apprendre à se respecter et à s'aimer.`,
+		shortPres: "Projet de création à destination des collégiens sur la thématique de l’égalité fille-garçon",
+		pres: `Par ce projet, les jeunes pourront être au coeur du processus de création d'un spectacle sur la thématique de l'égalité fille-garçon. Comme trame de narration, nous avons choisit de travailler sur des extraits du texte « Stroboscopie » de Sébastien Joanniez. qui met en scène la rencontre entre un garçon et une fille qui discutent ensemble « de ce qu'ils croient savoir de l'autre ».
+Nous avons souhaité proposer ce projet aux adolescents car c'est une période où les fractures entre garçons et filles se creusent, où les croyances stéréotypées s'affirment, où chacun reste de son côté ne comprenant pas les réactions du sexe opposé.
+La création artistique va leur permettre de partager une expérience commune, de n'avoir pas d'autre choix que de se réunir pour mieux avancer dans le travail scénique, de se soutenir lors du stress provoqué par la représentation et surtout de pouvoir communiquer sur leurs différences mais aussi sur tout ce qui les réunit, d'apprendre à se respecter et à s'aimer.`,
 		organisation: "Le projet se déroule en 3 temps :",
 		first: "Temps 1 : Découverte de la pièce",
 		presFirst: `Dans un premier temps après avoir fait des exercices d'échauffement, nous lirons la pièce ensemble pour avoir un premier avis de son contenu et des problématiques que le texte soulève concernant la thématique de l'égalité fille-garçon. L'idée sera de provoquer le débat afin de mieux saisir le propos du texte, comprendre ce que l'on dit dans son jeu d'interprétation, enrichir le sous-texte.`,
@@ -62,8 +61,8 @@ Nous avons souhaité proposer ce projet aux adolescents car c'est une période o
 		presSecond: `Dans un deuxième temps, nous effectuerons un travail d'improvisation autour de situations que l'on retrouve dans le texte afin de préciser le jeu théâtral adapté à l'écriture très contemporaine de « Stroboscopie ».`,
 		third: "Temps 3 : Travail scénique",
 		presThird: `Pour finir, nous ferons un travail de mise en scène des extraits choisis en portant une attention à la distribution, à la mise en espace, à la scénographie, à la partition sonore.`,
-		final: "Séance finale : La représentation",
-		presFinal: `Le travail de répétition se terminera avec une représentation au sein de la structure d'acceuil (école, centre sociaux, ALSH...)`,
+		fourth: "Séance finale : La représentation",
+		presFourth: `Le projet se terminera par une representation du spectacle co-construit avec le groupe d'adolescen`,
 		extract: "Extrait de la pièce ",
 		extractName: "Stroboscopie",
 		textExtract: `Chœur filles : Tu me trouves grosse ?
@@ -80,33 +79,36 @@ Nous avons souhaité proposer ce projet aux adolescents car c'est une période o
 **Chœur garçons** : De pleurer.
 
 **Chœur filles** : Chut ! Il y a quelqu'un !`,
-		thanks:
-			"Le Conseil Départemental de la Haute Garonne, à la professeur (Madame Chevalier et Madame Pichard) et les collégiens.",
+		thanks: `Le Conseil Départemental de la Haute Garonne dans le cadre de l'appel à projet "Parcours laïque et citoyen", à la professeur (Madame Chevalier et Madame Pichard) et les collégiens.`,
 	},
 	{
 		id: 3,
 		slug: "ephad",
 		name: "Projet de création - EPHAD",
-		title: "Le crépitement du vinyle",
+		title: "Le crépitement du vinyle Face A et B",
 		photoPres: "/images/ephad.webp",
 		photoSeance: "/images/ephad1.jpg",
 		photoDate: "/images/ephad2.jpg",
 		type: "Parcours théâtral",
-		public: "EPHAD",
+		public: "Personnes de plus de 60ans vivant ) domicile ou en EHPAD",
 		duration: "Adaptable",
 		theme: "LE SOUVENIR, transmission, Lien intergénérationnel",
-		shortPres : `Le crépitement du vinyle est un **projet de création artistique au sein d'un EHPAD** dans un but d'une restitution publique de l'oeuvre créée. **Le processus de création** se fait en prenant en compte **les spécificités du lieu et de ses habitants**. L'oeuvre finale présenté devant un public sera **le resultat de deux axes** qui se répondent et qui racontent **un passé et un présent des résidents de l'EHPAD** à la manière de la **face A et B d'un vinyle**.`,
-		pres: `Le crépitement du vinyle est un **projet de création artistique au sein d'un EHPAD** dans un but d'une restitution publique de l'oeuvre créée. **Le processus de création** se fait en prenant en compte **les spécificités du lieu et de ses habitants**. L'oeuvre finale présenté devant un public sera **le resultat de deux axes** qui se répondent et qui racontent **un passé et un présent des résidents de l'EHPAD** à la manière de la **face A et B d'un vinyle**.
-		Ce projet est né de l'envie, pour nous les générations actuelles de se poser la fameuse question : **« c'était comment déjà avant ? »**. De prendre le temps d'écouter les histoires d'autrefois, **avec la nostalgie de l'ancien**, les photos en noir et blanc, *le crépitement du vinyle*, ou encore l'odeur des bons petits plats maison.. C'est pourquoi, nous avons voulu aller **à la rencontre des résidents** pour les écouter, pour leur rappeler à quel point nous avons besoin **de leurs paroles pleine de sagesse**.
-		De cette époque passée, nous voulions églament à tout prix **revenir au présent** et mettre en lumière **ce qu'ils et elles sont aujourd'hui, au sein de l'EHPAD**, avec leurs joies et aussi leurs soucis dût à l'âge qui avance (perte d'autonomie). Nous avons pensées que le théâtre est un moyen formidable pour **leur permettre de s'exprimer et de s'épanouir**, pour s'approprier l'espace dans lequel ils vivent au quotidien en transformant le salon de l'EHPAD en salle de spectacle.
+		shortPres : `Projet de création à destination des résidents en EHPAD`,
+		pres: `Le crépitement du vinyle est un projet de création artistique à destination des résidents d’EHPAD et des personnes de plus de 60 ans (en génerale isolées). Le processus de création se fait en prenant en compte les spécificités des lieux et de ses habitants. L'œuvre finale présentée devant un public est le résultat de deux axes qui se répondent pour créer un objet hybride donnant naissance à une représentation et une exposition au sein de l’établissement ou à proximité (salle des fêtes du village, EHPAD partenaires). Le projet se construit sur deux années : la FACE A puis la FACE B : 
+
+La FACE A (année 1) cherche à faire s’exprimer les participants sur une époque passée, celle où ils étaient encore actifs, cette époque qui débute pour certains dans les années 30, cette époque qui nous échappe plus le temps avance. Leur parole est là pour que l’on puisse se souvenir de comment ça se passait avant. La nostalgie de l'ancien, les photos en noir et blanc, le crépitement du vinyle, ou encore l'odeur des bons petits plats maison. Ce premier travail de recherche autour du témoignage nourrit par la suite la deuxième partie du travail dont l’objectif est de créer collectivement un spectacle théâtral en vue d’une représentation. 
+
+La FACE B (année 2) se construit de la même manière que la FACE A mais cette fois ci, l’idée est de revenir à aujourd’hui, de permettre aux participants, dans un premier temps de s’exprimer autour de leur vie au présent, au sein de l’EHPAD ou dans leur foyer, en portant une attention à l’aspect positif, des nouvelles rencontres, des petites joies, des découvertes. Ce travail de témoignages comme pour la FACE A vient nourrir la création d’un spectacle théâtral mais cette fois-ci dans l’idée de réaliser plusieurs représentations en allant à l’extérieur (à l’image d’une “tournée de troupe”). 
 `,
 		organisation: "Le projet s'articule autour de deux axes :",
-		first: "Face A : Travail d'expression",
-		presFirst: `Dans un premier temps, nous concentrons uniquement notre attention sur l'Expression autour du souvenir de cette époque passée (l'enfance, la jeunesse, la vie active) en utilisant des objets d'autrefois comme moyen de faire jaillir la parole, les mots, les sentiments parfois poétiques posés sur le soufflet, le pot à lait, l'ardoise ou encore le tournedisque. Tous ces témoignages seront receuillis à l'aide d'un enregistreur pour nourrir le jour de la représentation une exposition avec casques audio installée au sein de l'EHPAD.Cette première phase de création sera également le moyen pour le.a metteur.e en scène de choisir la direction artistique pour la deuxième phase de création.`,
-		second: "Face B : Travail scénique",
-		presSecond: `En prenant en compte le travail de la face A (les récits, la personnalité de chaque résident, l'identité de groupe), il sera question de constituer avec eux une partition théâtrale faite de textes de théâtres écrits par différents auteurs classiques et contemporains, et également de texte non théâtraux (poésie, littérature) qui feront référence aux souvenirs partagés lors de la première phase de création dans l'idée d'évoquer ce temps d'avant d'une autre manière, plus éloignées d'eux. L'idée de cette face B sera de mettre en lumière l'image d'eux au présent, vivants, interprêtes de personnages et d'histoires fictives, en ayant une forte attention dans la mise en scène des problématiques de chacun et chacune (se déplacer, voir, entendre, parler fort...)`,
-		third: "Le vinyle : La représentation - vernissage",
-		presThird: `Les résidents se représenteront au sein de l'EHPAD devant un public constitué des autres résidents, de leurs familles et du personnel de l'établissement suivie du vernissage de l'exposition. La représentation et l'exposition seront la mélodie commune de ces deux faces réunies, le résultat du chemin parcouru vers l'oeuvre finale.`,
+		first: `Temps 1 :`,
+		presFirst: `Travail de recherche et enregistrement de témoignages Dans un premier temps, nous concentrons notre attention sur l'expression des résidents autour du souvenir de cette époque passée par le biais d’objet d’époque. Tous ces témoignages sont recueillis à l'aide d'un enregistreur pour nourrir le jour de la représentation une exposition avec casques audio installée au sein de l'EHPAD. Cette première phase de recherche est également le moyen pour le.a metteur.e en scène de nourrir la création du spectacle. `,
+		second: "Temps 2 : ",
+		presSecond: `Répétition du spectacle En prenant en compte le travail de témoignages (les récits, la personnalité de chaque résident, l'identité de groupe), il est question de constituer avec eux une partition théâtrale faite de textes de théâtre d’auteurs sur un registres humouristique et également de texte non théâtraux (poésie, littérature) qui font référence aux souvenirs partagés lors de la première phase de création dans l'idée d'évoquer ce temps d'avant d'une autre manière, plus éloignées d'eux. `,
+		third: "Temps 3 : ",
+		presThird: `La représentation Les deux premiers temps permettent d’aboutir à une représentation du spectacle par les résidents devant un public (les autres résidents, leurs familles, le personnel de l’établissements, les habitants du village.) associé au vernissage de l’exposition. `,
+		fourth: "FACE B (année 2)",
+		presFourth : "Le déroulement reste le même, en trois temps mais cette fois ci, les témoignages évoquent la vie au présent, celle au sein de l’EHPAD ou dans les foyers et aboutit à une exposition avec casques audio et portraits réalisés par un photographe des personnes interviewées. La représentation quand à elle évolue vers une “tournée” à l’extérieur de l’établissement. ",
 		material: [
 			"Enregistreur zoom",
 			"Vidéoprojecteur",
@@ -119,7 +121,6 @@ Nous avons souhaité proposer ce projet aux adolescents car c'est une période o
 
 		thanks:
 			"Le Conseil Départemental de la Haute Garonne, les animatrices des EHPAD (Cathy Morant, Marie-Christine Durban, Martine) ,Aurélié Bordet (art thérapeute) Hee Jen Kim et Mathilde Foriel-Destezet (vidéaste et montage), Mélissa Mathieu (curateur d'art) et Pauline Drolet (régisseuse), les résidents.",
-		credit: "Pauline Drolet",
 	},
 ];
 
