@@ -106,11 +106,11 @@ export default function DetailSpectacle({
 						<ScrollAnimation className={styles.story}>
 								<h4 className={styles.h4}>{"L'histoire"}</h4>
 							{data.resume.split("\n").map((paragraph, i) => (
-								<p className={styles.text} key={i}><Markdown>{paragraph}</Markdown></p>
+								<article className={styles.text} key={i}><Markdown>{paragraph}</Markdown></article>
 							))}
 								<h4 className={styles.h4}>{"Note d'intention"}</h4>
 							{data.propos && data.propos.split("\n").map((paragraph, i) => (
-								<p className={styles.text} key={i}><Markdown>{paragraph}</Markdown></p>
+								<article className={styles.text} key={i}><Markdown>{paragraph}</Markdown></article>
 							))}
 
 						</ScrollAnimation>
