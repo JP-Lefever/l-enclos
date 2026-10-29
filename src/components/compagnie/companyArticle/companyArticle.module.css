@@ -29,7 +29,7 @@
 	width: 50vw;
 	height: 50vh;
 	display: flex;
-	background-image: url("/images/affiche.png");
+	background-image: url("/images/affiche.webp");
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-attachment: fixed;
