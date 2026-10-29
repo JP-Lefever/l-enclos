@@ -125,9 +125,13 @@ export default function DetailSpectacle({
 					</article>
 				</header>
 
-				<section className={styles.carousel}>
-					<article className={styles.articleCarousel}>{carousel}</article>
-				</section>
+				{slug !== "Homo" &&
+					(
+						<section className={styles.carousel}>
+							<article className={styles.articleCarousel}>{carousel}</article>
+						</section>
+					)
+				}
 
 				<section className={styles.section}>
 					<ScrollAnimation2 className={styles.title}>
@@ -277,7 +281,7 @@ export default function DetailSpectacle({
 								<li className={styles.li} key={f.id}>{f.name}</li>
 							</ul>
 						)}
-						{!openProd &&
+						{!openProd && slug !== "Homo" &&
 							<button className={styles.button} type={"button"} onClick={handleOpenProd}>{"Voir plus"}</button>
 						}
 						{openProd && (
@@ -289,7 +293,7 @@ export default function DetailSpectacle({
 								)}
 							</>
 						)}
-						{openProd &&
+						{openProd && slug !== "Homo" &&
 							<button className={styles.button} type={"button"} onClick={handleOpenProd}>{"Voir moins"}</button>
 						}
 
