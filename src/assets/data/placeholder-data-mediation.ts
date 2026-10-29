@@ -36,7 +36,7 @@ Il fit le tour de la Terre pour en trouver une mais il y avait toujours quelque 
 
 C'était difficile à apprécier ; toujours une chose ou l'autre ne lui semblait pas parfaite. Il rentra chez lui tout triste, il aurait tant voulu rencontrer une véritable princesse. »`,
 		thanks:
-			`La Mairie de Toulouse dans le cadre de l'appel à projet "Passeport pour l'art", les instituteurs des écoles (Antoine, Matthieu et Laure) et les enfants.`,
+			`La Mairie de Toulouse dans le cadre de l'appel à projet "Passeport pour l'art".`,
 	},
 	{
 		id: 2,
@@ -79,7 +79,7 @@ La création artistique va leur permettre de partager une expérience commune, d
 **Chœur garçons** : De pleurer.
 
 **Chœur filles** : Chut ! Il y a quelqu'un !`,
-		thanks: `Le Conseil Départemental de la Haute Garonne dans le cadre de l'appel à projet "Parcours laïque et citoyen", à la professeur (Madame Chevalier et Madame Pichard) et les collégiens.`,
+		thanks: `Le Conseil Départemental de la Haute Garonne dans le cadre de l'appel à projet "Parcours laïque et citoyen".`,
 	},
 	{
 		id: 3,
@@ -119,7 +119,7 @@ La FACE B (année 2) se construit de la même manière que la FACE A mais cette 
 		],
 
 		thanks:
-			"Le Conseil Départemental de la Haute Garonne, par la DRAC, par le département du Lot, par le département du Tarn et Garon les animatrices des EHPAD (Cathy Morant, Marie-Christine Durban, Martine) ,Aurélié Bordet (art thérapeute) Hee Jen Kim et Mathilde Foriel-Destezet (vidéaste et montage), Mélissa Mathieu (curateur d'art) et Pauline Drolet (régisseuse), les résidents.",
+			"Le Conseil Départemental de la Haute Garonne, la DRAC, le département du Lot, le département du Tarn et Garon.",
 	},
 ];
 

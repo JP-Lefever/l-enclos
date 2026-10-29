@@ -67,7 +67,7 @@
 	text-align: center;
 	font-size: 3em;
 	text-transform: uppercase;
-	width: 70vw;
+	width: 60vw;
 	font-weight: bold;
 	margin: auto;
 	@media screen and (max-width: 1024px) {
