@@ -4,6 +4,7 @@ import clsx from "clsx";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import TransitionLink from "@/components/ui/transitionLink/TransitionLink";
+import Link from "next/link";
 
 
 const ButtonsAgenda = ({setIsOpenDate, setIsOpenInter} : {  setIsOpenDate : (s:boolean)=>void,  setIsOpenInter : (s:boolean)=>void})=>{
@@ -29,32 +30,21 @@ const ButtonsDates = ()=>{
     const pathname = usePathname();
     return(
         <>
-    <section className={styles.sectionAgenda}>
+    <section className={styles.companyButtons}>
         <article>
-            <TransitionLink className={clsx(styles.linkDates, {
-            [styles.isActiveLink] : pathname === "/agenda/spectacles"
+            <Link className={clsx(styles.linkDate, {
+            [styles.isActiveDate] : pathname === "/agenda/spectacles"
             })} href="/agenda/spectacles">
-                <Image className={styles.image}
-                       src="/images/logo.png"
-                       width={1024}
-                       height={1024}
-                       alt="Dates spectacle"/>
-                <p>Dates spectacles</p>
-            </TransitionLink>
+                {"Spectacles"}
+            </Link>
         </article>
         <article >
 
-            <TransitionLink className={clsx(styles.linkDates, {
-                [styles.isActiveLink] : pathname === "/agenda/immersions"
+            <Link className={clsx(styles.linkDate, {
+                [styles.isActiveDate] : pathname === "/agenda/immersions"
             })} href="/agenda/immersions">
-                 <Image
-                     className={styles.image}
-                     src="/images/logo.png"
-                     width={1024}
-                     height={1024}
-                     alt="Dates immersions"/>
-                <p>{"Dates d'immersion"}</p>
-            </TransitionLink>
+                {"Créations collectives"}
+            </Link>
         </article>
     </section>
     </>)

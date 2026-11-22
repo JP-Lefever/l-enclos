@@ -8,7 +8,7 @@ export default  function CardImmersionDate({data} : {data : ModifyImmersionProps
     const {year, label, mediation_id} = data
 
     const mediationPublic = (value : number)=>{
-        return value === 1 ? "Primaire" : value === 2 ? "Collège" : "EHPAD"
+        return value === 1 ? "Chevalier comme un garçon, princesse comme une fille" : value === 2 ? "Autour de Stroboscopie" : "Le crépitement du vinyle Face A et B"
     }
 
     return (<>

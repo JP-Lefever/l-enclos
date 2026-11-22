@@ -8,16 +8,13 @@ export default function DisplayDate({datesSpec}: {datesSpec : ModifyDateProps[] 
 
     return(<>
 
-<section className={styles.section}>
-    <article className={styles.article}>
-        <figure className={styles.figure}>
-        <Image className={styles.image} src ="/images/logo.png" alt={"logo L'enclos"} width={1080} height={1080} />
-        </figure>
-        {datesSpec.map((d)=>(
-        <CardSpectacleDate key={d.id} datesSpec={d}/>
-        ))}
-    </article>
-</section>
+        <section className={styles.section}>
+            <article className={styles.article}>
+                {datesSpec.map((d)=>(
+                <CardSpectacleDate key={d.id} datesSpec={d}/>
+                ))}
+            </article>
+        </section>
 
     </>)
 }
