@@ -9,16 +9,14 @@ export default async function immersionsDatePage(){
 
     const datesImmersion = await readAllInterventions()
 
+
     if (!datesImmersion.success){
         notFound()
     }
-
      return (<>
 
         <section>
-
             <DisplayImmersion data={datesImmersion.data}/>
-
         </section>
     </>)
 }

@@ -16,9 +16,7 @@ export default async function AgendaPage(){
     return (<>
 
             <section>
-
-        <DisplayDate datesSpec={allSpectacleDate.data}/>
-
+                 <DisplayDate datesSpec={allSpectacleDate.data}/>
             </section>
     </>)
 }
