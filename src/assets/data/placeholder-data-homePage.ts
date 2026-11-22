@@ -3,10 +3,10 @@ import {homePageProps} from "@/types/definitions";
 const generalesInformations : homePageProps[]  = [
     {
         id: 1,
-        title : "La compagnie l'enclos",
-        subtitle : "Créateurs de spectacles et de création collective",
+        title : "L'Enclos",
+        subtitle : "Compagnie de théâtre contemporain",
         image : "",
-        paragraph : `L'Enclos parle de cet Espace Clos qui entoure chaque être humain, l'intimité de l'être dans toute sa complexité, l'endroit de notre vulnérabilité. Notre carapace. Notre masque social. Par ses créations toujours axées sur des écritures contemporaines, L'Enclos souhaite ouvrir la porte de cet Espace Clos difficilement accessible dans la « vraie vie » en allant à la rencontre de ses personnages dans leur profondeur, dans les méandres de leurs pensées, dans leur sensibilité, dans leurs limites...`,
+        paragraph : `L'Enclos parle de cet Espace Clos qui entoure chaque être humain, l'intimité de l'être dans toute sa complexité, l'endroit de notre vulnérabilité. Notre carapace. Notre masque social. Par la création de ses spéctacles toujours axées sur des écritures contemporaines, L'Enclos souhaite ouvrir la porte de cet Espace Clos difficilement accessible dans la « vraie vie » en allant à la rencontre de ses personnages dans leur profondeur, dans les méandres de leurs pensées, dans leur sensibilité, dans leurs limites...`,
         button : "En savoir plus"
 
 
