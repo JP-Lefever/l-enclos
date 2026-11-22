@@ -40,7 +40,7 @@ export default function ContactForm() {
 					</h2>
 					<article className={styles.articleInfo}>
 						<p>
-							64 boulevard Silvio Trentin <br /> 31200, Toulouse
+							2 rue Sénéchal <br /> 46100, Cardaillac
 						</p>
 
 						<p className={styles.mail}>cie.lenclos@posteo.net</p>
